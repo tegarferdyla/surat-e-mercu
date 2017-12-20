@@ -22,7 +22,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php site_url('') ?>">Brand</a>
+      <a class="navbar-brand" href="<?php echo site_url('home') ?>">Brand</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
