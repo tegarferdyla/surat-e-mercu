@@ -29,7 +29,7 @@
                   <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
                 </div>
                 <!-- /.col -->
-              </div
+              </div>
           </div>
           <!-- /.login-box-body -->
         </div>
