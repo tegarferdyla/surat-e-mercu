@@ -5,6 +5,11 @@
 		padding: 5px; 
 		margin-top: 0;
 }
+.col-md-1,
+	.form-control div input{
+		margin-right:-14px; 
+		width: 80px;
+}
 .footer{
 	background-color: black;
 }

@@ -19,8 +19,8 @@
 			<div class="form-group inline">
 				<!-- NIM -->
 				<label class="control-label col-md-4" for="nim">NIM</label>
-				<div class="col-md-1" style="margin-right:-30px">
-			 		<input type="text" class="form-control" style="width: 50px" disabled>
+				<div class="col-md-1">
+			 		<input type="text" class="form-control" disabled>
 			 	</div>
 			 	<input type="text" class="form-control" style="width: 307px" name="nim">
 			</div>
