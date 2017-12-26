@@ -16,7 +16,7 @@
           <div class="login-box-body">
             <p class="login-box-msg">Silahkan Login Dengan Username</p>
               <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Username" name="username">
+                <input type="text" class="form-control" placeholder="NIM/email" name="username">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
@@ -34,8 +34,21 @@
           <!-- /.login-box-body -->
         </div>
       </div>
+
+<div class="row">
+  <center>
+  <p>Belum Punya Akun E-Surat?</p>
+  <a class="btn btn-danger" href="#">DAFTAR</a>
+</div>
+</center>
+
     </section>
 
+
+<script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/plugins/bootstrap/dist/js/bootstrap.min.js')?>" ></script>
+</body>
+</html>
      
    
 
