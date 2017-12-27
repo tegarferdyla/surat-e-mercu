@@ -8,6 +8,13 @@ class Mahasiswa extends CI_Controller {
 		
 	}
 
+	public function formkp()
+	{
+		$this->load->view('mahasiswa/header');
+		$this->load->view('mahasiswa/formkp');
+		$this->load->view('home/footer');
+	}
+
 }
 
 /* End of file Mahasiswa.php */
