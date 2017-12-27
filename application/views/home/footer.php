@@ -2,10 +2,10 @@
 <div class="footer">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-4"><h1>WOI</h1></div>
-			<div class="col-md-8"><h1>woiwo</h1>
-			<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid iste pariatur quisquam voluptas sequi doloremque possimus aperiam, nobis neque, non, cumque repellendus suscipit dolore expedita repellat necessitatibus, animi harum.</p>
-	
+			<p class="text-center"> 
+		Copyright &copy; <?php echo date("Y"); ?> Aslab Fasilkom <br>
+		Fakultas Ilmu Komputer <br>
+		Universitas Mercu Buana</p>
 			</div>
 		</div>
 	</div>
