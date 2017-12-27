@@ -1,10 +1,5 @@
 <!-- Content Wrapper. Contains page content -->
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-      </h1>
-    </section>
     <!-- Main content -->
     <section class="content container" style="padding: 0px 0px;">
      <div class="row">
