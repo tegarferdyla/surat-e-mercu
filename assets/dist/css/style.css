@@ -1,3 +1,11 @@
 .footer{
 	background-color: black;
 }
+#boxmodel {
+	background: #CDE;
+	border: 25px solid #ABC;
+	height: 100px;
+	margin: 25px;
+	padding: 25px;
+	width: 300px;
+}
