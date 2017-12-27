@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid form-login">
   <div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2"></div>
-    <div class="col-md-8  col-xs-12 col-md-8 col-md-offset-1">
+ 
+    <div class="col-md-8  col-xs-12 col-md-8 col-sm-offset-3 col-md-offset-3">
       <form class="form-horizontal">
         <div class="form-group">
           <label for="prodi" class="col-sm-2 control-label">Program Studi</label>
@@ -90,3 +90,4 @@
   }
 
 </script>
+

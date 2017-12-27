@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/font-awesome.min.css') ?>">
 </head>
-<body>
+<body class="body">
 
   <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">

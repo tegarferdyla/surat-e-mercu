@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-body{
-	padding-top: 70px;
+body.body{
+	padding-top:70px;
 		font-family:'Lato', sans-serif;
 }
 .navbar{
@@ -57,6 +57,12 @@ background-color: #e7e7e7 !important;
 	color: #ffffff;
 	padding: 20px;
 
+}
+
+
+
+.form-login{
+	padding-top: 70px;
 }
 .timeline {
   list-style: none;
