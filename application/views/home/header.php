@@ -4,14 +4,15 @@
 	<meta charset="UTF-8">
 	<title>E-Surat Mercu Buana</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
-  	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
-  	  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css') ?>">
- 	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/Ionicons/css/ionicons.min.css') ?>">
- 	<link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
-
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/Ionicons/css/ionicons.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/font-awesome.min.css') ?>">
 </head>
 <body>
+
   <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
