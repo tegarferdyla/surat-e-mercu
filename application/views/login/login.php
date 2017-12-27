@@ -10,7 +10,6 @@
      <div class="row">
        <div class="login-box">
           <div class="login-logo">
-           
           </div>
           <!-- /.login-logo -->
           <div class="login-box-body">
@@ -29,7 +28,7 @@
                   <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
                 </div>
                 <!-- /.col -->
-              </div
+              </div>
           </div>
           <!-- /.login-box-body -->
         </div>
