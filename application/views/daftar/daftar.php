@@ -1,3 +1,4 @@
+<form action="<?php echo site_url('daftar/registrasi') ?>" method="POST">
 <div class="container-fluid form-login">
   <div class="row">
  
@@ -21,7 +22,7 @@
                 <input type="text" class="form-control" value="" id="kodenim" name="kodenim" readonly >
               </div>
               <div class="col-sm-9 col-xs-8">
-                <input type="text" class="form-control" id="nim" placeholder="NIM" onkeypress="return no(event)">
+                <input type="text" class="form-control" id="nim" placeholder="NIM" name="nimmhs" onkeypress="return no(event)">
               </div>
             </div>
           </div>
@@ -29,19 +30,19 @@
         <div class="form-group">
           <label for="nama" class="col-sm-2 control-label">Nama</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap">
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
           </div>
         </div>
         <div class="form-group">
           <label for="email" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-6">
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
           </div>
         </div>
         <div class="form-group">
           <label for="password" class="col-sm-2 control-label">Password</label>
           <div class="col-sm-6">
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
           </div>
         </div>
         <div class="form-group">
@@ -70,6 +71,7 @@
 </div>
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/plugins/bootstrap/dist/js/bootstrap.min.js')?>" ></script>
+</form>
 <script>
   // Event handler for text input
   $('#kodenim').on('input', function() {
