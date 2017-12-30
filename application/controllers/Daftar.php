@@ -9,7 +9,11 @@ class Daftar extends CI_Controller {
 		$this->load->view('daftar/daftar');
 		$this->load->view('home/footer');
 	}
+
+	public function registrasi(){
+		$this->model_insert->registerMahasiswa();
+		redirect('daftar');
+
+	}
 }
 
-/* End of file Daftar.php */
-/* Location: ./application/controllers/Daftar.php */
