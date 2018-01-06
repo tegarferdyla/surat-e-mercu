@@ -9,7 +9,6 @@ class Daftar extends CI_Controller {
 		$this->load->view('daftar/daftar');
 		$this->load->view('home/footer');
 	}
-
 }
 
 /* End of file Daftar.php */
