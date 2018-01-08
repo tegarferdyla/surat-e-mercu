@@ -8,7 +8,7 @@
 			<div class="form-group">
 				<!-- Jurusan -->
 				<label for="jurusan" class="control-label col-md-4 col-xs-3">Jurusan</label>
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-8">
 			     	<select name="jurusan" id="jurusan" class="form-control" onchange="prodi()" >
 			     		<option value="" selected>Pilih Jurusan</option>
 			      		<option value="415">Informatika</option>
@@ -72,7 +72,7 @@
 					<label class="control-label col-md-4 col-xs-3" for="nim">NIM</label>
 
 					<div class="col-md-1 col-xs-3 col-sm-2">
-					 	<input type="text" class="form-control" class="fnimadd" readonly>
+					 	<input type="text" class="form-control" id="fnimadd" readonly>
 				 	</div>
 
 				 	<div class="col-md-3 col-xs-5 col-sm-6">
@@ -102,7 +102,7 @@
 
 			<div class="form-group">
 			 	<!-- Button -->
-			 	<div class="text-right">
+			 	<div class="col-xs-offset-5">
 			 		<button class="btn btn-primary">Submit</button>
 			 	</div>
 			</div>
@@ -114,7 +114,8 @@
 
   function prodi(){
     var jurusan=document.getElementById("jurusan").value;
-    $('.fnimadd').val("123")
+    document.getElementById("fnim").value=jurusan;
+    document.getElementById("fnimadd").value=jurusan;
   }
 
   function no(evt) {

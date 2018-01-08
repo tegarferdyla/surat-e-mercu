@@ -22,13 +22,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo site_url('home') ?>"><img src="<?php echo base_url('assets/image/UMB.png')?>" alt="Home" width="75"></a>
+      <a class="navbar-brand" href="<?php echo site_url('') ?>"><img src="<?php echo base_url('assets/image/UMB.png')?>" alt="Home" width="75"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-       <li><a href="#">Lihat Status</a></li>
+       <li><a class="status" href="#">Lihat Status</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
