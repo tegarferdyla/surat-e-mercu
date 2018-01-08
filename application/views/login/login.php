@@ -7,6 +7,7 @@
           <div class="login-logo">
           </div>
           <!-- /.login-logo -->
+          <?php echo form_open('login/ceklogin'); ?>
           <div class="login-box-body">
             <p class="login-box-msg">Silahkan Login Dengan Username</p>
               <div class="form-group has-feedback">
@@ -20,11 +21,13 @@
               <div class="row">
                 <!-- /.col -->
                 <div class="col-md-4 col-md-offset-8">
-                  <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+                  <input type="submit" class="btn btn-primary btn-block btn-flat" value="Login" />
                 </div>
                 <!-- /.col -->
               </div>
           </div>
+
+          <?php echo form_close(); ?>
           <!-- /.login-box-body -->
         </div>
       </div>
