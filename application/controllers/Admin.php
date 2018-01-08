@@ -3,13 +3,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+	public function __construct()
+	{
+		date_default_timezone_set("Asia/Jakarta");
+		parent::__construct();
+		if (!$this->session->has_userdata('status')) {
+			redirect('login');
+		}else if($this->session->userdata('role') =='mahasiswa'){
+			redirect('admin');
+		}
+	}
+
 	public function index()
 	{
-		$this->load->view('admin/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('admin/dashboardadmin_v');
-		$this->load->view('admin/footer');
+		echo "berhasil login sebagai admin ";
+	    echo $this->session->userdata('username');
+	    echo  anchor('login?logout=signout', 'keluar');
 	}
+  
+//   public function index()
+// 	{
+// 		$this->load->view('admin/header');
+// 		$this->load->view('admin/sidebar');
+// 		$this->load->view('admin/dashboardadmin_v');
+// 		$this->load->view('admin/footer');
+// 	}
+  
 	public function waitingkp()
 	{
 		$this->load->view('admin/header');
@@ -17,6 +36,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingkp');
 		$this->load->view('admin/footer');
 	}
+  
 	public function waitingsidang()
 	{
 		$this->load->view('admin/header');
@@ -24,4 +44,8 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingsidang');
 		$this->load->view('admin/footer');
 	}
+
 }
+
+/* End of file Admin.php */
+/* Location: ./application/controllers/Admin.php */
