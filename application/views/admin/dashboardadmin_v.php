@@ -36,13 +36,22 @@
           </section>
           <!-- /.content -->
         </div>
-
-        <footer class="main-footer">
-          <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0.0-beta
-          </div>
-          <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/bagan-organisasi-asisten-laboratorium-fasilkom/">Team Aslab</a>.</strong> All rights
-          reserved.
-        </footer>
-      </body>
-      </html>
+     <!--  <script>
+             $(document).ready(function () {
+               $('.sidebar-menu').tree()
+             })
+           
+             $(function () {
+               $('#example1').DataTable()
+               $('#example2').DataTable({
+                 'paging'      : true,
+                 'lengthChange': false,
+                 'searching'   : false,
+                 'ordering'    : true,
+                 'info'        : true,
+                 'autoWidth'   : false
+               })
+             })
+           </script>
+            -->      <!-- jQuery 3 -->
+      

@@ -3,13 +3,13 @@
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              Tabel Sidang
+              Tabel Kerja Praktek
               <small>Waiting</small>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
-              <li><i class="fa fa-balance-scale"></i> Surat Sidang</li>
-              <li class="active"><i class="fa fa-table"></i> Tabel Surat Sidang</li>
+              <li><i class="fa fa-building-o"></i> Surat Kerja Praktek</li>
+              <li class="active"><i class="fa fa-table"></i> Tabel Surat Kerja Praktek</li>
             </ol>
           </section>
 
@@ -23,9 +23,9 @@
                   <div class="box-header">
                     <h3 class="box-title">Data Table With Full Features</h3>
                   </div>
-                  <!-- /.box-header -->
+                  <!-- /<div class="bo">/div>x-header -->
                   <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
+                    <table id="datatable" class="table table-bordered table-striped">
                       <thead>
                         <tr>
                           <th>Rendering engine</th>
@@ -465,13 +465,4 @@
           </section>
           <!-- /.content -->
         </div>
-
-        <footer class="main-footer">
-          <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0.0-beta
-          </div>
-          <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/bagan-organisasi-asisten-laboratorium-fasilkom/">Team Aslab</a>.</strong> All rights
-          reserved.
-        </footer>
       </body>
-      </html>
