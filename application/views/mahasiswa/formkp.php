@@ -8,7 +8,7 @@
 			<div class="form-group">
 				<!-- Jurusan -->
 				<label for="jurusan" class="control-label col-md-4 col-xs-3">Jurusan</label>
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-8">
 			     	<select name="jurusan" id="jurusan" class="form-control" onchange="prodi()" >
 			     		<option value="" selected>Pilih Jurusan</option>
 			      		<option value="415">Informatika</option>
@@ -113,7 +113,7 @@
 
 			<div class="form-group">
 			 	<!-- Button -->
-			 	<div class="text-right">
+			 	<div class="col-xs-offset-5">
 			 		<button class="btn btn-primary">Submit</button>
 			 	</div>
 			</div>

@@ -38,7 +38,7 @@
             <ul class="treeview-menu">
               <li><a href="<?php echo site_url('admin/waitingsidang') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="#"><i class="fa fa-check"></i> Finish</a></li>
+              <li><a href="<?php echo site_url('admin/finishsidang') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
@@ -55,7 +55,7 @@
             <ul class="treeview-menu">
               <li><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="#"><i class="fa fa-check"></i> Finish</a></li>
+              <li><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>

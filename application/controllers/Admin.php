@@ -44,8 +44,19 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingsidang');
 		$this->load->view('admin/footer');
 	}
-
+	public function finishkp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/finishkp');
+		$this->load->view('admin/footer');
+	}
+	public function finishsidang()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/finishsidang');
+		$this->load->view('admin/footer');
+	}
 }
 
-/* End of file Admin.php */
-/* Location: ./application/controllers/Admin.php */
