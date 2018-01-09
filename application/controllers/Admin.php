@@ -8,26 +8,26 @@ class Admin extends CI_Controller {
 		date_default_timezone_set("Asia/Jakarta");
 		parent::__construct();
 		if (!$this->session->has_userdata('status')) {
-			redirect('login');
+			redirect('home');
 		}else if($this->session->userdata('role') =='mahasiswa'){
-			redirect('admin');
+			redirect('mahasiswa');
 		}
 	}
 
-	public function index()
-	{
-		echo "berhasil login sebagai admin ";
-	    echo $this->session->userdata('username');
-	    echo  anchor('login?logout=signout', 'keluar');
-	}
+	// public function index()
+	// {
+	// 	echo "berhasil login sebagai admin ";
+	//     echo $this->session->userdata('username');
+	//     echo  anchor('login?logout=signout', 'keluar');
+	// }
   
-//   public function index()
-// 	{
-// 		$this->load->view('admin/header');
-// 		$this->load->view('admin/sidebar');
-// 		$this->load->view('admin/dashboardadmin_v');
-// 		$this->load->view('admin/footer');
-// 	}
+  public function index()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/dashboardadmin_v');
+		$this->load->view('admin/footer');
+	}
   
 	public function waitingkp()
 	{
@@ -44,8 +44,19 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingsidang');
 		$this->load->view('admin/footer');
 	}
-
+	public function finishkp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/finishkp');
+		$this->load->view('admin/footer');
+	}
+	public function finishsidang()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/finishsidang');
+		$this->load->view('admin/footer');
+	}
 }
 
-/* End of file Admin.php */
-/* Location: ./application/controllers/Admin.php */
