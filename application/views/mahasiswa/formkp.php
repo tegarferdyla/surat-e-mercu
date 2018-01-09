@@ -16,6 +16,8 @@
 			      	</select>
 		      	</div>
 			</div>
+		
+				
 
 			<div class="form-group">
 				<!-- NIM -->
@@ -37,6 +39,15 @@
 			</div>
 
 		<div class="box">
+			<div class="form-group inline">
+				<!-- Nama Perusahaan -->
+			 	<label class="col-md-3" for="nomorsurat">Nomor Surat</label>
+			 	<div class="col-md-6">
+		 			<input type="text" name="nomorsurat" value="<?=$nomorsuratkp?>" class="form-control" readonly>
+		 		</div>
+			</div>
+
+
 			<div class="form-group inline">
 				<!-- Nama Perusahaan -->
 			 	<label class="col-md-3" for="namaperusahaan">Nama Perusahaan yang dituju</label>
