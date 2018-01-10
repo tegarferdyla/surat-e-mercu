@@ -39,11 +39,12 @@
           <div class="col-sm-6">
             <div class="row">
               <span class="text-danger"><?=form_error('kodenim')?></span>
+               <span class="text-danger"><?=form_error('nimmhs')?></span>
               <div class="col-sm-3 col-xs-4">
                 <input type="text" class="form-control"  value="<?=set_value('kodenim')?>" id="kodenim" name="kodenim" readonly >
               </div>
               <div class="col-sm-9 col-xs-8">
-                <input type="text" class="form-control" id="nim" value="<?=set_value('nimmhs')?>" name="nimmhs" placeholder="NIM" onkeypress="return no(event)">
+                <input type="text" class="form-control" id="nim" value="<?=set_value('nimmhs')?>" name="nimmhs" placeholder="NIM" maxlength="8" onkeypress="return no(event)">
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-<?php
+W<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Daftar extends CI_Controller {
