@@ -63,6 +63,13 @@
             <input type="email" class="form-control" id="email" name="email" value="<?=set_value('email')?>" placeholder="Email">
           </div>
         </div>
+         <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Re-Email</label>
+          <div class="col-sm-6">
+            <span class="text-danger"><?=form_error('reemail')?></span>
+            <input type="email" class="form-control" id="reemail" name="reemail" placeholder="Re-Email">
+          </div>
+        </div>
         <div class="form-group">
           <label for="password" class="col-sm-2 control-label">Password</label>
           <div class="col-sm-6">
