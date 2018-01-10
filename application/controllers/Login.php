@@ -2,8 +2,25 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
+<<<<<<< HEAD
 	public function __construct(){
+=======
+	public function __construct()
+	{
+>>>>>>> 6e1b916324f8dafa38ffb0427c4eb7d1bc96bec6
 		parent::__construct();
+		if (isset($_GET['logout']) == 'signout') {
+			$this->session->sess_destroy();
+			redirect('home');
+		}else{
+			if ($this->session->has_userdata('status')) {
+				if ($this->session->userdata('role') == "mahasiswa") {
+					redirect('mahasiswa');
+				}else if(($this->session->userdata('role') =='admin') ||($this->session->userdata('role') =='superadmin') ){
+					redirect('admin');
+				}
+			}
+		}
 	}
 
 	public function index()
@@ -33,24 +50,29 @@ class Login extends CI_Controller {
 	    	 	$result=$this->db->get_where('admin',$whereadmin)->row_array();
 	    	 	$data_session = array(
 	    	 					'id_admin'=>$result['id_admin'],
-	    	 					'username'=>$result['username']
+	    	 					'username'=>$result['username'],
+	    	 					'status'=>'login',
+	    	 					'role'=>$result['role']
 	    	 	);
 	    	 	$this->session->set_userdata($data_session);
-
-	    	 	echo "berhasil login sebagai admin ";
-	    	 	echo $this->session->userdata('username');
+	    	 	redirect('admin');
+	    	 	
 	   	}elseif ($hasiluser == 1) {
 	   			$result=$this->login_model->datauser('user',$username,$password);
 	   			$data_session = array(
 	   							'nim'=>$result['nim'],
-	   							'nama_mahasiswa'=>$result['nama_mahasiswa']
+	   							'nama_mahasiswa'=>$result['nama_mahasiswa'],
+	   							'status'=>'login',
+	   							'jurusan'=>$result['prodi'],
+	   							'email'=>$result['email'],
+	   							'role'=>'mahasiswa'
 	   			);
 	   			$this->session->set_userdata($data_session);
-
-	    	 	echo "berhasil login sebagai user ";
-	    	 	echo $this->session->userdata('nama_mahasiswa');
+	   			redirect('mahasiswa');
+	    	 	
 	   	}else{
-	   		echo "Login gagal";
+	   		$this->session->set_flashdata('info', 'true');
+	   		redirect('login');
 	   	}
 	}
 
