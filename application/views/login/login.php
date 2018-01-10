@@ -10,6 +10,14 @@
           <?php echo form_open('login/ceklogin'); ?>
           <div class="login-box-body">
             <p class="login-box-msg">Silahkan Login Dengan Username</p>
+            <?php if($this->session->flashdata('info')): ?>
+              <div class="row">
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    Maaf username/nim dan password salah
+                </div>
+              </div>
+            <?php endif; ?>
               <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="NIM/email" name="username">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -35,7 +43,7 @@
 <div class="row">
   <center>
   <p>Belum Punya Akun E-Surat?</p>
-  <a class="btn btn-danger" href="#">DAFTAR</a>
+  <a class="btn btn-info" href="#">DAFTAR</a>
 </div>
 </center>
 
