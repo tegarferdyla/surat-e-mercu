@@ -7,19 +7,19 @@ class Admin extends CI_Controller {
 	{
 		date_default_timezone_set("Asia/Jakarta");
 		parent::__construct();
-		// if (!$this->session->has_userdata('status')) {
-		// 	redirect('login');
-		// }else if($this->session->userdata('role') =='mahasiswa'){
-		// 	redirect('mahasiswa');
-		// }
+		if (!$this->session->has_userdata('status')) {
+			redirect('login');
+		}else if($this->session->userdata('role') =='mahasiswa'){
+			redirect('mahasiswa');
+		}
 	}
 
-	// public function index()
-	// {
-	// 	echo "berhasil login sebagai admin ";
-	//     echo $this->session->userdata('username');
-	//     echo  anchor('login?logout=signout', 'keluar');
-	// }
+	/*public function index()
+	{
+		echo "berhasil login sebagai admin ";
+	    echo $this->session->userdata('username');
+	    echo  anchor('login?logout=signout', 'keluar');
+	}*/
   
   public function index()
 	{
