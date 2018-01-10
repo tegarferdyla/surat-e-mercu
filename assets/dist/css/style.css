@@ -56,13 +56,12 @@ background-color: #e7e7e7 !important;
 	background-color:#1c2c39;
 	color: #ffffff;
 	padding: 20px;
-
 }
 
 
 
 .form-login{
-	padding-top: 70px;
+	padding: 70px 0px;
 }
 .timeline {
   list-style: none;
@@ -211,3 +210,4 @@ background-color: #e7e7e7 !important;
 .timeline-body > p + p {
   margin-top: 5px;
 }
+>>>>>>> upstream/master
