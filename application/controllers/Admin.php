@@ -15,14 +15,7 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	/*public function index()
-	{
-		echo "berhasil login sebagai admin ";
-	    echo $this->session->userdata('username');
-	    echo  anchor('login?logout=signout', 'keluar');
-	}*/
-  
-  public function index()
+   public function index()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
