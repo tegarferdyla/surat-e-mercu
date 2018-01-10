@@ -5,11 +5,11 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="<?php echo base_url('assets/image/UMB.png')?>" class="img-circle" alt="User Image">
+            <img src="<?php echo base_url('assets/image/logoadmin.png')?>" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
             <p>Admin</p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            <p><i class="fa fa-circle text-success"></i> Online<p>
           </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->

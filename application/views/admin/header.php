@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/Ionicons/css/ionicons.min.css') ?>">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css')?>">
+  <!-- Morris charts -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/morris.js/morris.css')?>">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
    folder instead of downloading all of them to reduce the load. -->
    <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/skins/_all-skins.min.css')?>">
@@ -57,8 +59,7 @@
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="<?php echo site_url('home')?>">
-                <img src="<?php echo base_url('assets/image/UMB.png')?>" class="user-image" alt="User Image">
-                <span class="hidden-xs">Sign Out</span>
+                <span class="hidden-xs"><b>Sign Out</b></span>
               </a>
             </li>
           </ul>
