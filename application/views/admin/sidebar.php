@@ -8,7 +8,7 @@
             <img src="<?php echo base_url('assets/image/UMB.png')?>" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Admin</p>
+            <p><?php echo $this->session->userdata('username'); ?></p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>
@@ -62,9 +62,9 @@
 
           <!-- Menu untuk setting dosen -->
           <li>
-            <a href="#">
+            <a href="<?php echo site_url('admin/koordinatorsetting') ?>">
               <i class="fa fa-user"></i>
-              <span>Setting Dosen</span>
+              <span>Setting Koordinator</span>
             </a>
           </li>
         </ul>
