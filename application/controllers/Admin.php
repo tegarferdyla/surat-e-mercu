@@ -59,5 +59,20 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/finishsidang');
 		$this->load->view('admin/footer');
 	}
+	public function koordinatorupdate(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/koordinatorupdate_v');
+		$this->load->view('admin/footer');
+	}
+	public function koordinatorsetting(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/koordinatorsetting');
+		$this->load->view('admin/footer');
+	}
+	public function printKPTA(){
+		$this->load->view('admin/printKPTA');
+	}
 }
 
