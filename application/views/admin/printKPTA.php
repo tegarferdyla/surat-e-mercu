@@ -17,6 +17,7 @@
 					<span class="pull-right tanggal">Jakarta, 21 February 2018</span>
 			</div>
 			</div>
+			<span class="hidden-print warning"><h1 class="text-center">Harus Memakai Browser CHROME!</h1></span>
 		</div>
 
 
@@ -57,27 +58,27 @@
 					<td>1</td>
 					<td>Riko Relawan</td>
 					<td>41814010069</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Si Koplak</td>
-					<td>41814010000</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>BHEWW</td>
-					<td>419212819</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>Phedot</td>
-					<td>41814010201</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>Bongkeh</td>
-					<td>418128181212</td>
-				</tr>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Si Koplak</td>
+			<td>41814010000</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>BHEWW</td>
+			<td>419212819</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Phedot</td>
+			<td>41814010201</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Bongkeh</td>
+			<td>418128181212</td>
+		</tr>
 			</table>
 			<p class="text-justify">Demikian Surat permohonan kami, atas perhatian dan bantuan Bapak/Ibu kami ucapkan terima kasih.</p>
 			</div>
@@ -87,7 +88,7 @@
 			<p>Hormat Kami,</p>
 			<p>Fakultas Ilmu Komputer</p>
 			<p><b>Sek. Program Studi Sistem Informasi</b></p>
-			<br><br><br><br>
+			<br><br><br>
 			<p><b><u>Nia Kusuma Wardhani,S.Kom,MM</u></b></p>
 			<p class="koordinator">Koordinator Kerja Praktek</p>
 
