@@ -4,37 +4,50 @@
 
 <div class="form-horizontal">
 	<section class="content container"">
-		<div class="row">
-			<div class="form-group inline">
+<form class='form-test'>
+			<div class="form-group">
 				<!-- Jurusan -->
-				<label for="jurusan" class="control-label col-md-4">Jurusan</label>
-				<div class="col-md-4">
-			     	<select name="jurusan" class="form-control">
-			      		<option value="TI">Informatika</option>
-			      		<option value="SI">Sistem Informasi</option>
+				<label for="jurusan" class="control-label col-md-4 col-xs-3">Jurusan</label>
+				<div class="col-md-4 col-xs-8">
+			     	<select name="jurusan" id="jurusan" class="form-control" onchange="prodi()" >
+			     		<option value="" selected>Pilih Jurusan</option>
+			      		<option value="415">Informatika</option>
+			      		<option value="418">Sistem Informasi</option>
 			      	</select>
 		      	</div>
 			</div>
+		
+				
 
-			<div class="form-group inline">
+			<div class="form-group">
 				<!-- NIM -->
-				<label class="control-label col-md-4" for="nim">NIM</label>
-				<div class="col-md-1" style="margin-right:-30px">
-			 		<input type="text" class="form-control" style="width: 50px" disabled>
+				<label class="control-label col-md-4 col-xs-3" for="nim">NIM</label>
+				<div class="col-md-1 col-xs-3 col-sm-2">
+			 		<input type="text" class="form-control" id="fnim" readonly>
 			 	</div>
-			 	<input type="text" class="form-control" style="width: 307px" name="nim">
+			 	<div class="col-md-3 col-xs-5 col-sm-6">
+			 		<input type="text" class="form-control" name="nim" onkeypress="return no(event)">
+			 	</div>
 			</div>
 
-			<div class="form-group inline">
+			<div class="form-group">
 				<!-- Nama -->
-			 	<label class="control-label col-md-4" for="nama">Nama Lengkap</label>
-			 	<div class="col-md-4">
+			 	<label class="control-label col-md-4 col-xs-3" for="nama">Nama Lengkap</label>
+			 	<div class="col-md-4 col-xs-8">
 		 			<input type="text" name="nama" class="form-control">
 		 		</div>
 			</div>
-		</div>
 
 		<div class="box">
+			<div class="form-group inline">
+				<!-- Nama Perusahaan -->
+			 	<label class="col-md-3" for="nomorsurat">Nomor Surat</label>
+			 	<div class="col-md-6">
+		 			<input type="text" name="nomorsurat" value="<?=$nomorsuratkp?>" class="form-control" readonly>
+		 		</div>
+			</div>
+
+
 			<div class="form-group inline">
 				<!-- Nama Perusahaan -->
 			 	<label class="col-md-3" for="namaperusahaan">Nama Perusahaan yang dituju</label>
@@ -59,29 +72,66 @@
 		 		</div>
 			</div>
 
-			<div class="form-group inline">
-				<!-- Alamat Perusahaan -->
+			<div class="form-group">
+				<!-- Tambahan Orang -->
 			 	<label class="col-md-3" for="tambah" >Tambahan Orang (Jika Perlu)</label>
-			 	<div class="col-md-6">
-		 			<label class="col-md-2" for="nim+" style="margin-top: 8px">NIM</label>
-		 			<input type="text" name="nimadd" class="form-control" style="width: 250px;">
+			 	<button class="btn btn-default btn-add" type='button'>tambah</button>
+			 </div>
+			
+			 	<div class="form-group">
+					<!-- NIM Tambahan -->
+					<label class="control-label col-md-4 col-xs-3" for="nim">NIM</label>
 
-		 			<label class="col-md-2" for="nama+" style="margin-top: 15px">Nama</label>
-		 			<input type="text" name="namaadd" class="form-control" style="width: 250px; margin-top:10px">
-		 		</div>
+					<div class="col-md-1 col-xs-3 col-sm-2">
+					 	<input type="text" class="form-control" id="fnimadd" readonly>
+				 	</div>
+
+				 	<div class="col-md-3 col-xs-5 col-sm-6">
+					 	<input type="text" class="form-control" name="nim" onkeypress="return no(event)">
+				 	</div>
+
+				</div>
+
+				<div class="form-group">
+					<!-- Nama Tambahan -->
+				 	<label class="control-label col-md-offset-1 col-xs-3" for="nama">Nama Lengkap</label>
+
+				 	<div class="col-md-4 col-xs-8">
+			 			<input type="text" name="nama" class="form-control" style="margin-bottom: 15px">
+			 		</div>
+
+				</div>
+
+			
 			</div>
-			<div class="form-group inline">
-				<div class="text-center col-md-10">
-	 				<button class="btn btn-default">Tambah <span class="glyphicon glyphicon-plus"></span></button>
-	 			</div>
-	 		</div>
 		</div>
+		<div class="form-group test">
+			<div class="text-center col-md-10">
+ 				<button class="btn btn-default">Tambah <span class="glyphicon glyphicon-plus"></span></button>
+ 			</div>
+ 		</div>
 
 			<div class="form-group">
 			 	<!-- Button -->
-			 	<div class="text-right">
+			 	<div class="col-xs-offset-5">
 			 		<button class="btn btn-primary">Submit</button>
 			 	</div>
 			</div>
+		</form>
 	</section>
 </div>
+
+<script>
+
+  function prodi(){
+    var jurusan=document.getElementById("jurusan").value;
+    document.getElementById("fnim").value=jurusan;
+    document.getElementById("fnimadd").value=jurusan;
+  }
+
+  function no(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+      return false;
+  }
+</script>

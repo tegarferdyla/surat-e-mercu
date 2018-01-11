@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
-body{
-	padding-top: 70px;
+body.body{
+	padding-top:70px;
 		font-family:'Lato', sans-serif;
 }
 .navbar{
@@ -56,7 +55,12 @@ background-color: #e7e7e7 !important;
 	background-color:#1c2c39;
 	color: #ffffff;
 	padding: 20px;
+}
 
+
+
+.form-login{
+	padding: 70px 0px;
 }
 .timeline {
   list-style: none;
@@ -204,4 +208,36 @@ background-color: #e7e7e7 !important;
 
 .timeline-body > p + p {
   margin-top: 5px;
+}
+
+body.printkpta{
+   font-family:Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+}
+
+span.tanggal{
+  padding-top: 70px; 
+  font-size: 15pt;
+}
+.idsurat,.kopsurat,.isipesan{
+  padding-bottom: 60px;
+}
+
+.kepadayth{
+  padding-bottom: 70px;
+}
+.table-borderless td,
+.table-borderless th,
+.table-borderless tr {
+    border: 0 !important;
+}
+p.koordinator{
+  font-size:11pt;
+}
+p#kepadayth{
+  margin-bottom: 0;
+}
+p#kepadayth-1{
+  font-size: 12pt;
+  margin-bottom: 0;
 }

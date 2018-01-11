@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<title>E-Surat Mercu Buana</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
-  	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
-  	  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css') ?>">
- 	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/Ionicons/css/ionicons.min.css') ?>">
- 	<link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
-
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/Ionicons/css/ionicons.min.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
 </head>
-<body>
+<body class="body">
+
   <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,8 +30,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo site_url('')?>">Beranda</a></li>
        <li><a href="#">Tentang</a></li>
-       <li><a href="">Bantuan</a></li>
-       <li> <a href="">Kontak</a></li>
+       <li><a href="#">Bantuan</a></li>
       </ul>
     
     </div><!-- /.navbar-collapse -->
