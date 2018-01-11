@@ -34,7 +34,7 @@
                         <div class="icon">
                           <i class="ion ion-university"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url('admin/waitingsidang') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
@@ -46,7 +46,7 @@
                         <div class="icon">
                           <i class="ion ion-briefcase"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url('admin/waitingkp') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                   </div>

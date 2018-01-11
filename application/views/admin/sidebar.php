@@ -9,8 +9,7 @@
           </div>
           <div class="pull-left info">
             <p><?php echo $this->session->userdata('username'); ?></p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-
+            <i class="fa fa-circle text-success"></i> Online 
           </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->

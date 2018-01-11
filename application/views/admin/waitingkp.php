@@ -24,104 +24,208 @@
                     <h3 class="box-title">Table Waiting</h3>
                   </div>
                   <!-- /<div class="bo">/div>x-header -->
-                  <div class="box-body">
-                    <table id="datatable" class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>No</th>
-                          <th>Tanggal</th>
-                          <th>NIM</th>
-                          <th>Nama</th>
-                          <th>Program Studi</th>
-                          <th>Aksi</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>418xxxxxxxx</td>
-                          <td>Ival</td>
-                          <td>Sistem Informasi</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>415XXXXXXXX</td>
-                          <td>Ines</td>
-                          <td>Teknik Informatika</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>415XXXXXXXX</td>
-                          <td>Ilham</td>
-                          <td>Teknik Informatika</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>418XXXXXXXX</td>
-                          <td>Ibnu</td>
-                          <td>Sistem Informasi</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                       <tr>
-                          <td>5</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>418xxxxxxxx</td>
-                          <td>Ival</td>
-                          <td>Sistem Informasi</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                        <tr>
-                          <td>6</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>415XXXXXXXX</td>
-                          <td>Ines</td>
-                          <td>Teknik Informatika</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                        <tr>
-                          <td>7</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>415XXXXXXXX</td>
-                          <td>Ilham</td>
-                          <td>Teknik Informatika</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                        <tr>
-                          <td>8</td>
-                          <td>DD-MM-YYYY</td>
-                          <td>418XXXXXXXX</td>
-                          <td>Ibnu</td>
-                          <td>Sistem Informasi</td>
-                          <td>Proses, Tolak, Detail</td>
-                        </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <th>No</th>
-                          <th>Tanggal</th>
-                          <th>NIM</th>
-                          <th>Nama</th>
-                          <th>Program Studi</th>
-                          <th>Aksi</th>
-                        </tr>
-                      </tfoot>
-                    </table>
+                    <div class="box-body">
+                      <table id="datatable" class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Program Studi</th>
+                            <th>Aksi</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>418xxxxxxxx</td>
+                            <td>Ival</td>
+                            <td>Sistem Informasi</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>415XXXXXXXX</td>
+                            <td>Ines</td>
+                            <td>Teknik Informatika</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>415XXXXXXXX</td>
+                            <td>Ilham</td>
+                            <td>Teknik Informatika</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>418XXXXXXXX</td>
+                            <td>Ibnu</td>
+                            <td>Sistem Informasi</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>418xxxxxxxx</td>
+                            <td>Ival</td>
+                            <td>Sistem Informasi</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>415XXXXXXXX</td>
+                            <td>Ines</td>
+                            <td>Teknik Informatika</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>415XXXXXXXX</td>
+                            <td>Ilham</td>
+                            <td>Teknik Informatika</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon ">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>DD-MM-YYYY</td>
+                            <td>418XXXXXXXX</td>
+                            <td>Ibnu</td>
+                            <td>Sistem Informasi</td>
+                            <td>
+                              <div class="btn-group">
+                                <button type="button" class="btn bg-maroon">Proses</button>
+                                <button type="button" class="btn bg-maroon dropdown-toggle" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Proses</a></li>
+                                  <li><a href="#">Tolak</a></li>
+                                  <li><a href="#">Detail</a></li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Program Studi</th>
+                            <th>Aksi</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                    <!-- /.box-body -->
                   </div>
-                  <!-- /.box-body -->
+                  <!-- /.box -->
                 </div>
-                <!-- /.box -->
+                <!-- /.col -->
               </div>
-              <!-- /.col -->
-            </div>
-            <!-- /.row -->
-          </section>
-          <!-- /.content -->
-        </div>
-      </body>
+              <!-- /.row -->
+            </section>
+            <!-- /.content -->
+          </div>
+        </body>
