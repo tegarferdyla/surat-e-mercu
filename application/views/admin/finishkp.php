@@ -36,12 +36,12 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1.</td>
+                          <td width="20px">1.</td>
                           <td><?php echo date('d/m/Y');?></td>
                           <td>41xxxxxxxxx</td>
                           <td>Lorem</td>
                           <td>
-                            <button class="btn btn-success"><span class="fa fa-check"></span>Finish</button>
+                            <a class="btn btn-primary col-sm-10 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Take</a>
                           </td>
                         </tr>
                       </tbody>

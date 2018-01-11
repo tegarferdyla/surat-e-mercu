@@ -28,7 +28,7 @@
                     <table id="datatable" class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>No.</th>
+                          <th width="20px">No.</th>
                           <th>Tanggal</th>
                           <th>NIM</th>
                           <th>Nama</th>
@@ -42,7 +42,7 @@
                           <td>41xxxxxxxxx</td>
                           <td>Lorem</td>
                           <td>
-                            <button class="btn btn-success"><span class="fa fa-check"></span>Finish</button>
+                            <a class="btn btn-primary col-sm-10 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Take</a>
                           </td>
                         </tr>
                       </tbody>
