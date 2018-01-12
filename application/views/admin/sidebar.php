@@ -5,11 +5,11 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="<?php echo base_url('assets/image/UMB.png')?>" class="img-circle" alt="User Image">
+            <img src="<?php echo base_url('assets/image/logoadmin.png')?>" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Admin</p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            <p><?php echo $this->session->userdata('username'); ?></p>
+            <i class="fa fa-circle text-success"></i> Online 
           </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -38,7 +38,7 @@
             <ul class="treeview-menu">
               <li><a href="<?php echo site_url('admin/waitingsidang') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="#"><i class="fa fa-check"></i> Finish</a></li>
+              <li><a href="<?php echo site_url('admin/finishsidang') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
@@ -55,7 +55,7 @@
             <ul class="treeview-menu">
               <li><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="#"><i class="fa fa-check"></i> Finish</a></li>
+              <li><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
