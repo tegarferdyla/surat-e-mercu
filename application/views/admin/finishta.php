@@ -3,13 +3,13 @@
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              Tabel Sidang
+              Tabel Tugas Akhir
               <medium class="label label-success">Finish</medium>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
-              <li><i class="fa fa-balance-scale"></i> Surat Sidang</li>
-              <li class="active"><i class="fa fa-table"></i> Tabel Surat Sidang</li>
+              <li><i class="fa fa-book"></i> Surat Tugas Akhir</li>
+              <li class="active"><i class="fa fa-table"></i> Tabel Tugas Akhir</li>
             </ol>
           </section>
 
