@@ -4,7 +4,7 @@
           <section class="content-header">
             <h1>
               Tabel Sidang
-              <small>Waiting</small>
+              <span class="label label-primary">Waiting</span>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
@@ -14,368 +14,220 @@
           </section>
 
           <section class="content">
-    <div class="row">
-      <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
 
-        <div class="box">
-          <div class="box-header">
-            <h3 class="box-title">Data Table With Full Features</h3>
+                <div class="box">
+                  <div class="box-header">
+                    <h3 class="box-title">Data Table With Full Features</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <table id="datatable" class="table table-responsive table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Tanggal</th>
+                          <th>NIM</th>
+                          <th>Nama</th>
+                          <th>Program Studi</th>
+                          <th>Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>DD-MM-YYYY</td>
+                          <td>418xxxxxxxx</td>
+                          <td>Ival</td>
+                          <td>Sistem Informasi</td>
+                          <td>
+                            <div class="btn-group">
+                              <button type="button" class="btn  btn-primary">Proses</button>
+                              <button type="button" class="btn  btn-default">Detail</button>
+                              <button type="button" class="btn  btn-danger">Tolak</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>DD-MM-YYYY</td>
+                          <td>415XXXXXXXX</td>
+                          <td>Ines</td>
+                          <td>Teknik Informatika</td>
+                          <td>
+                            <div class="btn-group">
+                              <button type="button" class="btn  btn-primary">Proses</button>
+                              <button type="button" class="btn  btn-default">Detail</button>
+                              <button type="button" class="btn  btn-danger">Tolak</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>DD-MM-YYYY</td>
+                          <td>415XXXXXXXX</td>
+                          <td>Ilham</td>
+                          <td>Teknik Informatika</td>
+                          <td>
+                            <div class="btn-group">
+                              <button type="button" class="btn  btn-primary">Proses</button>
+                              <button type="button" class="btn  btn-default">Detail</button>
+                              <button type="button" class="btn  btn-danger">Tolak</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>DD-MM-YYYY</td>
+                          <td>418XXXXXXXX</td>
+                          <td>Ibnu</td>
+                          <td>Sistem Informasi</td>
+                          <td>
+                           <div class="btn-group">
+                            <button type="button" class="btn  btn-primary">Proses</button>
+                            <button type="button" class="btn  btn-default">Detail</button>
+                            <button type="button" class="btn  btn-danger">Tolak</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>DD-MM-YYYY</td>
+                        <td>418xxxxxxxx</td>
+                        <td>Ival</td>
+                        <td>Sistem Informasi</td>
+                        <td>
+                          <div class="btn-group">
+                            <button type="button" class="btn  btn-primary">Proses</button>
+                            <button type="button" class="btn  btn-default">Detail</button>
+                            <button type="button" class="btn  btn-danger">Tolak</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>DD-MM-YYYY</td>
+                        <td>415XXXXXXXX</td>
+                        <td>Ines</td>
+                        <td>Teknik Informatika</td>
+                        <td>
+                          <div class="btn-group">
+                            <button type="button" class="btn  btn-primary">Proses</button>
+                            <button type="button" class="btn  btn-default">Detail</button>
+                            <button type="button" class="btn  btn-danger">Tolak</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>DD-MM-YYYY</td>
+                        <td>415XXXXXXXX</td>
+                        <td>Ilham</td>
+                        <td>Teknik Informatika</td>
+                        <td>
+                         <div class="btn-group">
+                          <button type="button" class="btn  btn-primary">Proses</button>
+                          <button type="button" class="btn  btn-default">Detail</button>
+                          <button type="button" class="btn  btn-danger">Tolak</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>DD-MM-YYYY</td>
+                      <td>418XXXXXXXX</td>
+                      <td>Ibnu</td>
+                      <td>Sistem Informasi</td>
+                      <td>
+                       <div class="btn-group">
+                        <button type="button" class="btn  btn-primary">Proses</button>
+                        <button type="button" class="btn  btn-default">Detail</button>
+                        <button type="button" class="btn  btn-danger">Tolak</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>No</th>
+                    <th>Tanggal</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Program Studi</th>
+                    <th>Aksi</th>
+                  </tr>
+                </tfoot>
+              </table>
+
+              <!-- Send Email -->
+              <div class="col-md-9">
+                <div class="box box-primary">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Compose New Message</h3>
+                  </div>
+                  <div class="box-body">
+                    <div class="form-group">
+                      <input class="form-control" placeholder="To:">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" placeholder="Subject:">
+                    </div>
+                    <div class="form-group">
+                      <textarea id="compose-textarea" class="form-control" style="height: 300px">
+                        <h1><u>Heading Of Message</u></h1>
+                        <h4>Subheading</h4>
+                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                          was born and I will give you a complete account of the system, and expound the actual teachings
+                          of the great explorer of the truth, the master-builder of human happiness. No one rejects,
+                          dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
+                          how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again
+                          is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
+                          but because occasionally circumstances occur in which toil and pain can procure him some great
+                          pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise,
+                          except to obtain some advantage from it? But who has any right to find fault with a man who
+                          chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
+                          produces no resultant pleasure? On the other hand, we denounce with righteous indignation and
+                          dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
+                        blinded by desire, that they cannot foresee</p>
+                        <ul>
+                          <li>List item one</li>
+                          <li>List item two</li>
+                          <li>List item three</li>
+                          <li>List item four</li>
+                        </ul>
+                        <p>Thank you,</p>
+                        <p>John Doe</p>
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                      <div class="btn btn-default btn-file">
+                        <i class="fa fa-paperclip"></i> Attachment
+                        <input type="file" name="attachment">
+                      </div>
+                      <p class="help-block">Max. 32MB</p>
+                    </div>
+                  </div>
+                  <div class="box-footer">
+                    <div class="pull-right">
+                      <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Draft</button>
+                      <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
+                    </div>
+                    <button type="reset" class="btn btn-default"><i class="fa fa-times"></i> Discard</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Akhir Send Email -->
+
+
+
+
+            </div>
+            <!-- /.box-body -->
           </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <table id="datatable" class="table table-responsive table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 6
-                  </td>
-                  <td>Win 98+</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 7</td>
-                  <td>Win XP SP2+</td>
-                  <td>7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>AOL browser (AOL desktop)</td>
-                  <td>Win XP</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.5</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 2.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 3.0</td>
-                  <td>Win 2k+ / OSX.3+</td>
-                  <td>1.9</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Camino 1.0</td>
-                  <td>OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Camino 1.5</td>
-                  <td>OSX.3+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Netscape 7.2</td>
-                  <td>Win 95+ / Mac OS 8.6-9.2</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Netscape Browser 8</td>
-                  <td>Win 98SE+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Netscape Navigator 9</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.0</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.1</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.1</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.2</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.2</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.3</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.3</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.4</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.4</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.5</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.6</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.7</td>
-                  <td>Win 98+ / OSX.1+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Mozilla 1.8</td>
-                  <td>Win 98+ / OSX.1+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Seamonkey 1.1</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Epiphany 2.20</td>
-                  <td>Gnome</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Webkit</td>
-                  <td>Safari 1.2</td>
-                  <td>OSX.3</td>
-                  <td>125.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Webkit</td>
-                  <td>Safari 1.3</td>
-                  <td>OSX.3</td>
-                  <td>312.8</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Webkit</td>
-                  <td>Safari 2.0</td>
-                  <td>OSX.4+</td>
-                  <td>419.3</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Webkit</td>
-                  <td>Safari 3.0</td>
-                  <td>OSX.4+</td>
-                  <td>522.1</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Webkit</td>
-                  <td>OmniWeb 5.5</td>
-                  <td>OSX.4+</td>
-                  <td>420</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Webkit</td>
-                  <td>iPod Touch / iPhone</td>
-                  <td>iPod</td>
-                  <td>420.1</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Webkit</td>
-                  <td>S60</td>
-                  <td>S60</td>
-                  <td>413</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera 7.0</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera 7.5</td>
-                  <td>Win 95+ / OSX.2+</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera 8.0</td>
-                  <td>Win 95+ / OSX.2+</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera 8.5</td>
-                  <td>Win 95+ / OSX.2+</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera 9.0</td>
-                  <td>Win 95+ / OSX.3+</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera 9.2</td>
-                  <td>Win 88+ / OSX.3+</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera 9.5</td>
-                  <td>Win 88+ / OSX.3+</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Opera for Wii</td>
-                  <td>Wii</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Nokia N800</td>
-                  <td>N800</td>
-                  <td>-</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Presto</td>
-                  <td>Nintendo DS browser</td>
-                  <td>Nintendo DS</td>
-                  <td>8.5</td>
-                  <td>C/A<sup>1</sup></td>
-                </tr>
-                </tr>
-                <tr>
-                  <td>Misc</td>
-                  <td>PSP browser</td>
-                  <td>PSP</td>
-                  <td>-</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-          <!-- /.box-body -->
+          <!-- /.box -->
         </div>
-        <!-- /.box -->
       </div>
-    </div>
-  </section>
-        </div>
-
-      </body>
+    </section>
+  </div>
+</body>
