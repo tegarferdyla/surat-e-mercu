@@ -7,7 +7,6 @@ class Admin extends CI_Controller {
 	{
 		date_default_timezone_set("Asia/Jakarta");
 		parent::__construct();
-
 		if (!$this->session->has_userdata('status')) {
 			redirect('home');
 
@@ -24,13 +23,6 @@ class Admin extends CI_Controller {
 	}*/
   
   public function index()
-	{
-		echo "berhasil login sebagai admin ";
-	    echo $this->session->userdata('username');
-	    echo  anchor('login?logout=signout', 'keluar');
-	}
-  
-  public function dashboard()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -53,7 +45,6 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingsidang');
 		$this->load->view('admin/footer');
 	}
-
 	public function finishkp()
 	{
 		$this->load->view('admin/header');
@@ -84,5 +75,6 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/printKPTA');
 	}
 }
+
 
 

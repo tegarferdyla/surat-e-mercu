@@ -4,7 +4,7 @@
           <section class="content-header">
             <h1>
               Tabel Kerja Praktek
-              <small>Finish</small>
+              <medium class="label label-success">Finish</medium>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
@@ -23,23 +23,27 @@
                     <h3 class="box-title">Finish Table</h3>
                   </div>
                   <!-- /<div class="bo">/div>x-header -->
-                  <div class="box-body">
+                  <div class="box-body table-responsive">
                     <table id="datatable" class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>No.</th>
+                          <th width="20px">No.</th>
                           <th>Tanggal</th>
                           <th>NIM</th>
                           <th>Nama</th>
+                          <th>E-Mail</th>
+                          <th>Program Studi</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td width="20px">1.</td>
+                          <td>1.</td>
                           <td><?php echo date('d/m/Y');?></td>
                           <td>41xxxxxxxxx</td>
                           <td>Lorem</td>
+                          <td>test@test.com</td>
+                          <td>Test Prodi</td>
                           <td>
                             <a class="btn btn-primary col-sm-10 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Take</a>
                           </td>

@@ -2,12 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-<<<<<<< HEAD
-	public function __construct(){
-=======
 	public function __construct()
 	{
->>>>>>> 6e1b916324f8dafa38ffb0427c4eb7d1bc96bec6
 		parent::__construct();
 		if (isset($_GET['logout']) == 'signout') {
 			$this->session->sess_destroy();
