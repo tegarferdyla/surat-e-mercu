@@ -62,9 +62,9 @@
 
           <!-- Menu untuk setting dosen -->
           <li>
-            <a href="#">
+            <a href="<?php echo site_url('admin/koordinatorsetting') ?>">
               <i class="fa fa-user"></i>
-              <span>Setting Dosen</span>
+              <span>Setting Koordinator</span>
             </a>
           </li>
         </ul>

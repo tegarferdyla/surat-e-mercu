@@ -9,7 +9,7 @@
           <!-- /.login-logo -->
           <?php echo form_open('login/ceklogin'); ?>
           <div class="login-box-body">
-            <p class="login-box-msg">Silahkan Login Dengan Username</p>
+            <p class="login-box-msg">Silahkan Login Dengan Menggunakan <b>NIM/EMAIL</b></p>
             <?php if($this->session->flashdata('info')): ?>
               <div class="row">
                 <div class="alert alert-danger alert-dismissible">
@@ -43,7 +43,7 @@
 <div class="row">
   <center>
   <p>Belum Punya Akun E-Surat?</p>
-  <a class="btn btn-info" href="#">DAFTAR</a>
+  <a class="btn btn-danger" href="#">DAFTAR</a>
 </div>
 </center>
 

@@ -9,7 +9,6 @@
               <li class="active"><a href="<?php echo base_url('admin')?>"><i class="fa fa-home"></i> Home</a></li>
             </ol>
           </section>
-
           <!-- Main content -->
           <section class="content">
             <div class="row">
