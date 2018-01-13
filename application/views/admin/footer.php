@@ -8,9 +8,10 @@
 </body>
 
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/jQueryUI/jquery-ui.min.js') ?>"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="<?php echo base_url('assets/plugins/bootstrap/dist/js/bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/dist/js/adminlte.min.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/bootstrap/dist/js/bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/datatables.net/js/jquery.dataTables.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/datatables.net-bs/js/dataTables.bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/moment/moment.js')?>"></script>
@@ -19,7 +20,7 @@
 <script src="<?php echo base_url('assets/dist/js/toast.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/raphael/raphael.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/morris.js/morris.min.js')?>"></script>
-<script src="<?php echo base_url('assets/Chart.js/Chart.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/chart.js/Chart.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')?>"></script>
 <script>
   $(function(){
