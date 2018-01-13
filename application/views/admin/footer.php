@@ -20,6 +20,7 @@
 <script src="<?php echo base_url('assets/plugins/raphael/raphael.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/morris.js/morris.min.js')?>"></script>
 <script src="<?php echo base_url('assets/Chart.js/Chart.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')?>"></script>
 <script>
   $(function(){
     $('#datatable').DataTable({
@@ -72,5 +73,13 @@
  $(document).ready(function () {
    $('.sidebar-menu').tree()
  })
+</script>
+
+<!-- Untuk meng-email yang ditolak -->
+<script>
+  $(function () {
+    //Add text editor
+    $("#compose-textarea").wysihtml5();
+  });
 </script>
 </html>
