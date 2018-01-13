@@ -40,6 +40,11 @@ body.body{
 .navbar-nav>li>a.status{
 	background-color: #439955 !important;
 	color:#e7e7e7;
+    line-height: 60px;
+    height: 70px;
+    padding: 6px 27px; 
+    margin-top: 0;
+    font-size: 1.3em;
 }
 .navbar-nav>li>a.status:hover{
 color: #439955 !important;
