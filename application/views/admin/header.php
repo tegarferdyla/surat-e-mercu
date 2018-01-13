@@ -18,6 +18,7 @@
    folder instead of downloading all of them to reduce the load. -->
    <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/skins/_all-skins.min.css')?>">
    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/datatables.net-bs/css/dataTables.bootstrap.min.css')?>">
+   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css')?>">
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,7 +57,7 @@
           <ul class="nav navbar-nav">
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
-              <a href="<?php echo site_url('home')?>">
+              <a href="<?php echo site_url('login?logout=signout')?>">
                 <img src="<?php echo base_url('assets/image/UMB.png')?>" class="user-image" alt="User Image">
                 <span class="hidden-xs">Sign Out</span>
               </a>

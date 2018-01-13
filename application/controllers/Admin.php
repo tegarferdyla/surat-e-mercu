@@ -7,32 +7,23 @@ class Admin extends CI_Controller {
 	{
 		date_default_timezone_set("Asia/Jakarta");
 		parent::__construct();
-<<<<<<< HEAD
+
 		if (!$this->session->has_userdata('status')) {
-			redirect('login');
+			redirect('home');
+
 		}else if($this->session->userdata('role') =='mahasiswa'){
 			redirect('mahasiswa');
 		}
 	}
 
-	public function index()
-=======
-		// if (!$this->session->has_userdata('status')) {
-		// 	redirect('login');
-		// }else if($this->session->userdata('role') =='mahasiswa'){
-		// 	redirect('mahasiswa');
-		// }
-	}
-
-	// public function index()
-	// {
-	// 	echo "berhasil login sebagai admin ";
-	//     echo $this->session->userdata('username');
-	//     echo  anchor('login?logout=signout', 'keluar');
-	// }
+	/*public function index()
+	{
+		echo "berhasil login sebagai admin ";
+	    echo $this->session->userdata('username');
+	    echo  anchor('login?logout=signout', 'keluar');
+	}*/
   
   public function index()
->>>>>>> 6e1b916324f8dafa38ffb0427c4eb7d1bc96bec6
 	{
 		echo "berhasil login sebagai admin ";
 	    echo $this->session->userdata('username');
@@ -62,13 +53,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingsidang');
 		$this->load->view('admin/footer');
 	}
-<<<<<<< HEAD
 
-}
-
-/* End of file Admin.php */
-/* Location: ./application/controllers/Admin.php */
-=======
 	public function finishkp()
 	{
 		$this->load->view('admin/header');
@@ -83,6 +68,21 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/finishsidang');
 		$this->load->view('admin/footer');
 	}
+	public function koordinatorupdate(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/koordinatorupdate_v');
+		$this->load->view('admin/footer');
+	}
+	public function koordinatorsetting(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/koordinatorsetting');
+		$this->load->view('admin/footer');
+	}
+	public function printKPTA(){
+		$this->load->view('admin/printKPTA');
+	}
 }
 
->>>>>>> 6e1b916324f8dafa38ffb0427c4eb7d1bc96bec6
+
