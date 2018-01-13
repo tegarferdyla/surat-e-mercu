@@ -4,7 +4,7 @@
           <section class="content-header">
             <h1>
               Tabel Kerja Praktek
-              <small>Waiting</small>
+              <span class="label label-primary">Waiting</span>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
