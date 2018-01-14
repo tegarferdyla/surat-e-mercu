@@ -30,4 +30,3 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /tests/tests/
 /tests/results/
 *.sql
-application/views/admin/dashboardadmin_v.php
