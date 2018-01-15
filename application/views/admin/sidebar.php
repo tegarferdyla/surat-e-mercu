@@ -5,11 +5,11 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="<?php echo base_url('assets/image/UMB.png')?>" class="img-circle" alt="User Image">
+            <img src="<?php echo base_url('assets/image/logoadmin.png')?>" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
             <p><?php echo $this->session->userdata('username'); ?></p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            <i class="fa fa-circle text-success"></i> Online 
           </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -19,7 +19,7 @@
           <!-- isi side bar navigation -->
 
           <!-- Menu Dashboard -->
-          <li>
+          <li class="<?php if($this->uri->segment(2)==""){echo 'active';} ?>">
             <a href="<?php echo site_url('admin')?>">
               <i class="fa fa-home"></i>
               <span>Dashboard</span>
@@ -27,24 +27,24 @@
           </li>
 
           <!-- Menu Surat Sidang -->
-          <li class="treeview">
+          <li class="treeview <?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="finishTA"){ echo 'active';} else if($this->uri->segment(2)=="tolakemailta"){echo 'active';}?>">
             <a href="#">
-              <i class="fa fa-balance-scale"></i>
-              <span>Surat Sidang</span>
+              <i class="fa fa-book"></i>
+              <span>Surat Tugas Akhir</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?php echo site_url('admin/waitingsidang') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
+              <li class="<?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/waitingTA') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="<?php echo site_url('admin/finishsidang') ?>"><i class="fa fa-check"></i> Finish</a></li>
+              <li class="<?php if($this->uri->segment(2)=="finishTA"){echo 'active';} ?>"><a href="<?php echo site_url('admin/finishTA') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
 
           <!-- Menu Surat Kerja Praktek -->
-          <li class="treeview">
+          <li class="treeview <?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="finishkp"){ echo 'active';} else if($this->uri->segment(2)=="tolakemailkp"){echo 'active';}?>">
             <a href="#">
               <i class="fa fa-building-o"></i>
               <span>Surat Kerja Praktek</span>
@@ -53,15 +53,15 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
+              <li class="<?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
+              <li class="<?php if($this->uri->segment(2)=="finishkp"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
 
           <!-- Menu untuk setting dosen -->
-          <li>
+          <li class="<?php if($this->uri->segment(2)=="koordinatorsetting" OR $this->uri->segment(2)=="koordinatorupdate"){echo 'active';} ?>">
             <a href="<?php echo site_url('admin/koordinatorsetting') ?>">
               <i class="fa fa-user"></i>
               <span>Setting Koordinator</span>
