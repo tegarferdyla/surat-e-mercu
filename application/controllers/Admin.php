@@ -14,6 +14,10 @@ class Admin extends CI_Controller {
 			redirect('mahasiswa');
 		}
 	}
+	public function suratkp_c(){
+		$this->load->model('tampilsurat_m');
+	}
+
 
 	/*public function index()
 	{
@@ -34,7 +38,8 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/waitingkp');
+		$data['surat'] = $this->tampilsurat_m->tampil_datakp_waiting();
+		$this->load->view('admin/waitingkp',$data);
 		$this->load->view('admin/footer');
 	}
 
@@ -54,21 +59,24 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/waitingta');
+		$data['surat'] = $this->tampilsurat_m->tampil_datata_waiting();	
+		$this->load->view('admin/waitingta',$data);
 		$this->load->view('admin/footer');
 	}
 	public function finishkp()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/finishkp');
+		$data['surat'] = $this->tampilsurat_m->tampil_datakp_finish();
+		$this->load->view('admin/finishkp',$data);
 		$this->load->view('admin/footer');
 	}
 	public function finishTA()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/finishTA');
+		$data['surat'] = $this->tampilsurat_m->tampil_datata_finish();	
+		$this->load->view('admin/finishTA',$data);
 		$this->load->view('admin/footer');
 	}
 	public function koordinatorupdate(){
