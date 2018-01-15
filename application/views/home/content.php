@@ -29,7 +29,7 @@
 		<div class="row">
 			<h1 class="text-center">SELAMAT DATANG DI WEBSITE E-SURAT FAKULTAS ILMU KOMPUTER</h1>
 			<hr>
-			<p>ini lagi diganti yak gan</p>
+			<p>ini lagi diganti yak gan ini ditambahin</p>
 		</div>
 	</div>
 </div>
