@@ -7,7 +7,6 @@
           <div class="login-logo">
           </div>
           <!-- /.login-logo -->
-          <?php echo form_open('login/ceklogin'); ?>
           <div class="login-box-body">
             <p class="login-box-msg">Silahkan Login Dengan Menggunakan <b>NIM/EMAILL/b></p>
             <?php if($this->session->flashdata('info')): ?>
@@ -29,13 +28,11 @@
               <div class="row">
                 <!-- /.col -->
                 <div class="col-md-4 col-md-offset-8">
-                  <input type="submit" class="btn btn-primary btn-block btn-flat" value="Login" />
+                  <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
                 </div>
                 <!-- /.col -->
               </div>
           </div>
-
-          <?php echo form_close(); ?>
           <!-- /.login-box-body -->
         </div>
       </div>
