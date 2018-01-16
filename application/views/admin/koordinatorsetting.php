@@ -3,13 +3,11 @@
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              Tabel Sidang
-              <small>Finish</small>
+           Setting Koordinator
             </h1>
             <ol class="breadcrumb">
-              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
-              <li><i class="fa fa-building-o"></i> Surat Kerja Praktek</li>
-              <li class="active"><i class="fa fa-table"></i> Tabel Surat Kerja Praktek</li>
+              <li><a href="<?php echo site_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
+              <li><i class="fa fa-building-o"></i> Setting Koordinator</li>     
             </ol>
           </section>
 
@@ -28,31 +26,24 @@
                     <table id="datatable" class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>Tanggal</th>
-                          <th>NIM</th>
+                          <th>No</th>
                           <th>Nama</th>
-                          <th>Aksi</th>
+                          <th>Jabatan</th>
+                          <th>Prodi</th>
+                          <th>Opsi</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td><?php echo date('d/m/Y');?></td>
-                          <td>41xxxxxxxxx</td>
-                          <td>Lorem</td>
+                          <td>1</td>
+                          <td>Andi Nugroho</td>
+                          <td>Koordinator TA</td>
+                          <td>Teknik Informatika</td>
                           <td>
-                            <button class="btn btn-success"><span class="fa fa-check"></span>Finish</button>
-                            <button class="btn btn-danger"><span class="fa fa-times"></span>Unfinish</button>
+                            <a href="<?php echo site_url('admin/koordinatorupdate') ?>" class="btn btn-success">UPDATE</a>
                           </td>
                         </tr>
                       </tbody>
-                      <tfoot>
-                        <tr>
-                          <th>Tanggal</th>
-                          <th>NIM</th>
-                          <th>Nama</th>
-                          <th>Aksi</th>
-                        </tr>
-                      </tfoot>
                       </table>
                   </div>
                   <!-- /.box-body -->
