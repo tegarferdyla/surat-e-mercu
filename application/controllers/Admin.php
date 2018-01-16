@@ -30,12 +30,24 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingkp');
 		$this->load->view('admin/footer');
 	}
-  
-	public function waitingsidang()
+
+	public function tolakemailta(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tolakemailta_v');
+		$this->load->view('admin/footer');
+	}
+    public function tolakemailkp(){
+    	$this->load->view('admin/header');
+    	$this->load->view('admin/sidebar');
+    	$this->load->view('admin/tolakemailkp_v');
+    	$this->load->view('admin/footer');
+    }
+	public function waitingTA()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/waitingsidang');
+		$this->load->view('admin/waitingta');
 		$this->load->view('admin/footer');
 	}
 	public function finishkp()
@@ -45,12 +57,29 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/finishkp');
 		$this->load->view('admin/footer');
 	}
-	public function finishsidang()
+	public function finishTA()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/finishsidang');
+		$this->load->view('admin/finishTA');
 		$this->load->view('admin/footer');
 	}
+	public function koordinatorupdate(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/koordinatorupdate_v');
+		$this->load->view('admin/footer');
+	}
+	public function koordinatorsetting(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/koordinatorsetting');
+		$this->load->view('admin/footer');
+	}
+	public function printKPTA(){
+		$this->load->view('admin/printKPTA');
+	}
 }
+
+
 

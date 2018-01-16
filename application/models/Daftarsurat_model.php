@@ -15,7 +15,7 @@ class Daftarsurat_model extends CI_Model {
 							    "SELECT * FROM mahasiswa m JOIN surat s 
 								ON m.id_surat=s.id_surat WHERE 
 								m.nim='$nim' AND 
-								(status !='Selesai' OR 
+								(status !='Diambil' OR 
 								date(tanggal_diambil) >= CURDATE() - INTERVAL 1 DAY)"
 								);
 
