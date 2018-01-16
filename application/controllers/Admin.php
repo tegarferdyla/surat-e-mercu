@@ -71,10 +71,12 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/finishTA');
 		$this->load->view('admin/footer');
 	}
+
+
 	public function koordinatorupdate($nik){
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-    	$dosen = $this->dosen_model->GetWhere("where nik ='$nik'");
+    	$dosen = $this->dosen_model->GetWhereDosen("where nik ='$nik'");
     	$data = array(
     		"nik" =>$dosen[0]['nik'],
     		"nama_dosen" =>$dosen[0]['nama_dosen'],
@@ -84,24 +86,31 @@ class Admin extends CI_Controller {
     	$this->load->view('admin/koordinatorupdate_v',$data);
 		$this->load->view('admin/footer');
 	}
+
+
 	public function update_data_dosen(){
+
 		$nik=$_POST['nik'];
 		$nama_dosen=$_POST['nama_dosen'];
 		$prodi=$_POST['prodi'];
 		$jabatan=$_POST['jabatan'];
+		$nikwhere = $_POST['nikwhere'];
+
 		$data_update=array(
 			'nik'=>$nik,
 			'nama_dosen'=>$nama_dosen,
 			'prodi'=>$prodi,
 			'jabatan'=>$jabatan
 		);
-		$where=array('nik'=>$nik);
-		$res=$this->dosen_model->UpdateDataDosen('dosen',$data_update,$where);
+		$where=array('nik'=>$nikwhere);
+		$result=$this->dosen_model->UpdateDataDosen('dosen',$data_update,$where);
 
-		if($res>=1){
+		if($result>=1){
+			$this->session->set_flashdata('berhasil','true');
 			redirect('admin/koordinatorsetting');
 		}else{
-			echo"Update Data Dosen Gagal";
+			$this->session->set_flashdata('gagal','true');
+			redirect('admin/koordinatorsetting');
 		}
 
 	}
