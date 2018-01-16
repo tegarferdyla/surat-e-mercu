@@ -1,4 +1,3 @@
-
 <div class="footer">
 	<div class="container-fluid">
 		<div class="row">
@@ -19,10 +18,42 @@
 	 $('.btn-add').click(function(){
 
 	 	var x=
-    $( ".form-test" ).append( "<div class='form-group'> <label class='control-label col-md-4 col-xs-3' for='nim'>NIM</label> <div class='col-md-1 col-xs-3 col-sm-2'><input type='text' class='form-control' class='fnimadd' readonly></div><div class='col-md-3 col-xs-5 col-sm-6'><input type='text' class='form-control' name='nim' onkeypress='return no(event)'></div></div><div class='form-group'><label class='control-label col-md-offset-1 col-xs-3' for='nama'>Nama Lengkap</label><div class='col-md-4 col-xs-8'><input type='text' name='nama' class='form-control' style='margin-bottom: 15px'></div></div>" );
-    // alert(123)
+    $( ".form-test" ).append( "" );
   });
 
+</script>
+<script>
+  // Event handler for text input
+  $('#kodenim').on('input', function() {
+    //TODO Getiing option based on input value and setting it as selected
+    $('#prodi option:contains(' + this.value + ')').eq(0).prop('selected', true);
+  });
+
+  // Event handler for select
+  $('#prodi').change(function() {
+      // Updating text input based on selected value
+      $('#kodenim').val($('option:selected', this).val());
+    });
+
+  function no(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+      return false;
+  }
+
+</script>
+
+<!-- sckrip coba -->
+<script>
+  $('.form-tambahan').hide();
+  $('#anggota').change(function(){
+
+    $('.form-tambahan').hide();
+    var total=$(this).val();
+    for (var i = 1; i <= total; i++) {
+      $('.ft'+i).show();
+    }
+  });
 </script>
 </body>
 </html>
