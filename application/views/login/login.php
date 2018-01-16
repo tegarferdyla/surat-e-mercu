@@ -9,7 +9,7 @@
           <!-- /.login-logo -->
           <?php echo form_open('login/ceklogin'); ?>
           <div class="login-box-body">
-            <p class="login-box-msg">Silahkan Login Dengan Menggunakan <b>NIM/EMAIL</b></p>
+            <p class="login-box-msg">Silahkan Login Dengan Menggunakan <b>NIM/EMAILL/b></p>
             <?php if($this->session->flashdata('info')): ?>
               <div class="row">
                 <div class="alert alert-danger alert-dismissible">
