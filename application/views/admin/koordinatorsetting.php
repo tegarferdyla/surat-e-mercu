@@ -27,6 +27,7 @@
                       <thead>
                         <tr>
                           <th>No</th>
+                          <th>Nik</th>
                           <th>Nama</th>
                           <th>Jabatan</th>
                           <th>Prodi</th>
@@ -34,15 +35,27 @@
                         </tr>
                       </thead>
                       <tbody>
+                        
+                        
+                      <?php
+                      $i=0;
+                      foreach($data as $d) {
+                        $i++;
+                      ?>
+          
                         <tr>
-                          <td>1</td>
-                          <td>Andi Nugroho</td>
-                          <td>Koordinator TA</td>
-                          <td>Teknik Informatika</td>
+                          <td><?php echo $i;?></td>
+                          <td><?php echo $d['nik'];?></td>
+                          <td><?php echo $d['nama_dosen'];?></td>
+                          <td><?php echo $d['jabatan'];?></td>
+                          <td><?php echo $d['prodi'];?></td>
                           <td>
-                            <a href="<?php echo site_url('admin/koordinatorupdate') ?>" class="btn btn-success">UPDATE</a>
+                            <a href="<?php echo base_url()."admin/koordinatorupdate/".$d['nik'];?>" class="btn btn-success">UPDATE</a>
                           </td>
                         </tr>
+                       <?php
+                     }
+                       ?>
                       </tbody>
                       </table>
                   </div>
