@@ -27,7 +27,7 @@ class Mahasiswa extends CI_Controller {
 		/*$data['nomorsuratkp'] = $this->nomorsurat_model->NomorSuratKP();*/
 
 		$this->load->view('mahasiswa/header');
-		$this->load->view('mahasiswa/formkp',$data);
+		$this->load->view('mahasiswa/formkp');
 		$this->load->view('home/footer');
 	}
 
