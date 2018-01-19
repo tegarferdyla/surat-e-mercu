@@ -210,6 +210,7 @@ background-color: #e7e7e7 !important;
 .timeline-body > ul {
   margin-bottom: 0;
 }
+}
 
 .timeline-body > p + p {
   margin-top: 5px;
@@ -218,6 +219,25 @@ background-color: #e7e7e7 !important;
 .btn-finish{
   font-size: 15px;
 }
+.skin-blue .sidebar-menu .treeview-menu>li.waiting-active>a{
+  color: #3c8dbc;
+}
+.skin-blue .sidebar-menu .treeview-menu>li.finish-active>a{
+  color: #00a65a;
+}
+
+.skin-blue .sidebar-menu>li.waiting-active>a{
+  color:#3c8dbc;
+
+}
+
+.skin-blue .sidebar-menu>li.finish-active>a{
+  color:#00a65a;
+  border-left-color: #00a65a;
+}
+
+/*PRINT */
+
 body.printkpta{
    font-family:Arial, Helvetica, sans-serif;
   font-size: 16pt;

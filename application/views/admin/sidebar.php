@@ -27,7 +27,7 @@
           </li>
 
           <!-- Menu Surat Sidang -->
-          <li class="treeview <?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="finishTA"){ echo 'active';} else if($this->uri->segment(2)=="tolakemailta"){echo 'active';}?>">
+          <li class="treeview <?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';} else if($this->uri->segment(2)=="finishTA"){ echo 'active finish-active';}?>">
             <a href="#">
               <i class="fa fa-book"></i>
               <span>Surat Tugas Akhir</span>
@@ -36,15 +36,15 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="<?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/waitingTA') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
+              <li class="<?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';} ?>"><a href="<?php echo site_url('admin/waitingTA') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li class="<?php if($this->uri->segment(2)=="finishTA"){echo 'active';} ?>"><a href="<?php echo site_url('admin/finishTA') ?>"><i class="fa fa-check"></i> Finish</a></li>
+              <li class="<?php if($this->uri->segment(2)=="finishTA"){echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishTA') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
 
           <!-- Menu Surat Kerja Praktek -->
-          <li class="treeview <?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="finishkp"){ echo 'active';} else if($this->uri->segment(2)=="tolakemailkp"){echo 'active';}?>">
+          <li class="treeview <?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active waiting-active';} else if($this->uri->segment(2)=="finishkp"){echo 'active finish-active';}?>">
             <a href="#">
               <i class="fa fa-building-o"></i>
               <span>Surat Kerja Praktek</span>
@@ -53,9 +53,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="<?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
+              <li class="<?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active waiting-active ';} ?>"><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
               <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li class="<?php if($this->uri->segment(2)=="finishkp"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
+              <li class="<?php if($this->uri->segment(2)=="finishkp"){ echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
               <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
