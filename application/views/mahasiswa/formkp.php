@@ -23,6 +23,7 @@
 	        </div>
         </div>
 		<?php echo form_open('mahasiswa/daftarsuratkp',array('class'=>'form-test','method'=>'post')); ?>
+
 			<div class="box">
 				<div class="form-group inline">
 					<!-- Nama Perusahaan -->
@@ -169,13 +170,12 @@
 						<div class="col-md-1 col-xs-3 col-sm-2">
 						 	<input type="text" class="form-control" id="fnim4" name="fnim4" value="<?=$nimdepan?>" readonly>
 					 	</div>
-
 					 	<div class="col-md-3 col-xs-5 col-sm-6">
 						 	<input type="text" class="form-control" name="nim4" id="nim4" onkeypress="return no(event)" >
 					 	</div>
 
-					</div>
 
+					</div>
 					<div class="form-group">
 					<!-- Nama Mahasiswa 4 -->
 				 	<label class="control-label col-md-offset-1 col-xs-3" for="nama">Nama Lengkap</label>
