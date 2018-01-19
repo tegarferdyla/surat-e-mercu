@@ -17,6 +17,7 @@ class Admin extends CI_Controller {
 	public function suratkp_c(){
 		$this->load->model('tampilsurat_m');
 	}
+
    public function index()
 	{
 		$this->load->view('admin/header');
@@ -50,7 +51,7 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$data['surat'] = $this->tampilsurat_m->tampil_datata_waiting();
+		$data['surat'] = $this->tampilsurat_m->tampil_datata_waiting();		
 		$this->load->view('admin/waitingta',$data);
 		$this->load->view('admin/footer');
 	}

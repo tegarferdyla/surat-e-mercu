@@ -29,7 +29,7 @@
               <div class="row">
                 <!-- /.col -->
                 <div class="col-md-4 col-md-offset-8">
-                  <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+                  <input type="submit" class="btn btn-primary btn-block btn-flat" value="Login" />
                 </div>
                 <!-- /.col -->
               </div>

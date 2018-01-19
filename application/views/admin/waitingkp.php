@@ -37,11 +37,11 @@
                           </tr>
                         </thead>
                         <tbody>
-                         <?php $no = 1;
+                          <?php $no =1;
                           foreach ($surat as $u) {
-                          ?> 
+                          ?>
                           <tr>
-                            <td><?php echo $no++; ?></td>
+                           <td><?php echo $no++; ?></td>
                             <td><?php echo $u->tanggal_diajukan; ?></td>
                             <td><?php echo $u->nim; ?></td>
                             <td><?php echo $u->nama_mahasiswa; ?></td>
@@ -54,7 +54,7 @@
                               </div>
                             </td>
                           </tr>
-                        <?php } ?>  
+                        <?php } ?>
                         </tbody>
                         <tfoot>
                           <tr>

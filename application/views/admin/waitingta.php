@@ -32,9 +32,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                      <?php $no= 1; 
+                        <?php $no=1;
                         foreach ($surat as $u) {
-                      ?>
+                        ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
                             <td><?php echo $u->tanggal_diajukan; ?></td>
@@ -47,7 +47,7 @@
                               <a href="<?php echo site_url('admin/tolakemailta') ?>" class="btn btn-danger">Tolak</a>
                           </td>
                         </tr>
-                      <?php } ?> 
+                       <?php } ?> 
                 </tbody>
                 <tfoot>
                   <tr>

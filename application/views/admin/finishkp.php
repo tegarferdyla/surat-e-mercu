@@ -37,9 +37,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php $no = 1;
-                          foreach ($surat as $u) {
-                         ?>
+                      <?php $no=1;
+                      foreach ($surat as $u) {
+                       ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
                           <td><?php echo $u->tanggal_selesai;?></td>
@@ -51,7 +51,7 @@
                             <a class="btn btn-primary col-sm-10 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Take</a>
                           </td>
                         </tr>
-                        <?php } ?>
+                      <?php } ?>  
                       </tbody>
                       <tfoot>
                         <tr>
