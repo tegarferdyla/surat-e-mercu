@@ -23,8 +23,8 @@ class Login_model extends CI_Model{
 	function datauser($table,$username,$password)
 	{
 		$query=$this->db->query("SELECT * FROM user WHERE nim='$username' AND
-		 					     password='$password' OR email='$username' AND password='$password'  
+		 			     password='$password' OR email='$username' AND password='$password'  
 		 					    ");
 		return $query->row_array();
 	}
-}a
+}
