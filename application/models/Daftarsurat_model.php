@@ -15,16 +15,35 @@ class Daftarsurat_model extends CI_Model {
 							    "SELECT * FROM mahasiswa m JOIN surat s 
 								ON m.id_surat=s.id_surat WHERE 
 								m.nim='$nim' AND 
-								(status !='Diambil' OR 
+								(status !='Ambil' OR 
 								date(tanggal_diambil) >= CURDATE() - INTERVAL 1 DAY)"
 								);
 
 		return $query->num_rows();
 	}	
 
-	public function daftarsurat()
+	public function GetIdSuratToMahasiswa($nim)
+	{
+		$this->db->select('id_surat');
+		$this->db->from('surat');
+		$this->db->where('status','Menunggu');
+		$query = $this->db->get();
+		return $query->row();
+	}
+
+	public function daftarsuratTA()
 	{
 		
+	}
+
+	public function daftarsuratkp($data,$table)
+	{
+		return $this->db->insert($table,$data);
+	}
+
+	public function InsertMahasiswa($data)
+	{
+		return $this->db->insert('mahasiswa',$data);
 	}
 
 }
