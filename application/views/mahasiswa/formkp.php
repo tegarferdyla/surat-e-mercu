@@ -3,6 +3,7 @@
 </section>
 
 <div class="form-horizontal">
+
 	<section class="content container">
 
 		<form class='form-test'>
@@ -153,7 +154,6 @@
 						<div class="col-md-1 col-xs-3 col-sm-2">
 						 	<input type="text" class="form-control" id="fnim4" readonly>
 					 	</div>
-
 			<div class="form-group">
 				<!-- NIM -->
 				<label class="control-label col-md-4 col-xs-3" for="nim">NIM</label>
