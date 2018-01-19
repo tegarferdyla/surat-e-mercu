@@ -37,3 +37,4 @@ class Nomorsurat_model extends CI_Model {
 
 /* End of file Nomorsurat_model.php */
 /* Location: ./application/models/Nomorsurat_model.php */
+a
