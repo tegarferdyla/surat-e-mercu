@@ -10,7 +10,7 @@
               <li><i class="fa fa-building-o"></i> Setting Koordinator</li>     
             </ol>
           </section>
-
+          
           <!-- Main content -->
           <section class="content">
             <div class="row">
@@ -20,6 +20,17 @@
                 <div class="box">
                   <div class="box-header">
                     <h3 class="box-title">Finish Table</h3>
+                    <?php if ($this->session->flashdata('berhasil')): ?>
+                      <div class="alert alert-success alert-dismissable" class="close" role="alert">
+                          Berhasil Mengupdate Kordinator Dosen
+                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                    <?php elseif($this->session->flashdata('gagal')): ?>
+                      <div class="alert alert-danger alert-dismissable" class="close" role="alert">
+                          Gagal Mengupdate Kordinator Dosen
+                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                    <?php endif ?>
                   </div>
                   <!-- /<div class="bo">/div>x-header -->
                   <div class="box-body">
@@ -27,6 +38,7 @@
                       <thead>
                         <tr>
                           <th>No</th>
+                          <th>Nik</th>
                           <th>Nama</th>
                           <th>Jabatan</th>
                           <th>Prodi</th>
@@ -34,15 +46,27 @@
                         </tr>
                       </thead>
                       <tbody>
+                        
+                        
+                      <?php
+                      $i=0;
+                      foreach($data as $d) {
+                        $i++;
+                      ?>
+          
                         <tr>
-                          <td>1</td>
-                          <td>Andi Nugroho</td>
-                          <td>Koordinator TA</td>
-                          <td>Teknik Informatika</td>
+                          <td><?php echo $i;?></td>
+                          <td><?php echo $d['nik'];?></td>
+                          <td><?php echo $d['nama_dosen'];?></td>
+                          <td><?php echo $d['jabatan'];?></td>
+                          <td><?php echo $d['prodi'];?></td>
                           <td>
-                            <a href="<?php echo site_url('admin/koordinatorupdate') ?>" class="btn btn-success">UPDATE</a>
+                            <a href="<?php echo base_url()."admin/koordinatorupdate/".$d['nik'];?>" class="btn btn-success">UPDATE</a>
                           </td>
                         </tr>
+                       <?php
+                     }
+                       ?>
                       </tbody>
                       </table>
                   </div>
