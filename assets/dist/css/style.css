@@ -207,7 +207,72 @@ background-color: #e7e7e7 !important;
 .timeline-body > ul {
   margin-bottom: 0;
 }
+}
 
 .timeline-body > p + p {
   margin-top: 5px;
+}
+
+
+.btn-finish{
+  font-size: 15px;
+}
+.skin-blue .sidebar-menu .treeview-menu>li.waiting-active>a{
+  color: #3c8dbc;
+}
+.skin-blue .sidebar-menu .treeview-menu>li.finish-active>a{
+  color: #00a65a;
+}
+
+.skin-blue .sidebar-menu>li.waiting-active>a{
+  color:#3c8dbc;
+
+}
+
+.skin-blue .sidebar-menu>li.finish-active>a{
+  color:#00a65a;
+  border-left-color: #00a65a;
+}
+
+/*PRINT */
+
+body.printkpta{
+   font-family:Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+}
+
+span.tanggal{
+  padding-top: 70px; 
+  font-size: 16pt;
+}
+.kopsurat{
+  padding-bottom: 100px;
+}
+.idsurat,.isipesan{
+  padding-bottom: 60px;
+}
+
+.kepadayth{
+  padding-bottom: 70px;
+}
+p.nomor,p.lampiran,p.perihal{
+  white-space: pre;
+}
+span.warning{
+  color:maroon;
+}
+.table-borderless td,
+.table-borderless th,
+.table-borderless tr {
+    border: 0 !important;
+}
+p.koordinator{
+  font-size:11pt;
+}
+p#kepadayth{
+  margin-bottom: 0;
+}
+p#kepadayth-1{
+  font-size: 12pt;
+  margin-bottom: 0;
 }
