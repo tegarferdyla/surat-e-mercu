@@ -3,7 +3,7 @@
 </section>
 
 <div class="form-horizontal">
-	<section class="content container"">
+	<section class="content container">
 		<form class='form-test'>
 			<div class="box">
 				<div class="form-group inline">
@@ -152,13 +152,17 @@
 						<div class="col-md-1 col-xs-3 col-sm-2">
 						 	<input type="text" class="form-control" id="fnim4" readonly>
 					 	</div>
-
-					 	<div class="col-md-3 col-xs-5 col-sm-6">
-						 	<input type="text" class="form-control" name="nim4" onkeypress="return no(event)">
-					 	</div>
-
+			<div class="form-group">
+				<!-- NIM -->
+				<label class="control-label col-md-4 col-xs-3" for="nim">NIM</label>
+				<div class="col-md-1 col-xs-3 col-sm-2">
+			 		<input type="text" class="form-control" id="fnim" readonly>
+			 	</div>
+			 	<div class="col-md-3 col-xs-5 col-sm-6">
+			 		<input type="text" class="form-control" name="nim" onkeypress="return no(event)">
+			 	</div>
+			</div>
 					</div>
-
 					<div class="form-group">
 					<!-- Nama Mahasiswa 4 -->
 				 	<label class="control-label col-md-offset-1 col-xs-3" for="nama">Nama Lengkap</label>
