@@ -58,6 +58,23 @@ background-color: #e7e7e7 !important;
 	padding: 20px;
 
 }
+.dash1{
+  background-color: blue;
+  border: 10px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 2%;
+}
+.dash2{
+  background-color: yellow;
+  border: 10px;
+  float: right;
+  margin-right: 10%;
+  padding-bottom: 2%;
+}
+.dash-btn{
+  margin-top: 25%;
+}
 
 
 

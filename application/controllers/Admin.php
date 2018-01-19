@@ -54,6 +54,20 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingta',$data);
 		$this->load->view('admin/footer');
 	}
+	public function proseskp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/proseskp');
+		$this->load->view('admin/footer');
+	}
+	public function prosesTA()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/prosesta');
+		$this->load->view('admin/footer');
+	}
 	public function finishkp()
 	{
 		$this->load->view('admin/header');
@@ -68,6 +82,21 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/sidebar');
 		$data['surat'] = $this->tampilsurat_m->tampil_datata_finish();
 		$this->load->view('admin/finishTA',$data);
+		$this->load->view('admin/footer');
+	}
+
+	public function taketa()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/takeTA');
+		$this->load->view('admin/footer');
+	}
+	public function takekp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/takeKP');
 		$this->load->view('admin/footer');
 	}
 
