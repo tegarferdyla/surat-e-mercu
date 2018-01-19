@@ -38,17 +38,21 @@
                         </tr>
                       </thead>
                       <tbody>
+                        <?php $no= 1;
+                        foreach ($surat as $u) {
+                        ?>
                         <tr>
-                          <td>1.</td>
-                          <td><?php echo date('d/m/Y');?></td>
-                          <td>41xxxxxxxxx</td>
-                          <td>Lorem</td>
-                          <td>test@test.com</td>
-                          <td>Test Prodi</td>
+                          <td><?php echo $no++; ?></td>
+                          <td><?php echo $u->tanggal_selesai;?></td>
+                          <td><?php echo $u->nim; ?></td>
+                          <td><?php echo $u->nama_mahasiswa; ?></td>
+                          <td><?php echo $u->email; ?></td>
+                          <td><?php echo $u->prodi; ?></td>
                           <td>
                             <a class="btn btn-primary col-sm-10 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Take</a>
                           </td>
                         </tr>
+                       <?php } ?> 
                       </tbody>
                       </table>
                   </div>
