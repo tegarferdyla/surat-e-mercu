@@ -37,9 +37,9 @@
             </a>
             <ul class="treeview-menu">
               <li class="<?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';} ?>"><a href="<?php echo site_url('admin/waitingTA') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
-              <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
+              <li><a href="<?php echo site_url('admin/prosesTA') ?>"><i class="fa fa-pencil"></i> Process</a></li>
               <li class="<?php if($this->uri->segment(2)=="finishTA"){echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishTA') ?>"><i class="fa fa-check"></i> Finish</a></li>
-              <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
+              <li><a href="<?php echo site_url('admin/taketa') ?>"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
 
@@ -54,9 +54,9 @@
             </a>
             <ul class="treeview-menu">
               <li class="<?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active waiting-active ';} ?>"><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
-              <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
+              <li><a href="<?php echo site_url('admin/proseskp') ?>"><i class="fa fa-pencil"></i> Process</a></li>
               <li class="<?php if($this->uri->segment(2)=="finishkp"){ echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
-              <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
+              <li><a href="<?php echo site_url('admin/takekp') ?>"><i class="fa fa-external-link"></i> Take</a></li>
             </ul>
           </li>
 
