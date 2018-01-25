@@ -1,10 +1,10 @@
 <?php 
-	class tampilsurat_m extends CI_Model
+	class Tampilsurat_model extends CI_Model
 	{
 		# Query menampilkan Data KP Status = 'Waiting'
 		function tampil_datakp_waiting()
 		{
-			$sql = "SELECT a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Kerja Praktek' ORDER BY id_surat DESC";
+			$sql = "SELECT a.id_surat,a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Kerja Praktek' ORDER BY id_surat DESC";
 			$query = $this->db->query($sql);
 
 			return $query->result(); 
@@ -38,5 +38,18 @@
 
 			return $query->result(); 
 		}
+
+		# Query Select data suratKP berdasarkan nim
+		function SelectSurat($id_surat)
+		{
+			$this->db->select('*');
+			$this->db->from('surat');
+			$this->db->where('id_surat',$id_surat);
+			$query= $this->db->get();
+
+			return $query->row();
+		}
+
+
 	}
  ?>
