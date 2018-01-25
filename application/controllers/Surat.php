@@ -6,7 +6,7 @@ class Surat extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('role') =='mahasiswas') {
+		if ($this->session->userdata('role') =='mahasiswa') {
 			redirect('mahasiswa');
 		}elseif(!$this->session->has_userdata('role')){
 			redirect('login');
