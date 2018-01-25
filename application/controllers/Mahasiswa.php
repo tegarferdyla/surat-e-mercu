@@ -9,7 +9,7 @@ class Mahasiswa extends CI_Controller {
 		parent::__construct();
 		if (!$this->session->has_userdata('status')) {
 			redirect('login');
-		}else if(($this->session->userdata('role') =='admin') ||($this->session->userdata('role') =='superadmin') ){
+		}else if(($this->session->userdata('role') =='admin') || ($this->session->userdata('role') =='superadmin') ){
 			redirect('admin');
 		}
 	}
