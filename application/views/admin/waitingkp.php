@@ -56,16 +56,6 @@
                           </tr>
                         <?php } ?>
                         </tbody>
-                        <tfoot>
-                          <tr>
-                            <th>No</th>
-                            <th>Tanggal</th>
-                            <th>NIM</th>
-                            <th>Nama</th>
-                            <th>Program Studi</th>
-                            <th>Aksi</th>
-                          </tr>
-                        </tfoot>
                       </table>
 
 
