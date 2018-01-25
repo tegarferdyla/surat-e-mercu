@@ -36,14 +36,26 @@ class Mahasiswa extends CI_Controller {
 
 	public function daftarsuratkp()
 	{
-	  
-	 $validasi = $this->daftarsurat_model->validasimahasiswa($this->session->userdata('nim'));	
+	 $row 	   = $this->input->post('anggota');
+	
+	 
+	 $jumlahmahasiswa = 0;
 
-	  if ($validasi > 0 ) {
+	 for ($y=1; $y <=$row ; $y++) { 
+		$fnim 		  = $this->input->post("fnim$y");
+  		$nim  		  = $this->input->post("nim$y");
+  		$nimmahasiswa = $fnim.$nim;
+
+  		$hasil = $this->daftarsurat_model->validasimahasiswa($nimmahasiswa);	
+  		$jumlahmahasiswa = $hasil+$jumlahmahasiswa;
+	 }
+
+
+	  if ($jumlahmahasiswa > 0 ) {
 		  	$this->session->set_flashdata('gagal', 'true');
 		  	redirect('mahasiswa/formkp');
 	  }else{
-		  	$row = $this->input->post('anggota');
+		  	
 
 			  	$data = array (
 					'id_surat'			 => $this->nomorsurat_model->IDSurat(),

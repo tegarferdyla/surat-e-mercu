@@ -48,7 +48,7 @@
           <li class="treeview <?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';} 
           else if($this->uri->segment(2)=="finishTA"){ echo 'active finish-active';}
           else if ($this->uri->segment(2)=="prosesTA"){echo 'active proses-active';} 
-          else if($this->uri->segment(2)=="taketa"){echo 'active take-active';}?>">
+          else if($this->uri->segment(2)=="takeTA"){echo 'active take-active';}?>">
             <a href="#">
               <i class="fa fa-book"></i>
               <span>Surat Tugas Akhir</span>
