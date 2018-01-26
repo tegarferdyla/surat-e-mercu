@@ -14,10 +14,6 @@ class Admin extends CI_Controller {
 			redirect('mahasiswa');
 		}
 	}
-	public function suratkp_c(){
-		$this->load->model('tampilsurat_m');
-	}
-
    public function index()
 	{
 		$this->load->view('admin/header');
