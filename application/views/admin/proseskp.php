@@ -45,18 +45,7 @@
                           <td>Ngok@Crud.com</td>
                           <td>Persilatan</td>
                           <td>
-                            <a class="btn btn-success col-sm-5 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Finish</a><a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish" href="#">Print<span class="glyphicon glyphicon-print"></span></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td><?php echo date('d/m/Y');?></td>
-                          <td>4151......</td>
-                          <td>Joss</td>
-                          <td>Ngok@crud.com</td>
-                          <td>Pertanian</td>
-                          <td>
-                            <a class="btn btn-success col-sm-5 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Finish</a><a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish" href="#">Print<span class="glyphicon glyphicon-print"></span></a>
+                            <a class="btn btn-success col-sm-5 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Finish</a><a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish" href="#">Print <span class="glyphicon glyphicon-print"></span></a>
                           </td>
                         </tr>
                       </tbody>
