@@ -9,7 +9,7 @@
 	          <?php if ($this->session->flashdata('gagal')): ?>
 	        	<div class="alert alert-danger alert-dismissible">
 	                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-	                <h4><i class="icon fa fa-check"></i>Info</h4>
+	                <h4><i class="icon fa fa-close"></i>Info</h4>
 	                Maaf Nim sudah terdaftar dan belum diambil atau anda baru mengambil dan harus jeda 1 hari untuk
 	                mendaftar lagi
 	            </div>

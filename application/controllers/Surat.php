@@ -6,7 +6,7 @@ class Surat extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('role') =='mahasiswas') {
+		if ($this->session->userdata('role') =='mahasiswa') {
 			redirect('mahasiswa');
 		}elseif(!$this->session->has_userdata('role')){
 			redirect('login');
@@ -20,7 +20,67 @@ class Surat extends CI_Controller {
 
 		$ubahStatusToProses	= $this->statussurat_model->SuratKpToProses($id_surat,$nomorsuratkp);
 
-		redirect('admin');	
+		$this->session->set_flashdata('info','true');
+		redirect('admin/waitingkp');	
+	}
+
+	public function ubahFinishKP($id_surat)
+	{
+		$this->statussurat_model->SuratKpToFinish($id_surat);
+		$kirimemail = $this->tampilsurat_model->GetIdentitasMahasiswa($id_surat);
+
+		$namafile 		= $kirimemail->id_surat;
+		$emailmahasiswa	= $kirimemail->email;
+		//Load the library
+	    $this->load->library('html2pdf');
+	    
+	    $this->html2pdf->folder('./assets/pdfs/');
+	    $this->html2pdf->filename($namafile.'.pdf');
+	    $this->html2pdf->paper('a4', 'portrait');
+	    
+	    $data = array(
+	    	'nama_mahasiswa' => $kirimemail->nama_mahasiswa,
+	    	'jenis_surat' => $kirimemail->jenis_surat
+	    );
+	    //Load html view
+	    $this->html2pdf->html($this->load->view('tiket/pdf', $data, true));
+	    
+	    //Check that the PDF was created before we send it
+	    if($path = $this->html2pdf->create('save')) {
+	    	
+	    	$config = Array(  
+            'protocol' => 'smtp',  
+            'smtp_host' => 'https://www.mohagustiar.info/',  
+            'smtp_port' =>  465,  
+            'smtp_user' => 'contactme@mohagustiar.info',   
+            'smtp_pass' => 'gundu12345',  
+            'smtp_keepalive'=>'TRUE',
+            'mailtype' => 'html',   
+            'charset' => 'iso-8859-1'  
+          );  
+	        $this->load->library('email', $config);  
+	        $this->email->set_newline("\r\n");  
+		    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
+			$this->email->to($emailmahasiswa); 
+				
+			$this->email->subject('Tiket Pengambilan Mahasiswa');
+			$this->email->message('Haloo Ini adalah tiket bukti pembayaran kamu');	
+			$this->email->attach($path);
+			$this->email->send();
+			
+			$this->session->set_flashdata('info','true');
+			redirect('admin/proseskp');
+						
+	    }
+		
+	}
+
+	public function ubahAmbilKP($id_surat)
+	{
+		$this->statussurat_model->SuratKpToTake($id_surat);
+
+		$this->session->set_flashdata('info','true');
+	    redirect('admin/finishkp');
 	}
 
 }

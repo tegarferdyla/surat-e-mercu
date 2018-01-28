@@ -25,7 +25,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-6">
                       <div class="small-box bg-maroon">
                         <div class="inner">
-                          <h3>150</h3>
+                          <h3><?=$tawaiting?></h3>
                           <p>Sidang</p>
                         </div>
                         <div class="icon">
@@ -37,7 +37,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-6">
                       <div class="small-box bg-light-blue-active">
                         <div class="inner">
-                          <h3>150</h3>
+                          <h3><?=$kpwaiting?></h3>
                           <p>Kerja Praktek</p>
                         </div>
                         <div class="icon">
@@ -63,7 +63,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-6">
                       <div class="small-box bg-maroon">
                         <div class="inner">
-                          <h3>53</h3>
+                          <h3><?=$taproses?></h3>
                           <p>Sidang</p>
                         </div>
                         <div class="icon">
@@ -75,7 +75,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-6">
                       <div class="small-box bg-light-blue-active">
                         <div class="inner">
-                          <h3>53</h3>
+                          <h3><?=$kpproses?></h3>
                           <p>Kerja Praktek</p>
                         </div>
                         <div class="icon">
@@ -103,7 +103,7 @@
                    <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="small-box bg-maroon">
                       <div class="inner">
-                        <h3>44</h3>
+                        <h3><?=$tafinish?></h3>
                         <p>Sidang</p>
                       </div>
                       <div class="icon">
@@ -115,7 +115,7 @@
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="small-box bg-light-blue-active">
                       <div class="inner">
-                        <h3>44</h3>
+                        <h3><?=$kpfinish?></h3>
                         <p>Kerja Praktek</p>
                       </div>
                       <div class="icon">
@@ -141,7 +141,7 @@
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="small-box bg-maroon">
                       <div class="inner">
-                        <h3>65</h3>
+                        <h3><?=$tatake?></h3>
                         <p>Sidang</p>
                       </div>
                       <div class="icon">
@@ -153,7 +153,7 @@
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="small-box bg-light-blue-active">
                       <div class="inner">
-                        <h3>65</h3>
+                        <h3><?=$kptake?></h3>
                         <p>Kerja Praktek</p>
                       </div>
                       <div class="icon">
