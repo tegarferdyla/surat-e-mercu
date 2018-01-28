@@ -40,7 +40,7 @@
                         <div class="form-group">
                            <label for="status" class="col-sm-2 control-label">Prodi</label>
                           <div class="col-sm-2">
-                           <select name="prodi" class="form-control" >
+                           <select name="prodi" class="form-control" readonly>
                         <option value="<?php echo  $prodi; ?>" selected="selected" ><?php echo "$prodi"; ?></option>
                         <?php if ($prodi=='Sistem Informasi'){
                            echo'<option value="Teknik Informatika" >Teknik Informatika</option>';
@@ -55,7 +55,7 @@
                         <div class="form-group">
                           <label for="nik" class="col-sm-2 control-label">Jabatan</label>
                           <div class="col-sm-3">
-                            <select name="jabatan" class="form-control" disabled >
+                            <select name="jabatan" class="form-control" readonly >
                         <option value="<?php echo $jabatan; ?>" selected="selected" ><?php echo "$jabatan"; ?></option>
                          <?php if ($jabatan=='Kordinator Kerja Praktek'){
                            echo'<option value="Koordinator Tugas Akhir" >Koordinator TA</option>';
