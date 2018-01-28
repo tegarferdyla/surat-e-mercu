@@ -29,6 +29,7 @@
                         <tr>
                           <th width="20px">No.</th>
                           <th>Tanggal</th>
+                          <th>Nomor Surat</th>
                           <th>NIM</th>
                           <th>Nama</th>
                           <th>E-Mail</th>
@@ -37,28 +38,20 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td><?php echo date('d/m/Y');?></td>
-                          <td>4151.......</td>
-                          <td>Mala</td>
-                          <td>Ngok@Crud.com</td>
-                          <td>Persilatan</td>
-                          <td>
-                            <h5 align="center"><strong>SELESAI</strong></h5>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td><?php echo date('d/m/Y');?></td>
-                          <td>4151......</td>
-                          <td>Joss</td>
-                          <td>Ngok@crud.com</td>
-                          <td>Pertanian</td>
-                          <td>
-                            <h5 align="center"><strong>SELESAI</strong></h5>
-                          </td>
-                        </tr>
+                        <?php $no=1; foreach ($surat as $u): ?>
+                          <tr>
+                            <td><?=$no++?></td>
+                            <td><?=$u->tanggal_diambil?></td>
+                            <td><?=$u->no_surat?></td>
+                            <td><?=$u->nim?></td>
+                            <td><?=$u->nama_mahasiswa?></td>
+                            <td><?=$u->email?></td>
+                            <td><?=$u->prodi?></td>
+                            <td>
+                              <p class="label label-success" style="font-size: 15px">Selesai</p>
+                            </td>
+                          </tr>
+                        <?php endforeach ?>
                       </tbody>
                       </table>
                   </div>
