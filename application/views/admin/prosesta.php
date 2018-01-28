@@ -46,7 +46,7 @@
                           <td>Ngok@crud.com</td>
                           <td>Kepercayaan</td>
                           <td>
-                            <a class="btn btn-success col-sm-5 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Finish</a><a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish" href="#">Print<span class="glyphicon glyphicon-print"></span></a>
+                            <a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish" href="#">Print <span class="glyphicon glyphicon-print"></span></a><a class="btn btn-success col-sm-5 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Finish</a>
                           </td>
                         </tr>
                         <tr>
@@ -57,7 +57,7 @@
                           <td>Ngok@club.com</td>
                           <td>Kedokteran</td>
                           <td>
-                            <a class="btn btn-success col-sm-5 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Finish</a><a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish" href="#">Print<span class="glyphicon glyphicon-print"></span></a>
+                            <a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish" href="#">Print <span class="glyphicon glyphicon-print"></span></a><a class="btn btn-success col-sm-5 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Finish</a>
                           </td>
                         </tr>
                       </tbody>

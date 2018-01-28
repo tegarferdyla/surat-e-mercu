@@ -37,129 +37,25 @@
                           </tr>
                         </thead>
                         <tbody>
+                          <?php $no =1;
+                          foreach ($surat as $u) {
+                          ?>
                           <tr>
-                            <td>1</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>418xxxxxxxx</td>
-                            <td>Ival</td>
-                            <td>Sistem Informasi</td>
+                           <td><?php echo $no++; ?></td>
+                            <td><?php echo date('d-M-Y',strtotime($u->tanggal_diajukan))  ?></td>
+                            <td><?php echo $u->nim; ?></td>
+                            <td><?php echo $u->nama_mahasiswa; ?></td>
+                            <td><?php echo $u->prodi; ?></td>
                             <td>
                               <div class="btn-group">
-                                <button type="button" class="btn btn-primary">Proses</button>
-                                <button type="button" class="btn btn-default">Detail</button>
-                                <a href="<?php echo site_url('admin/tolakemailkp') ?>" class="btn btn-danger">TOLAK</a>
+                                <a href="<?php echo site_url("surat/ubahProsesKP/$u->id_surat") ?>" class="btn btn-primary">Proses</a>
+                                <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-default">Detail</a>
+                                <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-danger">TOLAK</a>
                               </div>
                             </td>
                           </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>415XXXXXXXX</td>
-                            <td>Ines</td>
-                            <td>Teknik Informatika</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn btn-primary">Proses</button>
-                                <button type="button" class="btn btn-default">Detail</button>
-                                <button type="button" class="btn btn-danger">Tolak</button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>415XXXXXXXX</td>
-                            <td>Ilham</td>
-                            <td>Teknik Informatika</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn  btn-primary">Proses</button>
-                                <button type="button" class="btn  btn-default">Detail</button>
-                                <button type="button" class="btn  btn-danger">Tolak</button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>418XXXXXXXX</td>
-                            <td>Ibnu</td>
-                            <td>Sistem Informasi</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn  btn-primary">Proses</button>
-                                <button type="button" class="btn  btn-default">Detail</button>
-                                <button type="button" class="btn  btn-danger">Tolak</button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>418xxxxxxxx</td>
-                            <td>Ival</td>
-                            <td>Sistem Informasi</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn  btn-primary">Proses</button>
-                                <button type="button" class="btn  btn-default">Detail</button>
-                                <button type="button" class="btn  btn-danger">Tolak</button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>415XXXXXXXX</td>
-                            <td>Ines</td>
-                            <td>Teknik Informatika</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn  btn-primary">Proses</button>
-                                <button type="button" class="btn  btn-default">Detail</button>
-                                <button type="button" class="btn  btn-danger">Tolak</button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>415XXXXXXXX</td>
-                            <td>Ilham</td>
-                            <td>Teknik Informatika</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn  btn-primary">Proses</button>
-                                <button type="button" class="btn  btn-default">Detail</button>
-                                <button type="button" class="btn  btn-danger">Tolak</button>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>DD-MM-YYYY</td>
-                            <td>418XXXXXXXX</td>
-                            <td>Ibnu</td>
-                            <td>Sistem Informasi</td>
-                            <td>
-                              <div class="btn-group">
-                                <button type="button" class="btn  btn-primary">Proses</button>
-                                <button type="button" class="btn  btn-default">Detail</button>
-                                <button type="button" class="btn  btn-danger">Tolak</button>
-                              </div>
-                            </td>
-                          </tr>
+                        <?php } ?>
                         </tbody>
-                        <tfoot>
-                          <tr>
-                            <th>No</th>
-                            <th>Tanggal</th>
-                            <th>NIM</th>
-                            <th>Nama</th>
-                            <th>Program Studi</th>
-                            <th>Aksi</th>
-                          </tr>
-                        </tfoot>
                       </table>
 
 
