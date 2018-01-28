@@ -46,6 +46,13 @@ body.body{
     margin-top: 0;
     font-size: 1.3em;
 }
+.navbar-nav>li.status,.navbar-nav>li.status>a{
+    line-height: 60px;
+    height: 70px;
+    padding: 6px 27px; 
+    margin-top: 0;
+    font-size: 1.3em;
+}
 .navbar-nav>li>a.status:hover{
 color: #439955 !important;
 background-color: #e7e7e7 !important;
