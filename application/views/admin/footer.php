@@ -26,11 +26,11 @@
   $(function(){
     $('#datatable').DataTable({
       'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
+      'lengthChange': true,
+      'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : true
     })
   })
 </script>
@@ -83,4 +83,11 @@
     $("#compose-textarea").wysihtml5();
   });
 </script>
+
+<script>
+        $('#confirm').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
+        });
+    </script>
+
 </html>

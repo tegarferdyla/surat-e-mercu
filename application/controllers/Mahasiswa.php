@@ -1,4 +1,4 @@
-<?php
+	<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mahasiswa extends CI_Controller {
@@ -14,13 +14,11 @@ class Mahasiswa extends CI_Controller {
 		}
 	}
 	
-
 	public function index()
 	{
-
 		$this->load->view('mahasiswa/header');
 		$this->load->view('mahasiswa/pilihan');
-	     $this->load->view('home/footer');
+    $this->load->view('home/footer');
 		echo "berhasil login sebagai user ";
 	    echo $this->session->userdata('nama_mahasiswa');
 	    echo anchor('login?logout=signout', 'keluar');
@@ -34,6 +32,7 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('home/footer');
 	}
 
+	
 	public function daftarsuratkp()
 	{
 	 $row 	   = $this->input->post('anggota');
@@ -55,9 +54,17 @@ class Mahasiswa extends CI_Controller {
 		  	$this->session->set_flashdata('gagal', 'true');
 		  	redirect('mahasiswa/formkp');
 	  }else{
-		  	
+		  		$prodi 			= $this->session->userdata('jurusan');
+	  			$jenis 			= $this->uri->segment(2);
+	  			$jenis_surat	="";
 
-			  	$data = array (
+				if ($jenis =='daftarsuratkp') {
+	  				$jenissurat = "Kerja Praktek";
+	  			}else{
+	  				$jenissurat ="Tugas Akhir";
+	  			}
+	  			
+	  			$data = array (
 					'id_surat'			 => $this->nomorsurat_model->IDSurat(),
 					'no_surat'  		 => '',
 					'nama_perusahaan' 	 => $this->input->post('namaperusahaan'),
@@ -69,8 +76,9 @@ class Mahasiswa extends CI_Controller {
 					'tanggal_diambil'    => '0000-00-00',
 					'status'         	 => 'Menunggu',
 					'tahun'				 => date('Y'),	
+					'prodi'				 => $prodi,
 					'nim' 				 => $this->session->userdata('nim'),
-					'nik'				 => '0002'
+					'nik'				 => $this->dosen_model->GetTandaTangan($this->session->userdata('jurusan'),$jenissurat)->nik
 			   );
 
 		  	  $this->daftarsurat_model->daftarsuratkp($data,'surat');
@@ -95,6 +103,13 @@ class Mahasiswa extends CI_Controller {
 				redirect('mahasiswa/formkp');
 		}
 
+
+	}
+	public function lihat(){
+
+		$this->load->view('mahasiswa/header');
+		$this->load->view('mahasiswa/status');
+	    $this->load->view('home/footer');
 	}
 
 }

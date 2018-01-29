@@ -16,9 +16,21 @@ class Admin extends CI_Controller {
 	}
    public function index()
 	{
+		// Jumlah Surat Kerja Praktek
+		$data['kpwaiting'] = $this->statussurat_model->JumlahSuratKpWaiting();
+		$data['kpproses'] = $this->statussurat_model->JumlahSuratKpProses();
+		$data['kpfinish']  = $this->statussurat_model->JumlahSuratKpFinish();
+		$data['kptake']	   = $this->statussurat_model->JumlahSuratKpTake(); 
+
+		// Jumlah Surat Tugas Akhir
+		$data['tawaiting'] = $this->statussurat_model->JumlahSuratTAWaiting();
+		$data['taproses'] = $this->statussurat_model->JumlahSuratTAProses();
+		$data['tafinish']  = $this->statussurat_model->JumlahSuratTAFinish();
+		$data['tatake']	   = $this->statussurat_model->JumlahSuratTATake();	
+
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/dashboardadmin_v');
+		$this->load->view('admin/dashboardadmin_v',$data);
 		$this->load->view('admin/footer');
 	}
   
@@ -95,7 +107,8 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/takeKP');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_ambil();
+		$this->load->view('admin/takeKP',$data);
 		$this->load->view('admin/footer');
 	}
 
@@ -148,8 +161,11 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/koordinatorsetting',array('data'=>$data));
 		$this->load->view('admin/footer');
 	}
-	public function printKPTA(){
-		$this->load->view('admin/printKPTA');
+	public function printKP($idsurat){
+		$data['surat'] 		= $this->tampilsurat_model->printKP($idsurat);
+		$data['mahasiswa']	= $this->tampilsurat_model->PrintMahasiswaKP($idsurat);
+
+		$this->load->view('admin/printKP',$data);
 	}
 	
 }
