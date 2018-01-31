@@ -31,7 +31,6 @@
         <li><a class="home" href="<?php echo site_url('')?>">Beranda</a></li>
        <li><a class="home" href="#">Tentang</a></li>
        <li><a class="home" href="">Bantuan</a></li>
-       <li> <a class="home" href="">Kontak</a></li>
       </ul>
     
     </div><!-- /.navbar-collapse -->

@@ -17,29 +17,27 @@
               <div class="col-xs-12 col-md-6 col-sm-12">
                 <div class="box box-primary">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Status Waiting</h3>
+                    <h3 class="box-title">Status <span class="label label-primary">Waiting</span> </h3>
                     <div class="box-tools pull-right">
-                      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                     </div>
                   </div>
                   <div class="box-body">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                      <div class="small-box bg-aqua">
+                      <div class="small-box bg-maroon">
                         <div class="inner">
-                          <h3>150</h3>
+                          <h3><?=$tawaiting?></h3>
                           <p>Sidang</p>
                         </div>
                         <div class="icon">
                           <i class="ion ion-university"></i>
                         </div>
-                        <a href="<?php echo base_url('admin/waitingsidang') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url('admin/waitingTA') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                      <div class="small-box bg-aqua">
+                      <div class="small-box bg-light-blue-active">
                         <div class="inner">
-                          <h3>150</h3>
+                          <h3><?=$kpwaiting?></h3>
                           <p>Kerja Praktek</p>
                         </div>
                         <div class="icon">
@@ -55,19 +53,17 @@
 
               <!-- Chart Process -->
               <div class="col-xs-12 col-md-6 col-sm-12">
-                <div class="box box-primary">
+                <div class="box box-warning">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Status Process</h3>
+                    <h3 class="box-title">Status <span class="label label-warning">Process</span></h3>
                     <div class="box-tools pull-right">
-                      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                     </div>
                   </div>
                   <div class="box-body">
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                      <div class="small-box bg-green">
+                      <div class="small-box bg-maroon">
                         <div class="inner">
-                          <h3>53</h3>
+                          <h3><?=$taproses?></h3>
                           <p>Sidang</p>
                         </div>
                         <div class="icon">
@@ -77,9 +73,9 @@
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                      <div class="small-box bg-green">
+                      <div class="small-box bg-light-blue-active">
                         <div class="inner">
-                          <h3>53</h3>
+                          <h3><?=$kpproses?></h3>
                           <p>Kerja Praktek</p>
                         </div>
                         <div class="icon">
@@ -97,19 +93,17 @@
 
               <!-- Chart Finish -->
               <div class="col-xs-12 col-md-6 col-sm-12">
-                <div class="box box-primary">
+                <div class="box box-success">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Status Finish</h3>
+                    <h3 class="box-title">Status <span class="label label-success">Finish</span></h3>
                     <div class="box-tools pull-right">
-                      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                     </div>
                   </div>
                   <div class="box-body">
                    <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="small-box bg-yellow">
+                    <div class="small-box bg-maroon">
                       <div class="inner">
-                        <h3>44</h3>
+                        <h3><?=$tafinish?></h3>
                         <p>Sidang</p>
                       </div>
                       <div class="icon">
@@ -119,9 +113,9 @@
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="small-box bg-yellow">
+                    <div class="small-box bg-light-blue-active">
                       <div class="inner">
-                        <h3>44</h3>
+                        <h3><?=$kpfinish?></h3>
                         <p>Kerja Praktek</p>
                       </div>
                       <div class="icon">
@@ -137,19 +131,17 @@
 
             <!-- chart take -->
             <div class="col-xs-12 col-md-6 col-sm-12">
-              <div class="box box-primary">
+              <div class="box box-info">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Status Take</h3>
+                  <h3 class="box-title">Status <span class="label label-info">Take</span></h3>
                   <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                   </div>
                 </div>
                 <div class="box-body">
                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="small-box bg-red">
+                    <div class="small-box bg-maroon">
                       <div class="inner">
-                        <h3>65</h3>
+                        <h3><?=$tatake?></h3>
                         <p>Sidang</p>
                       </div>
                       <div class="icon">
@@ -159,9 +151,9 @@
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="small-box bg-red">
+                    <div class="small-box bg-light-blue-active">
                       <div class="inner">
-                        <h3>65</h3>
+                        <h3><?=$kptake?></h3>
                         <p>Kerja Praktek</p>
                       </div>
                       <div class="icon">

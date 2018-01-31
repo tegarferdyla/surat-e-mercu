@@ -8,9 +8,10 @@
 </body>
 
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/jQueryUI/jquery-ui.min.js') ?>"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="<?php echo base_url('assets/plugins/bootstrap/dist/js/bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/dist/js/adminlte.min.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/bootstrap/dist/js/bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/datatables.net/js/jquery.dataTables.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/datatables.net-bs/js/dataTables.bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/moment/moment.js')?>"></script>
@@ -19,17 +20,17 @@
 <script src="<?php echo base_url('assets/dist/js/toast.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/raphael/raphael.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/morris.js/morris.min.js')?>"></script>
-<script src="<?php echo base_url('assets/Chart.js/Chart.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/chart.js/Chart.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')?>"></script>
 <script>
   $(function(){
     $('#datatable').DataTable({
       'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
+      'lengthChange': true,
+      'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : true
     })
   })
 </script>
@@ -82,4 +83,79 @@
     $("#compose-textarea").wysihtml5();
   });
 </script>
+
+<script>
+        $('#confirm').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
+        });
+    </script>
+
 </html>
+
+<script type="text/javascript">
+$(function(){
+$.ajaxSetup({
+type:"POST",
+url: "<?php echo base_url('index.php/select/ambil_data') ?>",
+cache: false,
+});
+
+$("#provinsi").change(function(){
+  var value=$(this).val();
+  if(value>0){
+    $.ajax({
+        data:{modul:'kabupaten',id:value},
+        success: function(respond){
+          $("#kabupaten-kota").html(respond);
+        }
+    })
+     $.ajax({
+        data:{modul:'kecamatan',id:value},
+          success: function(respond){
+          $("#kecamatan").html(respond);
+        }
+    })
+  }else{
+    $.ajax({
+        data:{modul:'kabupaten',id:value},
+        success: function(respond){
+          $("#kabupaten-kota").html(respond);
+        }
+    })
+
+    $.ajax({
+        data:{modul:'kecamatan',id:value},
+          success: function(respond){
+          $("#kecamatan").html(respond);
+        }
+    })
+
+  }
+});
+
+
+
+
+$("#kabupaten-kota").change(function(){
+  var value=$(this).val();
+  if(value>0){
+      $.ajax({
+        data:{modul:'kecamatan',id:value},
+        success: function(respond){
+        $("#kecamatan").html(respond);
+      }
+    })
+  }else{
+      $.ajax({
+        data:{modul:'kecamatan',id:value},
+        success: function(respond){
+        $("#kecamatan").html(respond);
+      }
+    })
+   }
+})
+
+
+})
+
+</script>

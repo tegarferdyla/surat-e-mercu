@@ -85,9 +85,8 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit"  class="btn btn-primary" value="Sign Up">
-            <input type="reset" class="btn btn-danger" value="Reset">
+          <div class="col-sm-offset-2 col-sm-9">
+            <input type="submit" class="btn btn-primary col-sm-7" value="Sign Up">
           </div>
         </div>
       </form>
