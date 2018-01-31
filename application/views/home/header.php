@@ -22,7 +22,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-     <a class="navbar-brand" href="<?php echo site_url('')?>"><img src="<?php echo base_url('assets/image/UMB.png')?>" alt="Home" width="75"></a>
+     <a class="navbar-brand" href="<?php echo site_url('')?>"><img src="<?php echo base_url('assets/image/logomercu.png')?>" alt="Home" width="75"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -31,7 +31,6 @@
         <li><a class="home" href="<?php echo site_url('')?>">Beranda</a></li>
        <li><a class="home" href="#">Tentang</a></li>
        <li><a class="home" href="">Bantuan</a></li>
-       <li> <a class="home" href="">Kontak</a></li>
       </ul>
     
     </div><!-- /.navbar-collapse -->
