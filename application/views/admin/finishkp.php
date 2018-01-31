@@ -4,7 +4,7 @@
           <section class="content-header">
             <h1>
               Tabel Kerja Praktek
-              <small>Finish</small>
+              <medium class="label label-success">Finish</medium>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
@@ -17,43 +17,53 @@
             <div class="row">
               <div class="col-xs-12">
                 <!-- /.box -->
-
+                <?php if ($this->session->flashdata('info')): ?>
+                 <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h4><i class="icon fa fa-check"></i>Info</h4>
+                  Berhasil Merubah Status Kerja Praktek menjadi Ambil
+                </div>  
+                <?php endif ?>
                 <div class="box">
                   <div class="box-header">
                     <h3 class="box-title">Finish Table</h3>
                   </div>
                   <!-- /<div class="bo">/div>x-header -->
-                  <div class="box-body">
+                  <div class="box-body table-responsive">
                     <table id="datatable" class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>No.</th>
+                          <th width="20px">No.</th>
                           <th>Tanggal</th>
+                          <th>Nomor Surat</th>
                           <th>NIM</th>
                           <th>Nama</th>
+                          <th>E-Mail</th>
+                          <th>Program Studi</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
+                      <?php $no=1;
+                      foreach ($surat as $u) {
+                       ?>
                         <tr>
-                          <td width="20px">1.</td>
-                          <td><?php echo date('d/m/Y');?></td>
-                          <td>41xxxxxxxxx</td>
-                          <td>Lorem</td>
+                          <td><?php echo $no++; ?></td>
+                          <td><?php echo date('d-M-Y',strtotime($u->tanggal_selesai));?></td>
+                          <td><?php echo $u->no_surat ?></td>
+                          <td><?php echo $u->nim; ?></td>
+                          <td><?php echo $u->nama_mahasiswa; ?></td>
+                          <td><?php echo $u->email; ?></td>
+                          <td><?php echo $u->prodi; ?></td>
                           <td>
-                            <a class="btn btn-primary col-sm-10 col-sm-offset-1 btn-finish" href="#"><span class="fa fa-check"></span>Take</a>
+                            <button class="btn btn-primary col-sm-5 col-sm-offset-1" data-href="<?=site_url("surat/ubahAmbilKP/$u->id_surat")?>" data-toggle="modal" data-target="#confirm" >
+                               <span class="fa fa-check"></span> Take
+                              </button>
+                            <a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish"  target="_blank" href="<?=site_url("admin/printKP/$u->id_surat")?>">Print <span class="glyphicon glyphicon-print"></span></a>
                           </td>
                         </tr>
+                      <?php } ?>  
                       </tbody>
-                      <tfoot>
-                        <tr>
-                          <th>No.</th>
-                          <th>Tanggal</th>
-                          <th>NIM</th>
-                          <th>Nama</th>
-                          <th>Aksi</th>
-                        </tr>
-                      </tfoot>
                       </table>
                   </div>
                   <!-- /.box-body -->
@@ -67,3 +77,26 @@
           <!-- /.content -->
         </div>
       </body>
+
+
+      <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Konfirmasi</h4>
+                </div>
+            
+                <div class="modal-body">
+                    <p>Apakah anda yakin ingin mengubah dari Finish ke Ambil</p>
+                    <p class="debug-url"></p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary btn-ok">Konfirmasi</a>
+                </div>
+            </div>
+        </div>
+    </div>
