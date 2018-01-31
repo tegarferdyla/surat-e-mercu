@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Surat Kerja Praktek </title>
 	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
+
 	 <!-- <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>"> -->
 	 <style>
 	 	body{
@@ -33,7 +34,11 @@
 			<span class="hidden-print warning"><h1 class="text-center">Harus Memakai Browser CHROME!</h1></span>
 		</div>
 
+
+
+
 		<br /><br />
+
 		<div class="container idsurat">
 			<div class="row">
 				<div class="col-xs-12"><p class="nomor"><?=$surat['no_surat']; ?></p></div>
@@ -45,7 +50,9 @@
 				<div class="col-xs-12"><p class="perihal">Perihal	:Kerja Praktek</p></div>
 			</div>
 		</div>
+
 		<br /><br />
+
 		<div class="container kepadayth">
 			<p id="kepadayth">Kepada Yth,</p>
 			<p id="kepadayth"><?=$surat['nama_perusahaan']?></p>
@@ -76,6 +83,7 @@
 						<td><?=$vmahasiswa['nim']?></td>
 					</tr>
 				<?php endforeach ?>
+
 				<?php foreach ($mahasiswa as $vmahasiswa): ?>
 					<tr>
 						<td><?=$no++?></td>
