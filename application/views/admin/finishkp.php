@@ -5,7 +5,7 @@
             <h1>
               Tabel Kerja Praktek
 
-              <medium class="label label-success">Finish</medium>
+              <medium class="label label-success">Selesai</medium>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Beranda</a></li>

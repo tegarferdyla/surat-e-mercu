@@ -63,7 +63,7 @@
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="<?php echo site_url('login?logout=signout')?>">
-                <img src="<?php echo base_url('assets/image/UMB.png')?>" class="user-image" alt="User Image">
+                <!-- <img src="<?php echo base_url('assets/image/UMB.png')?>" class="user-image" alt="User Image"> -->
                 <span class="hidden-xs">Keluar</span>
               </a>
             </li>

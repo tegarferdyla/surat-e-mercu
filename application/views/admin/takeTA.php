@@ -4,10 +4,10 @@
           <section class="content-header">
             <h1>
               Tabel Tugas Akhir
-              <medium class="label label-info">Take</medium>
+              <medium class="label label-info">Terima</medium>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
+              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Beranda</a></li>
               <li><i class="fa fa-building-o"></i> Surat Tugas Akhir</li>
               <li class="active"><i class="fa fa-table"></i> Tabel Surat Tugas Akhir</li>
             </ol>

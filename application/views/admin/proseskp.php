@@ -4,10 +4,10 @@
           <section class="content-header">
             <h1>
               Tabel Kerja Praktek
-              <medium class="label label-warning">Process</medium>
+              <medium class="label label-warning">Proses</medium>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
+              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Beranda</a></li>
               <li><i class="fa fa-building-o"></i> Surat Kerja Praktek</li>
               <li class="active"><i class="fa fa-table"></i> Tabel Surat Kerja Praktek</li>
             </ol>
