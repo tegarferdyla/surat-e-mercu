@@ -9,7 +9,11 @@ body.body{
 	font-weight: bold;
 }
 .header-home{
-	background-color:#538EA6;
+	 background: url('../../image/tufasilkomm60persen.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	padding-top: 71px;
 	padding-bottom: 20px;
 }
@@ -46,15 +50,6 @@ body.body{
     margin-top: 0;
     font-size: 1.3em;
 }
-.navbar-nav>li>a.status1{
-  background-color: #e2190b !important;
-  color:#e7e7e7;
-    line-height: 60px;
-    height: 70px;
-    padding: 6px 27px; 
-    margin-top: 0;
-    font-size: 1.3em;
-}
 .navbar-nav>li.status,.navbar-nav>li.status>a{
     line-height: 60px;
     height: 70px;
@@ -66,10 +61,7 @@ body.body{
 color: #439955 !important;
 background-color: #e7e7e7 !important;
 }
-.navbar-nav>li>a.status1:hover{
-color: #46b2d6 !important;
-background-color: #e7e7e7 !important;
-}
+
 
 .btn-header{
 	font-size:22px;
@@ -81,35 +73,33 @@ background-color: #e7e7e7 !important;
 	padding: 20px;
 }
 .dash1{
-  background-color: #81cadb;
-  padding: 140px 0px;
-
-}
-.dash1:hover{
-
-  background-color: #54b7a1;
+  background-color: blue;
+  border: 10px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 2%;
 }
 .dash2{
-  background-color: #60bc75;
- padding: 140px 0px;
-}
-.dash2:hover{
- 
-  background-color: #4d8c5b;
+  background-color: yellow;
+  border: 10px;
+  float: right;
+  margin-right: 10%;
+  padding-bottom: 2%;
 }
 .dash-btn{
-
+  margin-top: 25%;
 }
-hr.garis{
-  border-top: 3px solid black;
-  }
-
-.pilihan{
-  padding: 50px 0px;
+.image-mahasiswa{
+   background: url('../../image/tulisanfasilkom20.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
 }
+
 
 .form-login{
-	padding:` 70px 0px;
+	padding: 70px 0px;
 }
 .timeline {
   list-style: none;
@@ -254,7 +244,7 @@ hr.garis{
 .timeline-body > ul {
   margin-bottom: 0;
 }
-}
+
 
 .timeline-body > p + p {
   margin-top: 5px;
@@ -297,22 +287,22 @@ hr.garis{
 
 body.printkpta{
    font-family:Arial, Helvetica, sans-serif;
-  font-size: 16pt;
+  font-size: 12pt;
 }
 
 span.tanggal{
   padding-top: 70px; 
-  font-size: 16pt;
+  font-size: 12pt;
 }
 .kopsurat{
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 .idsurat,.isipesan{
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .kepadayth{
-  padding-bottom: 70px;
+  padding-bottom: 40px;
 }
 p.nomor,p.lampiran,p.perihal{
   white-space: pre;
@@ -332,7 +322,7 @@ p#kepadayth{
   margin-bottom: 0;
 }
 p#kepadayth-1{
-  font-size: 12pt;
+  font-size: 9pt;
   margin-bottom: 0;
 
 }

@@ -1,10 +1,20 @@
-   <div class="container">
-
-    <h1 align="center">Surat Kerja Praktek</h1>
+    <div class="row">
+      <br>
+      <div class="col-md-8 col-md-offset-2">
+        
+               <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h4><i class="icon fa fa-check"></i>Info</h4>
+                  Anda Berhasil Mendaftar Surat Kerja Praktek
+              </div>    
+           
+      </div>
+    </div>
+    <h1 align="center">LIHAT STATUS PENGAJUAN RISET KP</h1>
     <br>
     <br>
     <br>
-    <table class="table table-striped table-bordered" >
+    <table class="table table-striped" >
     <thead>
       <tr>
         <th>Nama Mahasiswa</th>
@@ -35,10 +45,10 @@
     </tbody>
   </table>
 
-<hr class="garis">
+<hr>
+<hr>
 
-
-<h1 align="center">Surat Riset Tugas Akhir</h1>
+<h1 align="center">LIHAT STATUS PENGAJUAN RISET TA</h1>
     <br>
     <br>
     <br>
@@ -72,4 +82,3 @@
       </tr>
     </tbody>
   </table>
-  </div>
