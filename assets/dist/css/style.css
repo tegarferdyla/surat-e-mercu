@@ -46,15 +46,6 @@ body.body{
     margin-top: 0;
     font-size: 1.3em;
 }
-.navbar-nav>li>a.status1{
-  background-color: #e2190b !important;
-  color:#e7e7e7;
-    line-height: 60px;
-    height: 70px;
-    padding: 6px 27px; 
-    margin-top: 0;
-    font-size: 1.3em;
-}
 .navbar-nav>li.status,.navbar-nav>li.status>a{
     line-height: 60px;
     height: 70px;
@@ -66,10 +57,7 @@ body.body{
 color: #439955 !important;
 background-color: #e7e7e7 !important;
 }
-.navbar-nav>li>a.status1:hover{
-color: #46b2d6 !important;
-background-color: #e7e7e7 !important;
-}
+
 
 .btn-header{
 	font-size:22px;
@@ -81,35 +69,27 @@ background-color: #e7e7e7 !important;
 	padding: 20px;
 }
 .dash1{
-  background-color: #81cadb;
-  padding: 140px 0px;
-
-}
-.dash1:hover{
-
-  background-color: #54b7a1;
+  background-color: blue;
+  border: 10px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  padding-bottom: 2%;
 }
 .dash2{
-  background-color: #60bc75;
- padding: 140px 0px;
-}
-.dash2:hover{
- 
-  background-color: #4d8c5b;
+  background-color: yellow;
+  border: 10px;
+  float: right;
+  margin-right: 10%;
+  padding-bottom: 2%;
 }
 .dash-btn{
-
+  margin-top: 25%;
 }
-hr.garis{
-  border-top: 3px solid black;
-  }
 
-.pilihan{
-  padding: 50px 0px;
-}
+
 
 .form-login{
-	padding:` 70px 0px;
+	padding: 70px 0px;
 }
 .timeline {
   list-style: none;

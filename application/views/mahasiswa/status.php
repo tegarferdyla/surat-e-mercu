@@ -1,10 +1,8 @@
-   <div class="container">
-
-    <h1 align="center">Surat Kerja Praktek</h1>
+    <h1 align="center">LIHAT STATUS PENGAJUAN RISET KP</h1>
     <br>
     <br>
     <br>
-    <table class="table table-striped table-bordered" >
+    <table class="table table-striped" >
     <thead>
       <tr>
         <th>Nama Mahasiswa</th>
@@ -35,10 +33,10 @@
     </tbody>
   </table>
 
-<hr class="garis">
+<hr>
+<hr>
 
-
-<h1 align="center">Surat Riset Tugas Akhir</h1>
+<h1 align="center">LIHAT STATUS PENGAJUAN RISET TA</h1>
     <br>
     <br>
     <br>
@@ -72,4 +70,3 @@
       </tr>
     </tbody>
   </table>
-  </div>
