@@ -34,7 +34,6 @@
                 <!-- /.col -->
               </div>
           </div>
-
           <?php echo form_close(); ?>
           <!-- /.login-box-body -->
         </div>
@@ -43,7 +42,7 @@
 <div class="row">
   <center>
   <p>Belum Punya Akun E-Surat?</p>
-  <a class="btn btn-danger" href="#">DAFTAR</a>
+  <a class="btn btn-danger" href="<?=site_url('daftar')?>">DAFTAR</a>
 </div>
 </center>
 

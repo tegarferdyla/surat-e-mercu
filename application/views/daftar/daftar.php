@@ -63,6 +63,13 @@
             <input type="email" class="form-control" id="email" name="email" value="<?=set_value('email')?>" placeholder="Email">
           </div>
         </div>
+         <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Re-Email</label>
+          <div class="col-sm-6">
+            <span class="text-danger"><?=form_error('reemail')?></span>
+            <input type="email" class="form-control" id="reemail" name="reemail" placeholder="Re-Email">
+          </div>
+        </div>
         <div class="form-group">
           <label for="password" class="col-sm-2 control-label">Password</label>
           <div class="col-sm-6">
@@ -78,9 +85,8 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit"  class="btn btn-primary" value="Sign Up">
-            <input type="reset" class="btn btn-danger" value="Reset">
+          <div class="col-sm-offset-2 col-sm-9">
+            <input type="submit" class="btn btn-primary col-sm-7" value="Sign Up">
           </div>
         </div>
       </form>
@@ -88,7 +94,6 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8 col-md-8 col-xs-8">
          <label class="control-label">Sudah Punya Akun? Silahkan <a href="<?php echo site_url('login') ?>">Login</a></label>
-         <label class="control-label">Admin? <a href="<?php echo site_url('admin') ?>">Admin</a></label>
        </div>
        <div class="col-sm-2"></div>
      </div>
