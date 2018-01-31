@@ -30,7 +30,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="status"><?php echo $this->session->userdata('nama_mahasiswa');?></li>
        <li><a class="status" href="<?php echo site_url('mahasiswa/lihat') ?>">Lihat Status</a></li>
-       <li class="status"><?php echo anchor('login?logout=signout', 'keluar');?></li>
+       <li> <a class="status1" href="<?php echo site_url ('login?logout=signout') ?>">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
