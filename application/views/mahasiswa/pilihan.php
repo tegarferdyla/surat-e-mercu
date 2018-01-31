@@ -1,8 +1,9 @@
-<h1 align="center"> SELAMAT DATANG DI WEBSITE E-SURAT </h1>
-<h1 align="center"> FAKULTAS ILMU KOMPUTER </h1>
 
-<div class="container-fluid">
+
+<div class="container-fluid image-mahasiswa">
 	<div class="container">
+		<h1 style="color: white;" align="center"> SELAMAT DATANG DI WEBSITE E-SURAT </h1>
+		<h1 style="color: white;" align="center"> FAKULTAS ILMU KOMPUTER </h1>
 		<div class="row">
 			<div class="col-md-4 dash1" align="center">
 			<h3>
