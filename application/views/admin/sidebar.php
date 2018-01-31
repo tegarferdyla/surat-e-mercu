@@ -14,7 +14,7 @@
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">MAIN NAVIGATION</li>
+          <li class="header">NAVIGASI UTAMA</li>
 
           <!-- isi side bar navigation -->
 
@@ -22,7 +22,7 @@
           <li>
             <a href="<?php echo site_url('admin')?>">
               <i class="fa fa-home"></i>
-              <span>Dashboard</span>
+              <span>Beranda</span>
             </a>
           </li>
 
@@ -36,10 +36,10 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?php echo site_url('admin/waitingsidang') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
-              <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="<?php echo site_url('admin/finishsidang') ?>"><i class="fa fa-check"></i> Finish</a></li>
-              <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
+              <li><a href="<?php echo site_url('admin/waitingsidang') ?>"><i class="fa fa-spinner"></i> Menunggu</a></li>
+              <li><a href="#"><i class="fa fa-pencil"></i> Proses</a></li>
+              <li><a href="<?php echo site_url('admin/finishsidang') ?>"><i class="fa fa-check"></i> Selesai</a></li>
+              <li><a href="#"><i class="fa fa-external-link"></i> Terima</a></li>
             </ul>
           </li>
 
@@ -53,10 +53,10 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
-              <li><a href="#"><i class="fa fa-pencil"></i> Process</a></li>
-              <li><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
-              <li><a href="#"><i class="fa fa-external-link"></i> Take</a></li>
+              <li><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Menunggu</a></li>
+              <li><a href="#"><i class="fa fa-pencil"></i> Proses</a></li>
+              <li><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Selesai</a></li>
+              <li><a href="#"><i class="fa fa-external-link"></i> Terima</a></li>
             </ul>
           </li>
 
@@ -64,7 +64,7 @@
           <li>
             <a href="#">
               <i class="fa fa-user"></i>
-              <span>Setting Dosen</span>
+              <span>Pengaturan Dosen</span>
             </a>
           </li>
         </ul>

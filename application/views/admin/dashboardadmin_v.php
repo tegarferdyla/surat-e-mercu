@@ -6,7 +6,7 @@
               Selamat Datang di Halaman Admin E-Surat Mercu
             </h1>
             <ol class="breadcrumb">
-              <li class="active"><a href="<?php echo base_url('admin')?>"><i class="fa fa-home"></i> Home</a></li>
+              <li class="active"><a href="<?php echo base_url('admin')?>"><i class="fa fa-home"></i> Beranda</a></li>
             </ol>
           </section>
 
@@ -18,7 +18,7 @@
               <div class="col-xs-12 col-md-6 col-sm-12">
                 <div class="box box-primary">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Status Waiting</h3>
+                    <h3 class="box-title">Status Menunggu</h3>
                     <div class="box-tools pull-right">
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                       <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -34,7 +34,7 @@
                         <div class="icon">
                           <i class="ion ion-university"></i>
                         </div>
-                        <a href="<?php echo base_url('admin/waitingsidang') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url('admin/waitingsidang') ?>" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
@@ -46,7 +46,7 @@
                         <div class="icon">
                           <i class="ion ion-briefcase"></i>
                         </div>
-                        <a href="<?php echo base_url('admin/waitingkp') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo base_url('admin/waitingkp') ?>" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                   </div>
@@ -58,7 +58,7 @@
               <div class="col-xs-12 col-md-6 col-sm-12">
                 <div class="box box-primary">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Status Process</h3>
+                    <h3 class="box-title">Status Proses</h3>
                     <div class="box-tools pull-right">
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                       <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -74,7 +74,7 @@
                         <div class="icon">
                           <i class="ion ion-university"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="#" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
@@ -86,7 +86,7 @@
                         <div class="icon">
                           <i class="ion ion-briefcase"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="#" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                   </div>
@@ -100,7 +100,7 @@
               <div class="col-xs-12 col-md-6 col-sm-12">
                 <div class="box box-primary">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Status Finish</h3>
+                    <h3 class="box-title">Status Selesai</h3>
                     <div class="box-tools pull-right">
                       <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                       <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -116,7 +116,7 @@
                       <div class="icon">
                         <i class="ion ion-university"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      <a href="#" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
@@ -128,7 +128,7 @@
                       <div class="icon">
                         <i class="ion ion-briefcase"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      <a href="#" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -140,7 +140,7 @@
             <div class="col-xs-12 col-md-6 col-sm-12">
               <div class="box box-primary">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Status Take</h3>
+                  <h3 class="box-title">Status Terima</h3>
                   <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -156,7 +156,7 @@
                       <div class="icon">
                         <i class="ion ion-university"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      <a href="#" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
@@ -168,15 +168,13 @@
                       <div class="icon">
                         <i class="ion ion-briefcase"></i>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                      <a href="#" class="small-box-footer">Info lebih lanjut <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- akhir chart take -->
-
-          </div>
         </div>
       </section>
     </div>
