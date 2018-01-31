@@ -91,3 +91,71 @@
     </script>
 
 </html>
+
+<script type="text/javascript">
+$(function(){
+$.ajaxSetup({
+type:"POST",
+url: "<?php echo base_url('index.php/select/ambil_data') ?>",
+cache: false,
+});
+
+$("#provinsi").change(function(){
+  var value=$(this).val();
+  if(value>0){
+    $.ajax({
+        data:{modul:'kabupaten',id:value},
+        success: function(respond){
+          $("#kabupaten-kota").html(respond);
+        }
+    })
+     $.ajax({
+        data:{modul:'kecamatan',id:value},
+          success: function(respond){
+          $("#kecamatan").html(respond);
+        }
+    })
+  }else{
+    $.ajax({
+        data:{modul:'kabupaten',id:value},
+        success: function(respond){
+          $("#kabupaten-kota").html(respond);
+        }
+    })
+
+    $.ajax({
+        data:{modul:'kecamatan',id:value},
+          success: function(respond){
+          $("#kecamatan").html(respond);
+        }
+    })
+
+  }
+});
+
+
+
+
+$("#kabupaten-kota").change(function(){
+  var value=$(this).val();
+  if(value>0){
+      $.ajax({
+        data:{modul:'kecamatan',id:value},
+        success: function(respond){
+        $("#kecamatan").html(respond);
+      }
+    })
+  }else{
+      $.ajax({
+        data:{modul:'kecamatan',id:value},
+        success: function(respond){
+        $("#kecamatan").html(respond);
+      }
+    })
+   }
+})
+
+
+})
+
+</script>
