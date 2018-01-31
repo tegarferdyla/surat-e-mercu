@@ -100,12 +100,12 @@ class Mahasiswa extends CI_Controller {
 				}
 
 				$this->session->set_flashdata('berhasil', 'true');
-				redirect('mahasiswa/formkp');
+				redirect('mahasiswa/status');
 		}
 
 
 	}
-	public function lihat(){
+	public function status(){
 
 		$this->load->view('mahasiswa/header');
 		$this->load->view('mahasiswa/status');

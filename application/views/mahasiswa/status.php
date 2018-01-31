@@ -1,3 +1,15 @@
+    <div class="row">
+      <br>
+      <div class="col-md-8 col-md-offset-2">
+        
+               <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h4><i class="icon fa fa-check"></i>Info</h4>
+                  Anda Berhasil Mendaftar Surat Kerja Praktek
+              </div>    
+           
+      </div>
+    </div>
     <h1 align="center">LIHAT STATUS PENGAJUAN RISET KP</h1>
     <br>
     <br>
