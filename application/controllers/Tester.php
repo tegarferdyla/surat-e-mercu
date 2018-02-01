@@ -44,7 +44,9 @@ class Tester extends CI_Controller {
         echo $this->daftarsurat_model->GetIdSuratToMahasiswa($this->session->userdata('nim'))->id_surat;
         
     }
-
+public function tiket(){
+    $this->load->view('tiket/pdf');
+}
 }
 
 /* End of file Tester.php */
