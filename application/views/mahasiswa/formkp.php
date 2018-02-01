@@ -29,7 +29,7 @@
 					<!-- Nama Perusahaan -->
 				 	<label class="col-md-3" for="namaperusahaan">Nama Perusahaan yang dituju</label>
 				 	<div class="col-md-6">
-			 			<input type="text" name="namaperusahaan" class="form-control" required>
+			 			<input type="text" name="namaperusahaan" class="form-control" required placeholder="Nama Perusahaan">
 			 		</div>
 				</div>
 
@@ -37,22 +37,87 @@
 					<!-- Orang yang dituju -->
 				 	<label class="col-md-3" for="namaygdituju" >Orang yang Dituju</label>
 				 	<div class="col-md-6">
-			 			<input type="text" name="namefor" class="form-control" required>
+			 			<input type="text" name="namefor" class="form-control" required placeholder="Orang Dituju">
+			 		</div>
+				</div>
+
+				<div class="form-group inline">
+					<!-- Orang yang dituju -->
+				 	<label class="col-md-3" for="jabatan" >Jabatan</label>
+				 	<div class="col-md-6">
+			 			<input type="text" name="jabatan" class="form-control" required placeholder="Orang Dituju">
 			 		</div>
 				</div>
 
 				<div class="form-group inline">
 					<!-- Alamat Perusahaan -->
-				 	<label class="col-md-3" for="alamat" >Alamat Perusahaan</label>
+				 	<label class="col-md-3" for="propinsi" >Propinsi</label>
 				 	<div class="col-md-6">
-			 			<input type="text" name="alamat" class="form-control" required>
+			 			<select class='form-control' id='provinsi' name="provinsi" required>
+						  <option value=''>Pilih Provinsi</option>
+							<?php 
+							 foreach ($provinsi as $prov) {
+							   echo "<option value='$prov[id]'>$prov[nama]</option>";
+							}
+						?>
+						</select>
 			 		</div>
 				</div>
 
 				<div class="form-group inline">
+					<!-- Alamat Perusahaan -->
+				 	<label class="col-md-3" for="alamat" >Kabupaten/Kota</label>
+				 	<div class="col-md-6">
+			 			<select class='form-control' id='kabupaten-kota' name="kota_kabupaten" required>
+							<option value=''>Pilih Kabupaten/Kota</option>
+						</select>
+			 		</div>
+				</div>
+
+				<div class="form-group inline">
+					<!-- Alamat Perusahaan -->
+				 	<label class="col-md-3" for="kecamatan" >Kecamatan</label>
+				 	<div class="col-md-6">
+			 			<select class='form-control' id='kecamatan' name="kecamatan" required>
+							<option value=''>Pilih Kecamatan</option>
+						</select>
+			 		</div>
+				</div>
+
+				<div class="form-group inline">
+					<!-- Alamat Perusahaan -->
+				 	<label class="col-md-3" for="kecamatan" >Kelurahan/Desan</label>
+				 	<div class="col-md-6">
+			 			<select class='form-control' id='kelurahan-desa' name="kelurahan" required>
+							<option value=''>Pilih Kelurahan</option>
+						</select>
+			 		</div>
+				</div>
+
+				<div class="form-group inline">
+					<!-- Alamat Perusahaan -->
+				 	<label class="col-md-3" for="kodepos" >Kode Pos</label>
+				 	<div class="col-md-6">
+			 			<select class='form-control' id='kodepos' name="kodepos" required>
+							<option value=''>Pilih Kode Pos</option>
+						</select>
+			 		</div>
+				</div>
+
+				<div class="form-group inline">
+					<!-- Alamat Perusahaan -->
+				 	<label class="col-md-3" for="alamat" >Alamat Jalan Perusahaan</label>
+				 	<div class="col-md-6">
+			 			<input type="text" name="alamat" class="form-control" required placeholder="contoh: Jln Galunggung no.xx">
+			 		</div>
+				</div>
+
+				
+
+				<div class="form-group inline">
 					<!-- Jumlah Anggota -->
 				 	<label class="col-md-3" for="tambah" >Jumlah Anggota </label>
-				 	<div class="col-md-1">
+				 	<div class="col-md-6">
 					 	<select id="anggota" name="anggota" class="form-control text-center">
 					 		<option value="1">1</option>
 					 		<option value="2">2</option>
@@ -220,7 +285,7 @@
 				<div class="form-group">
 				 	<!-- Button -->
 				 	<div class="col-md-offset-10">
-				 		<button class="btn btn-primary">Submit</button>
+				 		<button class="btn btn-primary">Daftar</button>
 				 	</div>
 				</div>
 			</div>

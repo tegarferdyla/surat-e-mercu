@@ -23,7 +23,13 @@
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                   <h4><i class="icon fa fa-check"></i>Info</h4>
                   Berhasil Merubah Status Kerja Praktek menjadi Proses
-                </div>  
+                </div>
+                <?php elseif($this->session->flashdata('infotolak')): ?>
+                 <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h4><i class="icon fa fa-check"></i>Info</h4>
+                  Berhasil Merubah Status Kerja Praktek menjadi Tolak
+                </div>
                 <?php endif ?>
                 <div class="box">
                   <div class="box-header">
@@ -59,7 +65,7 @@
                                 Proses
                               </button>
                                 <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-default">Detail</a>
-                                <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-danger">TOLAK</a>
+                                <a href="<?php echo site_url("admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">TOLAK</a>
                               </div>
                             </td>
                           </tr>
