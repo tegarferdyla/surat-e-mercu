@@ -18,18 +18,42 @@ class Mahasiswa extends CI_Controller {
 	{
 		$this->load->view('mahasiswa/header');
 		$this->load->view('mahasiswa/pilihan');
+
     $this->load->view('home/footer');
 		echo "berhasil login sebagai user ";
 	    echo $this->session->userdata('nama_mahasiswa');
 	    echo anchor('login?logout=signout', 'keluar');
 
+
 	}
 
 	public function formkp()
 	{
+		$data['provinsi']=$this->daerah_model->provinsi();
 		$this->load->view('mahasiswa/header');
-		$this->load->view('mahasiswa/formkp');
+		$this->load->view('mahasiswa/formkp',$data);
 		$this->load->view('home/footer');
+	}
+
+
+	public function select_daerah()
+	{
+
+		$modul=$this->input->post('modul');
+		$id=$this->input->post('id');
+
+		if($modul=="kabupaten"){
+			echo $this->daerah_model->kabupaten($id);
+		}
+		else if($modul=="kecamatan"){
+			echo $this->daerah_model->kecamatan($id);
+
+		}
+		else if($modul=="kelurahan"){
+			echo $this->daerah_model->kelurahan($id);
+		}else if($modul=="kodepos"){
+			echo $this->daerah_model->kodepos($id);
+		}
 	}
 
 	
@@ -57,7 +81,9 @@ class Mahasiswa extends CI_Controller {
 		  		$prodi 			= $this->session->userdata('jurusan');
 	  			$jenis 			= $this->uri->segment(2);
 	  			$jenis_surat	="";
-
+	  			$namekota		= $this->daerah_model->getNameKotaKabupaten($this->input->post('kota_kabupaten'))->name;
+	  			$namekecamatan  = $this->daerah_model->getNameKecamatan($this->input->post('kecamatan'))->name;
+	  			$alamat_lengkap = $this->input->post('alamat').", ".ucwords(strtolower($namekecamatan));
 				if ($jenis =='daftarsuratkp') {
 	  				$jenissurat = "Kerja Praktek";
 	  			}else{
@@ -68,8 +94,11 @@ class Mahasiswa extends CI_Controller {
 					'id_surat'			 => $this->nomorsurat_model->IDSurat(),
 					'no_surat'  		 => '',
 					'nama_perusahaan' 	 => $this->input->post('namaperusahaan'),
-					'alamat_perusahaan'  => $this->input->post('alamat'),
+					'alamat_perusahaan'  => $alamat_lengkap,
 					'orang_dituju'   	 => $this->input->post('namefor'),
+					'jabatan'			 => $this->input->post('jabatan'),
+					'kota'				 => ucwords($namekota),
+					'kodepos'			 => $this->input->post('kodepos'),
 					'jenis_surat'    	 => 'Kerja Praktek',
 					'tanggal_diajukan'   => date('Y-m-d'),
 					'tanggal_selesai'    => '0000-00-00',
@@ -93,7 +122,7 @@ class Mahasiswa extends CI_Controller {
 			  		$data = array(
 			  			'id_surat'			=> $idsurat,
 			  			'nim'	  			=> $nimmahasiswa,
-			  			'nama_mahasiswa'	=> $nama	
+			  			'nama_mahasiswa'	=> ucwords(strtolower($nama))
 			  		);
 					
 					$this->daftarsurat_model->InsertMahasiswa($data);
@@ -110,6 +139,25 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('mahasiswa/header');
 		$this->load->view('mahasiswa/status');
 	    $this->load->view('home/footer');
+	}
+
+
+	public function lihat()
+	{
+		$nim = $this->session->userdata('nim');
+
+		$data['statuskp'] = $this->statussurat_model->StatusKpSuratMahasiswa($nim);
+		$data['statusta'] = $this->statussurat_model->StatusTASuratMahasiswa($nim);
+
+		$this->load->view('mahasiswa/header');
+		$this->load->view('mahasiswa/status',$data);
+	    $this->load->view('home/footer');
+	}
+
+	public function cek()
+	{
+		$kode = $this->input->post('kodepos');
+		redirect('http://kodepos.posindonesia.co.id/kodeposalamatindonesialist.php?cmd=search&t=kodeposalamatindonesia&z_Propinsi=%3D&x_Propinsi=&psearch=222&psearchtype=');
 	}
 
 }
