@@ -1,8 +1,10 @@
+
     <h1 align="center"> STATUS PENGAJUAN RISET KP</h1>
     <br>
     <br>
     <br>
     <table class="table table-striped" id="datatable" >
+
     <thead>
       <tr>
         <th>Nama Mahasiswa</th>
@@ -12,6 +14,7 @@
       </tr>
     </thead>
     <tbody>
+
       <?php $class=""; ?>
       <?php foreach ($statuskp as $value): ?>
         <?php 
@@ -46,6 +49,7 @@
           </td>
       </tr>
       <?php endforeach ?>
+
     </tbody>
   </table>
 
@@ -66,6 +70,7 @@
       </tr>
     </thead>
     <tbody>
+
       <?php $class=""; ?>
       <?php foreach ($statusta as $value): ?>
         <?php 
@@ -100,5 +105,6 @@
           </td>
       </tr>
       <?php endforeach ?>
+
     </tbody>
   </table>

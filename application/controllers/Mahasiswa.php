@@ -18,7 +18,12 @@ class Mahasiswa extends CI_Controller {
 	{
 		$this->load->view('mahasiswa/header');
 		$this->load->view('mahasiswa/pilihan');
-        $this->load->view('home/footer');
+
+    $this->load->view('home/footer');
+		echo "berhasil login sebagai user ";
+	    echo $this->session->userdata('nama_mahasiswa');
+	    echo anchor('login?logout=signout', 'keluar');
+
 
 	}
 
@@ -29,6 +34,7 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('mahasiswa/formkp',$data);
 		$this->load->view('home/footer');
 	}
+
 
 	public function select_daerah()
 	{
@@ -126,6 +132,13 @@ class Mahasiswa extends CI_Controller {
 				redirect('mahasiswa/formkp');
 		}
 
+
+	}
+	public function lihat(){
+
+		$this->load->view('mahasiswa/header');
+		$this->load->view('mahasiswa/status');
+	    $this->load->view('home/footer');
 	}
 
 
