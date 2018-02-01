@@ -50,10 +50,12 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/tolakemailta_v');
 		$this->load->view('admin/footer');
 	}
-    public function tolakemailkp(){
+    public function tolakemailkp($id_surat){
+    	$data['detailkp'] = $this->tampilsurat_model->get_email_user_kp($id_surat);
+
     	$this->load->view('admin/header');
     	$this->load->view('admin/sidebar');
-    	$this->load->view('admin/tolakemailkp_v');
+    	$this->load->view('admin/tolakemailkp_v',$data);
     	$this->load->view('admin/footer');
     }
 	public function waitingTA()
