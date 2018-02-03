@@ -49,6 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return $query->result(); 
 		}
 
+		
+
 		public function get_email_user_ta($id_surat)
 		{
 			$sql = "SELECT b.email,a.id_surat FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Tugas Akhir' AND a.id_surat='$id_surat' ";

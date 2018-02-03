@@ -38,7 +38,7 @@
           <label for="nim" class="col-sm-2 control-label">NIM</label>
           <div class="col-sm-6">
             <div class="row">
-              <span class="text-danger"><?=form_error('kodenim')?></span>
+              <!-- <span class="text-danger"><?=form_error('kodenim')?></span> -->
                <span class="text-danger"><?=form_error('nimmhs')?></span>
               <div class="col-sm-3 col-xs-4">
                 <input type="text" class="form-control"  value="<?=set_value('kodenim')?>" id="kodenim" name="kodenim" readonly >

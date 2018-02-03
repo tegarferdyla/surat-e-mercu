@@ -5,6 +5,14 @@
     <br>
     <br>
     <br>
+    <?php  if($this->session->flashdata('berhasil')): ?>
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4><i class="icon fa fa-check"></i>Info</h4>
+        Berhasil Mendaftar Surat KP
+    </div>
+  <?php endif; ?>
+
     <table class="table table-striped" id="datatable" >
 
     <thead>
@@ -71,7 +79,7 @@
         <th>Status</th>
       </tr>
     </thead>
-    <tbody>
+    <!-- <tbody>
 
       <?php $class=""; ?>
       <?php foreach ($statusta as $value): ?>
@@ -108,5 +116,5 @@
       </tr>
       <?php endforeach ?>
 
-    </tbody>
+    </tbody> -->
   </table>
