@@ -1,7 +1,7 @@
 <!-- Content Wrapper. Contains page content -->
     <!-- Content Header (Page header) -->
     <!-- Main content -->
-    <section class="content container" style="padding: 0px 0px;">
+    <section class="content container-fluid" style="padding: 0px 0px;">
      <div class="row">
        <div class="login-box">
           <div class="login-logo">

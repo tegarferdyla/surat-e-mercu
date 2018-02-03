@@ -40,11 +40,14 @@ class Surat extends CI_Controller {
 	    
 	    $data = array(
 	    	'nama_mahasiswa' => $kirimemail->nama_mahasiswa,
-	    	'jenis_surat' => $kirimemail->jenis_surat
+	    	'jenis_surat' => $kirimemail->jenis_surat,
+	    	'nim'		  => $kirimemail->nim,
+	    	'tanggal_diajukan' =>$kirimemail->tanggal_diajukan,
+	    	'no_surat'   => $kirimemail->no_surat
 	    );
 	    //Load html view
 	    $this->html2pdf->html($this->load->view('tiket/pdf', $data, true));
-	    
+	    $subjek = "[E-SURAT] "." ".$kirimemail->nama_mahasiswa." ".$kirimemail->jenis_surat;
 	    //Check that the PDF was created before we send it
 	    if($path = $this->html2pdf->create('save')) {
 	    	
@@ -63,30 +66,29 @@ class Surat extends CI_Controller {
 		    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
 			$this->email->to($emailmahasiswa); 
 				
-			$this->email->subject('Tiket Pengambilan Mahasiswa');
+			$this->email->subject($subjek);
 			$this->email->message('Haloo Ini adalah tiket bukti pembayaran kamu');	
 			$this->email->attach($path);
 			$this->email->send();
 			
 			$this->session->set_flashdata('info','true');
 			redirect('admin/proseskp');
-						
-	    }
+		}
 		
 	}
+
+	
 
 	public function kirimpesantolak()
 	{
 		
         $kepada = $this->input->post('emaildikirim');
 		$subjek = $this->input->post('subjek');
+		$id_surat = $this->input->post('id_surat');
 
 		$isi    = $this->input->post('isipesantolak');
 		
-		echo $isi;
-
-
-    	$config = Array(  
+		$config = Array(  
 	        'protocol' => 'smtp',  
 	        'smtp_host' => 'https://www.mohagustiar.info/',  
 	        'smtp_port' =>  465,  
@@ -100,7 +102,7 @@ class Surat extends CI_Controller {
         $this->load->library('email', $config);  
         $this->email->set_newline("\r\n");  
 	    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
-		$this->email->to('rakahikmah46@gmail.com'); 
+		$this->email->to($kepada); 
 			
 		$this->email->subject($subjek);
 		$this->email->message($isi);
