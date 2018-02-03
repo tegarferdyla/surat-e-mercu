@@ -4,10 +4,10 @@
           <section class="content-header">
             <h1>
               Tabel Kerja Praktek
-              <span class="label label-primary">Waiting</span>
+              <span class="label label-primary">Menunggu</span>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
+              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Beranda</a></li>
               <li><i class="fa fa-building-o"></i> Surat Kerja Praktek</li>
               <li class="active"><i class="fa fa-table"></i> Tabel Surat Kerja Praktek</li>
             </ol>
@@ -23,12 +23,15 @@
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                   <h4><i class="icon fa fa-check"></i>Info</h4>
                   Berhasil Merubah Status Kerja Praktek menjadi Proses
-                </div>  
+                </div>
+                <?php elseif($this->session->flashdata('infotolak')): ?>
+                 <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h4><i class="icon fa fa-check"></i>Info</h4>
+                  Berhasil Merubah Status Kerja Praktek menjadi Tolak
+                </div>
                 <?php endif ?>
                 <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title">Table Waiting</h3>
-                  </div>
                   <!-- /<div class="bo">/div>x-header -->
                     <div class="box-body table-responsive">
                       <table id="datatable" class="table table-bordered table-striped">
@@ -58,47 +61,45 @@
                                <button class="btn btn-primary" data-href="<?=site_url("surat/ubahProsesKP/$u->id_surat")?>" data-toggle="modal" data-target="#confirm" >
                                 Proses
                               </button>
-                                <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-default">Detail</a>
-                                <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-danger">TOLAK</a>
+                                <a href="<?php echo site_url("admin/detailkp") ?>" class="btn btn-default">Detail</a>
+                                <a href="<?php echo site_url("admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">TOLAK</a>
                               </div>
                             </td>
                           </tr>
                         <?php } ?>
                         </tbody>
                       </table>
-
-
                     </div>
                     <!-- /.box-body -->
                   </div>
                   <!-- /.box -->
                 </div>
-                <!-- /.col -->
+              </td>
+            </tr>                
+                  <!-- /.row -->
+                </section>
+                <!-- /.content -->
               </div>
-              <!-- /.row -->
-            </section>
-            <!-- /.content -->
-          </div>
-        </body>
+            </body>
 
-         <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            
-                <div class="modal-header">
+            <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="myModalLabel">Konfirmasi</h4>
-                </div>
-            
-                <div class="modal-body">
+                  </div>
+
+                  <div class="modal-body">
                     <p>Apakah anda yakin ingin mengubah dari waiting ke proses </p>
                     <p class="debug-url"></p>
-                </div>
-                
-                <div class="modal-footer">
+                  </div>
+
+                  <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary btn-ok">Konfirmasi</a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>

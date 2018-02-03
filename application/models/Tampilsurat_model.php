@@ -5,11 +5,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		# Query menampilkan Data KP Status = 'Waiting'
 		public function tampil_datakp_waiting()
 		{
-			$sql = "SELECT a.id_surat,a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Kerja Praktek' ORDER BY id_surat DESC";
+			$sql = "SELECT b.email,a.id_surat,a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Kerja Praktek' ORDER BY id_surat DESC";
 			$query = $this->db->query($sql);
 
 			return $query->result(); 
 		}
+
+		public function get_email_user_kp($id_surat)
+		{
+			$sql = "SELECT b.email,a.id_surat FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Kerja Praktek' AND a.id_surat='$id_surat' ";
+			$query = $this->db->query($sql);
+
+			return $query->row(); 
+		}
+
+
 		# Query menampilkan Data KP Status = 'Proses'
 		public function tampil_datakp_proses(){
 			$sql = "SELECT a.no_surat, a.id_surat,a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi,b.email FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Proses' AND a.jenis_surat ='Kerja Praktek' ORDER BY id_surat DESC";
@@ -38,6 +48,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			return $query->result(); 
 		}
+
+		public function get_email_user_ta($id_surat)
+		{
+			$sql = "SELECT b.email,a.id_surat FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Tugas Akhir' AND a.id_surat='$id_surat' ";
+			$query = $this->db->query($sql);
+
+			return $query->row(); 
+		}
+
+
 		# Query menampilkan Data TA Status = 'Proses'
 		public function tampil_datata_proses(){
 			$sql = "SELECT a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Proses' AND a.jenis_surat ='Tugas Akhir' ORDER BY id_surat DESC";
@@ -101,6 +121,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			return $query->result_array();
 		}
+
+		
 
 
 	}
