@@ -2,12 +2,15 @@
 	<div class="container-fluid">
 		<div class="row">
 
-			<p class="text-center"> 
+			
+      <div class="col-md-12"> 
+        <p class="text-center">
 		Copyright &copy; <?php echo date("Y"); ?> Aslab Fasilkom <br>
 		Fakultas Ilmu Komputer <br>
 		Universitas Mercu Buana edit</p>
 			</div>
 		</div>
+    </div>
 	</div>
 </div>
 
