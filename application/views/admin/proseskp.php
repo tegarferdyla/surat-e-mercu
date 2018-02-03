@@ -26,9 +26,6 @@
                 <?php endif ?>
 
                 <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title">Process Table</h3>
-                  </div>
                   <!-- /<div class="bo">/div>x-header -->
                   <div class="box-body table-responsive">
                     <table id="datatable" class="table table-bordered table-striped">

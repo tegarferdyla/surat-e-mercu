@@ -32,9 +32,6 @@
                 </div>
                 <?php endif ?>
                 <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title">Table Waiting</h3>
-                  </div>
                   <!-- /<div class="bo">/div>x-header -->
                     <div class="box-body table-responsive">
                       <table id="datatable" class="table table-bordered table-striped">
@@ -64,7 +61,7 @@
                                <button class="btn btn-primary" data-href="<?=site_url("surat/ubahProsesKP/$u->id_surat")?>" data-toggle="modal" data-target="#confirm" >
                                 Proses
                               </button>
-                                <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-default">Detail</a>
+                                <a href="<?php echo site_url("admin/detailkp") ?>" class="btn btn-default">Detail</a>
                                 <a href="<?php echo site_url("admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">TOLAK</a>
                               </div>
                             </td>
@@ -72,8 +69,6 @@
                         <?php } ?>
                         </tbody>
                       </table>
-
-
                     </div>
                     <!-- /.box-body -->
                   </div>
