@@ -1,7 +1,7 @@
-<div class="container-fluid form-login">
+<div class="container form-login">
   <div class="row">
     
-    <div class="col-md-8  col-xs-12 col-md-8 col-sm-offset-3 col-md-offset-3">
+    <div class="col-md-8 col-xs-12 col-md-offset-3">
       
       <div class="row">
         <div class="col-md-8">

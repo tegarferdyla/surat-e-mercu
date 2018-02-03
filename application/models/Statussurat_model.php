@@ -4,6 +4,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Statussurat_model extends CI_Model {
 
 	// SURAT KP
+	public function StatusKpSuratMahasiswa($nim)
+	{
+		$this->db->select("*");
+		$this->db->from('surat');
+		$this->db->join('user','user.nim=surat.nim');
+		$this->db->where('surat.nim',$nim);
+		$this->db->where('jenis_surat','Kerja Praktek');
+		$query = $this->db->get();
+
+		return $query->result();
+	}
+
+	public function SuratKpToTolak($id_surat)
+	{
+		$data = array(
+			'status'=>'Di Tolak',
+		);
+
+		$this->db->where('id_surat',$id_surat);
+		$this->db->where('jenis_surat','Kerja Praktek');
+		$this->db->limit(1);
+		return $this->db->update('surat',$data);
+	}
+
 	public function SuratKpToProses($id_surat,$nomorsuratkp)
 	{
 		$data = array (
@@ -84,6 +108,30 @@ class Statussurat_model extends CI_Model {
 	}
 
 	// SURAT TA
+	public function StatusTASuratMahasiswa($nim)
+	{
+		$this->db->select("*");
+		$this->db->from('surat');
+		$this->db->join('user','user.nim=surat.nim');
+		$this->db->where('surat.nim',$nim);
+		$this->db->where('jenis_surat','Tugas Akhir');
+		$query = $this->db->get();
+
+		return $query->result();
+	}
+
+	public function SuratTAToTolak($id_surat)
+	{
+		$data = array(
+			'status'=>'Di Tolak',
+		);
+
+		$this->db->where('id_surat',$id_surat);
+		$this->db->where('jenis_surat','Tugas Akhir');
+		$this->db->limit(1);
+		return $this->db->update('surat',$data);
+	}
+
 	public function SuratTAToProses($id_surat)
 	{
 		$data = array(

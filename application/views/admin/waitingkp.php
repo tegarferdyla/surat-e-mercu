@@ -23,49 +23,61 @@
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                   <h4><i class="icon fa fa-check"></i>Info</h4>
                   Berhasil Merubah Status Kerja Praktek menjadi Proses
-                </div>  
-              <?php endif ?>
-              <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">Table Waiting</h3>
                 </div>
-                <!-- /<div class="bo">/div>x-header -->
-                  <div class="box-body table-responsive">
-                    <table id="datatable" class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>No</th>
-                          <th>Tanggal</th>
-                          <th>NIM</th>
-                          <th>Nama</th>
-                          <th>Program Studi</th>
-                          <th>Aksi</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <?php $no=1; ?>
-                        <?php 
-                        foreach ($surat as $u) {
+                <?php elseif($this->session->flashdata('infotolak')): ?>
+                 <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h4><i class="icon fa fa-check"></i>Info</h4>
+                  Berhasil Merubah Status Kerja Praktek menjadi Tolak
+                </div>
+                <?php endif ?>
+                <div class="box">
+                  <div class="box-header">
+                    <h3 class="box-title">Table Waiting</h3>
+                  </div>
+                  <!-- /<div class="bo">/div>x-header -->
+                    <div class="box-body table-responsive">
+                      <table id="datatable" class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Program Studi</th>
+                            <th>Aksi</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php $no=1; ?>
+                          <?php 
+                          foreach ($surat as $u) {
                           ?>
                           <tr>
                            <td><?php echo $no++; ?></td>
-                           <td><?php echo date('d-M-Y',strtotime($u->tanggal_diajukan))  ?></td>
-                           <td><?php echo $u->nim; ?></td>
-                           <td><?php echo $u->nama_mahasiswa; ?></td>
-                           <td><?php echo $u->prodi; ?></td>
-                           <td>
-                            <div class="btn-group">
-                             <button class="btn btn-primary" data-href="<?=site_url("surat/ubahProsesKP/$u->id_surat")?>" data-toggle="modal" data-target="#confirm" >
-                              Proses
-                            </button>
-                            <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-default">Detail</a>
-                            <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-danger">TOLAK</a>
-                          </div>
-                        </td>
-                      </tr>
-                      <?php } ?>
-                    </tbody>
-                  </table>
+                            <td><?php echo date('d-M-Y',strtotime($u->tanggal_diajukan))  ?></td>
+                            <td><?php echo $u->nim; ?></td>
+                            <td><?php echo $u->nama_mahasiswa; ?></td>
+                            <td><?php echo $u->prodi; ?></td>
+                            <td>
+                              <div class="btn-group">
+                               <button class="btn btn-primary" data-href="<?=site_url("surat/ubahProsesKP/$u->id_surat")?>" data-toggle="modal" data-target="#confirm" >
+                                Proses
+                              </button>
+                                <a href="<?php echo site_url("admin/tolakemailkp") ?>" class="btn btn-default">Detail</a>
+                                <a href="<?php echo site_url("admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">TOLAK</a>
+                              </div>
+                            </td>
+                          </tr>
+                        <?php } ?>
+                        </tbody>
+                      </table>
+
+
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
                 </div>
               </td>
             </tr>                
