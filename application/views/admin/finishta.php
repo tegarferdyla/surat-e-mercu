@@ -3,11 +3,12 @@
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
+
               Tabel Tugas Akhir
-              <medium class="label label-success">Finish</medium>
+              <medium class="label label-success">Selesai</medium>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
+              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Beranda</a></li>
               <li><i class="fa fa-book"></i> Surat Tugas Akhir</li>
               <li class="active"><i class="fa fa-table"></i> Tabel Tugas Akhir</li>
             </ol>
@@ -20,9 +21,6 @@
                 <!-- /.box -->
 
                 <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title">Finish Table</h3>
-                  </div>
                   <!-- /<div class="bo">/div>x-header -->
                   <div class="box-body table-responsive">
                     <table id="datatable" class="table table-bordered table-striped">
@@ -55,15 +53,15 @@
                         <?php } ?>
                       </tbody>
                       </table>
+                    </div>
+                    <!-- /.box-body -->
                   </div>
-                  <!-- /.box-body -->
+                  <!-- /.box -->
                 </div>
-                <!-- /.box -->
+                <!-- /.col -->
               </div>
-              <!-- /.col -->
-            </div>
-            <!-- /.row -->
-          </section>
-          <!-- /.content -->
-        </div>
-      </body>
+              <!-- /.row -->
+            </section>
+            <!-- /.content -->
+          </div>
+        </body>
