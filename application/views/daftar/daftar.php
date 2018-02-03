@@ -86,19 +86,18 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-9">
-            <input type="submit" class="btn btn-primary col-sm-7" value="Sign Up">
+            <input type="submit" class="btn btn-primary btn-block" value="Sign Up">
           </div>
         </div>
       </form>
       <div class="form-group">
-        <div class="col-sm-2"></div>
         <div class="col-sm-8 col-md-8 col-xs-8">
          <label class="control-label">Sudah Punya Akun? Silahkan <a href="<?php echo site_url('login') ?>">Login</a></label>
        </div>
-       <div class="col-sm-2"></div>
+       
      </div>
    </div>
-   <div class="col-md-2"></div>
+   
  </div>
 </div>
 

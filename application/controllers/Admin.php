@@ -98,6 +98,19 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 
+	public function detailkp($idsurat)
+	{
+
+		$data['surat'] 		= $this->tampilsurat_model->detailKP($idsurat);
+		$data['mahasiswa']	= $this->tampilsurat_model->PrintMahasiswaKP($idsurat);
+
+
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/detailkp',$data);
+		$this->load->view('admin/footer');
+	}
+
 	public function takeTA()
 	{
 		$this->load->view('admin/header');
@@ -169,7 +182,6 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/printKP',$data);
 	}
-	
 }
 
 

@@ -79,7 +79,7 @@
         <th>Status</th>
       </tr>
     </thead>
-    <!-- <tbody>
+    <tbody>
 
       <?php $class=""; ?>
       <?php foreach ($statusta as $value): ?>
@@ -116,5 +116,5 @@
       </tr>
       <?php endforeach ?>
 
-    </tbody> -->
+    </tbody> 
   </table>

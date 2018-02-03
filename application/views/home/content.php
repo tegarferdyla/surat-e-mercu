@@ -13,10 +13,10 @@
 	<div class="row">
 		
 		<div class="col-md-4 col-md-offset-3">
-			<a href="<?php echo site_url('daftar') ?>" class="btn btn-primary btn-header col-md-4 col-xs-12">DAFTAR</a>
+			<a href="<?php echo site_url('daftar') ?>" class="btn btn-daftar btn-lg btn-header col-md-4 col-xs-12">DAFTAR</a>
 		</div>
 			<div class="col-md-4">
-				<a href="<?php echo site_url('login') ?>" class="btn btn-danger btn-header col-md-4 col-xs-12">LOGIN</a>
+				<a href="<?php echo site_url('login') ?>" class="btn btn-login btn-header btn-lg col-md-4 col-xs-12">LOGIN</a>
 			</div>
 			</div>
 	</div>
