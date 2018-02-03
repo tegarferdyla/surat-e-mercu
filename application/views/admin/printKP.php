@@ -28,7 +28,51 @@
 					</span>
 				</div>
 				<div class="col-xs-6">
-					<h4 class="pull-right tanggal">Jakarta, <?=date('d-F-Y',strtotime($surat['tanggal_diajukan']))?></h4>
+					<?php  
+						$pecah = explode("-",$surat['tanggal_diajukan']);
+						$bulanindo ="";
+						switch ($pecah[1]) {
+							    case '01':
+								   $bulanindo ="Januari";
+								break;
+								case '02':
+								   $bulanindo ="Febuari";
+								break;
+								case '03':
+								   $bulanindo ="Maret";
+								break;
+								case '04':
+								   $bulanindo ="April";
+								break;
+								case '05':
+								   $bulanindo ="Mei";
+								break;
+								case '06':
+								   $bulanindo ="Juni";
+								break;
+								case '07':
+								   $bulanindo ="Juli";
+								break;
+								case '08':
+								   $bulanindo ="Agustus";
+								break;
+								case '09':
+								   $bulanindo ="September";
+								break;
+								case '10':
+								   $bulanindo ="Oktober";
+								break;
+								case '11':
+								   $bulanindo ="November";
+								break;
+								case '12':
+								   $bulanindo ="Desember";
+								break;
+						}
+						$tanggal_fix = $pecah[2]." ".$bulanindo." ".$pecah[0];
+					?>
+
+					<h4 class="pull-right tanggal">Jakarta, <?=$tanggal_fix?></h4>
 				</div><!-- /.col-xs-6 -->
 			</div>
 			<span class="hidden-print warning"><h1 class="text-center">Harus Memakai Browser CHROME!</h1></span>
@@ -57,9 +101,9 @@
 			<p id="kepadayth">Kepada Yth,</p>
 			<p id="kepadayth"><?=$surat['nama_perusahaan']?></p>
 			<p id="kepadayth-1"><?=$surat['alamat_perusahaan']?></p>
-			<p id="kepadayth-1">--kota--</p>
-			<p id="kepadayth"><?=$surat['orang_dituju']?></p>
-			<p id="kepadayth">--Jabatan--</p>
+			<p id="kepadayth-1"><?=$surat['kota']?> <?=$surat['kodepos']?></p>
+			<p id="kepadayth">UP. <?=$surat['orang_dituju']?></p>
+			<p id="kepadayth"><?=$surat['jabatan_dituju']?></p>
 		</div>
 		<br /><br />
 		<div class="container isipesan">
@@ -84,34 +128,7 @@
 					</tr>
 				<?php endforeach ?>
 
-				<?php foreach ($mahasiswa as $vmahasiswa): ?>
-					<tr>
-						<td><?=$no++?></td>
-						<td><?=$vmahasiswa['nama_mahasiswa']?></td>
-						<td><?=$vmahasiswa['nim']?></td>
-					</tr>
-				<?php endforeach ?>
-				<?php foreach ($mahasiswa as $vmahasiswa): ?>
-					<tr>
-						<td><?=$no++?></td>
-						<td><?=$vmahasiswa['nama_mahasiswa']?></td>
-						<td><?=$vmahasiswa['nim']?></td>
-					</tr>
-				<?php endforeach ?>
-				<?php foreach ($mahasiswa as $vmahasiswa): ?>
-					<tr>
-						<td><?=$no++?></td>
-						<td><?=$vmahasiswa['nama_mahasiswa']?></td>
-						<td><?=$vmahasiswa['nim']?></td>
-					</tr>
-				<?php endforeach ?>
-				<?php foreach ($mahasiswa as $vmahasiswa): ?>
-					<tr>
-						<td><?=$no++?></td>
-						<td><?=$vmahasiswa['nama_mahasiswa']?></td>
-						<td><?=$vmahasiswa['nim']?></td>
-					</tr>
-				<?php endforeach ?>
+				
 			</table>
 			<p class="text-justify">Demikian Surat permohonan kami, atas perhatian dan bantuan Bapak/Ibu kami ucapkan terima kasih.</p>
 			<br /><br />
@@ -130,3 +147,6 @@
 	</div>
 </body>
 </html>
+<script>
+    window.print();
+</script>

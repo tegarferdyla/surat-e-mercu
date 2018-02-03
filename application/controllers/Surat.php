@@ -27,85 +27,87 @@ class Surat extends CI_Controller {
 	public function ubahFinishKP($id_surat)
 	{
 		$this->statussurat_model->SuratKpToFinish($id_surat);
-// 		$kirimemail = $this->tampilsurat_model->GetIdentitasMahasiswa($id_surat);
+		$kirimemail = $this->tampilsurat_model->GetIdentitasMahasiswa($id_surat);
 
-// 		$namafile 		= $kirimemail->id_surat;
-// 		$emailmahasiswa	= $kirimemail->email;
-// 		//Load the library
-// 	    $this->load->library('html2pdf');
+		$namafile 		= $kirimemail->id_surat;
+		$emailmahasiswa	= $kirimemail->email;
+		//Load the library
+	    $this->load->library('html2pdf');
 	    
-// 	    $this->html2pdf->folder('./assets/pdfs/');
-// 	    $this->html2pdf->filename($namafile.'.pdf');
-// 	    $this->html2pdf->paper('a4', 'portrait');
+	    $this->html2pdf->folder('./assets/pdfs/');
+	    $this->html2pdf->filename($namafile.'.pdf');
+	    $this->html2pdf->paper('a4', 'portrait');
 	    
-// 	    $data = array(
-// 	    	'nama_mahasiswa' => $kirimemail->nama_mahasiswa,
-// 	    	'jenis_surat' => $kirimemail->jenis_surat
-// 	    );
-// 	    //Load html view
-// 	    $this->html2pdf->html($this->load->view('tiket/pdf', $data, true));
-	    
-// 	    //Check that the PDF was created before we send it
-// 	    if($path = $this->html2pdf->create('save')) {
+	    $data = array(
+	    	'nama_mahasiswa' => $kirimemail->nama_mahasiswa,
+	    	'jenis_surat' => $kirimemail->jenis_surat,
+	    	'nim'		  => $kirimemail->nim,
+	    	'tanggal_diajukan' =>$kirimemail->tanggal_diajukan,
+	    	'no_surat'   => $kirimemail->no_surat
+	    );
+	    //Load html view
+	    $this->html2pdf->html($this->load->view('tiket/pdf', $data, true));
+	    $subjek = "[E-SURAT] "." ".$kirimemail->nama_mahasiswa." ".$kirimemail->jenis_surat;
+	    //Check that the PDF was created before we send it
+	    if($path = $this->html2pdf->create('save')) {
 	    	
-// 	    	$config = Array(  
-//             'protocol' => 'smtp',  
-//             'smtp_host' => 'https://www.mohagustiar.info/',  
-//             'smtp_port' =>  465,  
-//             'smtp_user' => 'contactme@mohagustiar.info',   
-//             'smtp_pass' => 'gundu12345',  
-//             'smtp_keepalive'=>'TRUE',
-//             'mailtype' => 'html',   
-//             'charset' => 'iso-8859-1'  
-//           );  
-// 	        $this->load->library('email', $config);  
-// 	        $this->email->set_newline("\r\n");  
-// 		    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
-// 			$this->email->to($emailmahasiswa); 
+	    	$config = Array(  
+            'protocol' => 'smtp',  
+            'smtp_host' => 'https://www.mohagustiar.info/',  
+            'smtp_port' =>  465,  
+            'smtp_user' => 'contactme@mohagustiar.info',   
+            'smtp_pass' => 'gundu12345',  
+            'smtp_keepalive'=>'TRUE',
+            'mailtype' => 'html',   
+            'charset' => 'iso-8859-1'  
+          );  
+	        $this->load->library('email', $config);  
+	        $this->email->set_newline("\r\n");  
+		    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
+			$this->email->to($emailmahasiswa); 
 				
-// 			$this->email->subject('Tiket Pengambilan Mahasiswa');
-// 			$this->email->message('Haloo Ini adalah tiket bukti pembayaran kamu');	
-// 			$this->email->attach($path);
-// 			$this->email->send();
+			$this->email->subject($subjek);
+			$this->email->message('Haloo Ini adalah tiket bukti pembayaran kamu');	
+			$this->email->attach($path);
+			$this->email->send();
 			
 			$this->session->set_flashdata('info','true');
 			redirect('admin/proseskp');
-						
-	    }
+		}
 		
 	}
+
+	
 
 	public function kirimpesantolak()
 	{
 		
         $kepada = $this->input->post('emaildikirim');
 		$subjek = $this->input->post('subjek');
+		$id_surat = $this->input->post('id_surat');
 
 		$isi    = $this->input->post('isipesantolak');
 		
-// 		echo $isi;
+		$config = Array(  
+	        'protocol' => 'smtp',  
+	        'smtp_host' => 'https://www.mohagustiar.info/',  
+	        'smtp_port' =>  465,  
+	        'smtp_user' => 'contactme@mohagustiar.info',   
+	        'smtp_pass' => 'gundu12345',  
+	        'smtp_keepalive'=>'TRUE',
+	        'mailtype' => 'html',   
+	        'charset' => 'iso-8859-1'  
+        );
 
-
-//     	$config = Array(  
-// 	        'protocol' => 'smtp',  
-// 	        'smtp_host' => 'https://www.mohagustiar.info/',  
-// 	        'smtp_port' =>  465,  
-// 	        'smtp_user' => 'contactme@mohagustiar.info',   
-// 	        'smtp_pass' => 'gundu12345',  
-// 	        'smtp_keepalive'=>'TRUE',
-// 	        'mailtype' => 'html',   
-// 	        'charset' => 'iso-8859-1'  
-//         );
-
-//         $this->load->library('email', $config);  
-//         $this->email->set_newline("\r\n");  
-// 	    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
-// 		$this->email->to('rakahikmah46@gmail.com'); 
+        $this->load->library('email', $config);  
+        $this->email->set_newline("\r\n");  
+	    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
+		$this->email->to($kepada); 
 			
-// 		$this->email->subject($subjek);
-// 		$this->email->message($isi);
-// 		$this->email->set_mailtype("html");
-// 		$this->email->send();
+		$this->email->subject($subjek);
+		$this->email->message($isi);
+		$this->email->set_mailtype("html");
+		$this->email->send();
 
 		$this->statussurat_model->SuratKpToTolak($id_surat);
 

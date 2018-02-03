@@ -81,9 +81,8 @@ class Mahasiswa extends CI_Controller {
 		  		$prodi 			= $this->session->userdata('jurusan');
 	  			$jenis 			= $this->uri->segment(2);
 	  			$jenis_surat	="";
-	  			$namekota		= $this->daerah_model->getNameKotaKabupaten($this->input->post('kota_kabupaten'))->name;
-	  			$namekecamatan  = $this->daerah_model->getNameKecamatan($this->input->post('kecamatan'))->name;
-	  			$alamat_lengkap = $this->input->post('alamat').", ".ucwords(strtolower($namekecamatan));
+	  			$namekota		= $this->input->post('kota_kabupaten');
+	  			$alamat_lengkap = $this->input->post('alamat').", ".$this->input->post('kelurahan').", ".$this->input->post('kecamatan');
 				if ($jenis =='daftarsuratkp') {
 	  				$jenissurat = "Kerja Praktek";
 	  			}else{
@@ -94,10 +93,10 @@ class Mahasiswa extends CI_Controller {
 					'id_surat'			 => $this->nomorsurat_model->IDSurat(),
 					'no_surat'  		 => '',
 					'nama_perusahaan' 	 => $this->input->post('namaperusahaan'),
-					'alamat_perusahaan'  => $alamat_lengkap,
-					'orang_dituju'   	 => $this->input->post('namefor'),
-					'jabatan'			 => $this->input->post('jabatan'),
-					'kota'				 => ucwords($namekota),
+					'alamat_perusahaan'  => ucwords(strtolower($alamat_lengkap)),
+					'orang_dituju'   	 => ucwords(strtolower($this->input->post('namefor'))),
+					'jabatan_dituju'			 => ucwords($this->input->post('jabatan')),
+					'kota'				 => ucwords(strtolower($namekota)),
 					'kodepos'			 => $this->input->post('kodepos'),
 					'jenis_surat'    	 => 'Kerja Praktek',
 					'tanggal_diajukan'   => date('Y-m-d'),
@@ -135,9 +134,9 @@ class Mahasiswa extends CI_Controller {
 
 	}
 	public function status(){
-
+			$data['statuskp'] = $this->statussurat_model->StatusKpSuratMahasiswa($this->session->userdata('nim'));
 		$this->load->view('mahasiswa/header');
-		$this->load->view('mahasiswa/status');
+		$this->load->view('mahasiswa/status',$data);
 	    $this->load->view('home/footer');
 	}
 

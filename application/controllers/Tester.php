@@ -45,7 +45,8 @@ class Tester extends CI_Controller {
         
     }
 public function tiket(){
-    $this->load->view('tiket/pdf');
+    $data= $this->tampilsurat_model->GetIdentitasMahasiswa('SR0001');
+    $this->load->view('tiket/pdf',$data);
 }
 }
 

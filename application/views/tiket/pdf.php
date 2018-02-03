@@ -198,29 +198,26 @@ body {
       <span class="admit">E-SURAT</span>
       <span class="line"></span>
       <span class="num">
-       Kerja Pratek
+       <?=$jenis_surat?>
       </span>
     </div>
     <div class="number"><img src="<?php echo base_url('assets/image/logomercu.png') ?>" width="200" alt=""></div>
   </div>
   <div class="check">
     <div class="big">
-      Mohammad Dirsza Safiro Asyari
+      <?=$nama_mahasiswa?>
     </div>
-    <div class="number">41814010058</div>
+    <div class="number"><?=$nim ?></div>
     <div class="info">
       <section>
-        <div class="title">Tanggal Dibuat</div>
-        <div>4/27/2016</div>
+        <div class="title">Tanggal Diajukan</div>
+        <div><?=$tanggal_diajukan?></div>
       </section>
       <section>
-        <div class="title">Jumlah Anggota</div>
-        <div>3</div>
+        <div class="title">Nomor Surat</div>
+        <div><?=$no_surat?></div>
       </section>
-      <section>
-        <div class="title">Terserah mau nambahin apa</div>
-        <div>31415926</div>
-      </section>
+      
     </div>
   </div>
 </div>
