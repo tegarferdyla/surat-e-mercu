@@ -265,6 +265,9 @@ background-color: #e7e7e7 !important;
 .skin-blue .sidebar-menu .treeview-menu>li.take-active>a{
   color: #00c0ef;
 }
+.skin-blue .sidebar-menu .treeview-menu>li.tolak-active>a{
+  color: #f56954;
+}
 
 
 .skin-blue .sidebar-menu>li.waiting-active>a{
@@ -281,6 +284,10 @@ background-color: #e7e7e7 !important;
 .skin-blue .sidebar-menu>li.take-active>a{
   color:#00c0ef;
   border-left-color: #00c0ef;
+}
+.skin-blue .sidebar-menu>li.tolak-active>a{
+  color:#f56954;
+  border-left-color: #f56954;
 }
 
 /*PRINT */

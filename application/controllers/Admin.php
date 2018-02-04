@@ -177,6 +177,20 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/printKP',$data);
 	}
+	public function tolakkp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tolakkp');
+		$this->load->view('admin/footer');
+	}
+	public function tolakTA()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tolakTA');
+		$this->load->view('admin/footer');
+	}
 }
 
 
