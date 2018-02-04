@@ -107,6 +107,8 @@ class Statussurat_model extends CI_Model {
 		return $query->num_rows();
 	}
 
+	
+
 	// SURAT TA
 	public function StatusTASuratMahasiswa($nim)
 	{

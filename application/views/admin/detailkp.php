@@ -24,16 +24,16 @@
             <!-- Detail Box-->
             <div class="box-body">
               <strong>Tanggal Usul</strong>
-              <p class="text-muted">DD-MM-YYYY</p>
+              <p class="text-muted"><?=date('d-M-Y',strtotime($surat['tanggal_diajukan']))?></p>
               <hr>
               <strong>NIM</strong>
-              <p class="text-muted">41815010033</p>
+              <p class="text-muted"><?=$surat['nim']?></p>
               <hr>
               <strong>Nama</strong>
-              <p class="text-muted">Ival</p>
+              <p class="text-muted"><?=$surat['nama_mahasiswa']?></p>
               <hr>
               <strong>Program Studi</strong>
-              <p>Sistem Informasi</p>
+              <p><?=$surat['prodi']?></p>
             </div>
           </div>
         </section>
@@ -49,16 +49,16 @@
             <!-- Detail Box-->
             <div class="box-body">
               <strong>Nama Perusahaan</strong>
-              <p class="text-muted">SD Technologies</p>
+              <p class="text-muted"><?=$surat['nama_perusahaan']?></p>
               <hr>
               <strong>Alamat Perusahaan</strong>
-              <p class="text-muted">Jl. Peta Barat No.37A RT.003/RW.07 Kel. Kalideres Kec. Kalideres, Jakarta Barat 11840</p>
+              <p class="text-muted"><?=$surat['alamat_perusahaan']."<br>".$surat['kota']."-",$surat['kodepos']?> </p>
               <hr>
               <strong>Untuk</strong>
-              <p class="text-muted">Bpk. xxx</p>
+              <p class="text-muted"><?=$surat['orang_dituju']?></p>
               <hr>
               <strong>Jabatan</strong>
-              <p class="text-muted">Chief Technology Officer</p>
+              <p class="text-muted"><?=$surat['jabatan_dituju']?></p>
             </div>
           </div>
         </section>
@@ -73,14 +73,11 @@
             </div>
             <!-- Detail Box-->
             <div class="box-body">
-              <strong>41815010033</strong>
-              <p class="text-muted">Ival</p>
-              <hr>
-              <strong>41815010033</strong>
-              <p class="text-muted">Ival</p>
-              <hr>
-              <strong>41815010033</strong>
-              <p class="text-muted">Ival</p> 
+              <?php foreach ($mahasiswa as $value): ?>
+              <strong><?=$value['nim']?></strong>
+              <p class="text-muted"><?=$value['nama_mahasiswa']?></p>
+              <hr>  
+              <?php endforeach ?>
             </div>
           </div>
         </section>

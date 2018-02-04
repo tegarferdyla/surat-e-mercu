@@ -49,6 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return $query->result(); 
 		}
 
+		
+
 		public function get_email_user_ta($id_surat)
 		{
 			$sql = "SELECT b.email,a.id_surat FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Tugas Akhir' AND a.id_surat='$id_surat' ";
@@ -99,6 +101,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return $query->row_array();
 		}
 
+		public function detailKP($id_surat)
+		{
+			$this->db->select('*');
+			$this->db->from('surat');
+			$this->db->join('user','user.nim =surat.nim');
+			$this->db->join('dosen','dosen.nik =surat.nik');
+			$this->db->where('surat.status =','Menunggu');
+			$this->db->where('id_surat',$id_surat);
+			$query = $this->db->get();
+			
+			return $query->row_array();
+		}
+
 		public function GetIdentitasMahasiswa($id_surat)
 		{
 			$this->db->select('*');
@@ -116,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 			$query = $this->db->query("SELECT m.nim,m.nama_mahasiswa FROM mahasiswa m JOIN surat s 
 								ON m.id_surat=s.id_surat WHERE 
-								m.id_surat='$id_surat' AND (s.status!='Menunggu' AND s.status!='Di Tolak')"
+								m.id_surat='$id_surat' AND s.status='Menunggu' "
 							);
 
 			return $query->result_array();

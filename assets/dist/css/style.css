@@ -99,7 +99,7 @@ background-color: #e7e7e7 !important;
 
 
 .form-login{
-	padding: 70px 0px;
+	margin-top: 70px;
 }
 .timeline {
   list-style: none;
@@ -332,4 +332,26 @@ p#kepadayth-1{
   font-size: 9pt;
   margin-bottom: 0;
 
+}
+
+.btn-daftar{
+  transition: 0.5s;
+  color: white;
+  background: rgba(0,0,0,0.01);
+  border: solid 2px white; 
+}
+.btn-daftar:hover{
+  background: white;
+  color: black;
+  border: 2px solid white;
+   }
+.btn-login{
+  transition: 0.5s;
+  color:#F4D03F;
+  background:rgba(0,0,0,0.01);
+  border: solid 2px #F4D03F;
+}
+.btn-login:hover{
+  color: white;
+  background-color: #F4D03F;
 }
