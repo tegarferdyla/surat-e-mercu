@@ -29,8 +29,12 @@
 		<div class="row">
 			<h1 class="text-center intro">APA ITU E-SURAT?</h1>
        <div class="col-md-6">
-			<p class="statement text-justify"> e-surat adalah website yang dikelola oleh fakultas ilmu komputer untuk memudahkan mahasiswa fakultas ilmu komputer dalam membuat surat-surat yang berhubungan dengan perkuliahan seperti pembuatan surat kerja praktek dan surat riset tugas akhir sehingga mahasiswa yang ingin membuat surat hanya perlu mendaftarkan diri melalui website ini dan mengambil surat di TU fakultas ilmu komputer ketika pemberitahuan bahwa surat yang diinginkan sudah selesai.</p>
+			<p class="statement text-justify"> E-surat adalah situs yang dikelola oleh Fakultas Ilmu Komputer (FASILKOM) Universitas Mercu Buana untuk memfasilitasi mahasiswa FASILKOM dalam membuat surat-surat yang berhubungan dengan perkuliahan <b>seperti pembuatan surat kerja praktek</b> dan <b>surat riset tugas akhir </b>.</p>
 		</div>
+    <div class="col-md-6">
+      <img src="<?php echo base_url('assets/image/logoesurat4.png')?>" style=" margin: 0 auto; margin: 0 auto;" class="img-responsive" alt="">
+      </div>
+    </div>
     </div>
 	</div>
 </div>
@@ -40,22 +44,22 @@
    <div class="col-md-4">
      <i class="fas fa-edit fa-7x blue"></i>
      <h3 class="title">Mudah!</h3>
-     <p class="isi">Isi data Kamu lewat E-Surat ini. nggak perlu ke Tata Usaha!</p>
+     <p class="isi">Isi data Anda melalui E-Surat ini. tidak perlu ke Tata Usaha FASILKOM!</p>
    </div>
    <div class="col-md-4">
      <i class="far fa-envelope-open fa-7x blue"></i>
-      <h3 class="title">Dikabarin lewat E-Mail kalau sudah selesai!</h3>
-      <p class="isi">Pihak Tata Usaha akan memberi kabar kepada kamu kalau surat yang sudah kamu ajukan sudah jadi!</p>
+      <h3 class="title">Notifikasi E-mail</h3>
+      <p class="isi">Anda akan mendapatkan notifikasi melalui E-mail jika surat sudah tersedia</p>
    </div>
    <div class="col-md-4">
      <i class="fas fa-ticket-alt fa-7x blue"></i>
-      <h3 class="title">Jangan Lupa Tukarkan Dengan Tiket!</h3>
-      <p class="isi">Tukarkan Tiketmu yang sudah dikirim oleh pihak TU untuk mendapatkan Surat yang kamu ajukan</p>
+      <h3 class="title">Dapatkan Surat Anda</h3>
+      <p class="isi">Tukarkan lampiran E-mail Anda dengan surat yang diajukan ke Tata Usaha FASILKOM</p>
    </div>
  </div>
   <div class="row">
     <div clas="col-md-12">
-      <a class="btn btn-more col-md-8 col-md-offset-2 btn-lg" href="">SELENGKAPNYA</a>
+      <a class="btn btn-more col-md-8 col-md-offset-2 btn-lg" href="">ALUR PROSES PENGAJUAN SURAT <i class="fas fa-arrow-circle-right fa-lg"></i></a>
     </div>
   </div>
 </div>

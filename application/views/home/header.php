@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-     <a class="navbar-brand" href="<?php echo site_url('')?>"><img src="<?php echo base_url('assets/image/logomercu.png')?>" alt="Home" width="75"></a>
+     <a class="navbar-brand" href="<?php echo site_url('')?>"><img src="<?php echo base_url('assets/image/logoesurat4.png')?>" alt="Home" width="60"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

@@ -1,8 +1,7 @@
 <div class="container form-login">
   <div class="row">
     
-    <div class="col-md-8 col-xs-12 col-md-offset-3">
-      
+    <div class="col-md-8 col-md-offset-3">
       <div class="row">
         <div class="col-md-8">
           <?php if ($this->session->flashdata('info_berhasil')): ?>
@@ -85,17 +84,12 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-9">
-            <input type="submit" class="btn btn-primary btn-block" value="Sign Up">
+          <div class="col-sm-offset-1 col-sm-8">
+            <input type="submit" class="btn btn-daftarkan btn-block" value="DAFTARKAN">
           </div>
         </div>
       </form>
-      <div class="form-group">
-        <div class="col-sm-8 col-md-8 col-xs-8">
-         <label class="control-label">Sudah Punya Akun? Silahkan <a href="<?php echo site_url('login') ?>">Login</a></label>
-       </div>
-       
-     </div>
+      </div>
    </div>
    
  </div>
