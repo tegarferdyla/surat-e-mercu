@@ -5,9 +5,9 @@
 			
       <div class="col-md-12"> 
         <p class="text-center">
-		Copyright &copy; <?php echo date("Y"); ?> Aslab Fasilkom <br>
+		Copyright &copy; <?php echo date("Y"); ?> <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a> <br>
 		Fakultas Ilmu Komputer <br>
-		Universitas Mercu Buana edit</p>
+		Universitas Mercu Buana</p>
 			</div>
 		</div>
     </div>
