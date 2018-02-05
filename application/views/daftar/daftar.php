@@ -1,8 +1,7 @@
-<div class="container-fluid form-login">
+<div class="container form-login">
   <div class="row">
     
-    <div class="col-md-8  col-xs-12 col-md-8 col-sm-offset-3 col-md-offset-3">
-      
+    <div class="col-md-8 col-md-offset-3">
       <div class="row">
         <div class="col-md-8">
           <?php if ($this->session->flashdata('info_berhasil')): ?>
@@ -38,7 +37,7 @@
           <label for="nim" class="col-sm-2 control-label">NIM</label>
           <div class="col-sm-6">
             <div class="row">
-              <span class="text-danger"><?=form_error('kodenim')?></span>
+              <!-- <span class="text-danger"><?=form_error('kodenim')?></span> -->
                <span class="text-danger"><?=form_error('nimmhs')?></span>
               <div class="col-sm-3 col-xs-4">
                 <input type="text" class="form-control"  value="<?=set_value('kodenim')?>" id="kodenim" name="kodenim" readonly >
@@ -85,20 +84,14 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-9">
-            <input type="submit" class="btn btn-primary col-sm-7" value="Sign Up">
+          <div class="col-sm-offset-1 col-sm-8">
+            <input type="submit" class="btn btn-daftarkan btn-block" value="DAFTARKAN">
           </div>
         </div>
       </form>
-      <div class="form-group">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8 col-md-8 col-xs-8">
-         <label class="control-label">Sudah Punya Akun? Silahkan <a href="<?php echo site_url('login') ?>">Login</a></label>
-       </div>
-       <div class="col-sm-2"></div>
-     </div>
+      </div>
    </div>
-   <div class="col-md-2"></div>
+   
  </div>
 </div>
 

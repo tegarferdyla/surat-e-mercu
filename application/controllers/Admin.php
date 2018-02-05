@@ -50,10 +50,12 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/tolakemailta_v');
 		$this->load->view('admin/footer');
 	}
-    public function tolakemailkp(){
+    public function tolakemailkp($id_surat){
+    	$data['detailkp'] = $this->tampilsurat_model->get_email_user_kp($id_surat);
+
     	$this->load->view('admin/header');
     	$this->load->view('admin/sidebar');
-    	$this->load->view('admin/tolakemailkp_v');
+    	$this->load->view('admin/tolakemailkp_v',$data);
     	$this->load->view('admin/footer');
     }
 	public function waitingTA()
@@ -93,6 +95,19 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/sidebar');
 		$data['surat'] = $this->tampilsurat_model->tampil_datata_finish();
 		$this->load->view('admin/finishTA',$data);
+		$this->load->view('admin/footer');
+	}
+
+	public function detailkp($idsurat)
+	{
+
+		$data['surat'] 		= $this->tampilsurat_model->detailKP($idsurat);
+		$data['mahasiswa']	= $this->tampilsurat_model->PrintMahasiswaKP($idsurat);
+
+
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/detailkp',$data);
 		$this->load->view('admin/footer');
 	}
 
@@ -167,7 +182,6 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/printKP',$data);
 	}
-	
 }
 
 

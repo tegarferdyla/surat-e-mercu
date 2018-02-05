@@ -43,7 +43,7 @@ class Daftar extends CI_Controller {
 			}else{
 				$this->daftar_model->registerMahasiswa();
 				$this->session->set_flashdata('info_berhasil', 'true');
-				redirect('daftar');
+				redirect('login');
 			}
 
 		}
