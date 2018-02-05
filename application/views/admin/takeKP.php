@@ -4,7 +4,7 @@
           <section class="content-header">
             <h1>
               Tabel Kerja Praktek
-              <medium class="label label-info">Take</medium>
+              <medium class="label label-info">Terima</medium>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>

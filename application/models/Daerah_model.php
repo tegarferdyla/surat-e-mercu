@@ -75,23 +75,8 @@ Class Daerah_model extends CI_Model
 		return $kodepos;
 	}
 
-	public function getNameKotaKabupaten($id){
-		$this->db->select('*');
-		$this->db->from("regencies");
-		$this->db->where('id',$id);
-		$query = $this->db->get();
-
-		return $query->row();
-	}
-
-	public function getNameKecamatan($id){
-		$this->db->select('*');
-		$this->db->from("districts");
-		$this->db->where('id',$id);
-		$query = $this->db->get();
-
-		return $query->row();
-	}
+	
+	
 
 
 }

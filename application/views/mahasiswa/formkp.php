@@ -45,7 +45,7 @@
 					<!-- Orang yang dituju -->
 				 	<label class="col-md-3" for="jabatan" >Jabatan</label>
 				 	<div class="col-md-6">
-			 			<input type="text" name="jabatan" class="form-control" required placeholder="Orang Dituju">
+			 			<input type="text" name="jabatan" class="form-control" required placeholder="Jabatan">
 			 		</div>
 				</div>
 
