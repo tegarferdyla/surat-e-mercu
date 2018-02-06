@@ -59,7 +59,7 @@
  </div>
   <div class="row">
     <div clas="col-md-12">
-      <a class="btn btn-more col-md-8 col-md-offset-2 btn-lg" href="">ALUR PROSES PENGAJUAN SURAT <i class="fas fa-arrow-circle-right fa-lg"></i></a>
+      <a class="btn btn-more col-md-8 col-md-offset-2 btn-lg" href="">ALUR PROSES PENGAJUAN <span class="hidden-xs">SURAT</span> <i class="fas fa-arrow-circle-right fa-lg"></i></a>
     </div>
   </div>
 </div>
