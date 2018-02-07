@@ -4,22 +4,84 @@
 	<meta charset="UTF-8">
 	<title>Surat Kerja Praktek </title>
 	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
-	 <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
+
+	 <!-- <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>"> -->
+	 <style>
+	 	body{
+	 		line-height: normal;
+	 	}
+	 	.table-borderless td,
+		.table-borderless th,
+		.table-borderless tr {
+		    border: 0 !important;
+		}
+	 </style>
 </head>
 <body class="printkpta">
+<br /><br /><br />
 	<div class="container-fluid printKPTA">
 		<div class="container kopsurat">
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-6">
 					<span class="hidden-print">
 					<img src="<?php echo base_url('assets/image/UMB.png') ?>" width="200" alt="">
-				</span>
-					<span class="pull-right tanggal">Jakarta, <?=date('d-F-Y',strtotime($surat['tanggal_diajukan']))?></span>
-			</div>
+					</span>
+				</div>
+				<div class="col-xs-6">
+					<?php  
+						$pecah = explode("-",$surat['tanggal_diajukan']);
+						$bulanindo ="";
+						switch ($pecah[1]) {
+							    case '01':
+								   $bulanindo ="Januari";
+								break;
+								case '02':
+								   $bulanindo ="Febuari";
+								break;
+								case '03':
+								   $bulanindo ="Maret";
+								break;
+								case '04':
+								   $bulanindo ="April";
+								break;
+								case '05':
+								   $bulanindo ="Mei";
+								break;
+								case '06':
+								   $bulanindo ="Juni";
+								break;
+								case '07':
+								   $bulanindo ="Juli";
+								break;
+								case '08':
+								   $bulanindo ="Agustus";
+								break;
+								case '09':
+								   $bulanindo ="September";
+								break;
+								case '10':
+								   $bulanindo ="Oktober";
+								break;
+								case '11':
+								   $bulanindo ="November";
+								break;
+								case '12':
+								   $bulanindo ="Desember";
+								break;
+						}
+						$tanggal_fix = $pecah[2]." ".$bulanindo." ".$pecah[0];
+					?>
+
+					<h4 class="pull-right tanggal">Jakarta, <?=$tanggal_fix?></h4>
+				</div><!-- /.col-xs-6 -->
 			</div>
 			<span class="hidden-print warning"><h1 class="text-center">Harus Memakai Browser CHROME!</h1></span>
 		</div>
 
+
+
+
+		<br /><br />
 
 		<div class="container idsurat">
 			<div class="row">
@@ -33,15 +95,17 @@
 			</div>
 		</div>
 
+		<br /><br />
+
 		<div class="container kepadayth">
 			<p id="kepadayth">Kepada Yth,</p>
 			<p id="kepadayth"><?=$surat['nama_perusahaan']?></p>
 			<p id="kepadayth-1"><?=$surat['alamat_perusahaan']?></p>
-			<p id="kepadayth-1">--kota--</p>
-			<p id="kepadayth"><?=$surat['orang_dituju']?></p>
-			<p id="kepadayth">--Jabatan--</p>
+			<p id="kepadayth-1"><?=$surat['kota']?> <?=$surat['kodepos']?></p>
+			<p id="kepadayth">UP. <?=$surat['orang_dituju']?></p>
+			<p id="kepadayth"><?=$surat['jabatan_dituju']?></p>
 		</div>
-
+		<br /><br />
 		<div class="container isipesan">
 			<p>Dengan Hormat,</p>
 			<p class="text-justify">
@@ -64,8 +128,10 @@
 					</tr>
 				<?php endforeach ?>
 
+				
 			</table>
 			<p class="text-justify">Demikian Surat permohonan kami, atas perhatian dan bantuan Bapak/Ibu kami ucapkan terima kasih.</p>
+			<br /><br />
 			</div>
 		</div>
 
@@ -81,3 +147,6 @@
 	</div>
 </body>
 </html>
+<script>
+    window.print();
+</script>
