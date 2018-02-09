@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
-	class Tampilsurat_model extends CI_Model
-	{
+class Tampilsurat_model extends CI_Model
+{
 		# Query menampilkan Data KP Status = 'Waiting'
 		public function tampil_datakp_waiting()
 		{
@@ -149,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 			$query = $this->db->query("SELECT m.nim,m.nama_mahasiswa FROM mahasiswa m JOIN surat s 
 								ON m.id_surat=s.id_surat WHERE 
-								m.id_surat='$id_surat' AND s.status='Menunggu' "
+								m.id_surat='$id_surat' "
 							);
 
 			return $query->result_array();
@@ -158,4 +158,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 
 
-	}
+}

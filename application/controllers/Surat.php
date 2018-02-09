@@ -50,7 +50,7 @@ class Surat extends CI_Controller {
 	    	'no_surat'   => $kirimemail->no_surat
 	    );
 	    //Load html view
-	    $this->html2pdf->html($this->load->view('tiket/pdf', $data, true));
+	    $this->html2pdf->html($this->load->view('tiket/pdf2', $data, true));
 	    $subjek = "[E-SURAT] "." ".$kirimemail->nama_mahasiswa." ".$kirimemail->jenis_surat;
 	    //Check that the PDF was created before we send it
 	    if($path = $this->html2pdf->create('save')) {
@@ -71,7 +71,8 @@ class Surat extends CI_Controller {
 			$this->email->to($emailmahasiswa); 
 				
 			$this->email->subject($subjek);
-			$this->email->message($isi);	
+			$this->email->message($isi);
+			$this->email->set_mailtype("html");	
 			$this->email->attach($path);
 			$this->email->send();
 			
@@ -108,7 +109,7 @@ class Surat extends CI_Controller {
 	    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
 		$this->email->to($data['email']); 
 			
-		$this->email->subject("Subject : Pengajuan Surat Anda Ditolak");
+		$this->email->subject("Pengajuan Surat Anda Ditolak");
 		$this->email->message($isi);
 		$this->email->set_mailtype("html");
 		$this->email->send();
