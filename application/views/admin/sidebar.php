@@ -14,7 +14,7 @@
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">MAIN NAVIGATION</li>
+          <li class="header">NAVIGASI UTAMA</li>
 
           <!-- isi side bar navigation -->
 
@@ -22,13 +22,14 @@
           <li class="<?php if($this->uri->segment(2)==""){echo 'active';} ?>">
             <a href="<?php echo site_url('admin')?>">
               <i class="fa fa-home"></i>
-              <span>Dashboard</span>
+              <span>Beranda</span>
             </a>
           </li>
           <!-- Menu Surat Kerja Praktek -->
           <li class="treeview <?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active waiting-active';} 
           else if($this->uri->segment(2)=="finishkp"){echo 'active finish-active';} 
-          else if ($this->uri->segment(2)=="proseskp"){echo 'active proses-active';} 
+          else if ($this->uri->segment(2)=="proseskp"){echo 'active proses-active';}
+          else if ($this->uri->segment(2)=="tolakkp"){echo 'active tolak-active';} 
           else if($this->uri->segment(2)=="takekp"){echo 'active take-active';}?>">
             <a href="#">
               <i class="fa fa-building-o"></i>
@@ -38,16 +39,18 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="<?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active waiting-active ';} ?>"><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
-              <li class="<?php if($this->uri->segment(2)=="proseskp"){echo 'active proses-active';} ?>"><a href="<?php echo site_url('admin/proseskp') ?>"><i class="fa fa-pencil"></i> Process</a></li>
-              <li class="<?php if($this->uri->segment(2)=="finishkp"){ echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Finish</a></li>
-              <li class="<?php if($this->uri->segment(2)=="takekp"){echo 'active take-active';}?>"><a href="<?php echo site_url('admin/takekp') ?>"><i class="fa fa-external-link"></i> Take</a></li>
+              <li class="<?php if($this->uri->segment(2)=="waitingkp" OR $this->uri->segment(2)=="tolakemailkp"){ echo 'active waiting-active ';} ?>"><a href="<?php echo site_url('admin/waitingkp') ?>"><i class="fa fa-spinner"></i> Menunggu</a></li>
+              <li class="<?php if($this->uri->segment(2)=="proseskp"){echo 'active proses-active';} ?>"><a href="<?php echo site_url('admin/proseskp') ?>"><i class="fa fa-pencil"></i> Proses</a></li>
+              <li class="<?php if($this->uri->segment(2)=="finishkp"){ echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishkp') ?>"><i class="fa fa-check"></i> Selesai</a></li>
+              <li class="<?php if($this->uri->segment(2)=="takekp"){echo 'active take-active';}?>"><a href="<?php echo site_url('admin/takekp') ?>"><i class="fa fa-external-link"></i> Terima</a></li>
+              <li class="<?php if($this->uri->segment(2)=="tolakkp"){echo 'active tolak-active';}?>"><a href="<?php echo site_url('admin/tolakkp') ?>"><i class="fa fa-file-o"></i> Arsip Penolakan</a></li>
             </ul>
           </li>
 <!-- Menu Surat Sidang -->
           <li class="treeview <?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';} 
           else if($this->uri->segment(2)=="finishTA"){ echo 'active finish-active';}
-          else if ($this->uri->segment(2)=="prosesTA"){echo 'active proses-active';} 
+          else if ($this->uri->segment(2)=="prosesTA"){echo 'active proses-active';}
+          else if ($this->uri->segment(2)=="tolakTA"){echo 'active tolak-active';} 
           else if($this->uri->segment(2)=="takeTA"){echo 'active take-active';}?>">
             <a href="#">
               <i class="fa fa-book"></i>
@@ -57,10 +60,11 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="<?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';} ?>"><a href="<?php echo site_url('admin/waitingTA') ?>"><i class="fa fa-spinner"></i> Waiting</a></li>
-              <li class="<?php if($this->uri->segment(2)=="prosesTA"){echo 'active proses-active';} ?>"><a href="<?php echo site_url('admin/prosesTA') ?>"><i class="fa fa-pencil"></i> Process</a></li>
-              <li class="<?php if($this->uri->segment(2)=="finishTA"){echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishTA') ?>"><i class="fa fa-check"></i> Finish</a></li>
-              <li class="<?php if($this->uri->segment(2)=="taketa"){echo 'active take-active';} ?>"><a href="<?php echo site_url('admin/taketa') ?>"><i class="fa fa-external-link"></i> Take</a></li>
+              <li class="<?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';} ?>"><a href="<?php echo site_url('admin/waitingTA') ?>"><i class="fa fa-spinner"></i> Menunggu</a></li>
+              <li class="<?php if($this->uri->segment(2)=="prosesTA"){echo 'active proses-active';} ?>"><a href="<?php echo site_url('admin/prosesTA') ?>"><i class="fa fa-pencil"></i> Proses</a></li>
+              <li class="<?php if($this->uri->segment(2)=="finishTA"){echo 'active finish-active';} ?>"><a href="<?php echo site_url('admin/finishTA') ?>"><i class="fa fa-check"></i> Selesai</a></li>
+              <li class="<?php if($this->uri->segment(2)=="takeTA"){echo 'active take-active';} ?>"><a href="<?php echo site_url('admin/takeTA') ?>"><i class="fa fa-external-link"></i> Terima</a></li>
+              <li class="<?php if($this->uri->segment(2)=="tolakTA"){echo 'active tolak-active';}?>"><a href="<?php echo site_url('admin/tolakTA') ?>"><i class="fa fa-file-o"></i> Arsip Penolakan</a></li>
             </ul>
           </li>
           <!-- Menu untuk setting dosen -->

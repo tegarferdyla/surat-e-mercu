@@ -4,10 +4,11 @@
           <section class="content-header">
             <h1>
               Tabel Kerja Praktek
-              <medium class="label label-success">Finish</medium>
+
+              <medium class="label label-success">Selesai</medium>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
+              <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Beranda</a></li>
               <li><i class="fa fa-building-o"></i> Surat Kerja Praktek</li>
               <li class="active"><i class="fa fa-table"></i> Tabel Surat Kerja Praktek</li>
             </ol>
@@ -25,9 +26,6 @@
                 </div>  
                 <?php endif ?>
                 <div class="box">
-                  <div class="box-header">
-                    <h3 class="box-title">Finish Table</h3>
-                  </div>
                   <!-- /<div class="bo">/div>x-header -->
                   <div class="box-body table-responsive">
                     <table id="datatable" class="table table-bordered table-striped">
@@ -65,10 +63,12 @@
                       <?php } ?>  
                       </tbody>
                       </table>
+                    </div>
+                    <!-- /.box-body -->
                   </div>
-                  <!-- /.box-body -->
+                  <!-- /.box -->
                 </div>
-                <!-- /.box -->
+                <!-- /.col -->
               </div>
               <!-- /.col -->
             </div>
