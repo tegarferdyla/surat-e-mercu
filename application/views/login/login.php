@@ -1,15 +1,10 @@
-<!-- Content Wrapper. Contains page content -->
-    <!-- Content Header (Page header) -->
-    <!-- Main content -->
-    <section class="content container" style="padding: 0px 0px;">
-     <div class="row">
-       <div class="login-box">
-          <div class="login-logo">
-          </div>
-          <!-- /.login-logo -->
-          <?php echo form_open('login/ceklogin'); ?>
-          <div class="login-box-body">
-            <p class="login-box-msg">Silahkan Login Dengan Username</p>
+   <div class="container-fluid">
+     <div class="container">
+
+       
+       <div class="row">
+         <div class="col-md-4 col-md-offset-4 box-login">
+           <?php echo form_open('login/ceklogin'); ?>
             <?php if($this->session->flashdata('info')): ?>
               <div class="row">
                 <div class="alert alert-danger alert-dismissible">
@@ -17,7 +12,15 @@
                     Maaf username/nim dan password salah
                 </div>
               </div>
-            <?php endif; ?>
+              <?php elseif ($this->session->flashdata('info_berhasil')):?>
+                 <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-check"></i>Info</h4>
+                Berhasi Mendaftar Akun
+            </div>
+            <?php endif; ?>            
+             <h3 class="text-center title-login">Silahkan Login Dengan menggunakan</h3>
+           <h3 class="text-center title-login">NIM/E-MAIL</h3>
               <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="NIM/email" name="username">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -26,28 +29,24 @@
                 <input type="password" class="form-control" placeholder="Password" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
-              <div class="row">
-                <!-- /.col -->
-                <div class="col-md-4 col-md-offset-8">
+              <div class="form-group has-feedback">
                   <input type="submit" class="btn btn-primary btn-block btn-flat" value="Login" />
                 </div>
+         </div>
+       </div>
+       <div class="row">
+                <!-- /.col -->
+                
                 <!-- /.col -->
               </div>
           </div>
-
           <?php echo form_close(); ?>
+     </div>
+          
+              
           <!-- /.login-box-body -->
-        </div>
-      </div>
+        
 
-<div class="row">
-  <center>
-  <p>Belum Punya Akun E-Surat?</p>
-  <a class="btn btn-info" href="#">DAFTAR</a>
-</div>
-</center>
-
-    </section>
 
 
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js') ?>"></script>

@@ -1,7 +1,20 @@
-W<?php
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Daftar extends CI_Controller {
+
+	public function __construct()
+	{
+		parent::__construct();
+		if ($this->session->has_userdata('status')) {
+			if ($this->session->userdata('role')=='mahasiswa') {
+				redirect('mahasiswa');
+			}elseif($this->session->userdata('role')=='admin' || $this->session->userdata('role')=='superadmin'){
+				redirect('admin');
+			}
+		}
+	}
+
 	public function index()
 	{
 		//form validasi
@@ -30,7 +43,7 @@ class Daftar extends CI_Controller {
 			}else{
 				$this->daftar_model->registerMahasiswa();
 				$this->session->set_flashdata('info_berhasil', 'true');
-				redirect('daftar');
+				redirect('login');
 			}
 
 		}
