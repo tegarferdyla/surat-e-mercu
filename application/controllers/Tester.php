@@ -55,7 +55,8 @@ class Tester extends CI_Controller {
     }
     public function teststring()
     {
-        echo ucwords("raka hikmah rH");
+        $nim = ("41814010066@student.mercubuana.ac.id");
+        echo substr($nim,11);
     }
 }
 

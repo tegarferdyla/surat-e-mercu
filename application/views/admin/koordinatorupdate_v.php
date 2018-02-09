@@ -33,20 +33,20 @@
                         </div>
                         <div class="form-group">
                           <label for="nik" class="col-sm-2 control-label" >NIK</label>
-                          <div class="col-sm-3">
+                          <div class="col-sm-4">
                             <input type="text" class="form-control" name="nik" placeholder="Nomor Induk Karyawan" maxlength="8" value="<?php echo $nik; ?>">
                           </div>
                         </div>
                         
                         <div class="form-group">
                            <label for="status" class="col-sm-2 control-label">Prodi</label>
-                          <div class="col-sm-2">
+                          <div class="col-sm-4">
                             <input type="text" class="form-control" name="prodi" class="form-control" maxlength="8" value="<?php echo $prodi; ?>" readonly >
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="nik" class="col-sm-2 control-label">Jabatan</label>
-                          <div class="col-sm-2">
+                          <div class="col-sm-4">
                             <input type="text" class="form-control" name="jabatan" class="form-control" maxlength="8" value="<?php echo $jabatan; ?>" readonly >
                           </div>
                           </div>
