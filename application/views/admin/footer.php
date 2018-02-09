@@ -105,5 +105,11 @@
         });
     </script>
 
+    <script>
+        $('#confirmtolak').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
+        });
+    </script>
+
 </html>
 
