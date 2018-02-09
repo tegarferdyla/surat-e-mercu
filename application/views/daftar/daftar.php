@@ -1,8 +1,7 @@
 <div class="container form-login">
   <div class="row">
     
-    <div class="col-md-8 col-xs-12 col-md-offset-3">
-      
+    <div class="col-md-8 col-md-offset-3">
       <div class="row">
         <div class="col-md-8">
           <?php if ($this->session->flashdata('info_berhasil')): ?>
@@ -59,8 +58,11 @@
         <div class="form-group">
           <label for="email" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-6">
+            <?php if ($this->session->flashdata('emailmercu')): ?>
+              <span class="text-danger">email yang digunakan harus  @student.mercubuana.ac.id</span>
+            <?php endif ?>
             <span class="text-danger"><?=form_error('email')?></span>
-            <input type="email" class="form-control" id="email" name="email" value="<?=set_value('email')?>" placeholder="Email">
+            <input type="email" class="form-control" id="email" name="email" value="<?=set_value('email')?>" placeholder="Email nim@student.mercubuana.ac.id">
           </div>
         </div>
          <div class="form-group">
@@ -85,17 +87,12 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-9">
-            <input type="submit" class="btn btn-primary btn-block" value="Sign Up">
+          <div class="col-sm-offset-1 col-sm-8">
+            <input type="submit" class="btn btn-daftarkan btn-block" value="DAFTARKAN">
           </div>
         </div>
       </form>
-      <div class="form-group">
-        <div class="col-sm-8 col-md-8 col-xs-8">
-         <label class="control-label">Sudah Punya Akun? Silahkan <a href="<?php echo site_url('login') ?>">Login</a></label>
-       </div>
-       
-     </div>
+      </div>
    </div>
    
  </div>

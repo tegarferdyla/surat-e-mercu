@@ -2,7 +2,7 @@
   <div class="pull-right hidden-xs">
     <b>Version</b> Alpha-3
   </div>
-  <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Team Aslab</a>.</strong> All rights
+  <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a>.</strong> All rights
   reserved.
 </footer>
 </body>
@@ -101,6 +101,12 @@
 
 <script>
         $('#confirm').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
+        });
+    </script>
+
+    <script>
+        $('#confirmtolak').on('show.bs.modal', function(e) {
             $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
         });
     </script>
