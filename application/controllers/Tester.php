@@ -49,10 +49,14 @@ class Tester extends CI_Controller {
         $data= $this->tampilsurat_model->GetIdentitasMahasiswa('SR0001');
         $this->load->view('tiket/pdf',$data);
     }
-
+    public function tiket2(){
+        $data= $this->tampilsurat_model->GetIdentitasMahasiswa('SR0001');
+        $this->load->view('tiket/pdf2',$data);
+    }
     public function teststring()
     {
-        echo ucwords("raka hikmah rH");
+        $nim = ("41814010066@student.mercubuana.ac.id");
+        echo substr($nim,11);
     }
 }
 

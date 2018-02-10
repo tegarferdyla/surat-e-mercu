@@ -105,10 +105,20 @@
             $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
         });
     </script>
+<<<<<<< HEAD
 <script>
     $(document).ready(function(){
       $('.datepicker').datepicker();
     });
     </script>
+=======
+
+    <script>
+        $('#confirmtolak').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
+        });
+    </script>
+
+>>>>>>> upstream/master
 </html>
 
