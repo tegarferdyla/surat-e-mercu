@@ -11,6 +11,8 @@
               <li><i class="fa fa-building-o"></i> Surat Kerja Praktek</li>
               <li class="active"><i class="fa fa-table"></i> Tabel Surat Kerja Praktek</li>
             </ol>
+
+
           </section>
           <!-- Main content -->
           <section class="content">
@@ -21,13 +23,13 @@
                 <div class="box">
                   <div class="container">
   <!-- Trigger the modal with a button -->
-                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Cetak Laporan</button><br>
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reportModal">Cetak Laporan</button><br>
 
                 <?php if ($this->session->flashdata('gagal_tanggal')): ?>
                        <p class="text-danger">inii gagallll</p>
                 <?php endif ?>
 <!-- Modal -->
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                   <div class="modal-content">
                   <div class="modal-header">
@@ -56,6 +58,32 @@
         <!-- /.modal-dialog -->
     </div>
   </div>
+
+                <!-- Modal -->
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Hapus </button>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+    
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-body">
+              <center> <p> Masukan Tanggal Untuk Penghapusan Data </p> </center>
+            </div>
+         <center> <?php echo form_open('surat/hapusKP'); ?>
+            Dari Tanggal :
+            <input type="date" name="startdate">
+            Sampai Tanggal :
+            <input type="date" name="finishdate">
+          <input type="submit" name="hapus" value="Kirim" />
+          <?php echo form_close(); ?> </center> <br>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
                   <!-- /<div class="bo">/div>x-header -->
                   <div class="box-body table-responsive">
                     <table id="datatable" class="table table-bordered table-striped">
