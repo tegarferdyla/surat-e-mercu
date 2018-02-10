@@ -4,8 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>CSS Ticket</title>
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 <style>
+
+
+  *{
+    font-family: calibri
+  }
   .bg-blue{
     background:#1976D2;
   }
@@ -56,7 +62,7 @@
         </h2>
       </td>
      <!--  <td class="text-center">
-        <img src="<?php echo base_url('assets/image/logomercu.png') ?>" width="120" alt="">
+        <img src="../assets/image/logomercu.png" width="120" alt="">
       </td> -->
      
     </tr>
@@ -76,7 +82,7 @@
           <?="$nama_mahasiswa - $nim"?>
         </h3>
       </td>
-      <td>
+      <td colspan="2">
         <p class="text-blue">Tanggal Diajukan:</p>
         
         <h3 class="text-center text-muted">

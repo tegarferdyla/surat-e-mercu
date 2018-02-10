@@ -107,7 +107,22 @@ class Statussurat_model extends CI_Model {
 		return $query->num_rows();
 	}
 
-	
+	public function JumlahSuratKpTolak()
+	{
+		$this->db->select('*');
+		$this->db->from('surat');
+		$this->db->where('status','Di Tolak');
+		$this->db->where('jenis_surat','Kerja Praktek');
+		$query = $this->db->get();
+		return $query->num_rows();
+	}
+
+	public function HapusDataKP($start_date,$end_date)
+	{
+		
+		$query = $this->db->query("DELETE FROM surat WHERE tanggal_diambil BETWEEN '$start_date' AND '$end_date'");
+		
+	}
 
 	// SURAT TA
 	public function StatusTASuratMahasiswa($nim)
@@ -202,6 +217,16 @@ class Statussurat_model extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('surat');
 		$this->db->where('status','Ambil');
+		$this->db->where('jenis_surat','Tugas Akhir');
+		$query = $this->db->get();
+		return $query->num_rows();
+	}
+
+	public function JumlahSuratTATolak()
+	{
+		$this->db->select('*');
+		$this->db->from('surat');
+		$this->db->where('status','Di Tolak');
 		$this->db->where('jenis_surat','Tugas Akhir');
 		$query = $this->db->get();
 		return $query->num_rows();

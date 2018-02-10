@@ -125,6 +125,15 @@ class Surat extends CI_Controller {
 	    redirect('admin/finishkp');
 	}
 
+	public function hapusKP()
+	{
+		$start_date = $this->input->post('startdate');
+		$end_date = $this->input->post('finishdate');
+
+		$this->statussurat_model->HapusDataKP($start_date,$end_date);
+
+	}
+
 }
 
 /* End of file Surat.php */

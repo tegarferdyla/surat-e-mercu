@@ -62,7 +62,10 @@
                                 Proses
                               </button>
                                 <a href="<?php echo site_url("admin/detailkp/$u->id_surat") ?>" class="btn btn-default">Detail</a>
-                                <a href="<?php echo site_url("admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">TOLAK</a>
+                                <button class="btn btn-danger" data-href="<?=site_url("surat/kirimpesantolakkp/$u->id_surat")?>" data-toggle="modal" data-target="#confirmtolak" >
+                                Tolak
+                              </button>
+                               <!--  <a href="<?php echo site_url("admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">TOLAK</a> -->
                               </div>
                             </td>
                           </tr>
@@ -99,6 +102,28 @@
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary btn-ok">Konfirmasi</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade" id="confirmtolak" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Konfirmasi</h4>
+                  </div>
+
+                  <div class="modal-body">
+                    <p>Apakah anda yakin ingin menolak surat tersebut</p>
+                    <p class="debug-url"></p>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger btn-ok">Tolak</a>
                   </div>
                 </div>
               </div>
