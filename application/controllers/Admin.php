@@ -200,7 +200,30 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/printKP',$data);
 	}
+
 	
+
+	public function cetakLAP(){
+		$startdate = $this->input->post('startdate');
+		$enddate = $this->input->post('enddate');
+
+		if ($startdate <= $enddate) {
+			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate);
+			$this->load->view('admin/cetaklaporan',array('data'=>$data));
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/takeTA');
+		}
+
+		
+	}
+	public function cetakLAPkp(){
+		$startdate = $this->input->post('startdate');
+		$finishdate = $this->input->post('finishdate');
+		$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate);
+		$this->load->view('admin/cetaklaporankp',array('data'=>$data));
+	}
+
 }
 
 

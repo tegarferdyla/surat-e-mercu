@@ -192,6 +192,8 @@ class Statussurat_model extends CI_Model {
 		return $query->num_rows();	
 	}
 
+	
+
 	public function JumlahSuratTAProses()
 	{
 		$this->db->select('*');
