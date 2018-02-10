@@ -125,7 +125,6 @@ class Tampilsurat_model extends CI_Model
 			$this->db->from('surat');
 			$this->db->join('user','user.nim =surat.nim');
 			$this->db->join('dosen','dosen.nik =surat.nik');
-			$this->db->where('surat.status =','Menunggu');
 			$this->db->where('id_surat',$id_surat);
 			$query = $this->db->get();
 			
