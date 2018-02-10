@@ -1,11 +1,44 @@
 <div class="footer">
 	<div class="container-fluid">
 		<div class="row">
-      <div class="col-md-4"> 
+      <div class="col-md-4 col-sm-12">
         <p class="text-center">
           Copyright &copy; <?php echo date("Y"); ?> <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a> <br>
           Fakultas Ilmu Komputer <br>
         Universitas Mercu Buana</p>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <p class="text-center">
+        Link Dukungan
+        </p>
+        <p class="text-center">
+          Fakultas Ilmu Komputer<br>
+          Prodi Sistem Informasi<br>
+          Prodi Teknik Informatika<br>
+          Sertifikat Seminar
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <p class="text-center">
+          Lokasi Tata Usaha Fasilkom
+        </p>
+        <div id="map" style="height: 200px;"></div>
+              <script>
+                function initMap() {
+                  var uluru = {lat: -6.210086, lng: 106.738548};
+                  var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 18,
+                    center: uluru
+                  });
+                  var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                  });
+                }
+              </script>
+              <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVFySsy-NUI9Ao6OdUAjZDvKgJ5xwIR_s&callback=initMap">
+            </script>
       </div>
     </div>
   </div>
