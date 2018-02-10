@@ -136,7 +136,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			return $query->result_array();
 		}
-
+		public function printLAPORAN($startdate,$enddate)
+		{
+			//$query = $this->db->query("select *FROM surat WHERE surat.tanggal_diambil BETWEEN ".$startdate." AND ".$enddate.";");
+			$this->db->select('*');
+			$this->db->from('surat');
+			$this->db->where('tanggal_diambil >=', date('Y-m-d',strtotime($startdate)));
+			$this->db->where('tanggal_diambil <=', date('Y-m-d',strtotime($enddate)));
+			$this->db->where('jenis_surat','Tugas Akhir');
+			$this->db->where('status =','Ambil');
+			$query = $this->db->get();
+			return $query->result_array();
+		
+		}
+		public function printLAPORANkp($startdate,$finishdate)
+		{
+			//$query = $this->db->query("select *FROM surat WHERE surat.tanggal_diambil BETWEEN ".$startdate." AND ".$enddate.";");
+			$this->db->select('*');
+			$this->db->from('surat');
+			$this->db->where('tanggal_diambil >=', date('Y-m-d',strtotime($startdate)));
+			$this->db->where('tanggal_diambil <=', date('Y-m-d',strtotime($finishdate)));
+			$this->db->where('jenis_surat','Kerja Pratek');
+			$this->db->where('surat.status =','Ambil');
+			$query = $this->db->get();
+			return $query->result_array();
+		
+		}
 		
 
 
