@@ -9,13 +9,10 @@
 			<tr>
 				<th>No</th>
 				<th>No Surat</th>
+				<th>NIM</th>
 				<th>Nama Perusahaan</th>
 				<th>Alamat Perusahaan</th>
-				<th>Jenis Surat</th>
 				<th>Tanggal Diambil</th>
-				<th>Prodi</th>
-				<th>NIM</th>
-				<th>NIK</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,14 +24,11 @@
 			<tr>
 				<td><?=$i;?></td>
                 <td><?php echo $d['no_surat'];?></td>
+                <td><?php echo $d['nim'];?></td>
                 <td><?php echo $d['nama_perusahaan'];?></td>
                 <td><?php echo $d['alamat_perusahaan'];?></td>
-                <td><?php echo $d['jenis_surat'];?></td>
                 <td><?php echo $d['tanggal_diambil'];?></td>
-                <td><?php echo $d['prodi'];?></td>
-                <td><?php echo $d['nim'];?></td>
-                <td><?php echo $d['nik'];?></td>
-			</tr>
+            </tr>
 			<?php } ?>
 		</tbody>
 	</table></center>

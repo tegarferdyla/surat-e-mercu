@@ -221,8 +221,6 @@ class Admin extends CI_Controller {
 		$startdate = $this->input->post('startdate');
 		$finishdate = $this->input->post('finishdate');
 		$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate);
-		
-		
 		$this->load->view('admin/cetaklaporankp',array('data'=>$data));
 	}
 
