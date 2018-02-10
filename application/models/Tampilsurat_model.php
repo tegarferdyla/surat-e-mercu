@@ -161,8 +161,8 @@ class Tampilsurat_model extends CI_Model
 			$this->db->from('surat');
 			$this->db->where('tanggal_diambil >=', date('Y-m-d',strtotime($startdate)));
 			$this->db->where('tanggal_diambil <=', date('Y-m-d',strtotime($enddate)));
-			$this->db->where('jenis_surat','Tugas Akhir');
-			$this->db->where('status =','Ambil');
+			//$this->db->where('jenis_surat = ','Tugas Akhir');
+			//$this->db->where('status =','Ambil');
 			$query = $this->db->get();
 			return $query->result_array();
 		
@@ -175,7 +175,7 @@ class Tampilsurat_model extends CI_Model
 			$this->db->where('tanggal_diambil >=', date('Y-m-d',strtotime($startdate)));
 			$this->db->where('tanggal_diambil <=', date('Y-m-d',strtotime($finishdate)));
 			$this->db->where('jenis_surat','Kerja Pratek');
-			$this->db->where('surat.status =','Ambil');
+			$this->db->where('status =','Ambil');
 			$query = $this->db->get();
 			return $query->result_array();
 		

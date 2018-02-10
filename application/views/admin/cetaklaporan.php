@@ -3,8 +3,10 @@
 <head>
 	<title>Laporan</title>
 </head>
-<body><center>
-	<table cellspacing="20">
+<body>
+	<center>
+	<h1>Arsip Pembuatan surat Kerja Praktek Tahun Akademik 2018/2019</h1>
+	<table border="1" cellspacing="0">
 		<thead>
 			<tr>
 				<th>No</th>
@@ -18,8 +20,8 @@
 				<th>NIK</th>
 			</tr>
 		</thead>
-		<tbody>
-			<?php
+			<tbody>
+					  <?php
                       $i=0;
                       foreach($data as $d) {
                         $i++;
@@ -37,6 +39,7 @@
 			</tr>
 			<?php } ?>
 		</tbody>
-	</table></center>
+	</table>
+</center>
 </body>
 </html>

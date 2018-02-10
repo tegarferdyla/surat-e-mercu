@@ -200,28 +200,22 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/printKP',$data);
 	}
-<<<<<<< HEAD
-	public function tolakkp()
-	{
-		$this->load->view('admin/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('admin/tolakkp');
-		$this->load->view('admin/footer');
-	}
-	public function tolakTA()
-	{
-		$this->load->view('admin/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('admin/tolakTA');
-		$this->load->view('admin/footer');
-	}
+
+	
+
 	public function cetakLAP(){
 		$startdate = $this->input->post('startdate');
 		$enddate = $this->input->post('enddate');
-		$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate);
+
+		if ($startdate <= $enddate) {
+			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate);
+			$this->load->view('admin/cetaklaporan',array('data'=>$data));
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/takeTA');
+		}
+
 		
-		
-		$this->load->view('admin/cetaklaporan',array('data'=>$data));
 	}
 	public function cetakLAPkp(){
 		$startdate = $this->input->post('startdate');
@@ -231,9 +225,7 @@ class Admin extends CI_Controller {
 		
 		$this->load->view('admin/cetaklaporankp',array('data'=>$data));
 	}
-=======
-	
->>>>>>> upstream/master
+
 }
 
 
