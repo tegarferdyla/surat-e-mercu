@@ -22,12 +22,14 @@ class Admin extends CI_Controller {
 		$data['kpproses'] = $this->statussurat_model->JumlahSuratKpProses();
 		$data['kpfinish']  = $this->statussurat_model->JumlahSuratKpFinish();
 		$data['kptake']	   = $this->statussurat_model->JumlahSuratKpTake(); 
+		$data['kptolak'] = $this->statussurat_model->JumlahSuratKpTolak();
 
 		// Jumlah Surat Tugas Akhir
 		$data['tawaiting'] = $this->statussurat_model->JumlahSuratTAWaiting();
 		$data['taproses'] = $this->statussurat_model->JumlahSuratTAProses();
 		$data['tafinish']  = $this->statussurat_model->JumlahSuratTAFinish();
-		$data['tatake']	   = $this->statussurat_model->JumlahSuratTATake();	
+		$data['tatake']	   = $this->statussurat_model->JumlahSuratTATake();
+		$data['tatolak'] =$this->statussurat_model->JumlahSuratTATolak();	
 
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -118,6 +120,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/takeTA');
 		$this->load->view('admin/footer');
 	}
+
 	public function takekp()
 	{
 		$this->load->view('admin/header');
@@ -127,6 +130,21 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 
+	public function tolakkp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_tolak();
+		$this->load->view('admin/tolakkp',$data);
+		$this->load->view('admin/footer');
+	}
+	public function tolakTA()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tolakTA');
+		$this->load->view('admin/footer');
+	}
 
 	public function koordinatorupdate($nik){
 		$this->load->view('admin/header');
@@ -182,20 +200,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin/printKP',$data);
 	}
-	public function tolakkp()
-	{
-		$this->load->view('admin/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('admin/tolakkp');
-		$this->load->view('admin/footer');
-	}
-	public function tolakTA()
-	{
-		$this->load->view('admin/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('admin/tolakTA');
-		$this->load->view('admin/footer');
-	}
+	
 }
 
 
