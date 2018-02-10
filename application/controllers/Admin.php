@@ -15,18 +15,25 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	/*public function index()
+   public function index()
 	{
-		echo "berhasil login sebagai admin ";
-	    echo $this->session->userdata('username');
-	    echo  anchor('login?logout=signout', 'keluar');
-	}*/
-  
-  public function index()
-	{
+		// Jumlah Surat Kerja Praktek
+		$data['kpwaiting'] = $this->statussurat_model->JumlahSuratKpWaiting();
+		$data['kpproses'] = $this->statussurat_model->JumlahSuratKpProses();
+		$data['kpfinish']  = $this->statussurat_model->JumlahSuratKpFinish();
+		$data['kptake']	   = $this->statussurat_model->JumlahSuratKpTake(); 
+		$data['kptolak'] = $this->statussurat_model->JumlahSuratKpTolak();
+
+		// Jumlah Surat Tugas Akhir
+		$data['tawaiting'] = $this->statussurat_model->JumlahSuratTAWaiting();
+		$data['taproses'] = $this->statussurat_model->JumlahSuratTAProses();
+		$data['tafinish']  = $this->statussurat_model->JumlahSuratTAFinish();
+		$data['tatake']	   = $this->statussurat_model->JumlahSuratTATake();
+		$data['tatolak'] =$this->statussurat_model->JumlahSuratTATolak();	
+
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/dashboardadmin_v');
+		$this->load->view('admin/dashboardadmin_v',$data);
 		$this->load->view('admin/footer');
 	}
   
@@ -34,7 +41,8 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/waitingkp');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_waiting();
+		$this->load->view('admin/waitingkp',$data);
 		$this->load->view('admin/footer');
 	}
 
@@ -44,34 +52,99 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/tolakemailta_v');
 		$this->load->view('admin/footer');
 	}
-    public function tolakemailkp(){
+    public function tolakemailkp($id_surat){
+    	$data['detailkp'] = $this->tampilsurat_model->get_email_user_kp($id_surat);
+
     	$this->load->view('admin/header');
     	$this->load->view('admin/sidebar');
-    	$this->load->view('admin/tolakemailkp_v');
+    	$this->load->view('admin/tolakemailkp_v',$data);
     	$this->load->view('admin/footer');
     }
 	public function waitingTA()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/waitingta');
+		$data['surat'] = $this->tampilsurat_model->tampil_datata_waiting();		
+		$this->load->view('admin/waitingta',$data);
+		$this->load->view('admin/footer');
+	}
+	public function proseskp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_proses();
+		$this->load->view('admin/proseskp',$data);
+		$this->load->view('admin/footer');
+	}
+	public function prosesTA()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/prosesta');
 		$this->load->view('admin/footer');
 	}
 	public function finishkp()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/finishkp');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_finish();
+		$this->load->view('admin/finishkp',$data);
 		$this->load->view('admin/footer');
 	}
 	public function finishTA()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/finishTA');
+		$data['surat'] = $this->tampilsurat_model->tampil_datata_finish();
+		$this->load->view('admin/finishTA',$data);
 		$this->load->view('admin/footer');
 	}
 
+	public function detailkp($idsurat)
+	{
+
+		$data['surat'] 		= $this->tampilsurat_model->detailKP($idsurat);
+		$data['mahasiswa']	= $this->tampilsurat_model->PrintMahasiswaKP($idsurat);
+
+
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/detailkp',$data);
+		$this->load->view('admin/footer');
+	}
+
+	public function takeTA()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/takeTA');
+		$this->load->view('admin/footer');
+	}
+
+	public function takekp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_ambil();
+		$this->load->view('admin/takeKP',$data);
+		$this->load->view('admin/footer');
+	}
+
+	public function tolakkp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_tolak();
+		$this->load->view('admin/tolakkp',$data);
+		$this->load->view('admin/footer');
+	}
+	public function tolakTA()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tolakTA');
+		$this->load->view('admin/footer');
+	}
 
 	public function koordinatorupdate($nik){
 		$this->load->view('admin/header');
@@ -121,10 +194,38 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/koordinatorsetting',array('data'=>$data));
 		$this->load->view('admin/footer');
 	}
-	public function printKPTA(){
-		$this->load->view('admin/printKPTA');
+	public function printKP($idsurat){
+		$data['surat'] 		= $this->tampilsurat_model->printKP($idsurat);
+		$data['mahasiswa']	= $this->tampilsurat_model->PrintMahasiswaKP($idsurat);
+
+		$this->load->view('admin/printKP',$data);
 	}
+
 	
+
+	public function cetakLAP(){
+		$startdate = $this->input->post('startdate');
+		$enddate = $this->input->post('enddate');
+
+		if ($startdate <= $enddate) {
+			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate);
+			$this->load->view('admin/cetaklaporan',array('data'=>$data));
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/takeTA');
+		}
+
+		
+	}
+	public function cetakLAPkp(){
+		$startdate = $this->input->post('startdate');
+		$finishdate = $this->input->post('finishdate');
+		$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate);
+		
+		
+		$this->load->view('admin/cetaklaporankp',array('data'=>$data));
+	}
+
 }
 
 

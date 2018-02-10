@@ -61,7 +61,7 @@
                           <td><?php echo $d['jabatan'];?></td>
                           <td><?php echo $d['prodi'];?></td>
                           <td>
-                            <a href="<?php echo base_url()."admin/koordinatorupdate/".$d['nik'];?>" class="btn btn-success">UPDATE</a>
+                            <a href="<?php echo base_url()."admin/koordinatorupdate/".$d['nik'];?>" class="btn btn-success">Ganti <?=$d['jabatan']." ".$d['prodi']?></a>
                           </td>
                         </tr>
                        <?php
