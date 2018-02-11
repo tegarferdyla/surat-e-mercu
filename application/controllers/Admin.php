@@ -206,6 +206,7 @@ class Admin extends CI_Controller {
 	public function cetakLAP(){
 		$startdate = $this->input->post('startdate');
 		$enddate = $this->input->post('enddate');
+		$jurusan = $this->input->post('jurusan');
 
 		if ($startdate <= $enddate) {
 			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate);
@@ -220,8 +221,16 @@ class Admin extends CI_Controller {
 	public function cetakLAPkp(){
 		$startdate = $this->input->post('startdate');
 		$finishdate = $this->input->post('finishdate');
-		$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate);
-		$this->load->view('admin/cetaklaporankp',array('data'=>$data));
+		$jurusan = $this->input->post('jurusan');
+		
+		if ($startdate <= $enddate) {
+			$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate,$jurusan);
+			$this->load->view('admin/cetaklaporankp',array('data'=>$data));	
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/takekp');
+		}
+		
 	}
 
 }
