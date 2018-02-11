@@ -38,14 +38,14 @@ class Tester extends CI_Controller {
       $email = $this->input->post('email');
       $rs = $this->tester_model->getByEmail($email);
      
-      // cek email ada atau engga
+      // cek apakah ada email di mahasiswa
       if (!$rs->num_rows() > 0){
         echo "maaf email tidak ditemukan";
       }else{
           $user = $rs->row();
           // get nim mahasiswa
           $user_token = $user->nim;
-          //create valid dan expire token
+          //buat umur token expirednya
           $date_create_token = date("Y-m-d H:i");
           $date_expired_token = date('Y-m-d H:i',strtotime('+2 hour',strtotime($date_create_token)));
           // membuat token string
@@ -57,7 +57,6 @@ class Tester extends CI_Controller {
                         'created'=>$date_create_token,
                         'expired'=>$date_expired_token
                   );
-
           $simpan = $this->tester_model->simpanToken($data);
            if ($simpan > 0){
                echo "Token ini berlaku untuk 2 jam dari pengiriman token ini:
@@ -72,7 +71,7 @@ class Tester extends CI_Controller {
       date_default_timezone_set("Asia/jakarta");
       $token = $this->uri->segment(4);
      
-      // get token ke nodel user
+      // get cek tokennya
       $cekToken = $this->tester_model->cekToken($token);
       $rs = $cekToken->num_rows();
      
