@@ -117,6 +117,13 @@ class Statussurat_model extends CI_Model {
 		return $query->num_rows();
 	}
 
+	public function HapusDataKP($start_date,$end_date)
+	{
+		
+		$query = $this->db->query("DELETE FROM surat WHERE tanggal_diambil BETWEEN '$start_date' AND '$end_date'");
+		
+	}
+
 	// SURAT TA
 	public function StatusTASuratMahasiswa($nim)
 	{
@@ -184,6 +191,8 @@ class Statussurat_model extends CI_Model {
 		$query = $this->db->get();
 		return $query->num_rows();	
 	}
+
+	
 
 	public function JumlahSuratTAProses()
 	{

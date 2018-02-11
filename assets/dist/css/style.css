@@ -280,6 +280,9 @@ span.tanggal{
 .kepadayth{
   padding-bottom: 40px;
 }
+.clsDatePicker {
+    z-index: 100000;
+}
 p.nomor,p.lampiran,p.perihal{
   white-space: pre;
 }
