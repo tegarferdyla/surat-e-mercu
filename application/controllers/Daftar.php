@@ -28,7 +28,7 @@ class Daftar extends CI_Controller {
 		$this->form_validation->set_rules('prodi', 'Program Studi', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('home/header');
+			$this->load->view('daftar/header');
 			$this->load->view('daftar/daftar');
 			$this->load->view('home/footer');
 		} else {
