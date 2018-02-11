@@ -52,6 +52,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/tolakemailta_v');
 		$this->load->view('admin/footer');
 	}
+	
     public function tolakemailkp($id_surat){
     	$data['detailkp'] = $this->tampilsurat_model->get_email_user_kp($id_surat);
 
@@ -60,6 +61,7 @@ class Admin extends CI_Controller {
     	$this->load->view('admin/tolakemailkp_v',$data);
     	$this->load->view('admin/footer');
     }
+
 	public function waitingTA()
 	{
 		$this->load->view('admin/header');
@@ -68,6 +70,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingta',$data);
 		$this->load->view('admin/footer');
 	}
+
 	public function proseskp()
 	{
 		$this->load->view('admin/header');
@@ -76,6 +79,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/proseskp',$data);
 		$this->load->view('admin/footer');
 	}
+
 	public function prosesTA()
 	{
 		$this->load->view('admin/header');
@@ -83,6 +87,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/prosesta');
 		$this->load->view('admin/footer');
 	}
+
 	public function finishkp()
 	{
 		$this->load->view('admin/header');
@@ -91,6 +96,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/finishkp',$data);
 		$this->load->view('admin/footer');
 	}
+
 	public function finishTA()
 	{
 		$this->load->view('admin/header');
@@ -187,6 +193,7 @@ class Admin extends CI_Controller {
 		}
 
 	}
+
 	public function koordinatorsetting(){
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -194,6 +201,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/koordinatorsetting',array('data'=>$data));
 		$this->load->view('admin/footer');
 	}
+
 	public function printKP($idsurat){
 		$data['surat'] 		= $this->tampilsurat_model->printKP($idsurat);
 		$data['mahasiswa']	= $this->tampilsurat_model->PrintMahasiswaKP($idsurat);
@@ -201,29 +209,34 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/printKP',$data);
 	}
 
-	
-
 	public function cetakLAP(){
 		$startdate = $this->input->post('startdate');
 		$enddate = $this->input->post('enddate');
+		$jurusan = $this->input->post('jurusan');
 
 		if ($startdate <= $enddate) {
-			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate);
+			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate,$jurusan);
 			$this->load->view('admin/cetaklaporan',array('data'=>$data));
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
 			redirect('admin/takeTA');
 		}
-
-		
 	}
+
 	public function cetakLAPkp(){
 		$startdate = $this->input->post('startdate');
 		$finishdate = $this->input->post('finishdate');
-		$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate);
-		$this->load->view('admin/cetaklaporankp',array('data'=>$data));
+		$jurusan = $this->input->post('jurusan');
+		
+		if ($startdate <= $enddate) {
+			$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate,$jurusan);
+			$this->load->view('admin/cetaklaporankp',array('data'=>$data));	
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/takekp');
+		}
+		
 	}
-
 }
 
 
