@@ -71,7 +71,14 @@ class Login extends CI_Controller {
 	   		redirect('login');
 	   	}
 	}
-
+	public function resetpassword(){
+		$this->load->view('login/header');
+		$this->load->view('login/resetpassword');
+	}
+	public function resetpassword1(){
+		$this->load->view('login/header');
+		$this->load->view('login/resetpassword-1');
+	}
 }
 
 /* End of file Login.php */
