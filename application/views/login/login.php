@@ -30,7 +30,10 @@
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
-                  <input type="submit" class="btn btn-primary btn-block btn-flat" value="Login" />
+                  <input type="submit" class="btn btn-primary btn-block" value="Login" />
+                </div>
+                <div class="form-group has-feedback">
+                  <a href="<?php echo site_url('login/resetpassword') ?>" class="btn btn-danger btn-block">Reset Password</a>
                 </div>
          </div>
        </div>
