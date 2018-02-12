@@ -31,7 +31,7 @@ class Surat extends CI_Controller {
 
 		$namafile 		= $kirimemail->id_surat;
 		$emailmahasiswa	= $kirimemail->email;
-		$isi       = html_entity_decode("Halo ".$kirimemail->nama_mahasiswa." surat yang kamu ajukan telah selesai dibuat, untuk dapat mengambil surat yang kamu ajukan di TU FASILKOM kamu <b>diharuskan</b> untuk membaa tanda bukti yang bisa kamu unduh di lampiran yang bersamaan dengan pesan ini.
+		$isi       = html_entity_decode("Halo ".$kirimemail->nama_mahasiswa." surat yang kamu ajukan telah selesai dibuat, untuk dapat mengambil surat yang kamu ajukan di TU FASILKOM kamu <b>diharuskan</b> untuk membawa tanda bukti yang bisa kamu unduh di lampiran yang bersamaan dengan pesan ini.
 		<br><br>
 		Salam,
 		TU FASILKOM");
