@@ -21,11 +21,11 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('home/header');
+		$this->load->view('login/header');
 		$this->load->view('login/login');
 	}
 
-	function ceklogin()
+	public function ceklogin()
 	{
 		$username = $this->input->post('username');
 		$password = md5($this->input->post('password'));
@@ -71,7 +71,14 @@ class Login extends CI_Controller {
 	   		redirect('login');
 	   	}
 	}
-
+	public function resetpassword(){
+		$this->load->view('login/header');
+		$this->load->view('login/resetpassword');
+	}
+	public function resetpassword1(){
+		$this->load->view('login/header');
+		$this->load->view('login/resetpassword-1');
+	}
 }
 
 /* End of file Login.php */

@@ -14,7 +14,7 @@
 </head>
 <body class="body">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar-login navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -38,4 +38,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-

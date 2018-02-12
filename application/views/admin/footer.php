@@ -2,7 +2,7 @@
   <div class="pull-right hidden-xs">
     <b>Version</b> Alpha-3
   </div>
-  <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Team Aslab</a>.</strong> All rights
+  <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a>.</strong> All rights
   reserved.
 </footer>
 </body>
@@ -22,6 +22,7 @@
 <script src="<?php echo base_url('assets/plugins/morris.js/morris.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/chart.js/Chart.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
 <script>
   $(function(){
     $('#datatable').DataTable({
@@ -101,6 +102,19 @@
 
 <script>
         $('#confirm').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
+        });
+    </script>
+<script>
+    $(document).ready(function(){
+      $('.datepicker').datepicker({
+       format : 'dd-mm-yyyy' 
+      });
+    });
+    </script>
+
+    <script>
+        $('#confirmtolak').on('show.bs.modal', function(e) {
             $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
         });
     </script>
