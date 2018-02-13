@@ -30,14 +30,14 @@ body.body{
     padding: 6px 27px; 
     margin-top: 0;
     font-size: 1.3em;
-     color: white;
-     text-align: center;
+    color: white;
+    text-align: center;
+    transition: 0.5s;
 
 }
 .navbar-nav>li>a.home:hover{
     border-bottom-color: coral;
     border-bottom-style: solid;
-    color: white;
 }
 nav.shrink{
 background-color: #34495E;
