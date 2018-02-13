@@ -33,7 +33,7 @@
                   <input type="submit" class="btn btn-primary btn-block" value="Login" />
                 </div>
                 <div class="form-group has-feedback">
-                  <a href="<?php echo site_url('login/resetpassword') ?>" class="btn btn-danger btn-block">Reset Password</a>
+                  <a href="<?php echo site_url('login/resetpassword') ?>" class="btn btn-danger btn-block">Lupa Password</a>
                 </div>
          </div>
        </div>
