@@ -21,6 +21,16 @@
 <script src="<?php echo base_url('assets/plugins/datatables.net-bs/js/dataTables.bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/dist/js/wow.min.js') ?>"></script>
 <script>
+  $(window).scroll(function(){
+    if($(document).scrollTop() > 570){
+      $('nav').addClass('shrink');
+    }
+    else{
+      $('nav').removeClass('shrink');
+    }
+  });
+</script>
+<script>
   new WOW().init();
 </script>
 
