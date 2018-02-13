@@ -82,7 +82,7 @@
 					<span class="pull-right tanggal">Jakarta, <?=$tanggal_fix?></span>
 				</div><!-- /.col-xs-6 -->
 			</div>
-			<span class="hidden-print warning"><h1 class="text-center">Direkomendasikan Menggunakan Chrome</h1></span>
+			<span class="hidden-print warning"><h1 class="text-center">Direkomendasikan Menggunakan Chrome Versi 64 Atau Lebih</h1></span>
 		</div>
 
 
