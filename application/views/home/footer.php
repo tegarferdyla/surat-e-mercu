@@ -1,49 +1,62 @@
 <div class="footer">
 	<div class="container-fluid">
 		<div class="row">
-      <div class="col-md-4 col-sm-12">
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <p class="text-center">
-          Copyright &copy; <?php echo date("Y"); ?> <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a> <br>
-          Fakultas Ilmu Komputer <br>
-        Universitas Mercu Buana</p>
+          &copy; 2017 - <?php echo date("Y"); ?>
+          <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank" style="color: #CCDC22; text-decoration:none;">Aslab Fasilkom</a>
+        </p>
+        <br>
+        <div class="row text-center">
+          <div>Fakultas Ilmu Komputer</div>
+          <div>Universitas Mercu Buana</div>
+          <div>Jl. Meruya Selatan No.1 Gedung C Lantai 2</div>
+          <br>
+          <div>
+            <i class="ion-ios-telephone" style="font-size: 25px; vertical-align: middle;"></i>
+            <a class="link-dukungan" href="tel:622158408165700">+6221-5840816 ext 5700</a>
+          </div>
+          <div>
+            <i class="ion-ios-email" style="font-size: 25px; vertical-align: middle;"></i>
+            <a class="link-dukungan" href="mailto:fasilkom@mercubuana.ac.id">fasilkom@mercubuana.ac.id</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 col-sm-12">
-        <p class="text-center">
-        Link Dukungan
-        </p>
-        <p class="text-center">
-          Fakultas Ilmu Komputer<br>
-          Prodi Sistem Informasi<br>
-          Prodi Teknik Informatika<br>
-          Sertifikat Seminar
-        </p>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+        <p class="text-center">Link Dukungan</p>
+        <br>
+        <div class="row text-center">
+          <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><a class="link-dukungan" href="http://sisteminformasi.fasilkom.mercubuana.ac.id/" target="_blank">Sistem Informasi</a></div>
+          <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><a class="link-dukungan" href="http://teknikinformatika.fasilkom.mercubuana.ac.id/" target="_blank">Teknik Informatika</a></div>
+        </div>
+        <br>
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <a class="link-dukungan" href="https://elearning.mercubuana.ac.id/" target="_blank">e-Learning Fasilkom</a>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <a class="link-dukungan" href="https://sia.mercubuana.ac.id/" target="_blank">Sistem Informasi Akademik (SIA)</a>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <a class="link-dukungan" href="https://sso.mercubuana.ac.id/" target="_blank">SSO Mercubuana</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 col-sm-12">
-        <p class="text-center">
-          Lokasi Tata Usaha Fasilkom
-        </p>
-        <div id="map" style="height: 200px;"></div>
-              <script>
-                function initMap() {
-                  var uluru = {lat: -6.210086, lng: 106.738548};
-                  var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 18,
-                    center: uluru
-                  });
-                  var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                  });
-                }
-              </script>
-              <script async defer
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVFySsy-NUI9Ao6OdUAjZDvKgJ5xwIR_s&callback=initMap">
-            </script>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <p class="text-center">Tata Usaha Fasilkom</p>
+        <br>
+        <div id="map" style="height: 200px;" class="embed-responsive embed-responsive-16by9 row" style="border-radius: 10px; width: 300px; overflow: hidden;">
+          <iframe class="embed-responsive-item" width="300" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0Yiefk_3aS4RXyefceQBZ18&key=AIzaSyDAVb-cCMXNZST6a_0Opq_C7wLqWdxy1Ic&zoom=18" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+<!-- </div> -->
 
 
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js') ?>"></script>
