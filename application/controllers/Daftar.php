@@ -28,23 +28,29 @@ class Daftar extends CI_Controller {
 		$this->form_validation->set_rules('prodi', 'Program Studi', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('home/header');
+			$this->load->view('daftar/header');
 			$this->load->view('daftar/daftar');
 			$this->load->view('home/footer');
 		} else {
 			$nimmhs  =$this->input->post('nimmhs');
 			$kodemhs =$this->input->post('kodenim');
 			$nimlengkap =$kodemhs.$nimmhs;
+			$validasiemail = substr($this->input->post('email'),11);
 			$resultchecknim = $this->daftar_model->ceknimmahasiswa($nimlengkap);
 
-			if ($resultchecknim > 0) {
+			if ($validasiemail != "@student.mercubuana.ac.id") {
+				$this->session->set_flashdata('emailmercu', 'true');
+				redirect('daftar');
+			}elseif($resultchecknim > 0){
 				$this->session->set_flashdata('nimsudahada', 'true');
 				redirect('daftar');
 			}else{
 				$this->daftar_model->registerMahasiswa();
 				$this->session->set_flashdata('info_berhasil', 'true');
-				redirect('daftar');
+				redirect('login');
 			}
+
+
 
 		}
 	}

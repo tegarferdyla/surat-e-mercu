@@ -259,7 +259,7 @@
 					<label class="control-label col-md-4 col-xs-3" for="nim">NIM</label>
 
 					<div class="col-md-1 col-xs-3 col-sm-2">
-					 	<input type="text" class="form-control" id="fnim5" value="<?=$nimdepan?>" readonly>
+					 	<input type="text" class="form-control" name="fnim5" id="fnim5" value="<?=$nimdepan?>" readonly>
 				 	</div>
 
 				 	<div class="col-md-3 col-xs-5 col-sm-6">

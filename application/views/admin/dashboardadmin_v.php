@@ -179,7 +179,7 @@
                    <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="small-box bg-maroon">
                       <div class="inner">
-                        <h3><?php echo "#" ?></h3>
+                        <h3><?=$kptolak ?></h3>
                         <p>Tugas Akhir</p>
                       </div>
                       <div class="icon">
@@ -191,7 +191,7 @@
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="small-box bg-light-blue-active">
                       <div class="inner">
-                        <h3><?php echo "#" ?></h3>
+                        <h3><?=$tatolak ?></h3>
                         <p>Kerja Praktek</p>
                       </div>
                       <div class="icon">
