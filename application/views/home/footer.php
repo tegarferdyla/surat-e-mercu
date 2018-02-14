@@ -1,16 +1,12 @@
 <div class="footer">
 	<div class="container-fluid">
 		<div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-        <p class="text-center">
-          &copy; 2017 - <?php echo date("Y"); ?>
-          <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank" style="color: #CCDC22; text-decoration:none;">Aslab Fasilkom</a>
-        </p>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 footer-column">
         <br>
         <div class="row text-center">
-          <div>Fakultas Ilmu Komputer</div>
-          <div>Universitas Mercu Buana</div>
-          <div>Jl. Meruya Selatan No.1 Gedung C Lantai 2</div>
+          <p>Fakultas Ilmu Komputer</p>
+          <p>Universitas Mercu Buana</p>
+          <p>Jl. Meruya Selatan No.1 Gedung C Lantai 2</p>
           <br>
           <div>
             <i class="ion-ios-telephone" style="font-size: 25px; vertical-align: middle;"></i>
@@ -22,9 +18,8 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-        <p class="text-center">Link Dukungan</p>
-        <br>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 footer-column">
+        <h4 class="text-center">Link Dukungan</h4>
         <div class="row text-center">
           <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><a class="link-dukungan" href="http://sisteminformasi.fasilkom.mercubuana.ac.id/" target="_blank">Sistem Informasi</a></div>
           <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><a class="link-dukungan" href="http://teknikinformatika.fasilkom.mercubuana.ac.id/" target="_blank">Teknik Informatika</a></div>
@@ -47,12 +42,18 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        <p class="text-center">Tata Usaha Fasilkom</p>
+        <h4 class="text-center">Tata Usaha Fasilkom</h4>
         <br>
         <div id="map" style="height: 200px;" class="embed-responsive embed-responsive-16by9 row" style="border-radius: 10px; width: 300px; overflow: hidden;">
           <iframe class="embed-responsive-item" width="300" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0Yiefk_3aS4RXyefceQBZ18&key=AIzaSyDAVb-cCMXNZST6a_0Opq_C7wLqWdxy1Ic&zoom=18" allowfullscreen></iframe>
         </div>
       </div>
+    </div>
+    <div class="row">
+       <h4 class="text-center">
+          &copy; 2017 - <?php echo date("Y"); ?>
+          <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank" style="color: #CCDC22; text-decoration:none;">Aslab Fasilkom</a>
+        </h4>
     </div>
   </div>
 </div>
@@ -64,7 +65,7 @@
 <script src="<?php echo base_url('assets/plugins/datatables.net/js/jquery.dataTables.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/datatables.net-bs/js/dataTables.bootstrap.min.js')?>"></script>
 <script src="<?php echo base_url('assets/dist/js/wow.min.js') ?>"></script>
-<script>
+<!-- <script>
   $(window).scroll(function(){
     if($(document).scrollTop() > 570){
       $('nav').addClass('shrink');
@@ -73,7 +74,7 @@
       $('nav').removeClass('shrink');
     }
   });
-</script>
+</script> -->
 <script>
   new WOW().init();
 </script>
