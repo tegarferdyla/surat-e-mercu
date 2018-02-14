@@ -9,6 +9,7 @@ body.body{
   background-color: rgba(0,0,0,0);
   border:none;
 }
+
 .navbar-login{
   background-color: #34495E;
   margin-bottom: 0;
@@ -182,6 +183,9 @@ background: rgba(46,134,193,1);
 	background-color:#1c2c39;
 	color: #ffffff;
 	padding: 20px;
+}
+.footer-column{
+  line-height: 34px;
 }
 
 .box-login{
