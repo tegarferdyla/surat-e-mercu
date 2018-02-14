@@ -14,7 +14,19 @@
           <div class="alert alert-success alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <h4><i class="icon fa fa-check"></i>Info</h4>
-            Berhasi Mendaftar Akun
+            Berhasil Mendaftar Akun
+          </div>
+        <?php elseif($this->session->flashdata('berhasil_reset')): ?>
+          <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-check"></i>Info</h4>
+            Berhasil mereset password 
+          </div>
+        <?php elseif($this->session->flashdata('gagal_reset')): ?>
+          <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-check"></i>Info</h4>
+            Maaf anda gagal mereset password
           </div>
         <?php endif; ?>
         <h3 class="text-center title-login">Silahkan Login Dengan menggunakan</h3>
@@ -31,15 +43,14 @@
           <input type="submit" class="btn btn-primary btn-block" value="Login" />
         </div>
         <div class="form-group has-feedback">
-          <a href="<?php echo site_url('login/resetpassword') ?>" class="btn btn-danger btn-block">Reset Password</a>
+          <a href="<?php echo site_url('login/resetpassword') ?>" class="btn btn-danger btn-block">Lupa Password</a>
         </div>
         <div class="form-group has-feedback">
           <h6 class="text-center title-login">Belum punya akun? silahkan <a class="link-login" href="<?php echo site_url('daftar') ?>">daftar</a></h6>
         </div>
       </div>
     </div>
-    <div class="row">
-    </div>
+    <div class="row"></div>
   </div>
   <?php echo form_close(); ?>
 </div>

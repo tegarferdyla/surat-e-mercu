@@ -118,6 +118,11 @@ class Tester extends CI_Controller {
 
     }
 
+    public function testform()
+    {
+      echo "haloo";
+    }
+
 }
 
 /* End of file Tester.php */
