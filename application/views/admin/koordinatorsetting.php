@@ -38,7 +38,7 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>Nik</th>
+                          <th>Nidn</th>
                           <th>Nama</th>
                           <th>Jabatan</th>
                           <th>Prodi</th>

@@ -71,8 +71,8 @@ class Surat extends CI_Controller {
 			$this->email->to($emailmahasiswa); 
 				
 			$this->email->subject($subjek);
-			$this->email->message($isi);
-			$this->email->set_mailtype("html");	
+			$this->email->message($isi);	
+			$this->email->set_mailtype("html");
 			$this->email->attach($path);
 			$this->email->send();
 			
@@ -118,8 +118,6 @@ class Surat extends CI_Controller {
 
 		$this->session->set_flashdata('infotolak','true');
 	    redirect('admin/waitingkp');
-
-
 	}
 
 	public function ubahAmbilKP($id_surat)
