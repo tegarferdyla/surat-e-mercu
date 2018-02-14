@@ -1,18 +1,62 @@
 <div class="footer">
 	<div class="container-fluid">
 		<div class="row">
-
-			
-      <div class="col-md-12"> 
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
         <p class="text-center">
-		Copyright &copy; <?php echo date("Y"); ?> <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a> <br>
-		Fakultas Ilmu Komputer <br>
-		Universitas Mercu Buana</p>
-			</div>
-		</div>
+          &copy; 2017 - <?php echo date("Y"); ?>
+          <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank" style="color: #CCDC22; text-decoration:none;">Aslab Fasilkom</a>
+        </p>
+        <br>
+        <div class="row text-center">
+          <div>Fakultas Ilmu Komputer</div>
+          <div>Universitas Mercu Buana</div>
+          <div>Jl. Meruya Selatan No.1 Gedung C Lantai 2</div>
+          <br>
+          <div>
+            <i class="ion-ios-telephone" style="font-size: 25px; vertical-align: middle;"></i>
+            <a class="link-dukungan" href="tel:622158408165700">+6221-5840816 ext 5700</a>
+          </div>
+          <div>
+            <i class="ion-ios-email" style="font-size: 25px; vertical-align: middle;"></i>
+            <a class="link-dukungan" href="mailto:fasilkom@mercubuana.ac.id">fasilkom@mercubuana.ac.id</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+        <p class="text-center">Link Dukungan</p>
+        <br>
+        <div class="row text-center">
+          <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><a class="link-dukungan" href="http://sisteminformasi.fasilkom.mercubuana.ac.id/" target="_blank">Sistem Informasi</a></div>
+          <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><a class="link-dukungan" href="http://teknikinformatika.fasilkom.mercubuana.ac.id/" target="_blank">Teknik Informatika</a></div>
+        </div>
+        <br>
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <a class="link-dukungan" href="https://elearning.mercubuana.ac.id/" target="_blank">e-Learning Fasilkom</a>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <a class="link-dukungan" href="https://sia.mercubuana.ac.id/" target="_blank">Sistem Informasi Akademik (SIA)</a>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+            <a class="link-dukungan" href="https://sso.mercubuana.ac.id/" target="_blank">SSO Mercubuana</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <p class="text-center">Tata Usaha Fasilkom</p>
+        <br>
+        <div id="map" style="height: 200px;" class="embed-responsive embed-responsive-16by9 row" style="border-radius: 10px; width: 300px; overflow: hidden;">
+          <iframe class="embed-responsive-item" width="300" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ0Yiefk_3aS4RXyefceQBZ18&key=AIzaSyDAVb-cCMXNZST6a_0Opq_C7wLqWdxy1Ic&zoom=18" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
-	</div>
+  </div>
 </div>
+<!-- </div> -->
 
 
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js') ?>"></script>
@@ -59,11 +103,11 @@
   })
 </script>
 <script>
-	 $('.btn-add').click(function(){
+  $('.btn-add').click(function(){
 
-	 	var x=
-    $( ".form-test" ).append( "" );
-  });
+   var x=
+   $( ".form-test" ).append( "" );
+ });
 
 </script>
 <script>
@@ -92,7 +136,7 @@
   $('.form-tambahan').hide();
   $('#anggota').change(function(){
 
-    
+
     $('.form-tambahan').hide();
     var total=$(this).val();
 
@@ -107,10 +151,10 @@
 
     for (var i = 1; i <= total; i++) {
       $('.ft'+i).show();
-       $('#nim'+i).prop({
-          'required': true,
-          'maxLength':8,
-          'minLength':8,
+      $('#nim'+i).prop({
+        'required': true,
+        'maxLength':8,
+        'minLength':8,
       });
       $('#nama'+i).prop('required', true);
     }
@@ -120,167 +164,167 @@
 </script>
 
 <script type="text/javascript">
-$(function(){
-  $.ajaxSetup({
-    type:"POST",
-    url: "<?php echo base_url('mahasiswa/select_daerah') ?>",
-    cache: false,
-  });
+  $(function(){
+    $.ajaxSetup({
+      type:"POST",
+      url: "<?php echo base_url('mahasiswa/select_daerah') ?>",
+      cache: false,
+    });
 
-$("#provinsi").change(function(){
-  var value=$(this).val();
-  if(value>0){
-    $.ajax({
-        data:{modul:'kabupaten',id:value},
-        success: function(respond){
-          $("#kabupaten-kota").html(respond);
-        }
-    })
-     $.ajax({
-        data:{modul:'kecamatan',id:value},
+    $("#provinsi").change(function(){
+      var value=$(this).val();
+      if(value>0){
+        $.ajax({
+          data:{modul:'kabupaten',id:value},
           success: function(respond){
-          $("#kecamatan").html(respond);
-        }
-    })
-      $.ajax({
-        data:{modul:'kelurahan',id:value},
-        success: function(respond){
-        $("#kelurahan-desa").html(respond);
+            $("#kabupaten-kota").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kecamatan',id:value},
+          success: function(respond){
+            $("#kecamatan").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kelurahan',id:value},
+          success: function(respond){
+            $("#kelurahan-desa").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kodepos',id:value},
+          success: function(respond){
+            $("#kodepos").html(respond);
+          }
+        })
+
+      }else{
+        $.ajax({
+          data:{modul:'kabupaten',id:value},
+          success: function(respond){
+            $("#kabupaten-kota").html(respond);
+          }
+        })
+
+        $.ajax({
+          data:{modul:'kecamatan',id:value},
+          success: function(respond){
+            $("#kecamatan").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kelurahan',id:value},
+          success: function(respond){
+            $("#kelurahan-desa").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kodepos',id:value},
+          success: function(respond){
+            $("#kodepos").html(respond);
+          }
+        })
+      } 
+    });
+
+
+
+
+    $("#kabupaten-kota").change(function(){
+      var value=$(this).val();
+      if(value != ""){
+        $.ajax({
+          data:{modul:'kecamatan',id:value},
+          success: function(respond){
+            $("#kecamatan").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kelurahan',id:value},
+          success: function(respond){
+            $("#kelurahan-desa").html(respond);
+          }
+        })  
+        $.ajax({
+          data:{modul:'kodepos',id:value},
+          success: function(respond){
+            $("#kodepos").html(respond);
+          }
+        })
+      }else{
+        $.ajax({
+          data:{modul:'kecamatan',id:value},
+          success: function(respond){
+            $("#kecamatan").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kelurahan',id:value},
+          success: function(respond){
+            $("#kelurahan-desa").html(respond);
+          }
+        })
+
+        $.ajax({
+          data:{modul:'kodepos',id:value},
+          success: function(respond){
+            $("#kodepos").html(respond);
+          }
+        })
       }
     })
+
+    $("#kecamatan").change(function(){
+      var value=$(this).val();
+      if(value !=""){
+        $.ajax({
+          data:{modul:'kelurahan',id:value},
+          success: function(respond){
+            $("#kelurahan-desa").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kodepos',id:value},
+          success: function(respond){
+            $("#kodepos").html(respond);
+          }
+        })
+      }else{
+        $.ajax({
+          data:{modul:'kelurahan',id:value},
+          success: function(respond){
+            $("#kelurahan-desa").html(respond);
+          }
+        })
+        $.ajax({
+          data:{modul:'kodepos',id:value},
+          success: function(respond){
+            $("#kodepos").html(respond);
+          }
+        })
+      } 
+    })
+  })
+
+  $("#kelurahan-desa").change(function(){
+    var value=$(this).val();
+    if(value != ""){
       $.ajax({
         data:{modul:'kodepos',id:value},
         success: function(respond){
-        $("#kodepos").html(respond);
-      }
-    })
-
-  }else{
-    $.ajax({
-        data:{modul:'kabupaten',id:value},
-        success: function(respond){
-          $("#kabupaten-kota").html(respond);
-        }
-    })
-
-    $.ajax({
-        data:{modul:'kecamatan',id:value},
-          success: function(respond){
-          $("#kecamatan").html(respond);
-        }
-    })
-     $.ajax({
-        data:{modul:'kelurahan',id:value},
-        success: function(respond){
-        $("#kelurahan-desa").html(respond);
-      }
-    })
-     $.ajax({
-          data:{modul:'kodepos',id:value},
-          success: function(respond){
           $("#kodepos").html(respond);
         }
       })
-    } 
-});
-
-
-
-
-$("#kabupaten-kota").change(function(){
-  var value=$(this).val();
-  if(value != ""){
-      $.ajax({
-        data:{modul:'kecamatan',id:value},
-        success: function(respond){
-        $("#kecamatan").html(respond);
-      }
-    })
+    }else{
      $.ajax({
-        data:{modul:'kelurahan',id:value},
-        success: function(respond){
-        $("#kelurahan-desa").html(respond);
-      }
-    })  
-     $.ajax({
-            data:{modul:'kodepos',id:value},
-            success: function(respond){
-            $("#kodepos").html(respond);
-          }
-        })
-}else{
-      $.ajax({
-        data:{modul:'kecamatan',id:value},
-        success: function(respond){
-        $("#kecamatan").html(respond);
-      }
-    })
-       $.ajax({
-        data:{modul:'kelurahan',id:value},
-        success: function(respond){
-        $("#kelurahan-desa").html(respond);
-      }
-    })
-   
-    $.ajax({
-            data:{modul:'kodepos',id:value},
-            success: function(respond){
-            $("#kodepos").html(respond);
-          }
-        })
-    }
-})
-
-$("#kecamatan").change(function(){
-var value=$(this).val();
-  if(value !=""){
-      $.ajax({
-        data:{modul:'kelurahan',id:value},
-        success: function(respond){
-        $("#kelurahan-desa").html(respond);
-      }
-    })
-    $.ajax({
-            data:{modul:'kodepos',id:value},
-            success: function(respond){
-            $("#kodepos").html(respond);
-          }
-        })
-  }else{
-    $.ajax({
-        data:{modul:'kelurahan',id:value},
-        success: function(respond){
-        $("#kelurahan-desa").html(respond);
-      }
-    })
-      $.ajax({
-        data:{modul:'kodepos',id:value},
-        success: function(respond){
+      data:{modul:'kodepos',id:value},
+      success: function(respond){
         $("#kodepos").html(respond);
       }
     })
-  } 
+   } 
  })
-})
-
-$("#kelurahan-desa").change(function(){
-var value=$(this).val();
-  if(value != ""){
-      $.ajax({
-        data:{modul:'kodepos',id:value},
-        success: function(respond){
-        $("#kodepos").html(respond);
-      }
-    })
-  }else{
-     $.ajax({
-        data:{modul:'kodepos',id:value},
-        success: function(respond){
-        $("#kodepos").html(respond);
-      }
-    })
-  } 
-})
 
 </script>
 
