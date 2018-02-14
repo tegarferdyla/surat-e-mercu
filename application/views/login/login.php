@@ -14,11 +14,23 @@
               </div>
               <?php elseif ($this->session->flashdata('info_berhasil')):?>
                  <div class="alert alert-success alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <h4><i class="icon fa fa-check"></i>Info</h4>
-                Berhasi Mendaftar Akun
-            </div>
-            <?php endif; ?>            
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4><i class="icon fa fa-check"></i>Info</h4>
+                    Berhasi Mendaftar Akun
+                </div>
+             <?php elseif($this->session->flashdata('berhasil_reset')): ?>
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4><i class="icon fa fa-check"></i>Info</h4>
+                    Berhasil mereset password 
+                </div>
+             <?php elseif($this->session->flashdata('gagal_reset')): ?>
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4><i class="icon fa fa-check"></i>Info</h4>
+                    Maaf anda gagal mereset password 
+                </div>
+             <?php endif; ?>            
              <h3 class="text-center title-login">Silahkan Login Dengan menggunakan</h3>
            <h3 class="text-center title-login">NIM/E-MAIL</h3>
               <div class="form-group has-feedback">

@@ -30,8 +30,6 @@ class Login extends CI_Controller {
 		$username = $this->input->post('username');
 		$password = md5($this->input->post('password'));
 
-	
-
 		$whereadmin = array(
 	    					'username'=>$username,
 	    					'password'=>$password
@@ -108,12 +106,36 @@ class Login extends CI_Controller {
                   );
           $simpan = $this->user_model->simpanToken($data);
            if ($simpan > 0){
-               echo "Token ini berlaku untuk 2 jam dari pengiriman token ini:
-               Klik disini untuk reset password anda :"; 
-               echo "<a href='http://localhost/surat-e-mercu/login/reset/token/$tokenstring'>http://localhost/surat-e-mercu/login/reset/token/".$tokenstring."</a>";
-           }else{
-            $this->session->set_flashdata('kesalahan','true');
-            redirect('login/resetpassword');
+
+           	// localhost/surat-e-mercu/login
+           	$isi= html_entity_decode(
+				"Ini adalah link untuk reset password harap untuk segera untuk mereset password anda "."<a href='http://localhost/surat-e-mercu/login/reset/token/$tokenstring'>http://localhost/surat-e-mercu/login/reset/token/".$tokenstring."</a>"
+			) ;
+
+           	  $config = Array(  
+		        'protocol' => 'smtp',  
+		        'smtp_host' => 'https://www.mohagustiar.info/',  
+		        'smtp_port' =>  465,  
+		        'smtp_user' => 'contactme@mohagustiar.info',   
+		        'smtp_pass' => 'project2m123!@#',  
+		        'smtp_keepalive'=>'TRUE',
+		        'mailtype' => 'html',   
+		        'charset' => 'iso-8859-1'  
+	         );
+
+	         $this->load->library('email', $config);  
+	         $this->email->set_newline("\r\n");  
+		     $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
+			 $this->email->to($email); 
+				
+			 $this->email->subject("Reset Password Untuk Akun Anda");
+			 $this->email->message($isi);
+			 $this->email->set_mailtype("html");
+			 $this->email->send();
+			 
+		   }else{
+             $this->session->set_flashdata('kesalahan','true');
+             redirect('login/resetpassword');
            }
        }
     }
@@ -151,20 +173,31 @@ class Login extends CI_Controller {
 
     public function kirim_reset(){
  
-      $password = $this->input->post('password');
-      $token = $this->input->post('token');
-      $cekToken = $this->tester_model->cekToken($token);
-      $data = $cekToken->row();
-      $nim = $data->nim;
-      
-      // ubah password
-      $data = array ('password'=>md5($password));
-      $simpan = $this->user_model->ResetPasswordMahasiswa($data,$nim);
-     
-      if ($simpan > 0){
-        echo "oke berhasil";
+      $this->form_validation->set_rules('password', 'password', 'trim|required|min_length[8]|alpha_numeric');
+      $this->form_validation->set_rules('confirmpassword','confirmpassword','required|matches[password]');
+
+      if ($this->form_validation->run() == FALSE) {
+      	  $data['token'] = $this->input->post('token');
+	      $this->load->view('login/header');
+	      $this->load->view('login/resetpassword-1',$data);
       }else{
-       echo "maaf gagal";
+	   	  $password = $this->input->post('password');
+	      $token = $this->input->post('token');
+	      $cekToken = $this->user_model->cekToken($token);
+	      $data = $cekToken->row();
+	      $nim = $data->nim;
+	      
+	      // ubah password
+	      $data = array ('password'=>md5($password));
+	      $simpan = $this->user_model->ResetPasswordMahasiswa($data,$nim);
+	     
+	      if ($simpan > 0){
+	      	$this->session->set_flashdata('berhasil_reset','true');
+	        redirect('login');
+	      }else{
+	       $this->session->set_flashdata('gagal_reset','true');
+	       redirect('login');
+	      }
       }
 
     }
