@@ -1,7 +1,7 @@
 <div class="footer">
 	<div class="container-fluid">
 		<div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 footer-column">
+      <div class="col-md-4 footer-column">
         <br>
         <div class="row text-center">
           <p>Fakultas Ilmu Komputer</p>
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 footer-column">
+      <div class="col-md-4  footer-column">
         <h4 class="text-center">Link Dukungan</h4>
         <div class="row text-center">
           <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><a class="link-dukungan" href="http://sisteminformasi.fasilkom.mercubuana.ac.id/" target="_blank">Sistem Informasi</a></div>
@@ -26,22 +26,22 @@
         </div>
         <br>
         <div class="row text-center">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="col-md-12 ">
             <a class="link-dukungan" href="https://elearning.mercubuana.ac.id/" target="_blank">e-Learning Fasilkom</a>
           </div>
         </div>
         <div class="row text-center">
-          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+          <div class="col-md-12 ">
             <a class="link-dukungan" href="https://sia.mercubuana.ac.id/" target="_blank">Sistem Informasi Akademik (SIA)</a>
           </div>
         </div>
         <div class="row text-center">
-          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+          <div class="col-md-12 ">
             <a class="link-dukungan" href="https://sso.mercubuana.ac.id/" target="_blank">SSO Mercubuana</a>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-md-4">
         <h4 class="text-center">Tata Usaha Fasilkom</h4>
         <br>
         <div id="map" style="height: 200px;" class="embed-responsive embed-responsive-16by9 row" style="border-radius: 10px; width: 300px; overflow: hidden;">
