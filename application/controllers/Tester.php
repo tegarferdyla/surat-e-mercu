@@ -123,6 +123,11 @@ class Tester extends CI_Controller {
       echo "haloo";
     }
 
+    public function phpinfo()
+    {
+    	echo phpinfo();
+    }
+
 }
 
 /* End of file Tester.php */
