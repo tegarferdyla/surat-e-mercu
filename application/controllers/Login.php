@@ -164,10 +164,10 @@ class Login extends CI_Controller {
           $this->load->view('login/resetpassword-1',$datatoken);
         }else{
           // redirect form forgot
-          echo "token expired";
+          $this->load->view('errors/tokenexpired');
         }
       }else{
-          echo "token tidak ditemukan";
+          $this->load->view('errors/tokennotfound');
       }
     }
 
