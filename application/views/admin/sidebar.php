@@ -74,7 +74,21 @@
               <span>Setting Koordinator</span>
             </a>
           </li>
+          <li class="treeview <?php if($this->uri->segment(2)=="teknikinfo" OR $this->uri->segment(2)=="sisteminfo"){ echo 'active';}?>">
+            <a href="#">
+             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <span>Mahasiswa</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="<?php if($this->uri->segment(2)=="teknikinfo"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/teknikinfo') ?>"><i class="fa fa-user" aria-hidden="true"></i>Teknik Informatika</a></li>
+              <li class="<?php if($this->uri->segment(2)=="sisteminfo"){echo 'active';} ?>"><a href="<?php echo site_url('admin/sisteminfo') ?>"><i class="fa fa-user" aria-hidden="true"></i>Sistem Informasi</a></li>
+            </ul>
+          </li>
         </ul>
+
       </section>
       <!-- /.sidebar -->
     </aside>

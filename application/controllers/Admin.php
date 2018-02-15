@@ -237,6 +237,18 @@ class Admin extends CI_Controller {
 		}
 		
 	}
+	public function teknikinfo(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/teknikinfo');
+		$this->load->view('admin/footer');
+	}
+	public function sisteminfo(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/sisteminfo');
+		$this->load->view('admin/footer');
+	}
 }
 
 
