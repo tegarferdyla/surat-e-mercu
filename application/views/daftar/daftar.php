@@ -1,5 +1,7 @@
 <div class="container form-login">
   <div class="row">
+    <h1 class="text-center">Daftar Akun E-surat</h1>
+    <hr>
     <div class="col-md-8 col-md-offset-3">
       <div class="row">
         <div class="col-md-8">
@@ -88,16 +90,12 @@
             <input type="submit" class="btn btn-daftarkan btn-block" value="DAFTARKAN">
           </div>
         </div>
-        <div class="form-group">
-          <div class="col-sm-6 col-xs-12 col-md-6">
-            <div class="form-group">
-              <h6 class="text-center control-label"><b>Sudah punya akun? silahkan <b><a class="link-daftar" href="<?php echo site_url('login') ?>">login</a></h6>
-              </div>            
-            </div>          
-          </div>
         </form>
       </div>
     </div>
+    <h5 class="text-center">Sudah punya akun? silahkan <b><a class="link-daftar" href="<?php echo site_url('login') ?>">login</a></b></h5>
+                        </div>
   </div>
 </div>
+
 
