@@ -16,9 +16,15 @@ class Daftar extends CI_Controller {
 		}
 	}
 
-	  function validate_captcha() {
+	function validate_captcha() {
         $recaptcha = trim($this->input->post('g-recaptcha-response'));
         $userIp= $this->input->ip_address();
+        // localhost
+		// secret key = 6Lc5kEYUAAAAAMSq4Kvz3k1IGKmDNIKaN_X9EhxH
+
+		// deploy hosting 
+		// secret key = 6Lc-xkYUAAAAAOjTXeEoqEkRGpHivYcco8kBXg8G
+        
         $secret='6Lc5kEYUAAAAAMSq4Kvz3k1IGKmDNIKaN_X9EhxH';
         $data = array(
             'secret' => "$secret",
@@ -53,7 +59,7 @@ class Daftar extends CI_Controller {
 		$this->form_validation->set_rules('kodenim', 'Program Studi', 'required');
 		$this->form_validation->set_rules('prodi', 'Program Studi', 'required');
 		$this->form_validation->set_rules('g-recaptcha-response', 'recaptcha validation', 'required|callback_validate_captcha');
-		$this->form_validation->set_message('validate_captcha', 'Please check the the captcha form');
+		$this->form_validation->set_message('validate_captcha', 'Mohon di check pada captcha');
 
 		if ($this->form_validation->run() == FALSE) {
 			$data = array(
@@ -68,10 +74,14 @@ class Daftar extends CI_Controller {
 			$kodemhs =$this->input->post('kodenim');
 			$nimlengkap =$kodemhs.$nimmhs;
 			$validasiemail = substr($this->input->post('email'),11);
+			$validasiemailnim = substr($this->input->post('email'),0,11);
 			$resultchecknim = $this->daftar_model->ceknimmahasiswa($nimlengkap);
 
 			if ($validasiemail != "@student.mercubuana.ac.id") {
 				$this->session->set_flashdata('emailmercu', 'true');
+				redirect('daftar');
+			}elseif($nimlengkap != $validasiemailnim ){
+				$this->session->set_flashdata('emailmhs','true');
 				redirect('daftar');
 			}elseif($resultchecknim > 0){
 				$this->session->set_flashdata('nimsudahada', 'true');

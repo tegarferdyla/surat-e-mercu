@@ -53,7 +53,7 @@
             <!-- /.box-body -->
                </div>
           <!-- /.box -->
-        <    /div>
+               </div>
              </div>
       </section>
   </div>

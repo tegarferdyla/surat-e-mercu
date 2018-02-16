@@ -5,33 +5,33 @@ Class Daerah extends CI_Controller
 {
     public function __construct(){
 		parent::__construct();
+		if (!$this->session->has_userdata('status')) {
+			redirect('login');
+		}
 	}
 
 
-function index(){
 
-$data['provinsi']=$this->daerah_model->provinsi();
-$this->load->view('admin/header');
-$this->load->view('view_select',$data);
-$this->load->view('admin/footer');
-}
+	public function ambil_data()
+	{
 
-function ambil_data(){
+		$modul=$this->input->post('modul');
+		$id=$this->input->post('id');
 
-$modul=$this->input->post('modul');
-$id=$this->input->post('id');
+		if($modul=="kabupaten"){
+		echo $this->daerah_model->kabupaten($id);
+		}
+		else if($modul=="kecamatan"){
+		echo $this->daerah_model->kecamatan($id);
 
-if($modul=="kabupaten"){
-echo $this->daerah_model->kabupaten($id);
-}
-else if($modul=="kecamatan"){
-echo $this->daerah_model->kecamatan($id);
-
-}
-else if($modul=="kelurahan"){
-echo $this->daerah_model->kelurahan($id);
-}
-}
+		}
+		else if($modul=="kelurahan"){
+		echo $this->daerah_model->kelurahan($id);
+		}
+	}
 
 
 }
+
+/* End of file Daerah.php */
+/* Location: ./application/controllers/Daerah.php */

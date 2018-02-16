@@ -61,6 +61,9 @@
             <?php if ($this->session->flashdata('emailmercu')): ?>
               <span class="text-danger">email yang digunakan harus  @student.mercubuana.ac.id</span>
             <?php endif ?>
+            <?php if ($this->session->flashdata('emailmhs')): ?>
+              <span class="text-danger">alamat email mahasiswa harus disamakan dengan nim mahasiswa</span>
+            <?php endif ?>
             <span class="text-danger"><?=form_error('email')?></span>
             <input type="email" class="form-control" id="email" name="email" value="<?=set_value('email')?>" placeholder="Email nim@student.mercubuana.ac.id">
           </div>

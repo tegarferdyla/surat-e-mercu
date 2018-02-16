@@ -121,7 +121,7 @@ class Login extends CI_Controller {
 
            	// localhost/surat-e-mercu/login
            	$isi= html_entity_decode(
-				"Ini adalah link untuk reset password harap untuk segera untuk mereset password anda "."<a href='http://localhost/surat-e-mercu/login/reset/token/$tokenstring'>http://localhost/surat-e-mercu/login/reset/token/".$tokenstring."</a>"
+					"Ini adalah link untuk reset password harap untuk segera untuk mereset password anda "."<a href='https://suratfasilkom.mohagustiar.info/login/reset/token/$tokenstring'>https://suratfasilkom.mohagustiar.info/login/reset/token/".$tokenstring."</a>"
 			) ;
 
            	  $config = Array(  
@@ -144,6 +144,9 @@ class Login extends CI_Controller {
 			 $this->email->message($isi);
 			 $this->email->set_mailtype("html");
 			 $this->email->send();
+
+			 $this->session->set_flashdata('cek_email','true');
+			 redirect('login/resetpassword');
 			 
 		   }else{
              $this->session->set_flashdata('kesalahan','true');

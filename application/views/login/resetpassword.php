@@ -25,6 +25,13 @@
                         Please check the captcha form
                     </div>
                   </div>
+                <?php elseif($this->session->flashdata('cek_email')): ?>
+                  <div class="row">
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        Harap cek email anda kami sudah mengirimkan link reset password untuk anda
+                    </div>
+                  </div>
                 <?php endif; ?>
                <h3 class="text-center title-login">Masukkan Alamat E-Mail Anda</h3>
                 <div class="form-group has-feedback">
