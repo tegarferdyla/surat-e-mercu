@@ -5,6 +5,7 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->library('Recaptcha');
 		if (isset($_GET['logout']) == 'signout') {
 			$this->session->sess_destroy();
 			redirect('home');
@@ -70,8 +71,13 @@ class Login extends CI_Controller {
 	   	}
 	}
 	public function resetpassword(){
+		 $data = array(
+            'captcha' => $this->recaptcha->getWidget(), // menampilkan recaptcha
+            'script_captcha' => $this->recaptcha->getScriptTag(), // javascript recaptcha ditaruh di head
+        );
+
 		$this->load->view('login/header');
-		$this->load->view('login/resetpassword');
+		$this->load->view('login/resetpassword',$data);
 	}
 
 	public function resetpassword1(){
@@ -83,9 +89,15 @@ class Login extends CI_Controller {
       date_default_timezone_set("Asia/jakarta");
       $email = $this->input->post('email');
       $rs = $this->user_model->getByEmail($email);
-     
+     	
+      $recaptcha = $this->input->post('g-recaptcha-response');
+      $response = $this->recaptcha->verifyResponse($recaptcha);	
+
       // cek apakah ada email di mahasiswa
-      if (!$rs->num_rows() > 0){
+      if(!isset($response['success']) || $response['success'] <> true){
+      	$this->session->set_flashdata('validasi_captcha','true');
+      	redirect('login/resetpassword','refresh');
+      }elseif (!$rs->num_rows() > 0){
         $this->session->set_flashdata('email_tidak_ada','true');
         redirect('login/resetpassword');
       }else{
@@ -109,7 +121,7 @@ class Login extends CI_Controller {
 
            	// localhost/surat-e-mercu/login
            	$isi= html_entity_decode(
-				"Ini adalah link untuk reset password harap untuk segera untuk mereset password anda "."<a href='http://localhost/surat-e-mercu/login/reset/token/$tokenstring'>http://localhost/surat-e-mercu/login/reset/token/".$tokenstring."</a>"
+					"Ini adalah link untuk reset password harap untuk segera untuk mereset password anda "."<a href='https://suratfasilkom.mohagustiar.info/login/reset/token/$tokenstring'>https://suratfasilkom.mohagustiar.info/login/reset/token/".$tokenstring."</a>"
 			) ;
 
            	  $config = Array(  
@@ -132,6 +144,9 @@ class Login extends CI_Controller {
 			 $this->email->message($isi);
 			 $this->email->set_mailtype("html");
 			 $this->email->send();
+
+			 $this->session->set_flashdata('cek_email','true');
+			 redirect('login/resetpassword');
 			 
 		   }else{
              $this->session->set_flashdata('kesalahan','true');

@@ -4,6 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Tester extends CI_Controller {
 
+  public function __construct()
+  {
+    parent::__construct();
+    $this->load->library('Recaptcha');
+  }
+
 	public function index()
 	{
 		$kodesurat = $this->nomorsurat_model->NomorSuratKP();
@@ -125,6 +131,50 @@ class Tester extends CI_Controller {
     public function tokennotfound(){
       $this->load->view('errors/tokennotfound');
     }
+
+
+    public function phpinfo()
+    {
+    	echo phpinfo();
+    }
+
+    public function captcha()
+    {
+       $data = array(
+            'action' => site_url('tester/logintest'),
+            'username' => set_value('username'),
+            'password' => set_value('password'),
+            'captcha' => $this->recaptcha->getWidget(), // menampilkan recaptcha
+            'script_captcha' => $this->recaptcha->getScriptTag(), // javascript recaptcha ditaruh di head
+        );
+ 
+        $this->load->view('tester/welcome_message', $data);
+    }
+
+    public function logintest()
+    {
+       // validasi form
+        $this->form_validation->set_rules('username', ' ', 'trim|required');
+        $this->form_validation->set_rules('password', ' ', 'trim|required');
+        
+        $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
+ 
+        $recaptcha = $this->input->post('g-recaptcha-response');
+        $response = $this->recaptcha->verifyResponse($recaptcha);
+ 
+        if ($this->form_validation->run() == FALSE || !isset($response['success']) || $response['success'] <> true) {
+            echo "gagal";
+        } else {
+            // lakukan proses validasi login disini
+            // pada contoh ini saya anggap login berhasil dan saya hanya menampilkan pesan berhasil
+            // tapi ini jangan di contoh ya menulis echo di controller hahahaha
+            echo 'Berhasil';
+        }
+    }
+
+    
+
+
 }
 
 /* End of file Tester.php */

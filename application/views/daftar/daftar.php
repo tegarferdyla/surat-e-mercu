@@ -1,3 +1,4 @@
+<?php echo $script_captcha; ?>
 <div class="container form-login">
   <div class="row">
     <h1 class="text-center">Daftar Akun E-surat</h1>
@@ -60,6 +61,9 @@
             <?php if ($this->session->flashdata('emailmercu')): ?>
               <span class="text-danger">email yang digunakan harus  @student.mercubuana.ac.id</span>
             <?php endif ?>
+            <?php if ($this->session->flashdata('emailmhs')): ?>
+              <span class="text-danger">alamat email mahasiswa harus disamakan dengan nim mahasiswa</span>
+            <?php endif ?>
             <span class="text-danger"><?=form_error('email')?></span>
             <input type="email" class="form-control" id="email" name="email" value="<?=set_value('email')?>" placeholder="Email nim@student.mercubuana.ac.id">
           </div>
@@ -83,6 +87,13 @@
           <div class="col-sm-6">
             <span class="text-danger"><?=form_error('repassword')?></span>
             <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Re-Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="col-sm-2 control-label"></label>
+          <div class="col-sm-6">
+            <span class="text-danger"><?=form_error('g-recaptcha-response')?></span>
+            <?php echo $captcha ?>
           </div>
         </div>
         <div class="form-group">

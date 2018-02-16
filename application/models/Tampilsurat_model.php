@@ -1,5 +1,6 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Tampilsurat_model extends CI_Model
 {
 		# Query menampilkan Data KP Status = 'Waiting'
@@ -153,31 +154,31 @@ class Tampilsurat_model extends CI_Model
 
 			return $query->result_array();
 		}
-		public function printLAPORAN($startdate,$enddate)
+		public function printLAPORAN($startdate,$enddate,$jurusan)
 		{
-			//$query = $this->db->query("select *FROM surat WHERE surat.tanggal_diambil BETWEEN ".$startdate." AND ".$enddate.";");
-			$this->db->select('*');
-			$this->db->from('surat');
-			$this->db->where('tanggal_diambil >=', date('Y-m-d',strtotime($startdate)));
-			$this->db->where('tanggal_diambil <=', date('Y-m-d',strtotime($enddate)));
-			$this->db->where('prodi',$jurusan);
-			$this->db->where('jenis_surat = ','Tugas Akhir');
-			$this->db->where('status =','Ambil');
-			$query = $this->db->get();
+			$query = $this->db->query(
+				"SELECT surat.no_surat,surat.nim,surat.nama_perusahaan,surat.tanggal_diambil,user.nama_mahasiswa 
+				 FROM surat INNER JOIN user ON surat.nim=user.nim
+				 WHERE surat.tanggal_diambil 
+				 BETWEEN '$startdate' AND '$endhdate' 
+				 AND surat.jenis_surat='Tugas Akhir' 
+				 AND surat.prodi='$jurusan'"
+			);
+			
 			return $query->result_array();
 		
 		}
-		public function printLAPORANkp($startdate,$finishdate)
+		public function printLAPORANkp($startdate,$finishdate,$jurusan)
 		{
-			//$query = $this->db->query("select *FROM surat WHERE surat.tanggal_diambil BETWEEN ".$startdate." AND ".$enddate.";");
-			$this->db->select('*');
-			$this->db->from('surat');
-			$this->db->where('tanggal_diambil >=', date('Y-m-d',strtotime($startdate)));
-			$this->db->where('tanggal_diambil <=', date('Y-m-d',strtotime($finishdate)));
-			$this->db->where('prodi',$jurusan);
-			$this->db->where('jenis_surat','Kerja Pratek');
-			$this->db->where('status =','Ambil');
-			$query = $this->db->get();
+			$query = $this->db->query(
+				"SELECT surat.no_surat,surat.nim,surat.nama_perusahaan,surat.tanggal_diambil,user.nama_mahasiswa 
+				 FROM surat INNER JOIN user ON surat.nim=user.nim
+				 WHERE surat.tanggal_diambil 
+				 BETWEEN '$startdate' AND '$finishdate' 
+				 AND surat.jenis_surat='Kerja Praktek' 
+				 AND surat.prodi='$jurusan'"
+			);
+			
 			return $query->result_array();
 		
 		}
