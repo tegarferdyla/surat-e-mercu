@@ -4,14 +4,16 @@
 	<title>Laporan</title>
 </head>
 <body><center>
-	<table cellspacing="20">
+	<h2>Daftar Laporan Pengambilan Surat Kp Jurusan <?=$jurusan?></h2>
+	<h3><?=date('d-m-Y',strtotime($dari))?> - <?=date('d-m-Y',strtotime($sampai))?></h3>
+	<table  border="1">
 		<thead>
 			<tr>
 				<th>No</th>
 				<th>No Surat</th>
 				<th>NIM</th>
+				<th>Nama Mahasiswa</th>
 				<th>Nama Perusahaan</th>
-				<th>Alamat Perusahaan</th>
 				<th>Tanggal Diambil</th>
 			</tr>
 		</thead>
@@ -25,9 +27,9 @@
 				<td><?=$i;?></td>
                 <td><?php echo $d['no_surat'];?></td>
                 <td><?php echo $d['nim'];?></td>
+                <td><?php echo $d['nama_mahasiswa']?></td>
                 <td><?php echo $d['nama_perusahaan'];?></td>
-                <td><?php echo $d['alamat_perusahaan'];?></td>
-                <td><?php echo $d['tanggal_diambil'];?></td>
+                <td><?php echo date('d-m-Y',strtotime($d['tanggal_diambil']));?></td>
             </tr>
 			<?php } ?>
 		</tbody>
