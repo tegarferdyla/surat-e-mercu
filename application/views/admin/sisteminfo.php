@@ -27,8 +27,10 @@
                           <th>No</th>
                           <th>NIM</th>
                           <th>Nama</th>
+
                           <th>Program Studi</th>
                           <th>Email</th>
+
                         </tr>
                       </thead>
                       <tbody>
@@ -36,11 +38,13 @@
                        foreach ( $mhssi as $u) {
                        ?> 
                         <tr>
+
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $u->nim; ?></td>
                             <td><?php echo $u->nama_mahasiswa; ?></td>
                             <td><?php echo $u->prodi; ?></td>
                             <td><?php echo $u->email; ?></td>
+
                         </tr>
                         <?php } ?>  
                       </tbody>

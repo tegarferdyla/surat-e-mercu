@@ -124,10 +124,14 @@ class Tester extends CI_Controller {
 
     }
 
-    public function testform()
+    public function tokenExpired()
     {
-      echo "haloo";
+      $this->load->view('errors/tokenexpired');
     }
+    public function tokennotfound(){
+      $this->load->view('errors/tokennotfound');
+    }
+
 
     public function phpinfo()
     {
