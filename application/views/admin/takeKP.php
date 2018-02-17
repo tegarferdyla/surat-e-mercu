@@ -21,6 +21,12 @@
                         <h4><i class="icon fa fa-close"></i>Info</h4>
                         Maaf tanggal awal harus lebih kecil dari tanggal akhir
                   </div>
+                <?php elseif($this->session->flashdata('berhasil_hapus')): ?>
+                  <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h4><i class="icon fa fa-close"></i>Info</h4>
+                        Berhasil Menghapus Surat Untuk Kerja Praktek
+                  </div>
                 <?php endif ?>
               </div>
               <div class="col-xs-12">
@@ -49,7 +55,7 @@
                         <?php $no=1; foreach ($surat as $u): ?>
                           <tr>
                             <td><?=$no++?></td>
-                            <td><?=$u->tanggal_diambil?></td>
+                            <td><?=date('d-M-Y',strtotime($u->tanggal_diambil))?></td>
                             <td><?=$u->no_surat?></td>
                             <td><?=$u->nim?></td>
                             <td><?=$u->nama_mahasiswa?></td>
@@ -79,7 +85,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title" id="myModalLabel">Hapus Data Surat</h4>
           </div>
-          <form action="<?php echo base_url('surat/hapusKP')?>" class="form-horizontal"  method="POST" role="form">
+          <form action="<?php echo base_url('admin/HapusSuratKP')?>" class="form-horizontal"  method="POST" role="form">
                 <div class="form-group">
                   <label for="startdate" class="col-md-3 control-label">Dari Tanggal</label>
                   <div class="col-md-8">
@@ -112,7 +118,7 @@
               </div>
                 <form action="<?php echo base_url('admin/cetakLAPkp')?>" class="form-horizontal" method="POST" role="form">
                     <div class="form-group">
-                      <label for="jurusan" class="col-md-3 control-label">Jurusab</label>
+                      <label for="jurusan" class="col-md-3 control-label">Jurusan</label>
                       <div class="col-md-8">
                         <select name="jurusan" class="form-control" required>
                           <option value=''>Pilih Jurusan</option>

@@ -5,6 +5,7 @@
             <h1>
               Tabel Mahasiswa
               <span class="label label-primary">Teknik Informatika</span>
+              <span class="label label-success"><?=$jmlmhsti?> Pengguna</span>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Beranda</a></li>
@@ -24,38 +25,32 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>Tanggal</th>
                           <th>NIM</th>
                           <th>Nama</th>
                           <th>Program Studi</th>
-                          <th>Aksi</th>
+                          <th>Email</th>
+
                         </tr>
                       </thead>
                       <tbody>
-                       <!--  <?php $no=1;
-                       foreach ($surat as $u) {
-                       ?> -->
+                       <?php $no=1;
+                       foreach ( $mhsti as $u) {
+                       ?> 
                         <tr>
-                          <td><?php echo $no++; ?></td>
-                            <td><?php echo $u->tanggal_diajukan; ?></td>
+                            <td><?php echo $no++; ?></td>
                             <td><?php echo $u->nim; ?></td>
                             <td><?php echo $u->nama_mahasiswa; ?></td>
                             <td><?php echo $u->prodi; ?></td>
-                          <td class="col-md-3">
-                              <button type="button" class="btn btn-primary">Proses</button>
-                              <button type="button" class="btn btn-default">Detail</button>
-                              <a href="<?php echo site_url('admin/tolakemailta') ?>" class="btn btn-danger">Tolak</a>
-                          </td>
+                            <td><?php echo $u->email; ?></td>
                         </tr>
-                       <!-- <?php } ?> --> 
-                </tbody>
-              </table>
-            </div>
+                        <?php } ?>  
+                      </tbody>
+                    </table>
+                  </div>
             <!-- /.box-body -->
-          </div>
+               </div>
           <!-- /.box -->
-        </div>
-      </div>
-    </section>
+               </div>
+             </div>
+      </section>
   </div>
-</body>

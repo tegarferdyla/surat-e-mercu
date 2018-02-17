@@ -89,7 +89,7 @@ class Mahasiswa extends CI_Controller {
 					'nama_perusahaan' 	 => $this->input->post('namaperusahaan'),
 					'alamat_perusahaan'  => ucwords(strtolower($alamat_lengkap)),
 					'orang_dituju'   	 => ucwords(strtolower($this->input->post('namefor'))),
-					'jabatan_dituju'			 => ucwords($this->input->post('jabatan')),
+					'jabatan_dituju'	 => ucwords($this->input->post('jabatan')),
 					'kota'				 => ucwords(strtolower($namekota)),
 					'kodepos'			 => $this->input->post('kodepos'),
 					'jenis_surat'    	 => 'Kerja Praktek',
@@ -128,8 +128,7 @@ class Mahasiswa extends CI_Controller {
 
 	}
 	
-
-
+	
 	public function lihat()
 	{
 		$nim = $this->session->userdata('nim');
@@ -142,11 +141,7 @@ class Mahasiswa extends CI_Controller {
 	    $this->load->view('home/footer');
 	}
 
-	public function cek()
-	{
-		$kode = $this->input->post('kodepos');
-		redirect('http://kodepos.posindonesia.co.id/kodeposalamatindonesialist.php?cmd=search&t=kodeposalamatindonesia&z_Propinsi=%3D&x_Propinsi=&psearch=222&psearchtype=');
-	}
+	
 
 }
 
