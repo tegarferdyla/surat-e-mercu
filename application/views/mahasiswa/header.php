@@ -13,7 +13,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="row" style="margin-left: 1%;">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -30,7 +30,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="status"><?php echo $this->session->userdata('nama_mahasiswa');?></li>
           <li><a class="status" href="<?php echo site_url('mahasiswa/lihat') ?>">Lihat Status</a></li>
-          <li class="status"><?php echo anchor('login?logout=signout', 'keluar');?></li>
+          <li class="keluar"><?php echo anchor('login?logout=signout', 'keluar');?></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
