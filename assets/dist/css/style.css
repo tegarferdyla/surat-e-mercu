@@ -212,21 +212,31 @@ color: #fff;
 background: rgba(46,134,193,1);
 }
 .dash1{
-  background-color: blue;
+  height: 260px;
+  background: rgba(10, 133, 209, 0.19);
+  border-radius: 7px;
   border: 10px;
   margin-left: 10%;
   margin-bottom: 10%;
   padding-bottom: 2%;
 }
 .dash2{
-  background-color: yellow;
+  height: 260px;
+  background:rgba(10, 209, 103, 0.19);
+  border-radius: 7px;
   border: 10px;
   float: right;
   margin-right: 10%;
   padding-bottom: 2%;
 }
 .dash-btn{
-  margin-top: 25%;
+  font-weight: bold;
+  margin-top: 5%;
+}
+.dash-text{
+  color: white;
+  font-weight: bold;
+  margin-top: 10%;
 }
 .image-mahasiswa{
    background: url('../../image/tulisanfasilkom20.jpg') no-repeat center center fixed; 
