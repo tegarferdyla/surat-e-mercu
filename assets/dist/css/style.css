@@ -96,22 +96,29 @@ background-color: #34495E;
 .header-home h1{
 	color:#EFF0FB
 }
-
+.keluar{
+  line-height: 70px;
+  height: 80px;
+  padding-top: 16px; 
+  margin-top: 0px;
+  margin-right: 12px;
+  font-size: 1.3em;
+}
 .navbar-nav>li>a.status{
 	background-color: #439955 !important;
 	color:#e7e7e7;
-    line-height: 60px;
-    height: 70px;
-    padding: 6px 27px; 
-    margin-top: 0;
-    font-size: 1.3em;
+  line-height: 70px;
+  height: 80px;
+  padding: 6px 27px; 
+  margin-top: 0;
+  font-size: 1.3em;
 }
 .navbar-nav>li.status,.navbar-nav>li.status>a{
-    line-height: 60px;
-    height: 70px;
-    padding: 6px 27px; 
-    margin-top: 0;
-    font-size: 1.3em;
+  line-height: 70px;
+  height: 80px;
+  padding: 6px 27px; 
+  margin-top: 0;
+  font-size: 1.3em;
 }
 .navbar-nav>li>a.status:hover{
 color: #439955 !important;
@@ -212,21 +219,31 @@ color: #fff;
 background: rgba(46,134,193,1);
 }
 .dash1{
-  background-color: blue;
+  height: 260px;
+  background: rgba(10, 133, 209, 0.19);
+  border-radius: 7px;
   border: 10px;
   margin-left: 10%;
   margin-bottom: 10%;
   padding-bottom: 2%;
 }
 .dash2{
-  background-color: yellow;
+  height: 260px;
+  background:rgba(10, 209, 103, 0.19);
+  border-radius: 7px;
   border: 10px;
   float: right;
   margin-right: 10%;
   padding-bottom: 2%;
 }
 .dash-btn{
-  margin-top: 25%;
+  font-weight: bold;
+  margin-top: 5%;
+}
+.dash-text{
+  color: white;
+  font-weight: bold;
+  margin-top: 10%;
 }
 .image-mahasiswa{
    background: url('../../image/tulisanfasilkom20.jpg') no-repeat center center fixed; 
