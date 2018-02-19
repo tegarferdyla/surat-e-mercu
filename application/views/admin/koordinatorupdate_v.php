@@ -23,48 +23,41 @@
                 <div class="box">
                   <div class="box-header">
                     <h3 class="box-title"></h3>
-
-                    <form class="form-horizontal" >
-  <div class="form-group">
-    <label for="nama" class="col-sm-2 control-label">Nama Koordinator</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" name="" placeholder="Nama Koordinator">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="nik" class="col-sm-2 control-label">NIK</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="nik" placeholder="Nomor Induk Karyawan" maxlength="8">
-    </div>
-  </div>
-  <div class="form-group">
-     <label for="status" class="col-sm-2 control-label">Prodi</label>
-    <div class="col-sm-2">
-     <select name="status" class="form-control">
-  <option selected="selected">Pilih Prodi</option>
-  <option value="Sistem Informasi">Sistem Informasi</option>
-  <option value="Teknik Informasi">Teknik Informatika</option>
-</select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="nik" class="col-sm-2 control-label">Jabatan</label>
-    <div class="col-sm-3">
-      <select name="jabatan" class="form-control">
-  <option selected="selected">Pilih Jabatan</option>
-  <option value="Koordinator KP">Koordinator KP (Kerja Praktek)</option>
-  <option value="Koordinator TA">Koordinator TA(Tugas Akhir)</option>
-</select>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-4 col-sm-6">
-      <input type="submit" onclick="return confirm('Apa Anda Yakin?')" class="btn btn-success" value="UPDATE"/>
-    </div>
-  </div>
-</form>
+                    <form class="form-horizontal" method="post" action="<?php echo base_url()."index.php/admin/update_data_dosen"; ?>">
+                       <input type="hidden" name="nikwhere" value="<?php echo $nik ?>">
+                        <div class="form-group" >
+                          <label for="nama" class="col-sm-2 control-label">Nama Koordinator</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control" name="nama_dosen" placeholder="Nama Koordinator" value="<?php echo $nama_dosen; ?>">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="nik" class="col-sm-2 control-label" >NIK</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control" name="nik" placeholder="Nomor Induk Karyawan" maxlength="8" value="<?php echo $nik; ?>">
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                           <label for="status" class="col-sm-2 control-label">Prodi</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control" name="prodi" class="form-control" maxlength="8" value="<?php echo $prodi; ?>" readonly >
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="nik" class="col-sm-2 control-label">Jabatan</label>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control" name="jabatan" class="form-control" maxlength="8" value="<?php echo $jabatan; ?>" readonly >
+                          </div>
+                          </div>
+                         <div class="form-group">
+                          <div class="col-sm-offset-5 col-sm-6">
+                            <input type="submit" onclick="return confirm('Apa Anda Yakin?')" class="btn btn-success" value="UPDATE"/>
+                          </div>
+                        </div>
+                        </div>
+                    </form>
                   </div>
-                
                   <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
