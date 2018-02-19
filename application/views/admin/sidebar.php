@@ -74,7 +74,7 @@
   <li class="<?php if($this->uri->segment(2)=="koordinatorsetting" OR $this->uri->segment(2)=="koordinatorupdate"){echo 'active';} ?>">
     <a href="<?php echo site_url('admin/koordinatorsetting') ?>">
       <i class="fa fa-user"></i>
-      <span>Setting Koordinator</span>
+      <span>Pengaturan Koordinator</span>
     </a>
   </li>
   <li class="treeview <?php if($this->uri->segment(2)=="teknikinfo" OR $this->uri->segment(2)=="sisteminfo"){ echo 'active';}?>">
