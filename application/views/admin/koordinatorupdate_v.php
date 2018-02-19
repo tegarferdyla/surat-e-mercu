@@ -50,11 +50,11 @@
                             <input type="text" class="form-control" name="jabatan" class="form-control" maxlength="8" value="<?php echo $jabatan; ?>" readonly >
                           </div>
                           </div>
-                        </div>
-                        <div class="form-group">
-                          <div class="col-sm-offset-4 col-sm-6">
+                         <div class="form-group">
+                          <div class="col-sm-offset-5 col-sm-6">
                             <input type="submit" onclick="return confirm('Apa Anda Yakin?')" class="btn btn-success" value="UPDATE"/>
                           </div>
+                        </div>
                         </div>
                     </form>
                   </div>

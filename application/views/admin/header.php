@@ -65,7 +65,7 @@
             <li class="dropdown user user-menu">
               <a href="<?php echo site_url('login?logout=signout')?>">
                 <!-- <img src="<?php echo base_url('assets/image/UMB.png')?>" class="user-image" alt="User Image"> -->
-                <span class="hidden-xs">Keluar</span>
+                Keluar
               </a>
             </li>
           </ul>

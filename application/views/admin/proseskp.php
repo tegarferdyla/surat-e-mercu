@@ -51,10 +51,10 @@
                             <td><?=$v->email?></td>
                             <td><?=$v->prodi?></td>
                             <td>
-                              <button class="btn btn-success col-sm-5 col-sm-offset-1" data-href="<?=site_url("surat/ubahFinishKP/$v->id_surat")?>" data-toggle="modal" data-target="#confirm" >
+                              <button class="btn btn-success col-sm-10" data-href="<?=site_url("surat/ubahFinishKP/$v->id_surat")?>" data-toggle="modal" data-target="#confirm" >
                                <span class="fa fa-check"></span> Finish
                               </button>
-                              <a class="btn btn-primary col-sm-5 col-sm-offset-1 btn-finish"  target="_blank" href="<?=site_url("admin/printKP/$v->id_surat")?>">Print <span class="glyphicon glyphicon-print"></span></a>
+                              <a class="btn btn-primary col-sm-10 btn-finish"  target="_blank" href="<?=site_url("admin/printKP/$v->id_surat")?>">Print <span class="glyphicon glyphicon-print"></span></a>
                              
                             </td>
                           </tr>

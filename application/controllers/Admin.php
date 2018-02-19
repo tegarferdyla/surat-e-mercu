@@ -214,7 +214,7 @@ class Admin extends CI_Controller {
 		$enddate = $this->input->post('enddate');
 		$jurusan = $this->input->post('jurusan');
 
-		if ($startdate <= $enddate) {
+		if ($startdate < $enddate) {
 			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate,$jurusan);
 			$this->load->view('admin/cetaklaporan',array('data'=>$data));
 		}else{
@@ -223,21 +223,61 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	public function cetakLAPkp(){
-		$startdate = $this->input->post('startdate');
-		$finishdate = $this->input->post('finishdate');
-		$jurusan = $this->input->post('jurusan');
-		
-		if ($startdate <= $enddate) {
-			$data= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate,$jurusan);
-			$this->load->view('admin/cetaklaporankp',array('data'=>$data));	
+	public function HapusSuratKP()
+	{
+		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
+		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
+
+		if ($startdate < $finishdate) {
+			$this->statussurat_model->HapusDataKP($startdate,$finishdate);
+			$this->session->set_flashdata('berhasil_hapus','true');
+			redirect('admin/takekp');
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
 			redirect('admin/takekp');
 		}
+	}
+
+
+	public function cetakLAPkp(){
+		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
+		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
+		$jurusan = $this->input->post('jurusan');
 		
+		if ($startdate < $finishdate) {
+			$data['data']= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate,$jurusan);
+			$data['jurusan'] = $jurusan;
+			$data['dari'] = $startdate;
+			$data['sampai'] = $finishdate;
+
+			$this->load->view('admin/cetaklaporankp',$data);	
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/takekp');
+			
+		}
+		
+	}
+	public function teknikinfo(){
+		$data['mhsti']    = $this->user_model->MahasiswaTeknikInformatika();
+		$data['jmlmhsti'] = $this->user_model->JumlahMahasiswaTeknikInformatika();
+
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/teknikinfo',$data);
+		$this->load->view('admin/footer');
+	}
+	public function sisteminfo(){
+		$data['mhssi']    = $this->user_model->MahasiswaSistemInformasi();
+		$data['jmlmhssi'] = $this->user_model->JumlahMahasiswaSistemInformasi();
+
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/sisteminfo',$data);
+		$this->load->view('admin/footer');
 	}
 }
 
 
 
+	
