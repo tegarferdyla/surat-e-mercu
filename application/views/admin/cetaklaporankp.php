@@ -19,20 +19,20 @@
 		</thead>
 		<tbody>
 			<?php
-                      $i=0;
-                      foreach($data as $d) {
-                        $i++;
-                      ?>
-			<tr>
-				<td><?=$i;?></td>
-                <td><?php echo $d['no_surat'];?></td>
-                <td><?php echo $d['nim'];?></td>
-                <td><?php echo $d['nama_mahasiswa']?></td>
-                <td><?php echo $d['nama_perusahaan'];?></td>
-                <td><?php echo date('d-m-Y',strtotime($d['tanggal_diambil']));?></td>
-            </tr>
-			<?php } ?>
-		</tbody>
-	</table></center>
-</body>
-</html>
+			$i=0;
+			foreach($data as $d) {
+				$i++;
+				?>
+				<tr>
+					<td><?=$i;?></td>
+					<td><?php echo $d['no_surat'];?></td>
+					<td><?php echo $d['nim'];?></td>
+					<td><?php echo $d['nama_perusahaan'];?></td>
+					<td><?php echo $d['alamat_perusahaan'];?></td>
+					<td><?php echo $d['tanggal_diambil'];?></td>
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table></center>
+	</body>
+	</html>

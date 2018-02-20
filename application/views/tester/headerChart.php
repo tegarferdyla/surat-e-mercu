@@ -25,3 +25,8 @@
 
 </head>
 <body>
+  <header class="header">
+    <center><h3 style="color: #112EA5">LAPORAN PEMBUATAN SURAT DAN JUMLAH</h3></center>
+    <center><h3 style="color: #112EA5">AKUN E-SURAT</h3></center>
+    <center><h3 style="color: #E219B7"><?=date('d-m-Y',strtotime($startdate))?> - <?=date('d-m-Y',strtotime($enddate))?></h3></center>
+  </header>

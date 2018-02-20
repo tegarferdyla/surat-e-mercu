@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Tester extends CI_Controller {
-
+// CONTROLLER INI HANYA UNTUK CONTROLLER TESTER SEBELUM DIMASUKAN KE CONTROLLER YANG AKAN DI DEPLOY
   public function __construct()
   {
     parent::__construct();
@@ -53,41 +53,52 @@ class Tester extends CI_Controller {
   {
     $startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
     $enddate = date('Y-m-d',strtotime($this->input->post('enddate')));
-    // Jumlah Surat Kerja Praktek
-    $data['kpwaiting'] = $this->report_model->ReportJumlahSuratKpWaiting($startdate,$enddate);
-    $data['kpproses']  = $this->report_model->ReportJumlahSuratKpProses($startdate,$enddate);
-    $data['kpfinish']  = $this->report_model->ReportJumlahSuratKpFinish($startdate,$enddate);
-    $data['kptake']    = $this->report_model->ReportJumlahSuratKpTake($startdate,$enddate); 
-    $data['kptolak']   = $this->report_model->ReportJumlahSuratKpTolak($startdate,$enddate);
+   
+    if ($startdate <= $enddate) {
+      $data['startdate'] = $startdate;
+      $data['enddate']   = $enddate;
 
-    // Data Jumlah mahasiswa Sistem Informasi Kerja Praktek
-    $data['siwaiting'] = $this->report_model->MahasiswaSIKpWaiting($startdate,$enddate);
-    $data['siproses']  = $this->report_model->MahasiswaSIKpProses($startdate,$enddate);
-    $data['sifinish']  = $this->report_model->MahasiswaSIKpFinish($startdate,$enddate);
-    $data['sitake']    = $this->report_model->MahasiswaSIKpTake($startdate,$enddate);
-    $data['sitolak']   = $this->report_model->MahasiswaSIKpTolak($startdate,$enddate);
+         // Jumlah Surat Kerja Praktek
+      $data['kpwaiting'] = $this->report_model->ReportJumlahSuratKpWaiting($startdate,$enddate);
+      $data['kpproses']  = $this->report_model->ReportJumlahSuratKpProses($startdate,$enddate);
+      $data['kpfinish']  = $this->report_model->ReportJumlahSuratKpFinish($startdate,$enddate);
+      $data['kptake']    = $this->report_model->ReportJumlahSuratKpTake($startdate,$enddate); 
+      $data['kptolak']   = $this->report_model->ReportJumlahSuratKpTolak($startdate,$enddate);
 
-    // Data Jumlah Mahasiswa Teknik Informatika Kerja Praktek
-    $data['tiwaiting']    = $this->report_model->MahasiswaTIKpWaiting($startdate,$enddate);
-    $data['tiproses']     = $this->report_model->MahasiswaTIKpProses($startdate,$enddate);
-    $data['tifinish']     = $this->report_model->MahasiswaTIKpFinish($startdate,$enddate);
-    $data['titake']       = $this->report_model->MahasiswaTIKpTake($startdate,$enddate);
-    $data['titolak']      = $this->report_model->MahasiswaTIKpTolak($startdate,$enddate);
+      // Data Jumlah mahasiswa Sistem Informasi Kerja Praktek
+      $data['siwaiting'] = $this->report_model->MahasiswaSIKpWaiting($startdate,$enddate);
+      $data['siproses']  = $this->report_model->MahasiswaSIKpProses($startdate,$enddate);
+      $data['sifinish']  = $this->report_model->MahasiswaSIKpFinish($startdate,$enddate);
+      $data['sitake']    = $this->report_model->MahasiswaSIKpTake($startdate,$enddate);
+      $data['sitolak']   = $this->report_model->MahasiswaSIKpTolak($startdate,$enddate);
 
-    // Data nama mahasiswa
-    $data['suratwaiting'] = $this->report_model->SuratWaiting($startdate,$enddate);
-    $data['suratproses']  = $this->report_model->SuratProses($startdate,$enddate);
-    $data['suratfinish']  = $this->report_model->SuratFinish($startdate,$enddate);
-    $data['surattake']    = $this->report_model->SuratTake($startdate,$enddate);
-    $data['suratolak']    = $this->report_model->SuratTolak($startdate,$enddate);
+      // Data Jumlah Mahasiswa Teknik Informatika Kerja Praktek
+      $data['tiwaiting']    = $this->report_model->MahasiswaTIKpWaiting($startdate,$enddate);
+      $data['tiproses']     = $this->report_model->MahasiswaTIKpProses($startdate,$enddate);
+      $data['tifinish']     = $this->report_model->MahasiswaTIKpFinish($startdate,$enddate);
+      $data['titake']       = $this->report_model->MahasiswaTIKpTake($startdate,$enddate);
+      $data['titolak']      = $this->report_model->MahasiswaTIKpTolak($startdate,$enddate);
 
-    //Data mahasiswa yang daftar KP keseluruhan
-    $data['mahasiswaTI']  = $this->report_model->SuratMahasiswaSI($startdate,$enddate);
-    $data['mahasiswaSI']  = $this->report_model->SuratMahasiswaTI($startdate,$enddate);
+      // Data nama mahasiswa
+      $data['suratwaiting'] = $this->report_model->SuratWaiting($startdate,$enddate);
+      $data['suratproses']  = $this->report_model->SuratProses($startdate,$enddate);
+      $data['suratfinish']  = $this->report_model->SuratFinish($startdate,$enddate);
+      $data['surattake']    = $this->report_model->SuratTake($startdate,$enddate);
+      $data['surattolak']   = $this->report_model->SuratTolak($startdate,$enddate);
 
-    $this->load->view('tester/headerChart');
-    $this->load->view('tester/chartjs_v',$data);
-    $this->load->view('tester/footerChart',$data);
+      //Data mahasiswa yang daftar KP keseluruhan
+      $data['mahasiswaSI']  = $this->report_model->SuratMahasiswaSI($startdate,$enddate);
+      $data['mahasiswaTI']  = $this->report_model->SuratMahasiswaTI($startdate,$enddate);
+
+      $this->load->view('tester/headerChart',$data);
+      $this->load->view('tester/chartjs_v',$data);
+      $this->load->view('tester/footerChart',$data);  
+    }else{
+      $this->session->set_flashdata('gagal_tanggal', 'true');
+      redirect('admin/takekp');
+    }
+
+    
   }
 
     
