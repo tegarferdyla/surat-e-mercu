@@ -76,10 +76,14 @@ class Tester extends CI_Controller {
 
     // Data nama mahasiswa
     $data['suratwaiting'] = $this->report_model->SuratWaiting($startdate,$enddate);
-    $data['suratproses'] = $this->report_model->SuratProses($startdate,$enddate);
-    $data['suratfinish'] = $this->report_model->SuratFinish($startdate,$enddate);
-    $data['surattake'] = $this->report_model->SuratTake($startdate,$enddate);
-    $data['suratolak'] = $this->report_model->SuratTolak($startdate,$enddate);
+    $data['suratproses']  = $this->report_model->SuratProses($startdate,$enddate);
+    $data['suratfinish']  = $this->report_model->SuratFinish($startdate,$enddate);
+    $data['surattake']    = $this->report_model->SuratTake($startdate,$enddate);
+    $data['suratolak']    = $this->report_model->SuratTolak($startdate,$enddate);
+
+    //Data mahasiswa yang daftar KP keseluruhan
+    $data['mahasiswaTI']  = $this->report_model->SuratMahasiswaSI($startdate,$enddate);
+    $data['mahasiswaSI']  = $this->report_model->SuratMahasiswaTI($startdate,$enddate);
 
     $this->load->view('tester/headerChart');
     $this->load->view('tester/chartjs_v',$data);
