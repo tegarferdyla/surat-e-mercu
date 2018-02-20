@@ -1,4 +1,12 @@
 </body>
+<?php 
+  // JUMLAH KESELURUHAN MAHASISWA TEKNIK INFORMATIKA YANG DAFTAR 
+  $mahasiswajumlahTI = $tiwaiting + $tiproses + $tifinish + $titake + $titolak; 
+
+  // JUMLAH KESELURUHAN MAHASISWA SISTEM INFORMASI  YANG DAFTAR 
+  $mahasiswajumlahSI = $siwaiting + $siproses + $sifinish + $sitake + $sitolak;
+
+?>            
 
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/jQueryUI/jquery-ui.min.js') ?>"></script>
@@ -17,6 +25,8 @@
 
 <script src="<?php echo base_url('assets/plugins/chart.js/Chart.js')?>"></script>
 <script>
+ 
+            
 
  //-------------
     //- PIE CHART -
@@ -27,31 +37,31 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
       {
-        value    : 1,
+        value    : <?=$kptolak?>,
         color    : '#f56954',
         highlight: '#f56954',
         label    : 'Ditolak'
       },
       {
-        value    : 2,
+        value    : <?=$kpwaiting ?>,
         color    : '#00a65a',
         highlight: '#00a65a',
         label    : 'Menunggu'
       },
       {
-        value    : 3,
+        value    : <?=$kpproses?>,
         color    : '#f39c12',
         highlight: '#f39c12',
         label    : 'Proses'
       },
       {
-        value    : 2,
+        value    : <?=$kpfinish?>,
         color    : '#00c0ef',
         highlight: '#00c0ef',
         label    : 'Selesai'
       },
       {
-        value    : 2,
+        value    : <?=$kptake?>,
         color    : '#3c8dbc',
         highlight: '#3c8dbc',
         label    : 'Diambil'
@@ -84,21 +94,21 @@
     //Create pie or douhnut chart
     // You can switch between pie and douhnut using the method below.
     pieChart.Doughnut(PieData, pieOptions)
-
+   
     // JSON STATUS
     var pieChartCanvas = $('#pieChart2').get(0).getContext('2d')
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
       {
-        value    : 5,
+        value    : <?php echo $mahasiswajumlahTI; ?>,
         color    : '#E219B7',
         highlight: '#E219B7',
-        label    : 'Teknik Informatika &#9632'
+        label    : 'Teknik Informatika'
       },
       {
-        value    : 4,
-        color    : '#000000',
-        highlight: '#00a65a',
+        value    : <?php echo $mahasiswajumlahSI ?> ,
+        color    : '#ffff99',
+        highlight: '#ffff99',
         label    : 'Sistem Informasi'
       },
     ]
