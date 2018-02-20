@@ -38,7 +38,7 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>Nik</th>
+                          <th>Nidn</th>
                           <th>Nama</th>
                           <th>Jabatan</th>
                           <th>Prodi</th>
@@ -61,7 +61,7 @@
                           <td><?php echo $d['jabatan'];?></td>
                           <td><?php echo $d['prodi'];?></td>
                           <td>
-                            <a href="<?php echo base_url()."admin/koordinatorupdate/".$d['nik'];?>" class="btn btn-success">Ganti <?=$d['jabatan']?></a>
+                            <a href="<?php echo base_url()."admin/koordinatorupdate/".$d['nik'];?>" class="btn btn-success">Ganti <?=$d['jabatan']." ".$d['prodi']?></a>
                           </td>
                         </tr>
                        <?php

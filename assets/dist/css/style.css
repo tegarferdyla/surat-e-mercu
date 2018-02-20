@@ -1,16 +1,89 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-body{
-  
-}
 body.body{
-	padding-top:70px;
+
 	font-family: 'Montserrat', sans-serif;
 }
 .navbar{
 	margin-bottom: 0;
-
-	font-weight: bold;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0);
+  border:none;
 }
+
+.navbar-login{
+  background-color: #34495E;
+  margin-bottom: 0;
+  font-weight: bold;
+  border:none;
+}
+.navbar-brand{
+  line-height:70px;
+    height: 70px; 
+    margin-top: -6px;
+}
+.navbar-toggle{
+  padding:28px 15px;
+}
+
+.navbar-nav li a.home{
+    line-height: 70px;
+    height: 70px;
+    padding: 6px 27px; 
+    margin-top: 0;
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+
+}
+.navbar-nav>li>a.home:hover{
+    border-bottom-color: coral;
+    border-bottom-style: solid;
+}
+nav.shrink{
+background-color: #34495E;
+}
+.navbar-collapse{
+  border:0;
+}
+.navbar-default .navbar-toggle:hover{
+  background-color:#154360;
+}
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+
 .header-home{
 	 background: url('../../image/tufasilkomm60persen.jpg') no-repeat center center; 
   -webkit-background-size: cover;
@@ -23,42 +96,29 @@ body.body{
 .header-home h1{
 	color:#EFF0FB
 }
-.navbar-brand{
-	line-height:70px;
-		height: 70px; 
-		margin-top: -6px;
-}
-.navbar-toggle{
-	padding:28px 15px;
-}
-
-.navbar-nav li a.home{
-		line-height: 70px;
-		height: 70px;
-		padding: 6px 27px; 
-		margin-top: 0;
-		font-size: 1.3em;
-
-}
-.navbar-nav>li>a.home:hover{
-    border-bottom-color: coral;
-    border-bottom-style: solid;
+.keluar{
+  line-height: 70px;
+  height: 80px;
+  padding-top: 16px; 
+  margin-top: 0px;
+  margin-right: 12px;
+  font-size: 1.3em;
 }
 .navbar-nav>li>a.status{
 	background-color: #439955 !important;
 	color:#e7e7e7;
-    line-height: 60px;
-    height: 70px;
-    padding: 6px 27px; 
-    margin-top: 0;
-    font-size: 1.3em;
+  line-height: 70px;
+  height: 80px;
+  padding: 6px 27px; 
+  margin-top: 0;
+  font-size: 1.3em;
 }
 .navbar-nav>li.status,.navbar-nav>li.status>a{
-    line-height: 60px;
-    height: 70px;
-    padding: 6px 27px; 
-    margin-top: 0;
-    font-size: 1.3em;
+  line-height: 70px;
+  height: 80px;
+  padding: 6px 27px; 
+  margin-top: 0;
+  font-size: 1.3em;
 }
 .navbar-nav>li>a.status:hover{
 color: #439955 !important;
@@ -71,9 +131,10 @@ background-color: #e7e7e7 !important;
 }
 h1.intro{
   font-weight: 700;
+  margin-bottom: 33px;
 }
 p.statement{
-  line-height:50px;
+  line-height:36px;
   font-size: 2.0rem;
 }
 .btn-header{
@@ -151,12 +212,15 @@ background: rgba(46,134,193,1);
 	color: #ffffff;
 	padding: 20px;
 }
+.footer-column{
+  line-height: 34px;
+}
 
 .box-login{
   background-color:  #34495E;
   padding: 40px;
   border-radius: 5px;
-   margin-top: 70px;
+   margin-top: 200px;
 }
 .title-login{
   color: white;
@@ -176,21 +240,31 @@ color: #fff;
 background: rgba(46,134,193,1);
 }
 .dash1{
-  background-color: blue;
+  height: 260px;
+  background: rgba(10, 133, 209, 0.19);
+  border-radius: 7px;
   border: 10px;
   margin-left: 10%;
   margin-bottom: 10%;
   padding-bottom: 2%;
 }
 .dash2{
-  background-color: yellow;
+  height: 260px;
+  background:rgba(10, 209, 103, 0.19);
+  border-radius: 7px;
   border: 10px;
   float: right;
   margin-right: 10%;
   padding-bottom: 2%;
 }
 .dash-btn{
-  margin-top: 25%;
+  font-weight: bold;
+  margin-top: 5%;
+}
+.dash-text{
+  color: white;
+  font-weight: bold;
+  margin-top: 10%;
 }
 .image-mahasiswa{
    background: url('../../image/tulisanfasilkom20.jpg') no-repeat center center fixed; 
@@ -218,7 +292,6 @@ background: rgba(46,134,193,1);
   color: #f56954;
 }
 
-
 .skin-blue .sidebar-menu>li.waiting-active>a{
   color:#3c8dbc;
 }
@@ -240,8 +313,8 @@ background: rgba(46,134,193,1);
 }
 
 .form-login{
-	margin-top: 70px;
-  margin-bottom: 70px;
+	margin-top: 100px;
+  margin-bottom: 60px;
 }
 
 /*PRINT */
@@ -264,6 +337,9 @@ span.tanggal{
 
 .kepadayth{
   padding-bottom: 40px;
+}
+.clsDatePicker {
+    z-index: 100000;
 }
 p.nomor,p.lampiran,p.perihal{
   white-space: pre;
@@ -288,3 +364,61 @@ p#kepadayth-1{
 
 }
 
+.link-login{
+  color: #CCDC22; 
+}
+ 
+.link-login:hover{
+  color: #CCDC22;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.link-daftar{
+  color: #CCDC22;
+  border-right: 1px solid whitesmoke;
+  letter-spacing: .1em;
+  transition: text-shadow .3s;
+}
+ 
+.link-daftar:hover{
+  color: #CCDC22;
+  text-decoration: none;
+  text-shadow: 0 0 .65px #7F8815, 0 0 .65px #7F8815;
+}
+
+.link-dukungan{
+  color: #FFF;
+  text-decoration: none;
+}
+.link-dukungan:hover{
+  color: #CCDC22;
+  text-decoration: none;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}

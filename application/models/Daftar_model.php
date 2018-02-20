@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			$data = array(
 				"nim" 			 => $nim,
-				"nama_mahasiswa" =>ucwords($nama_mahasiswaSS),
+				"nama_mahasiswa" =>ucwords($nama_mahasiswa),
 				"email" 		 => $email,
 				"password" 		 => $password,
 				"prodi" 	     => $prodi
@@ -41,8 +41,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$query = $this->db->get();
 			return $query->num_rows();
 		}
-
-		
 
 	}
 ?>

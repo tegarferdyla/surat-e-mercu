@@ -24,24 +24,23 @@
                         <thead>
                           <tr>
                             <th width="20px">No.</th>
-                            <th>Nomor Surat</th>
                             <th>Nim</th>
                             <th>Nama</th>
                             <th>E-Mail</th>
                             <th>Program Studi</th>
-                            <th>Keterangan</th>
                           </tr>
                         </thead>
                         <tbody>
+                          <?php $no = 1; ?>
+                          <?php foreach ($surat as $value): ?>
                             <tr>
-                              <td>1</td>
-                              <td>nomor surat</td>
-                              <td>4181...</td>
-                              <td>ival</td>
-                              <td>email@gmail.com</td>
-                              <td>sistem informasi</td>
-                              <td>alasan penolakan</td>
-                           </tr>
+                              <td><?=$no++?></td>
+                              <td><?=$value->nim?></td>
+                              <td><?=$value->nama_mahasiswa?></td>
+                              <td><?=$value->email?></td>
+                              <td><?=$value->prodi?></td>
+                            </tr>
+                          <?php endforeach ?>
                        </tbody>
                      </table>
                    </div>

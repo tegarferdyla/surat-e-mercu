@@ -1,7 +1,8 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
-	class Tampilsurat_model extends CI_Model
-	{
+
+class Tampilsurat_model extends CI_Model
+{
 		# Query menampilkan Data KP Status = 'Waiting'
 		public function tampil_datakp_waiting()
 		{
@@ -11,6 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return $query->result(); 
 		}
 
+		# Query menampilkan email user KP
 		public function get_email_user_kp($id_surat)
 		{
 			$sql = "SELECT b.email,a.id_surat FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Kerja Praktek' AND a.id_surat='$id_surat' ";
@@ -41,6 +43,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			return $query->result(); 
 		}
+
+		# Query menampilkan Data KP Status = 'Tolak'
+		public function tampil_datakp_tolak(){
+			$sql = "SELECT a.tanggal_diajukan, b.email,a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Di Tolak' AND a.jenis_surat ='Kerja Praktek' ORDER BY id_surat DESC";
+			$query = $this->db->query($sql);
+
+			return $query->result(); 
+		}
+
 		# Query menampilkan Data TA Status = 'Waiting'
 		public function tampil_datata_waiting(){
 			$sql = "SELECT a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Tugas Akhir' ORDER BY id_surat DESC";
@@ -49,8 +60,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return $query->result(); 
 		}
 
-		
+		# Query menampilkan Data TA Status = 'Tolak'
+		public function tampil_datata_tolak(){
+			$sql = "SELECT a.tanggal_diajukan, a.nim,b.nama_mahasiswa,a.prodi FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Di Tolak' AND a.jenis_surat ='Tugas Akhir' ORDER BY id_surat DESC";
+			$query = $this->db->query($sql);
 
+			return $query->result(); 
+		}
+
+
+		# Query menampilkan email user TA
 		public function get_email_user_ta($id_surat)
 		{
 			$sql = "SELECT b.email,a.id_surat FROM surat a, user b WHERE a.nim = b.nim AND a.status ='Menunggu' AND a.jenis_surat ='Tugas Akhir' AND a.id_surat='$id_surat' ";
@@ -107,7 +126,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->db->from('surat');
 			$this->db->join('user','user.nim =surat.nim');
 			$this->db->join('dosen','dosen.nik =surat.nik');
-			$this->db->where('surat.status =','Menunggu');
 			$this->db->where('id_surat',$id_surat);
 			$query = $this->db->get();
 			
@@ -131,13 +149,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 			$query = $this->db->query("SELECT m.nim,m.nama_mahasiswa FROM mahasiswa m JOIN surat s 
 								ON m.id_surat=s.id_surat WHERE 
-								m.id_surat='$id_surat' AND s.status='Menunggu' "
+								m.id_surat='$id_surat' "
 							);
 
 			return $query->result_array();
 		}
-
 		
 
-
-	}
+}

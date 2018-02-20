@@ -10,7 +10,7 @@
               <li><a href="<?php echo base_url('admin/koordinatorsetting') ?>"><i class="fa fa-building-o"></i> Setting Koordinator</a></li>
               <li class="active"><i class="fa fa-table"></i> Form Update</li>
             </ol>
-<br>
+            <br>
             <div class="alert alert-warning alert-dismissable" class="close" role="alert">Pastikan Masukan Nama dengan <strong>BENAR</strong> <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button></div>
           </section>
 
@@ -33,80 +33,28 @@
                         </div>
                         <div class="form-group">
                           <label for="nik" class="col-sm-2 control-label" >NIK</label>
-                          <div class="col-sm-3">
-                            <input type="text" class="form-control" name="nik" placeholder="Nomor Induk Karyawan" maxlength="8" value="<?php echo $nik; ?>">
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control" name="nik" placeholder="Nomor Induk Karyawan"  value="<?php echo $nik; ?>" onkeypress="return no(event)">
                           </div>
                         </div>
+                        
                         <div class="form-group">
                            <label for="status" class="col-sm-2 control-label">Prodi</label>
-                          <div class="col-sm-2">
-                           <select name="prodi" class="form-control" readonly>
-                        <option value="<?php echo  $prodi; ?>" selected="selected" ><?php echo "$prodi"; ?></option>
-                        <?php if ($prodi=='Sistem Informasi'){
-                           echo'<option value="Teknik Informatika" >Teknik Informatika</option>';
-                          }
-                            elseif ($prodi =='Teknik Informatika') {
-                            echo'<option value="Sistem Informasi" >Sistem Informasi</option>';
-                          }
-                           ?>
-                      </select>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control" name="prodi" class="form-control" maxlength="8" value="<?php echo $prodi; ?>" readonly >
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="nik" class="col-sm-2 control-label">Jabatan</label>
-                          <div class="col-sm-3">
-                            <select name="jabatan" class="form-control" readonly >
-                        <option value="<?php echo $jabatan; ?>" selected="selected" ><?php echo "$jabatan"; ?></option>
-                         <?php if ($jabatan=='Kordinator Kerja Praktek'){
-                           echo'<option value="Koordinator Tugas Akhir" >Koordinator TA</option>';
-                           echo'<option value="Sekprodi TI 1" >Sekprodi TI 1</option>';
-                           echo'<option value="Sekprodi TI 2" >Sekprodi TI 2</option>';
-                           echo'<option value="Sekprodi SI 1" >Sekprodi SI 1</option>';
-                           echo'<option value="Sekprodi SI 2" >Sekprodi SI 2</option>';
-                          }
-                            elseif ($jabatan =='Kordinator Tugas Akhir') {
-                            echo'<option value="Koordinator Kerja Praktek" >Koordinator KP</option>';
-                            echo'<option value="Sekprodi TI 1" >Koordinator TA</option>';
-                            echo'<option value="Sekprodi TI 2" >Sekprodi TI 2</option>';
-                            echo'<option value="Sekprodi SI 1" >Sekprodi SI 1</option>';
-                            echo'<option value="Sekprodi SI 2" >Sekprodi SI 2</option>';
-                          }
-                          elseif ($jabatan =='Sekprodi TI 1') {
-                            echo'<option value="Koordinator Kerja Praktek">Koordinator KP</option>';
-                            echo'<option value="Koordinator Tugas Akhir" >Sekprodi TI 1</option>';
-                            echo'<option value="Sekprodi TI 2" >Sekprodi TI 2</option>';
-                            echo'<option value="Sekprodi SI 1" >Sekprodi SI 1</option>';
-                            echo'<option value="Sekprodi SI 2" >Sekprodi SI 2</option>';
-                          }
-                          elseif ($jabatan =='Sekprodi TI 2') {
-                            echo'<option value="Koordinator Kerja Praktek" >Koordinator KP</option>';
-                            echo'<option value="Koordinator Tugas Akhir" >Koordinator TA</option>';
-                            echo'<option value="Sekprodi TI 1" >Sekprodi TI 1</option>';
-                            echo'<option value="Sekprodi SI 1" >Sekprodi SI 1</option>';
-                            echo'<option value="Sekprodi SI 2" >Sekprodi SI 2</option>';
-                          }
-                          elseif ($jabatan =='Sekprodi SI 1') {
-                            echo'<option value="Koordinator Kerja Praktek" >Koordinator KP</option>';
-                            echo'<option value="Koordinator Tugas Akhir" >Koordinator TA</option>';
-                            echo'<option value="Sekprodi TI 1" >Sekprodi TI 1</option>';
-                            echo'<option value="Sekprodi TI 2" >Sekprodi SI 1</option>';
-                            echo'<option value="Sekprodi SI 2" >Sekprodi SI 2</option>';
-                          }
-                          elseif ($jabatan =='Sekprodi SI 2') {
-                            echo'<option value="Koordinator Kerja Praktek" >Koordinator KP</option>';
-                            echo'<option value="Koordinator Tugas Akhir" >Koordinator TA</option>';
-                            echo'<option value="Sekprodi TI 1" >Sekprodi TI 1</option>';
-                            echo'<option value="Sekprodi SI 1" >Sekprodi SI 1</option>';
-                            echo'<option value="Sekprodi TI 2" >Sekprodi SI 2</option>';
-                          }
-                           ?>
-                      </select>
+                          <div class="col-sm-4">
+                            <input type="text" class="form-control" name="jabatan" class="form-control" maxlength="8" value="<?php echo $jabatan; ?>" readonly >
                           </div>
-                        </div>
-                        <div class="form-group">
-                          <div class="col-sm-offset-4 col-sm-6">
+                          </div>
+                         <div class="form-group">
+                          <div class="col-sm-offset-5 col-sm-6">
                             <input type="submit" onclick="return confirm('Apa Anda Yakin?')" class="btn btn-success" value="UPDATE"/>
                           </div>
+                        </div>
                         </div>
                     </form>
                   </div>
