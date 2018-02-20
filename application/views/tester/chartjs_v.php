@@ -7,66 +7,57 @@
                   <canvas id="pieChart" style="height:250px"></canvas>
                 </div>
             </div>
-          <?php
-              // JUMLAH KESELURUHAN MAHASISWA TEKNIK INFORMATIKA YANG DAFTAR 
-              $jumlahTI = $tiwaiting + $tiproses + $tifinish + $titake + $titolak; 
-
-              // JUMLAH KESELURUHAN MAHASISWA SISTEM INFORMASI  YANG DAFTAR 
-              $jumlahSI = $siwaiting + $siproses + $sifinish + $sitake + $sitolak;
-          ?>
-          <div class="col-xs-4">
+          
+            <div class="col-xs-4">
             <div class="box box-primary">
             <div class="row">
               <div class="col-xs-1">
                 <h4 style="color: #00a65a">&#9632</h4>
               </div>
               <div class="col-xs-5">
-                <h4>Menunggu <?=$kpwaiting?></h4>
+                <h4>Menunggu</h4>
               </div>
               <div class="col-xs-1">
                 <h4 style="color: #f56954">&#9632</h4>
               </div>
               <div class="col-xs-5">
-                <h4>Ditolak <?=$kptolak?></h4>
+                <h4>Ditolak</h4>
               </div>
             </div>
-            
             <div class="row">
               <div class="col-xs-1">
                 <h4 style="color: #f39c12">&#9632</h4>
               </div>
               <div class="col-xs-5">
-                <h4>Proses <?=$kpproses?></h4>
+                <h4>Proses</h4>
               </div>
               <div class="col-xs-1">
                 <h4 style="color: #E219B7">&#9632</h4>
               </div>
               <div class="col-xs-5">
-                <h4>Teknik Informatika <?=$jumlahTI?></h4>
+                <h4>Teknik Informatika</h4>
               </div>
             </div>
-            
             <div class="row">
               <div class="col-xs-1">
                 <h4 style="color: #00c0ef">&#9632</h4>
               </div>
               <div class="col-xs-5">
-                <h4>Selesai <?=$kpfinish?></h4>
+                <h4>Selesai</h4>
               </div>
               <div class="col-xs-1">
-                <h4 style="color: #ffff99">&#9632</h4>
+                <h4 style="color: #000000">&#9632</h4>
               </div>
               <div class="col-xs-5">
-                <h4>Sistem Informasi <?=$jumlahSI?></h4>
+                <h4>Sistem Informasi</h4>
               </div>
             </div>
-            
             <div class="row">
               <div class="col-xs-1">
                 <h4 style="color: #3c8dbc">&#9632</h4>
               </div>
               <div class="col-xs-9">
-                <h4>Ambil <?=$kptake?></h4>
+                <h4>Ambil</h4>
               </div>
             </div>
 
@@ -93,6 +84,7 @@
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
@@ -100,16 +92,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                      <?php $no=1; ?>
-                      <?php foreach ($suratwaiting as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -119,6 +133,7 @@
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
@@ -126,25 +141,48 @@
                         </tr>
                     </thead>
                     <tbody>
-                      <?php $no=1; ?>
-                      <?php foreach ($suratproses as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
                 <div class="col-md-4">
-                  <h3 class="box-title" style="color: #ffff99">Sistem Informasi</h3>       
+                  <h3 class="box-title" style="color: #000000">Sistem Informasi</h3>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
@@ -152,16 +190,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                     <?php $no=1; ?>
-                      <?php foreach ($mahasiswaSI as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -175,6 +235,7 @@
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
@@ -182,16 +243,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                     <?php $no=1; ?>
-                      <?php foreach ($suratfinish as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -201,6 +284,7 @@
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
@@ -208,16 +292,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                     <?php $no=1; ?>
-                      <?php foreach ($surattake as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -227,6 +333,7 @@
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
@@ -234,16 +341,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                      <?php $no=1; ?>
-                      <?php foreach ($mahasiswaTI as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -257,6 +386,7 @@
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
@@ -264,16 +394,38 @@
                         </tr>
                     </thead>
                     <tbody>
-                      <?php $no=1; ?>
-                      <?php foreach ($surattolak as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
