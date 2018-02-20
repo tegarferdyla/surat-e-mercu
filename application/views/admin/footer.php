@@ -1,8 +1,8 @@
 <footer class="main-footer">
   <div class="pull-right hidden-xs">
-    <b>Version</b> 1.0.0-beta
+    <b>Version</b> Alpha-3
   </div>
-  <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/bagan-organisasi-asisten-laboratorium-fasilkom/" target="_blank">Team Aslab</a>.</strong> All rights
+  <strong>Copyright &copy; 2017-2018 <a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a>.</strong> All rights
   reserved.
 </footer>
 </body>
@@ -22,6 +22,7 @@
 <script src="<?php echo base_url('assets/plugins/morris.js/morris.min.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/chart.js/Chart.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
 <script>
   $(function(){
     $('#datatable').DataTable({
@@ -33,6 +34,13 @@
       'autoWidth'   : true
     })
   })
+
+  function no(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+      return false;
+  }
+  
 </script>
 <script>
   /*Script untuk chart KP jgn dihapus dulu*/
@@ -80,7 +88,22 @@
 <script>
   $(function () {
     //Add text editor
-    $("#compose-textarea").wysihtml5();
+
+    $('#compose-textarea').wysihtml5({
+      toolbar: {
+        "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+        "emphasis": true, //Italics, bold, etc. Default true
+        "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+        "html": true, //Button which allows you to edit the generated HTML. Default false
+        "link": false, //Button to insert a link. Default true
+        "image": false, //Button to insert an image. Default true,
+        "color": false, //Button to change color of font  
+        "blockquote": true, //Blockquote  
+        
+      }
+    });
+
+    
   });
 </script>
 
@@ -89,73 +112,19 @@
             $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
         });
     </script>
+<script>
+    $(document).ready(function(){
+      $('.datepicker').datepicker({
+       format : 'dd-mm-yyyy' 
+      });
+    });
+    </script>
+
+    <script>
+        $('#confirmtolak').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
+        });
+    </script>
 
 </html>
 
-<script type="text/javascript">
-$(function(){
-$.ajaxSetup({
-type:"POST",
-url: "<?php echo base_url('index.php/select/ambil_data') ?>",
-cache: false,
-});
-
-$("#provinsi").change(function(){
-  var value=$(this).val();
-  if(value>0){
-    $.ajax({
-        data:{modul:'kabupaten',id:value},
-        success: function(respond){
-          $("#kabupaten-kota").html(respond);
-        }
-    })
-     $.ajax({
-        data:{modul:'kecamatan',id:value},
-          success: function(respond){
-          $("#kecamatan").html(respond);
-        }
-    })
-  }else{
-    $.ajax({
-        data:{modul:'kabupaten',id:value},
-        success: function(respond){
-          $("#kabupaten-kota").html(respond);
-        }
-    })
-
-    $.ajax({
-        data:{modul:'kecamatan',id:value},
-          success: function(respond){
-          $("#kecamatan").html(respond);
-        }
-    })
-
-  }
-});
-
-
-
-
-$("#kabupaten-kota").change(function(){
-  var value=$(this).val();
-  if(value>0){
-      $.ajax({
-        data:{modul:'kecamatan',id:value},
-        success: function(respond){
-        $("#kecamatan").html(respond);
-      }
-    })
-  }else{
-      $.ajax({
-        data:{modul:'kecamatan',id:value},
-        success: function(respond){
-        $("#kecamatan").html(respond);
-      }
-    })
-   }
-})
-
-
-})
-
-</script>

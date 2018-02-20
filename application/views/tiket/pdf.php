@@ -1,55 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-	<meta charset="utf-8">
-	<title>Tiket Nih</title>
+  <meta charset="UTF-8">
+  <title>CSS Ticket</title>
 
-<style type="text/css">
-
-body {
- background-color: #fff;
- margin: 40px;
- font-family: Lucida Grande, Verdana, Sans-serif;
- font-size: 14px;
- color: #4F5155;
-}
-
-a {
- color: #003399;
- background-color: transparent;
- font-weight: normal;
-}
-
-h1 {
- color: #444;
- background-color: transparent;
- border-bottom: 1px solid #D0D0D0;
- font-size: 16px;
- font-weight: bold;
- margin: 24px 0 2px 0;
- padding: 5px 0 6px 0;
-}
-
-code {
- font-family: Monaco, Verdana, Sans-serif;
- font-size: 12px;
- background-color: #f9f9f9;
- border: 1px solid #D0D0D0;
- color: #002166;
- display: block;
- margin: 14px 0 14px 0;
- padding: 12px 10px 12px 10px;
-}
-
+<style>
+  .bg-blue{
+    background:#1976D2;
+  }
+  .text-blue{
+    color: #1976D2;
+  }
+  .text-white{
+    color: white;
+  }
+  .text-center{
+    text-align: center;
+  }
+  .text-muted{
+    color: #34495E;
+  }
+  .notice{
+    background: black;
+    color: white;
+    padding: 10px ;
+    margin-bottom: 20px;
+  }
+  table{
+  margin: 0 auto;
+    border: 3px dashed black;
+    border-collapse: collapse;
+    /*padding: 20px;*/
+  }
+  table td{
+    border: 2px solid gray;
+    padding: 0 10px;
+  }
 </style>
+  
 </head>
+  
 <body>
+<div class="notice text-center">
+  Print dan bawa tiket ini untuk ditukarkan dengan surat Kerja Praktek/Riset Tugas Akhir di Tata Usaha
+</div>
+<br /><br /><br />
+  <table>
 
-<h1><?= $nama_mahasiswa ?></h1>
+    <tr>
+      <td colspan="3" class="bg-blue">
+      
+        <h2 class="text-center text-white">
+          E SURAT | <?=$jenis_surat?>
+        </h2>
+      </td>
+     <!--  <td class="text-center">
+        <img src="<?php echo base_url('assets/image/logomercu.png') ?>" width="120" alt="">
+      </td> -->
+     
+    </tr>
 
-<p>Halo ini adalah tiket kamu dan tukarkan ke tu</p>
+    <tr>
+      <td>
+      <p class="text-blue">Nomor Surat:</p>
+        
+        <h3 class="text-center text-muted">
+          <?=$no_surat?>
+        </h3>
+      </td>
+      <td>
+        <p class="text-blue">Nama Mahasiswa:</p>
+        
+        <h3 class="text-center text-muted">
+          <?="$nama_mahasiswa - $nim"?>
+        </h3>
+      </td>
+      <td>
+        <p class="text-blue">Tanggal Diajukan:</p>
+        
+        <h3 class="text-center text-muted">
+          <?=date("d M Y",strtotime($tanggal_diajukan))?>
+        </h3>
+      </td>
 
-<code><?= $jenis_surat; ?></code>
+    </tr>
+   <tr>
+      <td>
+      <p class="text-blue">Nama Perusahaan:</p>
+        
+        <h3 class="text-center text-muted">
+          <?=$nama_perusahaan?>
+        </h3>
+      </td>
+      <td colspan="2">
+        <p class="text-blue">Alamat Perusahaan:</p>
+        
+        <h3 class="text-center text-muted">
+          <?="$alamat_perusahaan"?>
+        </h3>
+      </td>
+      
+    </tr>
+  </table>
+
 
 </body>
+
 </html>
