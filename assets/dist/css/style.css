@@ -115,6 +115,27 @@ p.isi{
   font-size: 1.8rem;
 }
 
+section.tentang{
+  background-color: #d5d5e2;
+}
+
+.tentanghome{
+   background: url('../../image/tufasilkomm60persen.jpg') no-repeat center center; 
+  background-size: cover;
+  padding: 100px 0px;
+}
+
+.texttentang{
+  text-align: center;
+  margin-top: 75px;
+}
+
+.texttentang1{
+  text-align: center;
+  padding: 50px 0px;
+  color: #f4f5f7;
+}
+
 .btn-more{
   transition: 0.5s;
   color: #2E86C1;
