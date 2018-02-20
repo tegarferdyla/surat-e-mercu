@@ -401,3 +401,77 @@ p#kepadayth-1{
 .embed-responsive-4by3 {
   padding-bottom: 75%;
 }
+
+/* LAPORAN */
+.judul-chart{
+  color: #112EA5;
+}
+.tanggal-chart {
+  color: #E219B7;
+}
+.tunggu-chart {
+  color: #3c8dbc;
+}
+
+.ditolak-chart {
+  color: #f56954;
+}
+.proses-chart {
+  color: #f39c12;
+}
+.ti-chart {
+  color: #E219B7;
+}
+.selesai-chart {
+  color: #00a65a;
+}
+.si-chart {
+  color: #000000;
+}
+.ambil-chart{
+  color: #00c0ef;
+}
+#pieChart{
+}
+@media print {
+  @page {size: landscape}
+  .judul-chart{
+    color: #112EA5 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .tanggal-chart {
+    color: #E219B7 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  #pieChart {
+    margin-left: -65px;
+  }
+  .tunggu-chart {
+    color: #3c8dbc !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .ditolak-chart {
+    color: #f56954 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .proses-chart {
+    color: #f39c12 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .ti-chart {
+    color: #E219B7 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .selesai-chart {
+    color: #00a65a !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .si-chart {
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .ambil-chart {
+  color: #00c0ef !important;
+  -webkit-print-color-adjust: exact;
+  }
+}

@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Tester extends CI_Controller {
-
+// CONTROLLER INI HANYA UNTUK CONTROLLER TESTER SEBELUM DIMASUKAN KE CONTROLLER YANG AKAN DI DEPLOY
   public function __construct()
   {
     parent::__construct();
@@ -87,10 +87,13 @@ class Tester extends CI_Controller {
 
     $this->load->view('tester/headerChart');
     $this->load->view('tester/chartjs_v',$data);
-    $this->load->view('tester/footerChart',$data);
+
   }
 
-    
+    public function perjurusan(){
+    $this->load->view('tester/headerChart');
+    $this->load->view('tester/laporanperjurusan_v');
+    }
 
 
 }
