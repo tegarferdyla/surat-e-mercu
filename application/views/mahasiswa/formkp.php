@@ -107,6 +107,7 @@
 				<!-- Alamat Perusahaan -->
 				<label class="col-md-3" for="alamat" >Alamat Jalan Perusahaan</label>
 				<div class="col-md-6">
+					contoh : Jl. Rebana No.9
 					<input type="text" name="alamat" class="form-control" required placeholder="contoh: Jln Galunggung no.xx">
 				</div>
 			</div>
