@@ -214,7 +214,7 @@ class Admin extends CI_Controller {
 		$enddate = $this->input->post('enddate');
 		$jurusan = $this->input->post('jurusan');
 
-		if ($startdate <= $enddate) {
+		if ($startdate < $enddate) {
 			$data= $this->report_model->printLAPORAN($startdate,$enddate,$jurusan);
 			$this->load->view('admin/cetaklaporan',array('data'=>$data));
 		}else{
@@ -228,7 +228,7 @@ class Admin extends CI_Controller {
 		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
 		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
 
-		if ($startdate <= $finishdate) {
+		if ($startdate < $finishdate) {
 			$this->statussurat_model->HapusDataKP($startdate,$finishdate);
 			$this->session->set_flashdata('berhasil_hapus','true');
 			redirect('admin/takekp');
@@ -244,7 +244,7 @@ class Admin extends CI_Controller {
 		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
 		$jurusan = $this->input->post('jurusan');
 		
-		if ($startdate <= $finishdate) {
+		if ($startdate < $finishdate) {
 			$data['data']= $this->report_model->printLAPORANkp($startdate,$finishdate,$jurusan);
 			$data['jurusan'] = $jurusan;
 			$data['dari'] = $startdate;
