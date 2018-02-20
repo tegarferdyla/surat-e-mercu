@@ -63,7 +63,7 @@
                          </p>
                 </div><!--end of panduan description-->
                 <div class="col-md-6 wow bounceInLeft">
-                    <img src="<?php echo base_url('assets/image/daftar.jpg') ?>" alt="daftar esurat" style="max-width: 100%;" >
+                    <img src="<?php echo base_url('assets/image/dashboardpilihan.png') ?>" alt="daftar esurat" style="max-width: 100%;" >
                 </div><!--end of panduan image-->
             </div><!--panduan 4 kiri-->
 
