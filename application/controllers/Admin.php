@@ -276,6 +276,12 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/sisteminfo',$data);
 		$this->load->view('admin/footer');
 	}
+	public function tambahakun(){
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tambahakun');
+		$this->load->view('admin/footer');
+	}
 }
 
 
