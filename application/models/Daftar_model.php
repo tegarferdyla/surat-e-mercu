@@ -42,7 +42,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return $query->num_rows();
 		}
 
-		
+		public function registerAdmin(){
+			// INSERT DATA / REGISTER
+			$username 		= $this->input->post('username');
+			$password		= md5($this->input->post('password'));
+
+			$data = array(
+				"username" 		=> $username,
+				"role"			=> "admin",
+				"password" 		=> $password
+				
+			);
+				return $this->db->insert('admin',$data);
+		}
+
+		public function cekusernameadmin($username)
+		{
+			$this->db->select('*');
+			$this->db->from('admin');
+			$this->db->where('username',$username);
+			$query = $this->db->get();
+			return $query->num_rows();
+		}
 
 	}
 ?>

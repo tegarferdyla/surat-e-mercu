@@ -120,7 +120,13 @@ class Statussurat_model extends CI_Model {
 	public function HapusDataKP($start_date,$end_date)
 	{
 		
-		$query = $this->db->query("DELETE FROM surat WHERE tanggal_diambil BETWEEN '$start_date' AND '$end_date'");
+		$query = $this->db->query(
+			"DELETE FROM surat 
+			WHERE tanggal_diambil 
+			BETWEEN '$start_date' AND '$end_date' 
+			AND status='Ambil'
+			AND jenis_surat='Kerja Praktek'"
+		);
 		
 	}
 
@@ -156,6 +162,7 @@ class Statussurat_model extends CI_Model {
 		);
 
 		$this->db->where('id_surat',$id_surat);
+		$this->db->where('jenis_surat','Tugas Akhir');
 		$this->db->limit(1);
 		return $this->db->update('surat',$data);
 	}
@@ -167,6 +174,7 @@ class Statussurat_model extends CI_Model {
 		);
 
 		$this->db->where('id_surat',$id_surat);
+		$this->db->where('jenis_surat','Tugas Akhir');
 		$this->db->limit(1);
 		return $this->db->update('surat',$data);
 	}
@@ -178,6 +186,7 @@ class Statussurat_model extends CI_Model {
 		);
 
 		$this->db->where('id_surat',$id_surat);
+		$this->db->where('jenis_surat','Tugas Akhir');
 		$this->db->limit(1);
 		return $this->db->update('surat',$data);
 	}
@@ -191,6 +200,8 @@ class Statussurat_model extends CI_Model {
 		$query = $this->db->get();
 		return $query->num_rows();	
 	}
+
+	
 
 	public function JumlahSuratTAProses()
 	{
