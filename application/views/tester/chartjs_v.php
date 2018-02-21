@@ -12,13 +12,13 @@
               </div>
 
               <div class="col-xs-4">
-                <h4>Menunggu</h4>
+                <h4>Menunggu <?=$kpwaiting?> </h4>
               </div>
               <div class="col-xs-1 col-xs-offset-2">
                 <h4 class="proses-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Proses</h4>
+                <h4>Proses <?=$kpproses?> </h4>
               </div>
             </div>
             
@@ -27,13 +27,13 @@
                 <h4 class="selesai-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Selesai</h4>
+                <h4>Selesai <?=$kpfinish?> </h4>
               </div>
              <div class="col-xs-1 col-xs-offset-2">
                <h4 class="ambil-chart">&#9632</h4>
              </div>
              <div class="col-xs-4">
-               <h4>Diambil</h4>
+               <h4>Diambil <?=$kptake?> </h4>
              </div>
 
             </div>
@@ -44,7 +44,7 @@
               </div>
 
               <div class="col-xs-5">
-                <h4>Ditolak</h4>
+                <h4>Ditolak <?=$kptolak?> </h4>
 
               </div>
             </div>
@@ -131,7 +131,7 @@
                     </thead>
                     <tbody>
                      <?php $no=1; ?>
-                      <?php foreach ($mahasiswaSI as $surat): ?>
+                      <?php foreach ($suratfinish as $surat): ?>
                         <tr>
                           <td><?=$no++?></td>
                           <td><?=$surat['nim']?></td>
@@ -231,31 +231,31 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
       {
-        value    : 1,
+        value    : <?=$kptolak?>,
         color    : '#f56954',
         highlight: '#f56954',
         label    : 'Ditolak'
       },
       {
-        value    : 2,
+        value    : <?=$kpwaiting?>,
         color    : '#00a65a',
         highlight: '#00a65a',
         label    : 'Menunggu'
       },
       {
-        value    : 3,
+        value    : <?=$kpproses?>,
         color    : '#f39c12',
         highlight: '#f39c12',
         label    : 'Proses'
       },
       {
-        value    : 2,
+        value    : <?=$kpfinish?>,
         color    : '#00c0ef',
         highlight: '#00c0ef',
         label    : 'Selesai'
       },
       {
-        value    : 2,
+        value    : <?=$kptake?>,
         color    : '#3c8dbc',
         highlight: '#3c8dbc',
         label    : 'Diambil'

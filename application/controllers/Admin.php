@@ -231,15 +231,16 @@ class Admin extends CI_Controller {
 		if ($startdate <= $finishdate) {
 			$this->statussurat_model->HapusDataKP($startdate,$finishdate);
 			$this->session->set_flashdata('berhasil_hapus','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 		}
 	}
 
 
-	public function cetakLAPkp(){
+	public function cetakLAPkp()
+	{
 		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
 		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
 		$jurusan = $this->input->post('jurusan');
@@ -253,12 +254,14 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/cetaklaporankp',$data);	
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 			
 		}
 		
 	}
-	public function teknikinfo(){
+
+	public function teknikinfo()
+	{
 		$data['mhsti']    = $this->user_model->MahasiswaTeknikInformatika();
 		$data['jmlmhsti'] = $this->user_model->JumlahMahasiswaTeknikInformatika();
 
@@ -267,7 +270,9 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/teknikinfo',$data);
 		$this->load->view('admin/footer');
 	}
-	public function sisteminfo(){
+
+	public function sisteminfo()
+	{
 		$data['mhssi']    = $this->user_model->MahasiswaSistemInformasi();
 		$data['jmlmhssi'] = $this->user_model->JumlahMahasiswaSistemInformasi();
 
@@ -276,10 +281,20 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/sisteminfo',$data);
 		$this->load->view('admin/footer');
 	}
-	public function tambahakun(){
+
+	public function tambahakun()
+	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
 		$this->load->view('admin/tambahakun');
+		$this->load->view('admin/footer');
+	}
+
+	public function report()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/report');
 		$this->load->view('admin/footer');
 	}
 }
