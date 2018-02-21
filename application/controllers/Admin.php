@@ -231,15 +231,16 @@ class Admin extends CI_Controller {
 		if ($startdate <= $finishdate) {
 			$this->statussurat_model->HapusDataKP($startdate,$finishdate);
 			$this->session->set_flashdata('berhasil_hapus','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 		}
 	}
 
 
-	public function cetakLAPkp(){
+	public function cetakLAPkp()
+	{
 		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
 		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
 		$jurusan = $this->input->post('jurusan');
@@ -253,12 +254,14 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/cetaklaporankp',$data);	
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 			
 		}
 		
 	}
-	public function teknikinfo(){
+
+	public function teknikinfo()
+	{
 		$data['mhsti']    = $this->user_model->MahasiswaTeknikInformatika();
 		$data['jmlmhsti'] = $this->user_model->JumlahMahasiswaTeknikInformatika();
 
@@ -267,7 +270,9 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/teknikinfo',$data);
 		$this->load->view('admin/footer');
 	}
-	public function sisteminfo(){
+
+	public function sisteminfo()
+	{
 		$data['mhssi']    = $this->user_model->MahasiswaSistemInformasi();
 		$data['jmlmhssi'] = $this->user_model->JumlahMahasiswaSistemInformasi();
 
@@ -276,10 +281,48 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/sisteminfo',$data);
 		$this->load->view('admin/footer');
 	}
-	public function tambahakun(){
+
+	public function tambahakun()
+	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
 		$this->load->view('admin/tambahakun');
+		$this->load->view('admin/footer');
+
+	}
+
+	public function daftar()
+	{
+
+		//form validasi
+		$this->form_validation->set_rules('username','Username','trim|required');
+		$this->form_validation->set_rules('password','Password', 'trim|required|exact_length[8]|numeric');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]|alpha_numeric');
+		$this->form_validation->set_rules('repassword', 'Re-Password', 'trim|required|matches[password]');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('reemail', 'Re-Email', 'trim|required|matches[email]');
+		$this->form_validation->set_rules('kodenim', 'Program Studi', 'required');
+		$this->form_validation->set_rules('prodi', 'Program Studi', 'required');
+		$this->form_validation->set_rules('g-recaptcha-response', 'recaptcha validation', 'required|callback_validate_captcha');
+		$this->form_validation->set_message('validate_captcha', 'Mohon di check pada captcha');
+		$data = $this->input->post();
+		$resultcheckusernameadmin = $this->daftar_model->cekusernameadmin($username);
+
+		if($resultcheckusernameadmin > 0){
+			$this->session->set_flashdata('usernamesudahada', 'true');
+			redirect('admin/tambahakun');
+		}else{
+			$this->daftar_model->registerAdmin($data);
+			$this->session->set_flashdata('info_berhasil', 'true');
+			redirect('admin/tambahakun');
+		}
+	}
+
+	public function report()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/report');
 		$this->load->view('admin/footer');
 	}
 }

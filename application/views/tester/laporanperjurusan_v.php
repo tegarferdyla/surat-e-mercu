@@ -1,30 +1,32 @@
 <div class="container-fluid">
           <!-- CHART -->
-       
-          <div class="row">
+        <div class="row">
             <!-- CHART STATUS LAPORAN -->
-          
-            <div class="col-xs-5">
+        <?php 
+          $jumlahTI = $tiwaiting + $tiproses + $tifinish + $titake + $titolak;
+          $jumlahSI = $siwaiting + $siproses + $sifinish + $sitake + $sitolak;
+        ?>
+            <div class="col-xs-6">
             <div class="box box-primary" style="margin-top: 87px;">
             <div class="row">
               <div class="col-xs-1">
                 <h4 class="si-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Sistem Informasi</h4>
+                <h4>Sistem Informasi : <?=$jumlahSI?></h4>
               </div>
               <div class="col-xs-1 col-xs-offset-2">
                 <h4 class="ti-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Teknik Informatika</h4>
+                <h4>Teknik Informatika : <?=$jumlahTI?></h4>
               </div>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
         </div>
- <div class="col-xs-4 col-xs-offset-2">
+            <div class="col-xs-4 col-xs-offset-2">
                 <div class="box-body">
 
                   <canvas id="pieChart2"></canvas>
@@ -33,110 +35,61 @@
           </div>
 
           <!-- TABEL -->
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
-              <div class="table-responsive">  
-                <div class="col-xs-4 col-xs-offset-2">
-                  <h4 class="box-title si-chart">Sistem Informasi</h4>       
+                <div class="col-xs-12">
+                  <h4 class="box-title si-chart text-center">Sistem Informasi</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
                         <th>No.</th>
-                        <th>Tanggal</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
-                        <th>Prodi</th>
                         </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title ti-chart">Teknik Informatika</h4>       
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>No.</th>
-                        <th>Tanggal</th>
-                        <th>NIM</th>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>Prodi</th>
+                      <?php $no = 1; ?>
+                      <?php foreach ($mahasiswaSI as $surat): ?>
+                        <tr>
+                          <td><?=$no++?></td>
+                          <td><?=$surat['nim']?></td>
+                          <td><?=$surat['nama_mahasiswa']?></td>
+                          <td><?=$surat['email']?></td>
                         </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
+                      <?php endforeach ?>
                     </tbody>
                   </table>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="box-title ti-chart text-center">Teknik Informatika</h4>       
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <?php $no = 1; ?>
+                      <?php foreach ($mahasiswaTI as $surat): ?>
+                        <tr>
+                          <td><?=$no++?></td>
+                          <td><?=$surat['nim']?></td>
+                          <td><?=$surat['nama_mahasiswa']?></td>
+                          <td><?=$surat['email']?></td>
+                        </tr>
+                      <?php endforeach ?>
+                    </tbody>
+                  </table>
+                </div>
             </div>
           </div>
+          
 </div>
 </body>
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js')?>"></script>
@@ -160,13 +113,13 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
       {
-        value    : 4,
+        value    : <?php echo $jumlahTI; ?>,
         color    : '#E219B7',
         highlight: '#E219B7',
         label    : 'Teknik Informatika'
       },
       {
-        value    : 5,
+        value    : <?php echo $jumlahSI; ?>,
         color    : '#000000',
         highlight: '#000000',
         label    : 'Sistem Informasi'

@@ -12,13 +12,13 @@
               </div>
 
               <div class="col-xs-4">
-                <h4>Menunggu</h4>
+                <h4>Menunggu : <?=$kpwaiting?> </h4>
               </div>
               <div class="col-xs-1 col-xs-offset-2">
                 <h4 class="proses-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Proses</h4>
+                <h4>Proses : <?=$kpproses?> </h4>
               </div>
             </div>
             
@@ -27,13 +27,13 @@
                 <h4 class="selesai-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Selesai</h4>
+                <h4>Selesai : <?=$kpfinish?> </h4>
               </div>
              <div class="col-xs-1 col-xs-offset-2">
                <h4 class="ambil-chart">&#9632</h4>
              </div>
              <div class="col-xs-4">
-               <h4>Diambil</h4>
+               <h4>Terima : <?=$kptake?> </h4>
              </div>
 
             </div>
@@ -44,7 +44,7 @@
               </div>
 
               <div class="col-xs-5">
-                <h4>Ditolak</h4>
+                <h4>Ditolak : <?=$kptolak?> </h4>
 
               </div>
             </div>
@@ -61,11 +61,10 @@
           </div>
 
           <!-- TABEL -->
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
-              <div class="table-responsive">  
-                <div class="col-xs-4">
-                  <h4 class="box-title tunggu-chart">Menunggu</h4>       
+                <div class="col-xs-12">
+                  <h4 class="box-title tunggu-chart text-center">Menunggu</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -90,8 +89,11 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title proses-chart">Proses</h4>       
+
+              </div>
+              <div class="row">  
+                <div class="col-xs-12">
+                  <h4 class="box-title proses-chart text-center">Proses</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -116,39 +118,11 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title selesai-chart">Selesai</h4>       
-
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>No.</th>
-                        <th>NIM</th>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>Prodi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                     <?php $no=1; ?>
-                      <?php foreach ($mahasiswaSI as $surat): ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$surat['nim']?></td>
-                          <td><?=$surat['nama_mahasiswa']?></td>
-                          <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
-                        </tr>
-                      <?php endforeach ?>
-                    </tbody>
-                  </table>
-                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="table-responsive">  
-                <div class="col-xs-4 col-xs-offset-2">
-                  <h4 class="box-title ambil-chart">Ambil</h4>       
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="box-title selesai-chart text-center">Selesai</h4>       
+
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -173,8 +147,38 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title ditolak-chart">Ditolak</h4>       
+              </div>
+            <div class="row"> 
+                <div class="col-xs-12">
+                  <h4 class="box-title ambil-chart text-center">Terima</h4>       
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Prodi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     <?php $no=1; ?>
+                      <?php foreach ($suratfinish as $surat): ?>
+                        <tr>
+                          <td><?=$no++?></td>
+                          <td><?=$surat['nim']?></td>
+                          <td><?=$surat['nama_mahasiswa']?></td>
+                          <td><?=$surat['email']?></td>
+                          <td><?=$surat['prodi']?></td>
+                        </tr>
+                      <?php endforeach ?>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="box-title ditolak-chart text-center">Ditolak</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -199,7 +203,6 @@
                     </tbody>
                   </table>
                 </div>
-              </div>
             </div>
           </div>
 </div>
@@ -231,33 +234,33 @@
     var pieChart       = new Chart(pieChartCanvas)
     var PieData        = [
       {
-        value    : 1,
+        value    : <?=$kptolak?>,
         color    : '#f56954',
         highlight: '#f56954',
         label    : 'Ditolak'
       },
       {
-        value    : 2,
-        color    : '#00a65a',
-        highlight: '#00a65a',
+        value    : <?=$kpwaiting?>,
+        color    : '#3c8dbc',
+        highlight: '#3c8dbc',
         label    : 'Menunggu'
       },
       {
-        value    : 3,
+        value    : <?=$kpproses?>,
         color    : '#f39c12',
         highlight: '#f39c12',
         label    : 'Proses'
       },
       {
-        value    : 2,
-        color    : '#00c0ef',
-        highlight: '#00c0ef',
+        value    : <?=$kpfinish?>,
+        color    : '#00a65a',
+        highlight: '#00a65a',
         label    : 'Selesai'
       },
       {
-        value    : 2,
-        color    : '#3c8dbc',
-        highlight: '#3c8dbc',
+        value    : <?=$kptake?>,
+        color    : '#7D3C98',
+        highlight: '#7D3C98',
         label    : 'Diambil'
       },
     ]

@@ -2,13 +2,13 @@
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              Tabel Kerja Praktek
-              <medium class="label label-terima">Terima</medium>
+              Report Surat Kerja Praktek
+              <medium class="label label-info">Report</medium>
             </h1>
             <ol class="breadcrumb">
               <li><a href="<?php echo base_url('admin') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
               <li><i class="fa fa-building-o"></i> Surat Kerja Praktek</li>
-              <li class="active"><i class="fa fa-table"></i> Tabel Surat Kerja Praktek</li>
+              <li class="active"><i class="fa fa-book"></i> Report Surat Kerja Praktek</li>
             </ol>
           </section>
           <!-- Main content -->
@@ -27,47 +27,33 @@
                         <h4><i class="icon fa fa-close"></i>Info</h4>
                         Berhasil Menghapus Surat Untuk Kerja Praktek
                   </div>
+                </div>
                 <?php endif ?>
               </div>
               <div class="col-xs-12">
                 <div class="box">
-                  
-                  <div class="box-body table-responsive">
-                    <table id="datatable" class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th width="20px">No.</th>
-                          <th>Tanggal</th>
-                          <th>Nomor Surat</th>
-                          <th>NIM</th>
-                          <th>Nama</th>
-                          <th>E-Mail</th>
-                          <th>Program Studi</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <?php $no=1; foreach ($surat as $u): ?>
-                          <tr>
-                            <td><?=$no++?></td>
-                            <td><?=date('d-M-Y',strtotime($u->tanggal_diambil))?></td>
-                            <td><?=$u->no_surat?></td>
-                            <td><?=$u->nim?></td>
-                            <td><?=$u->nama_mahasiswa?></td>
-                            <td><?=$u->email?></td>
-                            <td><?=$u->prodi?></td>
-                            <td>
-                              <p class="label label-success" style="font-size: 15px">Selesai</p>
-                            </td>
-                          </tr>
-                        <?php endforeach ?>
-                      </tbody>
-                      </table>
+                  <div class="container">
+                    <div class="btngroup" style="margin-top: 200px; margin-bottom: 200px;" >
+                      <div class="btnatas" style="margin-bottom: 10px;">
+                    <div class="row">
+                      <div class="col-md-6 text-center" style="margin-bottom: 10px;"><button class="btn btn-primary btn-lg " data-toggle="modal" data-target="#rekapitulasiModal">Cetak Rekapitulasi</button></div>
+                      <div class="col-md-6 text-center">
+                      <button class="btn btn-default btn-md btn-lg " data-toggle="modal" data-target="#laporanModal">Cetak Laporan Surat</button>
+                      </div>
+                    </div>
+                    </div>
+                   
+                     <div class="row">
+                      <div class="col-md-6 text-center" style="margin-bottom: 10px;"><button class="btn btn-success btn-lg" data-toggle="modal" data-target="#laporanJurusanModal">Cetak Laporan Perjurusan</button></div>
+                      <div class="col-md-6 text-center"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Hapus </button></div>
+                      </div>
+          
+                       </div>
+                       </div>
                   </div>
                   <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
-              </div>
           </div>
     </section>
 </div>
@@ -84,13 +70,13 @@
                 <div class="form-group">
                   <label for="startdate" class="col-md-3 control-label">Dari Tanggal</label>
                   <div class="col-md-8">
-                    <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal">
+                    <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal" required>
                   </div>  
                 </div>
                 <div class="form-group">
                   <label for="enddate" class="col-md-3 control-label">Sampai Tanggal</label>
                   <div class="col-md-8">
-                    <input type="text" name="finishdate" class="form-control datepicker" placeholder="Tanggal awal">
+                    <input type="text" name="finishdate" class="form-control datepicker" placeholder="Tanggal awal" required>
                   </div>
                 </div>
               <div class="modal-footer">      
@@ -125,13 +111,13 @@
                     <div class="form-group ">
                       <label for="startdate" class="col-md-3 control-label">Dari Tanggal</label>
                       <div class="col-md-8">
-                        <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal">
+                        <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal" required>
                       </div>
                     </div>
                     <div class="form-group ">
                       <label for="startdate" class="col-md-3 control-label">Sampai Tanggal</label>
                       <div class="col-md-8">
-                        <input type="text" name="finishdate" class="form-control datepicker" placeholder="Tanggal Akhir">
+                        <input type="text" name="finishdate" class="form-control datepicker" placeholder="Tanggal Akhir" required>
                       </div>
                     </div>    
                     <div class="modal-footer">      
@@ -155,13 +141,13 @@
                 <div class="form-group">
                   <label for="startdate" class="col-md-3 control-label">Dari Tanggal</label>
                   <div class="col-md-8">
-                    <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal">
+                    <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal" required>
                   </div>  
                 </div>
                 <div class="form-group">
                   <label for="enddate" class="col-md-3 control-label">Sampai Tanggal</label>
                   <div class="col-md-8">
-                    <input type="text" name="enddate" class="form-control datepicker" placeholder="Tanggal awal">
+                    <input type="text" name="enddate" class="form-control datepicker" placeholder="Tanggal awal" required>
                   </div>
                 </div>
               <div class="modal-footer">      
@@ -184,13 +170,13 @@
                 <div class="form-group">
                   <label for="startdate" class="col-md-3 control-label">Dari Tanggal</label>
                   <div class="col-md-8">
-                    <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal">
+                    <input type="text" name="startdate" class="form-control datepicker" placeholder="Tanggal awal" required>
                   </div>  
                 </div>
                 <div class="form-group">
                   <label for="enddate" class="col-md-3 control-label">Sampai Tanggal</label>
                   <div class="col-md-8">
-                    <input type="text" name="enddate" class="form-control datepicker" placeholder="Tanggal awal">
+                    <input type="text" name="enddate" class="form-control datepicker" placeholder="Tanggal awal" required>
                   </div>
                 </div>
               <div class="modal-footer">      

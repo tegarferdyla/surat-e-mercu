@@ -77,7 +77,7 @@
       <span>Pengaturan Koordinator</span>
     </a>
   </li>
-  <li class="treeview <?php if($this->uri->segment(2)=="teknikinfo" OR $this->uri->segment(2)=="sisteminfo"){ echo 'active';}?>">
+  <li class="treeview <?php if($this->uri->segment(2)=="teknikinfo" OR $this->uri->segment(2)=="sisteminfo" OR $this->uri->segment(2)=="report"){ echo 'active';}?>">
     <a href="#">
      <i class="fa fa-graduation-cap" aria-hidden="true"></i>
      <span>Mahasiswa</span>
@@ -88,6 +88,7 @@
   <ul class="treeview-menu">
     <li class="<?php if($this->uri->segment(2)=="teknikinfo"){ echo 'active';} ?>"><a href="<?php echo site_url('admin/teknikinfo') ?>"><i class="fa fa-user" aria-hidden="true"></i>Teknik Informatika</a></li>
     <li class="<?php if($this->uri->segment(2)=="sisteminfo"){echo 'active';} ?>"><a href="<?php echo site_url('admin/sisteminfo') ?>"><i class="fa fa-user" aria-hidden="true"></i>Sistem Informasi</a></li>
+    <li class="<?php if($this->uri->segment(2)=="report"){echo 'active';} ?>"><a href="<?php echo site_url('admin/report') ?>"><i class="fa fa-book" aria-hidden="true"></i>Report Surat Kerja Praktek</a></li>
   </ul>
 </li>
 <li class="<?php if($this->uri->segment(2)=="koordinatorsetting" OR $this->uri->segment(2)=="koordinatorupdate"){echo 'active';} ?>">

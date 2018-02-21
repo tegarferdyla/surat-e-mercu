@@ -42,7 +42,7 @@
   }
   
 </script>
-<script>
+<!-- <script>
   /*Script untuk chart KP jgn dihapus dulu*/
   $(function () {
     "use strict";
@@ -77,7 +77,7 @@
       hideHover: 'auto'
     });
   });
-</script>
+</script> -->
 <script>
  $(document).ready(function () {
    $('.sidebar-menu').tree()
