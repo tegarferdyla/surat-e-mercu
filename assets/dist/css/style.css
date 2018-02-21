@@ -176,6 +176,27 @@ p.isi{
   font-size: 1.8rem;
 }
 
+section.tentang{
+  background-color: #d5d5e2;
+}
+
+.tentanghome{
+   background: url('../../image/tufasilkomm60persen.jpg') no-repeat center center; 
+  background-size: cover;
+  padding: 100px 0px;
+}
+
+.texttentang{
+  text-align: center;
+  margin-top: 75px;
+}
+
+.texttentang1{
+  text-align: center;
+  padding: 50px 0px;
+  color: #f4f5f7;
+}
+
 .btn-more{
   transition: 0.5s;
   color: #2E86C1;
@@ -400,4 +421,78 @@ p#kepadayth-1{
 }
 .embed-responsive-4by3 {
   padding-bottom: 75%;
+}
+
+/* LAPORAN */
+.judul-chart{
+  color: #112EA5;
+}
+.tanggal-chart {
+  color: #E219B7;
+}
+.tunggu-chart {
+  color: #3c8dbc;
+}
+
+.ditolak-chart {
+  color: #f56954;
+}
+.proses-chart {
+  color: #f39c12;
+}
+.ti-chart {
+  color: #E219B7;
+}
+.selesai-chart {
+  color: #00a65a;
+}
+.si-chart {
+  color: #000000;
+}
+.ambil-chart{
+  color: #00c0ef;
+}
+#pieChart{
+}
+@media print {
+  @page {size: landscape}
+  .judul-chart{
+    color: #112EA5 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .tanggal-chart {
+    color: #E219B7 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  #pieChart {
+    margin-left: -65px;
+  }
+  .tunggu-chart {
+    color: #3c8dbc !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .ditolak-chart {
+    color: #f56954 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .proses-chart {
+    color: #f39c12 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .ti-chart {
+    color: #E219B7 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .selesai-chart {
+    color: #00a65a !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .si-chart {
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .ambil-chart {
+  color: #00c0ef !important;
+  -webkit-print-color-adjust: exact;
+  }
 }
