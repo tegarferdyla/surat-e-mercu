@@ -77,7 +77,7 @@
       <span>Pengaturan Koordinator</span>
     </a>
   </li>
-  <li class="treeview <?php if($this->uri->segment(2)=="teknikinfo" OR $this->uri->segment(2)=="sisteminfo"){ echo 'active';}?>">
+  <li class="treeview <?php if($this->uri->segment(2)=="teknikinfo" OR $this->uri->segment(2)=="sisteminfo" OR $this->uri->segment(2)=="report"){ echo 'active';}?>">
     <a href="#">
      <i class="fa fa-graduation-cap" aria-hidden="true"></i>
      <span>Mahasiswa</span>
