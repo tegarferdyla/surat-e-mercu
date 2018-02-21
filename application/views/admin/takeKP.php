@@ -31,15 +31,7 @@
               </div>
               <div class="col-xs-12">
                 <div class="box">
-                  <div class="container">
-                    <div class="row">
-                      <button class="btn btn-primary btn-md " data-toggle="modal" data-target="#rekapitulasiModal">Cetak Rekapitulasi</button>
-                      <button class="btn btn-default btn-md " data-toggle="modal" data-target="#laporanModal">Cetak Laporan Surat</button>
-                      <button class="btn btn-success btn-md " data-toggle="modal" data-target="#laporanJurusanModal">Cetak Laporan Perjurusan</button>
-                      <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal"> Hapus </button>
-
-                    </div>
-                  </div>
+                  
                   <div class="box-body table-responsive">
                     <table id="datatable" class="table table-bordered table-striped">
                       <thead>
