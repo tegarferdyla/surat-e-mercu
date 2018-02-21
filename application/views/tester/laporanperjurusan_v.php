@@ -6,7 +6,7 @@
           $jumlahTI = $tiwaiting + $tiproses + $tifinish + $titake + $titolak;
           $jumlahSI = $siwaiting + $siproses + $sifinish + $sitake + $sitolak;
         ?>
-            <div class="col-xs-5">
+            <div class="col-xs-6">
             <div class="box box-primary" style="margin-top: 87px;">
             <div class="row">
               <div class="col-xs-1">
@@ -14,12 +14,13 @@
               </div>
               <div class="col-xs-4">
                 <h4>Sistem Informasi <?=$jumlahSI?></h4>
-              </div>d
+              </div>
+            </div>
               <div class="col-xs-1 col-xs-offset-2">
                 <h4 class="ti-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Teknik Informatika <?=$jumlahTI?></h4>
+                <h4>Teknik Informatika : <?=$jumlahTI?></h4>
               </div>
             </div>
             <!-- /.box-body -->
@@ -35,11 +36,10 @@
           </div>
 
           <!-- TABEL -->
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
-              <div class="table-responsive">  
-                <div class="col-xs-4 col-xs-offset-2">
-                  <h4 class="box-title si-chart">Sistem Informasi</h4>       
+                <div class="col-xs-12">
+                  <h4 class="box-title si-chart text-center">Sistem Informasi</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -47,7 +47,6 @@
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
-                        <th>Prodi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,14 +57,15 @@
                           <td><?=$surat['nim']?></td>
                           <td><?=$surat['nama_mahasiswa']?></td>
                           <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
                         </tr>
                       <?php endforeach ?>
                     </tbody>
                   </table>
                 </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title ti-chart">Teknik Informatika</h4>       
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="box-title ti-chart text-center">Teknik Informatika</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -73,7 +73,6 @@
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Email</th>
-                        <th>Prodi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -84,13 +83,11 @@
                           <td><?=$surat['nim']?></td>
                           <td><?=$surat['nama_mahasiswa']?></td>
                           <td><?=$surat['email']?></td>
-                          <td><?=$surat['prodi']?></td>
                         </tr>
                       <?php endforeach ?>
                     </tbody>
                   </table>
                 </div>
-              </div>
             </div>
           </div>
           

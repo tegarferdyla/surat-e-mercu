@@ -23,7 +23,6 @@
 		</div>
 		<?php echo form_open('mahasiswa/daftarsuratkp',array('class'=>'form-test','method'=>'post')); ?>
 
-		<div class="box">
 			<div class="form-group inline">
 				<!-- Nama Perusahaan -->
 				<label class="col-md-3" for="namaperusahaan">Nama Perusahaan yang dituju</label>
@@ -277,17 +276,16 @@
 						<input type="text" name="nama5" class="form-control" name="nama5" style="margin-bottom: 15px" >
 					</div>
 				</div>
+			 </div>
+			 <div class="checkbox text-center">
+      <label><input type="checkbox" value="" onchange="document.getElementById('submit').enabled = !this.checked;">Data yang saya masukkan adalah data yang sesuai dan sebenarnya.</label> 
 			</div>
-		</div>
 
 		<div class="form-group">
-
-			<div class="form-group">
 				<!-- Button -->
 				<div class="col-md-offset-10">
-					<button class="btn btn-primary">Daftar</button>
+					<button id="submit" class="btn btn-primary btn-lg">Daftar</button>
 				</div>
-			</div>
 		</div>
 		<?php echo form_close(); ?>
 	</section>
