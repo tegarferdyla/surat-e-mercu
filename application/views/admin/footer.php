@@ -42,42 +42,7 @@
   }
   
 </script>
-<script>
-  /*Script untuk chart KP jgn dihapus dulu*/
-  $(function () {
-    "use strict";
-    var donut = new Morris.Donut({
-      element: 'kp-chart',
-      resize: true,
-      colors: ["#3c8dbc", "#f56954","#f21fa2", "#00a65a"],
-      data: [
-      {label: "Waiting", value: 35},
-      {label: "Process", value: 30},
-      {label: "Finish", value: 15},
-      {label: "Take", value: 20}
-      ],
-      hideHover: 'auto'
-    });
-  });
-</script>
-<script>
-  /*Script untuk chart Sidang jgn dihapus dulu*/
-  $(function () {
-    "use strict";
-    var donut = new Morris.Donut({
-      element: 'sidang-chart',
-      resize: true,
-      colors: ["#3c8dbc", "#f56954","#f21fa2", "#00a65a"],
-      data: [
-      {label: "Waiting", value: 12},
-      {label: "Process", value: 18},
-      {label: "Finish", value: 25},
-      {label: "Take", value: 45}
-      ],
-      hideHover: 'auto'
-    });
-  });
-</script>
+
 <script>
  $(document).ready(function () {
    $('.sidebar-menu').tree()
@@ -111,20 +76,26 @@
         $('#confirm').on('show.bs.modal', function(e) {
             $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
         });
-    </script>
+
+        $('.modal').on('hidden.bs.modal', function(){
+            $(this).find('form')[0].reset();
+        });
+</script>
 <script>
     $(document).ready(function(){
       $('.datepicker').datepicker({
        format : 'dd-mm-yyyy' 
       });
     });
-    </script>
+</script>
 
     <script>
         $('#confirmtolak').on('show.bs.modal', function(e) {
             $(this).find('.btn-ok').prop('href', $(e.relatedTarget).data('href'));
         });
     </script>
+
+
 
 </html>
 

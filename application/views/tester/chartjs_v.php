@@ -12,13 +12,13 @@
               </div>
 
               <div class="col-xs-4">
-                <h4>Menunggu <?=$kpwaiting?> </h4>
+                <h4>Menunggu : <?=$kpwaiting?> </h4>
               </div>
               <div class="col-xs-1 col-xs-offset-2">
                 <h4 class="proses-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Proses <?=$kpproses?> </h4>
+                <h4>Proses : <?=$kpproses?> </h4>
               </div>
             </div>
             
@@ -27,13 +27,13 @@
                 <h4 class="selesai-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Selesai <?=$kpfinish?> </h4>
+                <h4>Selesai : <?=$kpfinish?> </h4>
               </div>
              <div class="col-xs-1 col-xs-offset-2">
                <h4 class="ambil-chart">&#9632</h4>
              </div>
              <div class="col-xs-4">
-               <h4>Diambil <?=$kptake?> </h4>
+               <h4>Terima : <?=$kptake?> </h4>
              </div>
 
             </div>
@@ -44,7 +44,7 @@
               </div>
 
               <div class="col-xs-5">
-                <h4>Ditolak <?=$kptolak?> </h4>
+                <h4>Ditolak : <?=$kptolak?> </h4>
 
               </div>
             </div>
@@ -61,11 +61,10 @@
           </div>
 
           <!-- TABEL -->
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
-              <div class="table-responsive">  
-                <div class="col-xs-4">
-                  <h4 class="box-title tunggu-chart">Menunggu</h4>       
+                <div class="col-xs-12">
+                  <h4 class="box-title tunggu-chart text-center">Menunggu</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -90,8 +89,11 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title proses-chart">Proses</h4>       
+
+              </div>
+              <div class="row">  
+                <div class="col-xs-12">
+                  <h4 class="box-title proses-chart text-center">Proses</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -116,8 +118,10 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title selesai-chart">Selesai</h4>       
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="box-title selesai-chart text-center">Selesai</h4>       
 
                   <table class="table table-bordered">
                     <thead>
@@ -144,11 +148,9 @@
                   </table>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="table-responsive">  
-                <div class="col-xs-4 col-xs-offset-2">
-                  <h4 class="box-title ambil-chart">Ambil</h4>       
+            <div class="row"> 
+                <div class="col-xs-12">
+                  <h4 class="box-title ambil-chart text-center">Terima</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -161,7 +163,7 @@
                     </thead>
                     <tbody>
                      <?php $no=1; ?>
-                      <?php foreach ($suratfinish as $surat): ?>
+                      <?php foreach ($surattake as $surat): ?>
                         <tr>
                           <td><?=$no++?></td>
                           <td><?=$surat['nim']?></td>
@@ -173,8 +175,10 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-xs-4">
-                  <h4 class="box-title ditolak-chart">Ditolak</h4>       
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <h4 class="box-title ditolak-chart text-center">Ditolak</h4>       
                   <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -199,7 +203,6 @@
                     </tbody>
                   </table>
                 </div>
-              </div>
             </div>
           </div>
 </div>
@@ -238,8 +241,8 @@
       },
       {
         value    : <?=$kpwaiting?>,
-        color    : '#00a65a',
-        highlight: '#00a65a',
+        color    : '#3c8dbc',
+        highlight: '#3c8dbc',
         label    : 'Menunggu'
       },
       {
@@ -250,15 +253,15 @@
       },
       {
         value    : <?=$kpfinish?>,
-        color    : '#00c0ef',
-        highlight: '#00c0ef',
+        color    : '#00a65a',
+        highlight: '#00a65a',
         label    : 'Selesai'
       },
       {
         value    : <?=$kptake?>,
-        color    : '#3c8dbc',
-        highlight: '#3c8dbc',
-        label    : 'Diambil'
+        color    : '#7D3C98',
+        highlight: '#7D3C98',
+        label    : 'Terima'
       },
     ]
     var pieOptions     = {

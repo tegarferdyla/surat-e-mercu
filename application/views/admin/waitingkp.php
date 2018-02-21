@@ -56,8 +56,8 @@
                             <td><?php echo $u->nim; ?></td>
                             <td><?php echo $u->nama_mahasiswa; ?></td>
                             <td><?php echo $u->prodi; ?></td>
-                            <td>
-                              <div class="btn-group">
+                            <td class="text-center">
+                              
                                <button class="btn btn-primary" data-href="<?=site_url("surat/ubahProsesKP/$u->id_surat")?>" data-toggle="modal" data-target="#confirm" >
                                 Proses
                               </button>
@@ -66,7 +66,7 @@
                                 Tolak
                               </button>
                                <!--  <a href="<?php echo site_url("admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">TOLAK</a> -->
-                              </div>
+                              
                             </td>
                           </tr>
                         <?php } ?>

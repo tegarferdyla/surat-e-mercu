@@ -130,9 +130,9 @@
 
               <!-- chart take -->
               <div class="col-xs-12 col-md-6 col-sm-12">
-                <div class="box box-info">
+                <div class="box box-terima">
                   <div class="box-header with-border">
-                    <h3 class="box-title">Status <span class="label label-info">Terima</span></h3>
+                    <h3 class="box-title">Status <span class="label label-terima">Terima</span></h3>
                     <div class="box-tools pull-right">
                     </div>
                   </div>

@@ -284,11 +284,37 @@ class Admin extends CI_Controller {
 
 	public function tambahakun()
 	{
-		$this->load->view('admin/header');
-		$this->load->view('admin/sidebar');
-		$this->load->view('admin/tambahakun');
-		$this->load->view('admin/footer');
+		if ($this->uri->segment(2) == 'tambahakun') {
+			if ($this->session->userdata('role')=='superadmin') {
+						//form validasi
+				$this->form_validation->set_rules('username','Username','trim|required|alpha_numeric');
+				$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]|alpha_numeric');
+				$this->form_validation->set_rules('repassword', 'Re-Password', 'trim|required|matches[password]');
+
+				if ($this->form_validation->run() == FALSE) {
+					$this->load->view('admin/header');
+					$this->load->view('admin/sidebar');
+					$this->load->view('admin/tambahakun');
+					$this->load->view('admin/footer');
+				} else {
+					$username = $this->input->post('username');
+					$resultcheckusernameadmin = $this->daftar_model->cekusernameadmin($username);
+
+					if($resultcheckusernameadmin > 0){
+						$this->session->set_flashdata('usernamesudahada', 'true');
+						redirect('admin/tambahakun');
+					}else{
+						$this->daftar_model->registerAdmin($data);
+						$this->session->set_flashdata('info_berhasil', 'true');
+						redirect('admin/tambahakun');
+					}
+				}
+			}else{
+				redirect('admin');
+			}
+		}
 	}
+
 
 	public function report()
 	{
