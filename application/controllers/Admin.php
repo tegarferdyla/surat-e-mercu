@@ -258,6 +258,7 @@ class Admin extends CI_Controller {
 		}
 		
 	}
+
 	public function teknikinfo(){
 		$data['mhsti']    = $this->user_model->MahasiswaTeknikInformatika();
 		$data['jmlmhsti'] = $this->user_model->JumlahMahasiswaTeknikInformatika();
@@ -267,6 +268,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/teknikinfo',$data);
 		$this->load->view('admin/footer');
 	}
+
 	public function sisteminfo(){
 		$data['mhssi']    = $this->user_model->MahasiswaSistemInformasi();
 		$data['jmlmhssi'] = $this->user_model->JumlahMahasiswaSistemInformasi();
@@ -276,10 +278,19 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/sisteminfo',$data);
 		$this->load->view('admin/footer');
 	}
+
 	public function tambahakun(){
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
 		$this->load->view('admin/tambahakun');
+		$this->load->view('admin/footer');
+	}
+
+	public function report()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/report');
 		$this->load->view('admin/footer');
 	}
 }

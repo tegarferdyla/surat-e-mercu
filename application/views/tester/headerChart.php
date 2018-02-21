@@ -24,6 +24,6 @@
 <body>
 
    <h3 class="text-center judul-chart">LAPORAN STATUS SURAT</h3>
-   <h3 class="text-center">SISTEM INFORMASI ATAU TEKNIK INFORMATIKA?</h3>
-   <h3 class="text-center tanggal-chart">01/01/2018 ~ 01/02/2018</h3>
+   <h3 class="text-center">SISTEM INFORMASI ATAU TEKNIK INFORMATIKA</h3>
+   <h3 class="text-center tanggal-chart"><?=date('d-m-Y',strtotime($startdate))?> ~ <?=date('d-m-Y',strtotime($enddate))?></h3>
 
