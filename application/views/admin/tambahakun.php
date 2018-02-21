@@ -18,23 +18,26 @@
                 <div class="box">
                   <div class="box-header">
                     <h3 class="box-title"></h3>
-                    <?php echo form_open('', array('class'=>'form-horizontal','method'=>'post') ); ?>
+                    <?php echo form_open(site_url('admin/daftar')); ?>
                       <div class="form-group">
                         <label class="control-label col-sm-2" for="email">Username</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" name="username" id="username" placeholder="Username ">
+                          <input type="text" class="form-control" name="username" id="username" placeholder="Username " required>
+                          <span class="text-danger"><?=form_error('username')?></span>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-sm-2" for="pwd">Password:</label>
                         <div class="col-sm-10"> 
-                          <input type="password" class="form-control" id="password" placeholder="Password">
+                          <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                          <span class="text-danger"><?=form_error('password')?></span>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-sm-2" for="confirmpassword">Confirm Password:</label>
                         <div class="col-sm-10"> 
-                          <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password">
+                          <span class="text-danger"><?=form_error('repassword')?></span>
+                          <input type="password" class="form-control" id="repassword" placeholder="Confirm Password" required>
                         </div>
                       </div>
                       <div class="form-group"> 
