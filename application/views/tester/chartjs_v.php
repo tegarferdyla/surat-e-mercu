@@ -163,7 +163,7 @@
                     </thead>
                     <tbody>
                      <?php $no=1; ?>
-                      <?php foreach ($suratfinish as $surat): ?>
+                      <?php foreach ($surattake as $surat): ?>
                         <tr>
                           <td><?=$no++?></td>
                           <td><?=$surat['nim']?></td>
@@ -261,7 +261,7 @@
         value    : <?=$kptake?>,
         color    : '#7D3C98',
         highlight: '#7D3C98',
-        label    : 'Diambil'
+        label    : 'Terima'
       },
     ]
     var pieOptions     = {
