@@ -15,7 +15,8 @@
               <div class="col-xs-4">
                 <h4>Sistem Informasi <?=$jumlahSI?></h4>
               </div>
-            </div>
+            
+        
               <div class="col-xs-1 col-xs-offset-2">
                 <h4 class="ti-chart">&#9632</h4>
               </div>
@@ -25,15 +26,17 @@
             </div>
             <!-- /.box-body -->
           </div>
-          <!-- /.box -->
         </div>
-            <div class="col-xs-4 col-xs-offset-2">
+          <div class="col-xs-4 col-xs-offset-1">
                 <div class="box-body">
 
                   <canvas id="pieChart2"></canvas>
                 </div>
             </div>
           </div>
+          <!-- /.box -->
+        </div>
+            
 
           <!-- TABEL -->
           <div class="container">
