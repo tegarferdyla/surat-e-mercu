@@ -13,8 +13,9 @@
                 <h4 class="si-chart">&#9632</h4>
               </div>
               <div class="col-xs-4">
-                <h4>Sistem Informasi : <?=$jumlahSI?></h4>
+                <h4>Sistem Informasi <?=$jumlahSI?></h4>
               </div>
+            </div>
               <div class="col-xs-1 col-xs-offset-2">
                 <h4 class="ti-chart">&#9632</h4>
               </div>

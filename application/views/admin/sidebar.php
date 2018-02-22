@@ -91,12 +91,14 @@
     <li class="<?php if($this->uri->segment(2)=="report"){echo 'active';} ?>"><a href="<?php echo site_url('admin/report') ?>"><i class="fa fa-book" aria-hidden="true"></i>Report Surat Kerja Praktek</a></li>
   </ul>
 </li>
-<li class="<?php if($this->uri->segment(2)=="koordinatorsetting" OR $this->uri->segment(2)=="koordinatorupdate"){echo 'active';} ?>">
-    <a href="<?php echo site_url('admin/tambahakun') ?>">
-      <i class="fa fa-user"></i>
-      <span>Tambah Akun Admin</span>
-    </a>
-  </li>
+<?php if ($this->session->userdata('role')=='superadmin'): ?>
+  <li class="<?php if($this->uri->segment(2)=="koordinatorsetting" OR $this->uri->segment(2)=="koordinatorupdate"){echo 'active';} ?>">
+      <a href="<?php echo site_url('admin/tambahakun') ?>">
+        <i class="fa fa-user"></i>
+        <span>Tambah Akun Admin</span>
+      </a>
+  </li>  
+<?php endif ?>
 </ul>
 </section>
 <!-- /.sidebar -->
