@@ -69,23 +69,9 @@
   function isChecked(checkbox, sub1) {
     document.getElementById(sub1).disabled = !checkbox.checked;
 }
-</script>
-<!-- <script>
-  $(window).scroll(function(){
-    if($(document).scrollTop() > 570){
-      $('nav').addClass('shrink');
-    }
-    else{
-      $('nav').removeClass('shrink');
-    }
-  });
-</script> -->
-<script>
-  new WOW().init();
-</script>
+new WOW().init();
 
-<script>
-  $(function(){
+ $(function(){
     $('#datatable').DataTable({
       'paging'      : false,
       'lengthChange': false,
@@ -95,8 +81,6 @@
       'autoWidth'   : true
     })
   })
-</script>
-<script>
   $(function(){
     $('#datatable2').DataTable({
       'paging'      : false,
@@ -107,17 +91,14 @@
       'autoWidth'   : true
     })
   })
-</script>
-<script>
+
   $('.btn-add').click(function(){
 
    var x=
    $( ".form-test" ).append( "" );
  });
 
-</script>
-<script>
-  // Event handler for text input
+   // Event handler for text input
   $('#kodenim').on('input', function() {
     //TODO Getiing option based on input value and setting it as selected
     $('#prodi option:contains(' + this.value + ')').eq(0).prop('selected', true);
@@ -135,11 +116,8 @@
       return false;
   }
 
-</script>
 
-<!-- sckrip coba -->
-<script>
-  $('.form-tambahan').hide();
+ $('.form-tambahan').hide();
   $('#anggota').change(function(){
 
 
@@ -167,10 +145,9 @@
 
 
   });
-</script>
 
-<script type="text/javascript">
-  $(function(){
+
+   $(function(){
     $.ajaxSetup({
       type:"POST",
       url: "<?php echo base_url('mahasiswa/select_daerah') ?>",
@@ -331,8 +308,23 @@
     })
    } 
  })
-
 </script>
+<!-- <script>
+  $(window).scroll(function(){
+    if($(document).scrollTop() > 570){
+      $('nav').addClass('shrink');
+    }
+    else{
+      $('nav').removeClass('shrink');
+    }
+  });
+</script> -->
+
+
+
+
+<!-- sckrip coba -->
+
 
 </body>
 </html>
