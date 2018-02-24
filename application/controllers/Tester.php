@@ -10,6 +10,22 @@ class Tester extends CI_Controller {
     $this->load->library('Recaptcha');
   }
 
+  public function testerlink($bil1)
+  {
+    $bil2 = 15;
+    $bil3 = 20;
+    if ($bil1 < $bil2) {
+      echo "bil 1 lebih kecil dari bilangan 2";
+    }else{
+      redirect('tester/testerlinkcoba/'.$bil3);
+    }
+  }
+
+  public function testerlinkcoba($bil)
+  {
+    echo $bil;
+  }
+
   public function phpinfo()
   {
   	echo phpinfo();
