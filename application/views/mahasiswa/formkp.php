@@ -278,13 +278,13 @@
 				</div>
 			 </div>
 			 <div class="checkbox text-center">
-      <label><input type="checkbox" value="" onchange="document.getElementById('submit').enabled = !this.checked;">Data yang saya masukkan adalah data yang sesuai dan sebenarnya.</label> 
+      <label><input type="checkbox" value="" onchange="isChecked(this, 'sub1')">Data yang saya masukkan adalah data yang sesuai dan sebenarnya.</label> 
 			</div>
 
 		<div class="form-group">
 				<!-- Button -->
 				<div class="col-md-offset-10">
-					<button id="submit" class="btn btn-primary btn-lg">Daftar</button>
+					<button id="sub1" class="btn btn-primary btn-lg" disabled="disabled">Daftar</button>
 				</div>
 		</div>
 		<?php echo form_close(); ?>

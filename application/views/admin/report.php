@@ -27,26 +27,33 @@
                         <h4><i class="icon fa fa-close"></i>Info</h4>
                         Berhasil Menghapus Surat Untuk Kerja Praktek
                   </div>
+                </div>
                 <?php endif ?>
               </div>
               <div class="col-xs-12">
                 <div class="box">
                   <div class="container">
+                    <div class="btngroup" style="margin-top: 200px; margin-bottom: 200px;" >
+                      <div class="btnatas" style="margin-bottom: 10px;">
                     <div class="row">
-                      <button class="btn btn-primary btn-md " data-toggle="modal" data-target="#rekapitulasiModal">Cetak Rekapitulasi</button>
-                      <button class="btn btn-default btn-md " data-toggle="modal" data-target="#laporanModal">Cetak Laporan Surat</button>
-                      <button class="btn btn-success btn-md " data-toggle="modal" data-target="#laporanJurusanModal">Cetak Laporan Perjurusan</button>
-                      <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal"> Hapus </button>
-
+                      <div class="col-md-6 text-center" style="margin-bottom: 10px;"><button class="btn btn-primary btn-lg " data-toggle="modal" data-target="#rekapitulasiModal">Cetak Rekapitulasi</button></div>
+                      <div class="col-md-6 text-center">
+                      <button class="btn btn-default btn-md btn-lg " data-toggle="modal" data-target="#laporanModal">Cetak Laporan Surat</button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="box-body table-responsive">
-                    
+                    </div>
+                   
+                     <div class="row">
+                      <div class="col-md-6 text-center" style="margin-bottom: 10px;"><button class="btn btn-success btn-lg" data-toggle="modal" data-target="#laporanJurusanModal">Cetak Laporan Perjurusan</button></div>
+                      <div class="col-md-6 text-center"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Hapus </button></div>
+                      </div>
+          
+                       </div>
+                       </div>
                   </div>
                   <!-- /.box-body -->
                 </div>
                 <!-- /.box -->
-              </div>
           </div>
     </section>
 </div>

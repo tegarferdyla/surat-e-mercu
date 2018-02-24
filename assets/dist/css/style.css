@@ -24,6 +24,9 @@ body.body{
 .navbar-toggle{
   padding:28px 15px;
 }
+.navbar-toggle2 {
+  padding:28px;
+}
 
 .navbar-nav li a.home{
     line-height: 70px;
@@ -37,8 +40,9 @@ body.body{
 
 }
 .navbar-nav>li>a.home:hover{
-    border-bottom-color: coral;
+    border-bottom-color: #5DADE2;
     border-bottom-style: solid;
+    color:white;
 }
 nav.shrink{
 background-color: #34495E;
@@ -96,22 +100,15 @@ background-color: #34495E;
 .header-home h1{
 	color:#EFF0FB
 }
-.keluar{
-  line-height: 70px;
-  height: 80px;
-  padding-top: 16px; 
-  margin-top: 0px;
-  margin-right: 12px;
-  font-size: 1.3em;
-}
 .navbar-nav>li>a.status{
-	background-color: #439955 !important;
-	color:#e7e7e7;
+	color: #76D7C4   !important;
   line-height: 70px;
   height: 80px;
   padding: 6px 27px; 
-  margin-top: 0;
   font-size: 1.3em;
+}
+.navbar-nav>li>a.keluar{
+    color:#E70F0F    !important;
 }
 .navbar-nav>li.status,.navbar-nav>li.status>a{
   line-height: 70px;
@@ -120,10 +117,7 @@ background-color: #34495E;
   margin-top: 0;
   font-size: 1.3em;
 }
-.navbar-nav>li>a.status:hover{
-color: #439955 !important;
-background-color: #e7e7e7 !important;
-}
+
 #home{
   color: white;
    background-color: #34495E;
@@ -208,7 +202,8 @@ color: #fff;
 background: rgba(46,134,193,1);
 }
 .footer{
-	background-color:#1c2c39;
+  background: url('../../image/footer2.jpg') no-repeat center center;
+	/* background-color:#1c2c39; */
 	color: #ffffff;
 	padding: 20px;
 }
@@ -220,7 +215,7 @@ background: rgba(46,134,193,1);
   background-color:  #34495E;
   padding: 40px;
   border-radius: 5px;
-   margin-top: 150px;
+   margin-top: 95px;
 }
 .title-login{
   color: white;
@@ -239,32 +234,37 @@ background: rgba(46,134,193,1);
 color: #fff;
 background: rgba(46,134,193,1);
 }
+.box-notice {
+  margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+}
 .dash1{
   height: 260px;
-  background: rgba(10, 133, 209, 0.19);
+  background: rgba(10, 133, 209, 0.5);
   border-radius: 7px;
   border: 10px;
-  margin-left: 10%;
-  margin-bottom: 10%;
-  padding-bottom: 2%;
+  margin-bottom: 10px
+ 
 }
 .dash2{
   height: 260px;
-  background:rgba(10, 209, 103, 0.19);
+  background:rgba(10, 209, 103, 0.5);
   border-radius: 7px;
   border: 10px;
-  float: right;
-  margin-right: 10%;
-  padding-bottom: 2%;
+  margin-bottom: 10px;
 }
 .dash-btn{
   font-weight: bold;
-  margin-top: 5%;
+ 
 }
 .dash-text{
   color: white;
   font-weight: bold;
-  margin-top: 10%;
 }
 .image-mahasiswa{
    background: url('../../image/tulisanfasilkom20.jpg') no-repeat center center fixed; 
