@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
   <div class="jumbotron tentanghome">
-        <h1 class="texttentang" style="color: #f4f5f7;">TENTANG</h1>      
+        <h1 class="texttentang" style="color: #f4f5f7;">PANDUAN</h1>      
         <p class="texttentang1">Tata Cara Dalam Menggunakan E-Surat Sesuai Dengan Ketentuan</p>
 
     

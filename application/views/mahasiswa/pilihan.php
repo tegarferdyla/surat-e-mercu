@@ -1,7 +1,7 @@
 <div class="container-fluid image-mahasiswa text-center">
 	<div class="container">
 		<h3 class="text-center box-notice">Pilih Surat yang ingin Anda ajukan</h3>
-		<div class="row">
+		<div class="row" style="padding:80px 0">
 			<div class="col-md-4 col-md-offset-1 dash1">
 				<div class="row container-fluid">
 					<div class="col-md-3">
