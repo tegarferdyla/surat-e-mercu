@@ -53,6 +53,13 @@ class Tester extends CI_Controller {
     $this->session->sess_destroy();
   }
 
+  public function testhtml()
+  {
+    $string = "<h1>halooaa</h1>";
+    $string2 = htmlentities($string);
+    echo html_entity_decode($string2);
+  }
+
 
 
 
