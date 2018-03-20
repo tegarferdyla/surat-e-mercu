@@ -111,11 +111,13 @@ class Mahasiswa extends CI_Controller {
 			  		$nim  		  = $this->input->post("nim$i");
 			  		$nimmahasiswa = $fnim.$nim;
 			  		$nama 		  = $this->input->post("nama$i");
+			  		$nohp 		  = $this->input->post("nohp$i");
 
 			  		$data = array(
 			  			'id_surat'			=> $idsurat,
 			  			'nim'	  			=> $nimmahasiswa,
-			  			'nama_mahasiswa'	=> ucwords(strtolower($nama))
+			  			'nama_mahasiswa'	=> ucwords(strtolower($nama)),
+			  			'nohp'				=> $nohp,
 			  		);
 					
 					$this->daftarsurat_model->InsertMahasiswa($data);

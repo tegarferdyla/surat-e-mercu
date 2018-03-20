@@ -135,6 +135,8 @@ new WOW().init();
       $('#nim'+x).removeAttr('minlength');
       $('#nim'+x).removeAttr('required');
       $('#nama'+x).removeAttr('required');
+      $('#nohp'+x).removeAttr('required');
+      $('#nohp'+x).removeAttr('maxLength');
     }
     
 
@@ -146,6 +148,10 @@ new WOW().init();
         'minLength':8,
       });
       $('#nama'+i).prop('required', true);
+      $('#nohp'+i).prop({
+        'required':true,
+        'maxLength':13,
+      });
     }
 
 
