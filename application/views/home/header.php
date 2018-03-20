@@ -28,7 +28,7 @@
 </head>
 <body class="body">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav style="transition: padding .3s;" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -45,7 +45,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a class="home" href="<?php echo site_url('')?>">Beranda</a></li>
-          <li><a class="home" href="<?php echo site_url('tentang')?>">Tentang</a></li>
+          <li><a class="home" href="<?php echo site_url('panduan')?>">Panduan</a></li>
         </ul>
         
       </div><!-- /.navbar-collapse -->

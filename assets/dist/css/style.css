@@ -45,7 +45,8 @@ body.body{
     color:white;
 }
 nav.shrink{
-background-color: #34495E;
+background-color: rgba(33, 47, 61,1);
+padding: 5px;
 }
 .navbar-collapse{
   border:0;
