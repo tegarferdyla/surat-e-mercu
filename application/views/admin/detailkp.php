@@ -75,7 +75,10 @@ asaa<div class="content-wrapper">
             <div class="box-body">
               <?php foreach ($mahasiswa as $value): ?>
               <strong><?=$value['nim']?></strong>
-              <p class="text-muted"><?=$value['nama_mahasiswa']?></p>
+              <p class="text-muted">
+                <?=$value['nama_mahasiswa']?><br>
+                <?=$value['nohp']?>
+              </p>
               <hr>  
               <?php endforeach ?>
             </div>
@@ -85,8 +88,5 @@ asaa<div class="content-wrapper">
       </div>
     </div>
   </div>
-
-
-
 </div>
 </body>

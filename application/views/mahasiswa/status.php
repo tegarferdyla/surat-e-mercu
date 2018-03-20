@@ -38,7 +38,7 @@
         $class="label-success";
         break;     
         case 'Ambil':
-        $class="label-default";
+        $class="label-terima";
         break;
       }
       ?>
@@ -94,7 +94,7 @@
         $class="label-success";
         break;     
         case 'Ambil':
-        $class="label-default";
+        $class="label-terima";
         break;
       }
       ?>
