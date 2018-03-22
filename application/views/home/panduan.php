@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
   <div class="jumbotron tentanghome">
-        <h1 class="texttentang" style="color: #f4f5f7;">TENTANG</h1>      
+        <h1 class="texttentang" style="color: #f4f5f7;">PANDUAN</h1>      
         <p class="texttentang1">Tata Cara Dalam Menggunakan E-Surat Sesuai Dengan Ketentuan</p>
 
     
@@ -40,13 +40,13 @@
                          </p>
                 </div><!--end of panduan description-->
                 <div class="col-md-6 wow bounceInLeft">
-                    <img src="<?php echo base_url('assets/image/daftarkan.jpg') ?>" alt="esurat form register" style="max-width: 100%;" >
+                    <img src="<?php echo base_url('assets/image/daftarkan.JPG') ?>" alt="esurat form register" style="max-width: 100%;" >
                 </div><!--end of panduan image-->
             </div><!--panduan 2 kiri-->
             
             <div class="row" style="margin-bottom: 100px;">
                 <div class="col-md-6 wow bounceInLeft">
-                    <img src="<?php echo base_url('assets/image/login.jpg') ?>" alt="Login" style="max-width: 100%;" >
+                    <img src="<?php echo base_url('assets/image/login.JPG') ?>" alt="Login" style="max-width: 100%;" >
                 </div><!--end of panduan image-->
                 <div class="col-lg-6 col-md-6 padding-20 wow bounceInRight">
                     <h2>Panduan 3</h2>
@@ -70,7 +70,7 @@
 
             <div class="row" style="margin-bottom: 100px;">
                 <div class="col-md-6 wow bounceInLeft">
-                    <img src="<?php echo base_url('assets/image/formkerjapraktek.jpg') ?>" alt="form kerja praktek" style="max-width: 100%;" >
+                    <img src="<?php echo base_url('assets/image/formkerjapraktek.JPG') ?>" alt="form kerja praktek" style="max-width: 100%;" >
                 </div><!--end of panduan image-->
                 <div class="col-lg-6 col-md-6 padding-20 wow bounceInRight">
                     <h2>Panduan 5</h2>
@@ -98,7 +98,7 @@
 
             <div class="row" style="margin-bottom: 100px;">
                 <div class="col-md-6 wow bounceInLeft">
-                    <img src="<?php echo base_url('assets/image/daftarulang.jpg') ?>" alt="status surat" style="max-width: 100%; padding: 100px 0px; max-height: 30%" >
+                    <img src="<?php echo base_url('assets/image/daftarulang.JPG') ?>" alt="status surat" style="max-width: 100%; padding: 100px 0px; max-height: 30%" >
                 </div><!--end of panduan image-->
                 <div class="col-lg-6 col-md-6 wow bounceInRight">
                     <h2>Panduan 7</h2>
@@ -132,7 +132,7 @@
                              </p>
                     </div><!--end of panduan description-->
                     <div class="col-md-6 paddingk-0 wow bounceInLeft">
-                        <img src="<?php echo base_url('assets/image/jeda.jpg') ?>" alt="Print" style="max-width: 100%;" >
+                        <img src="<?php echo base_url('assets/image/jeda.JPG') ?>" alt="Print" style="max-width: 100%;" >
                     </div><!--end of panduan image-->
                 </div><!--panduan 10 kiri-->
 </section>

@@ -116,12 +116,8 @@ class Surat extends CI_Controller {
 	public function kirimpesantolakkp($idsurat)
 	{
 		$data = $this->tampilsurat_model->detailKP($idsurat);
-		$isi= html_entity_decode(
-			"Halo ".$data['nama_mahasiswa']." dengan datangnya pesan ini kami TU FASILKOM masih belum bisa memproses surat Kerja Praktek yang kamu ajukan karena terdapat kesalahan dalam proses pengisian data pada saat kamu mengisi formulir pengajuan surat, pastikan kamu mengisi alamat yang sesuai dengan kaidah penulisan alamat yang benar serta menuliskan nama jabatan yang sesuai dengan jabatan orang yang kamu tuju.
-			<br><br>
-			Salam,
-			TU FASILKOM"
-		) ;
+		$pesan = htmlentities($this->input->post('isipesantolak'));
+		$isi= html_entity_decode($pesan) ;
 
 		$config = Array(  
 	        'protocol' => 'smtp',  
@@ -139,7 +135,7 @@ class Surat extends CI_Controller {
 	    $this->email->from('contactme@mohagustiar.info','Raka Hikmah');
 		$this->email->to($data['email']); 
 			
-		$this->email->subject("Pengajuan Surat Anda Ditolak");
+		$this->email->subject($this->input->post('subjek'));
 		$this->email->message($isi);
 		$this->email->set_mailtype("html");
 		$this->email->send();
