@@ -105,13 +105,15 @@
 			</div>
 
 			<div class="modal-body">
-				<p>Apakah anda yakin ingin mengubah dari Finish ke Ambil</p>
 				<p class="debug-url"></p>
+				<p>
+					Isi nama pengambil surat : <input type="text" name="namaPengambil" id="namaPengambil">
+				</p>
 			</div>
 
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				<a class="btn btn-primary btn-ok">Konfirmasi</a>
+				<a class="btn btn-primary btn-ok" id="btnKonfirmasiNama">Konfirmasi</a>
 			</div>
 		</div>
 	</div>
