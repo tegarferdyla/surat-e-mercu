@@ -8,7 +8,7 @@ class Login extends CI_Controller {
 		$this->load->library('Recaptcha');
 		if (isset($_GET['logout']) == 'signout') {
 			$this->session->sess_destroy();
-			redirect('home');
+			redirect('');
 		}else{
 			if ($this->session->has_userdata('status')) {
 				if ($this->session->userdata('role') == "mahasiswa") {

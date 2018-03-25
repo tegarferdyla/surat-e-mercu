@@ -125,6 +125,7 @@
 					<th>No.</th>
 					<th>Nama</th>
 					<th>NIM</th>
+					<th>No Handphone</th>
 				</tr>
 				<?php $no=1; ?>
 				<?php foreach ($mahasiswa as $vmahasiswa): ?>
@@ -132,6 +133,7 @@
 						<td><?=$no++?></td>
 						<td><?=$vmahasiswa['nama_mahasiswa']?></td>
 						<td><?=$vmahasiswa['nim']?></td>
+						<td><?=$vmahasiswa['nohp']?></td>
 					</tr>
 				
 			<?php endforeach ?>

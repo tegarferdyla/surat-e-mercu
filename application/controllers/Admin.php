@@ -214,8 +214,8 @@ class Admin extends CI_Controller {
 		$enddate = $this->input->post('enddate');
 		$jurusan = $this->input->post('jurusan');
 
-		if ($startdate < $enddate) {
-			$data= $this->tampilsurat_model->printLAPORAN($startdate,$enddate,$jurusan);
+		if ($startdate <= $enddate) {
+			$data= $this->report_model->printLAPORAN($startdate,$enddate,$jurusan);
 			$this->load->view('admin/cetaklaporan',array('data'=>$data));
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
@@ -228,24 +228,25 @@ class Admin extends CI_Controller {
 		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
 		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
 
-		if ($startdate < $finishdate) {
+		if ($startdate <= $finishdate) {
 			$this->statussurat_model->HapusDataKP($startdate,$finishdate);
 			$this->session->set_flashdata('berhasil_hapus','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 		}
 	}
 
 
-	public function cetakLAPkp(){
+	public function cetakLAPkp()
+	{
 		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
 		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
 		$jurusan = $this->input->post('jurusan');
 		
-		if ($startdate < $finishdate) {
-			$data['data']= $this->tampilsurat_model->printLAPORANkp($startdate,$finishdate,$jurusan);
+		if ($startdate <= $finishdate) {
+			$data['data']= $this->report_model->printLAPORANkp($startdate,$finishdate,$jurusan);
 			$data['jurusan'] = $jurusan;
 			$data['dari'] = $startdate;
 			$data['sampai'] = $finishdate;
@@ -253,12 +254,14 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/cetaklaporankp',$data);	
 		}else{
 			$this->session->set_flashdata('gagal_tanggal','true');
-			redirect('admin/takekp');
+			redirect('admin/report');
 			
 		}
 		
 	}
-	public function teknikinfo(){
+
+	public function teknikinfo()
+	{
 		$data['mhsti']    = $this->user_model->MahasiswaTeknikInformatika();
 		$data['jmlmhsti'] = $this->user_model->JumlahMahasiswaTeknikInformatika();
 
@@ -267,13 +270,57 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/teknikinfo',$data);
 		$this->load->view('admin/footer');
 	}
-	public function sisteminfo(){
+
+	public function sisteminfo()
+	{
 		$data['mhssi']    = $this->user_model->MahasiswaSistemInformasi();
 		$data['jmlmhssi'] = $this->user_model->JumlahMahasiswaSistemInformasi();
 
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
 		$this->load->view('admin/sisteminfo',$data);
+		$this->load->view('admin/footer');
+	}
+
+	public function tambahakun()
+	{
+		if ($this->uri->segment(2) == 'tambahakun') {
+			if ($this->session->userdata('role')=='superadmin') {
+						//form validasi
+				$this->form_validation->set_rules('username','Username','trim|required|alpha_numeric');
+				$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]|alpha_numeric');
+				$this->form_validation->set_rules('repassword', 'Re-Password', 'trim|required|matches[password]');
+
+				if ($this->form_validation->run() == FALSE) {
+					$this->load->view('admin/header');
+					$this->load->view('admin/sidebar');
+					$this->load->view('admin/tambahakun');
+					$this->load->view('admin/footer');
+				} else {
+					$username = $this->input->post('username');
+					$resultcheckusernameadmin = $this->daftar_model->cekusernameadmin($username);
+
+					if($resultcheckusernameadmin > 0){
+						$this->session->set_flashdata('usernamesudahada', 'true');
+						redirect('admin/tambahakun');
+					}else{
+						$this->daftar_model->registerAdmin($data);
+						$this->session->set_flashdata('info_berhasil', 'true');
+						redirect('admin/tambahakun');
+					}
+				}
+			}else{
+				redirect('admin');
+			}
+		}
+	}
+
+
+	public function report()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/report');
 		$this->load->view('admin/footer');
 	}
 }

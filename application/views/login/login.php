@@ -29,6 +29,7 @@
             Maaf anda gagal mereset password
           </div>
         <?php endif; ?>
+        <a href="<?php echo site_url('') ?>"><img class="img-responsive" src="<?php echo base_url('assets/image/logoesurat7v2kiri.png')?>" alt=""></a>
         <h3 class="text-center title-login">Silahkan Login Dengan menggunakan</h3>
         <h3 class="text-center title-login">NIM/E-MAIL</h3>
         <div class="form-group has-feedback">
@@ -41,6 +42,9 @@
         </div>
         <div class="form-group has-feedback">
           <input type="submit" class="btn btn-primary btn-block" value="Login" />
+        </div>
+        <div class="form-group has-feedback">
+          <a href="<?=site_url('Logingoogle/google_login')?>" target="_blank" class="btn btn-primary btn-block">Login With SSO Mercubuana Email</a>
         </div>
         <div class="form-group has-feedback">
           <a href="<?php echo site_url('login/resetpassword') ?>" class="btn btn-danger btn-block">Lupa Password</a>

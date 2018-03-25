@@ -23,7 +23,6 @@
 		</div>
 		<?php echo form_open('mahasiswa/daftarsuratkp',array('class'=>'form-test','method'=>'post')); ?>
 
-		<div class="box">
 			<div class="form-group inline">
 				<!-- Nama Perusahaan -->
 				<label class="col-md-3" for="namaperusahaan">Nama Perusahaan yang dituju</label>
@@ -34,7 +33,7 @@
 
 			<div class="form-group inline">
 				<!-- Orang yang dituju -->
-				<label class="col-md-3" for="namaygdituju" >Orang yang Dituju</label>
+				<label class="col-md-3" for="namaygdituju" >Personal yang Dituju</label>
 				<div class="col-md-6">
 					<input type="text" name="namefor" class="form-control" required placeholder="Orang Dituju">
 				</div>
@@ -107,6 +106,7 @@
 				<!-- Alamat Perusahaan -->
 				<label class="col-md-3" for="alamat" >Alamat Jalan Perusahaan</label>
 				<div class="col-md-6">
+					contoh : Jl. Rebana No.9
 					<input type="text" name="alamat" class="form-control" required placeholder="contoh: Jln Galunggung no.xx">
 				</div>
 			</div>
@@ -171,6 +171,16 @@
 
 			</div>
 
+			<div class="form-group">
+				<!-- Nama Mahasiswa 1 -->
+				<label class="control-label col-md-offset-1 col-xs-3" for="nama">No Handphone</label>
+
+				<div class="col-md-4 col-xs-8">
+					<input type="text" name="nohp1" class="form-control" id="nohp1" value="" placeholder="No Handphone" onkeypress="return no(event)" required>
+				</div>
+
+			</div>
+
 			<div class="form-tambahan ft2">
 				<hr>
 				<div class="form-group test">
@@ -197,6 +207,17 @@
 					</div>
 
 				</div>
+
+				<div class="form-group">
+					<!-- Nama Mahasiswa 1 -->
+					<label class="control-label col-md-offset-1 col-xs-3" for="nama">No Handphone</label>
+
+					<div class="col-md-4 col-xs-8">
+						<input type="text" name="nohp2" class="form-control" id="nohp2" value="" placeholder="No Handphone" onkeypress="return no(event)">
+					</div>
+
+				</div>
+
 			</div>
 
 			<div class="form-tambahan ft3">
@@ -223,6 +244,16 @@
 						<input type="text" name="nama3" class="form-control" id="nama3">
 					</div>
 				</div>
+
+				<div class="form-group">
+					<!-- Nama Mahasiswa 1 -->
+					<label class="control-label col-md-offset-1 col-xs-3" for="nama">No Handphone</label>
+
+					<div class="col-md-4 col-xs-8">
+						<input type="text" name="nohp3" class="form-control" id="nohp3" value="" placeholder="No Handphone" onkeypress="return no(event)">
+					</div>
+
+				</div>
 			</div>
 
 			<div class="form-tambahan ft4">
@@ -247,6 +278,16 @@
 					<div class="col-md-4 col-xs-8">
 						<input type="text" name="nama4" class="form-control" id="nama4" >
 					</div>
+				</div>
+
+				<div class="form-group">
+					<!-- Nama Mahasiswa 1 -->
+					<label class="control-label col-md-offset-1 col-xs-3" for="nama">No Handphone</label>
+
+					<div class="col-md-4 col-xs-8">
+						<input type="text" name="nohp4" class="form-control" id="nohp4" value="" placeholder="No Handphone" onkeypress="return no(event)">
+					</div>
+
 				</div>
 
 			</div>
@@ -276,17 +317,27 @@
 						<input type="text" name="nama5" class="form-control" name="nama5" style="margin-bottom: 15px" >
 					</div>
 				</div>
+
+				<div class="form-group">
+					<!-- Nama Mahasiswa 1 -->
+					<label class="control-label col-md-offset-1 col-xs-3" for="nama">No Handphone</label>
+
+					<div class="col-md-4 col-xs-8">
+						<input type="text" name="nohp5" class="form-control" id="nohp5" value="" placeholder="No Handphone" onkeypress="return no(event)">
+					</div>
+
+				</div>
+
+			 </div>
+			 <div class="checkbox text-center">
+      <label><input type="checkbox" value="" onchange="isChecked(this, 'sub1')">Data yang saya masukkan adalah data yang sesuai dan sebenarnya.</label> 
 			</div>
-		</div>
 
 		<div class="form-group">
-
-			<div class="form-group">
 				<!-- Button -->
 				<div class="col-md-offset-10">
-					<button class="btn btn-primary">Daftar</button>
+					<button id="sub1" class="btn btn-primary btn-lg" disabled="disabled">Daftar</button>
 				</div>
-			</div>
 		</div>
 		<?php echo form_close(); ?>
 	</section>

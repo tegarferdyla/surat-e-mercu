@@ -4,7 +4,7 @@
           <section class="content-header">
             <h1>
               Tabel Mahasiswa
-              <span class="label label-primary">Teknik Informatika</span>
+              <span class="label label-info">Sistem Informasi</span>
               <span class="label label-success"><?=$jmlmhssi?> Pengguna</span>
             </h1>
             <ol class="breadcrumb">
