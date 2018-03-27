@@ -2,7 +2,7 @@
 	<div class="pull-right hidden-xs">
 		<b>Version</b> Alpha-3
 	</div>
-	<strong>Copyright &copy; 2017-2018
+	<strong>Copyright &copy; 2017-<?php echo date("Y"); ?>
 		<a href="http://fasilkom.mercubuana.ac.id/wp-content/uploads/2017/11/struktur-organisasi-aslab.jpg" target="_blank">Aslab Fasilkom</a>.</strong> All rights reserved.
 </footer>
 </body>

@@ -231,17 +231,127 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<h4 class="modal-title">Detail</h4>
+				<div class="pull-left header">
+					<i class="fa fa-th"></i> Detail</li>
+				</div>
 			</div>
 			<div class="modal-body">
-				<p>One fine body&hellip;</p>
+				<div class="nav-tabs-custom">
+					<!-- judul tab -->
+					<ul class="nav nav-tabs align-center">
+						<li class="active">
+							<a href="#pengambilSurat" data-toggle="tab">Pengambil Surat</a>
+						</li>
+						<li>
+							<a href="#pengusulSurat" data-toggle="tab">Pengusul Kerja Praktek</a>
+						</li>
+						<li>
+							<a href="#perusahaan" data-toggle="tab">Perusahaan</a>
+						</li>
+						<li>
+							<a href="#anggota" data-toggle="tab">Anggota</a>
+						</li>
+					</ul>
+					<!-- isi tab -->
+					<div class="tab-content">
+						<!-- detail nama pengambil -->
+						<div class="tab-pane active" id="pengambilSurat">
+							<div class="table-responsive no-padding">
+								<table class="table table-hover" border="0">
+									<tr>
+										<th>Nama</th>
+										<th>Waktu Ambil</th>
+									</tr>
+									<tr>
+										<td>Tukiyem</td>
+										<td>
+											<?php echo date("d-m-y")?>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<!-- detail pengusul -->
+						<div class="tab-pane" id="pengusulSurat">
+							<div class="table-responsive no-padding">
+								<table class="table table-hover" border="0">
+									<tr>
+										<th>Tanggal Usul</th>
+										<th>NIM</th>
+										<th>Nama</th>
+										<th>Program Studi</th>
+									</tr>
+									<tr>
+										<td>
+											<?php echo date("d-m-y")?>
+										</td>
+										<td>
+											41815010033
+										</td>
+										<td>Nama pengusul</td>
+										<td>Sistem Informasi</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<!-- detail perusahaan -->
+						<div class="tab-pane" id="perusahaan">
+							<div class="table-responsive no-padding">
+								<table class="table table-hover" border="0">
+									<tr>
+										<th>Nama</th>
+										<th>Alamat</th>
+										<th>Untuk</th>
+										<th>Jabatan</th>
+									</tr>
+									<tr>
+										<td>PT abc
+										</td>
+										<td>
+											Kalideres
+										</td>
+										<td>Pak Bengkong</td>
+										<td>Office Boy</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<!-- detail anggota -->
+						<div class="tab-pane" id="anggota">
+							<div class="table-responsive no-padding">
+								<table class="table table-hover" border="0">
+									<tr>
+										<th>Nomor</th>
+										<th>Nama</th>
+										<th>NIM</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>mbew</td>
+										<td>41815010033</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>mbew</td>
+										<td>41815010033</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>mbew</td>
+										<td>41815010033</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END Detail TABS -->
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default pull-right" data-dismiss="modal" aria-label="Close">Close</button>
 			</div>
 		</div>
 	</div>
