@@ -75,7 +75,6 @@
           </section>
           <!-- /.content -->
         </div>
-      </body>
 
 
       <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -1,13 +1,11 @@
-<div class="container-fluid image-mahasiswa">
+<div class="container-fluid image-mahasiswa text-center">
 	<div class="container">
-		<div class="container-fluid" style="width: 50%;margin-top: 6%; border: 2px solid white;">
-			<h2 style="color: white;margin-bottom: 5%;" align="center">Pilih surat yang ingin Anda ajukan</h2>
-		</div>
-		<div class="row" style="margin-top: 7%;">
-			<div class="col-md-4 dash1" align="center">
-				<div class="row container-fluid" style="margin-top: 5%;">
+		<h3 class="text-center box-notice">Pilih Surat yang ingin Anda ajukan</h3>
+		<div class="row" style="padding:80px 0">
+			<div class="col-md-4 col-md-offset-1 dash1">
+				<div class="row container-fluid">
 					<div class="col-md-3">
-						<img style="margin-top: 2%;" align="center" src="https://png.icons8.com/ios/70/ffffff/link-company-parent.png">
+						<img  align="center" src="https://png.icons8.com/ios/70/ffffff/link-company-parent.png">
 					</div>
 					<div class="col-md-9">
 						<h3 style="color: white">E-Surat Kerja Praktek</h3>
@@ -20,10 +18,10 @@
 				<a href="<?php echo site_url('mahasiswa/formkp') ?>" class="btn btn-danger dash-btn">PILIH</a>
 			</div>
 
-			<div class="col-md-4 dash2" align="center">
-				<div class="row container-fluid" style="margin-top: 5%;">
+			<div class="col-md-4 col-md-offset-2 dash2">
+				<div class="row container-fluid">
 					<div class="col-md-3">
-						<img style="margin-top: 2%;" align="center" src="https://png.icons8.com/ios/70/ffffff/school.png">
+						<img align="center" src="https://png.icons8.com/ios/70/ffffff/school.png">
 					</div>
 					<div class="col-md-9" align="center">
 						<h3 style="color: white">E-Surat Riset TA</h3>
@@ -33,7 +31,7 @@
 				<p class="dash-text">
 					Surat untuk pengajuan riset Tugas Akhir
 				</p>
-				<a href="#" class="btn btn-danger dash-btn">PILIH</a>
+				<a href="<?php echo site_url('mahasiswa/formta') ?>" class="btn btn-danger dash-btn">PILIH</a>
 			</div>
 		</div>
 	</div>
