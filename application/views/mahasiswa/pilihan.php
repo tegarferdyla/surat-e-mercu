@@ -31,7 +31,7 @@
 				<p class="dash-text">
 					Surat untuk pengajuan riset Tugas Akhir
 				</p>
-				<a href="#" class="btn btn-danger dash-btn">PILIH</a>
+				<a href="<?php echo site_url('mahasiswa/formta') ?>" class="btn btn-danger dash-btn">PILIH</a>
 			</div>
 		</div>
 	</div>
