@@ -1,5 +1,6 @@
 <?php echo $script_captcha; ?>
 <div class="container form-login">
+
   <div class="row">
     <h1 class="text-center">Daftar Akun E-surat</h1>
     <hr>
@@ -113,6 +114,6 @@
     <h5 class="text-center">Sudah punya akun? silahkan <b><a class="link-daftar" href="<?php echo site_url('login') ?>">login</a></b></h5>
                         </div>
   </div>
-</div>
 
+</div>
 
