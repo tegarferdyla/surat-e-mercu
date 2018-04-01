@@ -1,5 +1,5 @@
 <section class="content-header">
-	<h1 class="text-center ">Kerja Praktek</h1>
+	<h1 class="text-center ">Surat Pengantar Kerja Praktek</h1>
 </section>
 <div class="form-horizontal m-t-30">
 	<section class="content container">
