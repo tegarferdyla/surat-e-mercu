@@ -21,12 +21,14 @@ class Admin extends CI_Controller {
 		$data['kpproses'] = $this->statussurat_model->JumlahSuratKpProses();
 		$data['kpfinish']  = $this->statussurat_model->JumlahSuratKpFinish();
 		$data['kptake']	   = $this->statussurat_model->JumlahSuratKpTake(); 
+		$data['kptolak'] = $this->statussurat_model->JumlahSuratKpTolak();
 
 		// Jumlah Surat Tugas Akhir
 		$data['tawaiting'] = $this->statussurat_model->JumlahSuratTAWaiting();
 		$data['taproses'] = $this->statussurat_model->JumlahSuratTAProses();
 		$data['tafinish']  = $this->statussurat_model->JumlahSuratTAFinish();
-		$data['tatake']	   = $this->statussurat_model->JumlahSuratTATake();	
+		$data['tatake']	   = $this->statussurat_model->JumlahSuratTATake();
+		$data['tatolak'] =$this->statussurat_model->JumlahSuratTATolak();	
 
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -49,6 +51,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/tolakemailta_v');
 		$this->load->view('admin/footer');
 	}
+	
     public function tolakemailkp($id_surat){
     	$data['detailkp'] = $this->tampilsurat_model->get_email_user_kp($id_surat);
 
@@ -57,7 +60,8 @@ class Admin extends CI_Controller {
     	$this->load->view('admin/tolakemailkp_v',$data);
     	$this->load->view('admin/footer');
     }
-	public function waitingTA()
+
+	public function waitingta()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -65,6 +69,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/waitingta',$data);
 		$this->load->view('admin/footer');
 	}
+
 	public function proseskp()
 	{
 		$this->load->view('admin/header');
@@ -73,7 +78,8 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/proseskp',$data);
 		$this->load->view('admin/footer');
 	}
-	public function prosesTA()
+
+	public function prosesta()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -81,6 +87,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/prosesta',$data);
 		$this->load->view('admin/footer');
 	}
+
 	public function finishkp()
 	{
 		$this->load->view('admin/header');
@@ -89,12 +96,13 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/finishkp',$data);
 		$this->load->view('admin/footer');
 	}
-	public function finishTA()
+
+	public function finishta()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
 		$data['surat'] = $this->tampilsurat_model->tampil_datata_finish();
-		$this->load->view('admin/finishTA',$data);
+		$this->load->view('admin/finishta',$data);
 		$this->load->view('admin/footer');
 	}
 
@@ -111,13 +119,14 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 
-	public function takeTA()
+	public function taketa()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/takeTA');
+		$this->load->view('admin/taketa');
 		$this->load->view('admin/footer');
 	}
+
 	public function takekp()
 	{
 		$this->load->view('admin/header');
@@ -127,6 +136,21 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer');
 	}
 
+	public function tolakkp()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$data['surat'] = $this->tampilsurat_model->tampil_datakp_tolak();
+		$this->load->view('admin/tolakkp',$data);
+		$this->load->view('admin/footer');
+	}
+	public function tolakta()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tolakta');
+		$this->load->view('admin/footer');
+	}
 
 	public function koordinatorupdate($nik){
 		$this->load->view('admin/header');
@@ -169,6 +193,7 @@ class Admin extends CI_Controller {
 		}
 
 	}
+
 	public function koordinatorsetting(){
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
@@ -176,27 +201,126 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/koordinatorsetting',array('data'=>$data));
 		$this->load->view('admin/footer');
 	}
+
 	public function printKP($idsurat){
 		$data['surat'] 		= $this->tampilsurat_model->printKP($idsurat);
 		$data['mahasiswa']	= $this->tampilsurat_model->PrintMahasiswaKP($idsurat);
 
 		$this->load->view('admin/printKP',$data);
 	}
-	public function tolakkp()
+
+	public function cetakLAP(){
+		$startdate = $this->input->post('startdate');
+		$enddate = $this->input->post('enddate');
+		$jurusan = $this->input->post('jurusan');
+
+		if ($startdate <= $enddate) {
+			$data= $this->report_model->printLAPORAN($startdate,$enddate,$jurusan);
+			$this->load->view('admin/cetaklaporan',array('data'=>$data));
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/takeTA');
+		}
+	}
+
+	public function HapusSuratKP()
 	{
+		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
+		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
+
+		if ($startdate <= $finishdate) {
+			$this->statussurat_model->HapusDataKP($startdate,$finishdate);
+			$this->session->set_flashdata('berhasil_hapus','true');
+			redirect('admin/report');
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/report');
+		}
+	}
+
+
+	public function cetakLAPkp()
+	{
+		$startdate = date('Y-m-d',strtotime($this->input->post('startdate')));
+		$finishdate = date('Y-m-d',strtotime($this->input->post('finishdate')));
+		$jurusan = $this->input->post('jurusan');
+		
+		if ($startdate <= $finishdate) {
+			$data['data']= $this->report_model->printLAPORANkp($startdate,$finishdate,$jurusan);
+			$data['jurusan'] = $jurusan;
+			$data['dari'] = $startdate;
+			$data['sampai'] = $finishdate;
+
+			$this->load->view('admin/cetaklaporankp',$data);	
+		}else{
+			$this->session->set_flashdata('gagal_tanggal','true');
+			redirect('admin/report');
+			
+		}
+		
+	}
+
+	public function teknikinfo()
+	{
+		$data['mhsti']    = $this->user_model->MahasiswaTeknikInformatika();
+		$data['jmlmhsti'] = $this->user_model->JumlahMahasiswaTeknikInformatika();
+
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/tolakkp');
+		$this->load->view('admin/teknikinfo',$data);
 		$this->load->view('admin/footer');
 	}
-	public function tolakTA()
+
+	public function sisteminfo()
+	{
+		$data['mhssi']    = $this->user_model->MahasiswaSistemInformasi();
+		$data['jmlmhssi'] = $this->user_model->JumlahMahasiswaSistemInformasi();
+
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/sisteminfo',$data);
+		$this->load->view('admin/footer');
+	}
+
+	public function tambahakun()
+	{
+		if ($this->uri->segment(2) == 'tambahakun') {
+			if ($this->session->userdata('role')=='superadmin') {
+						//form validasi
+				$this->form_validation->set_rules('username','Username','trim|required|alpha_numeric');
+				$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]|alpha_numeric');
+				$this->form_validation->set_rules('repassword', 'Re-Password', 'trim|required|matches[password]');
+
+				if ($this->form_validation->run() == FALSE) {
+					$this->load->view('admin/header');
+					$this->load->view('admin/sidebar');
+					$this->load->view('admin/tambahakun');
+					$this->load->view('admin/footer');
+				} else {
+					$username = $this->input->post('username');
+					$resultcheckusernameadmin = $this->daftar_model->cekusernameadmin($username);
+
+					if($resultcheckusernameadmin > 0){
+						$this->session->set_flashdata('usernamesudahada', 'true');
+						redirect('admin/tambahakun');
+					}else{
+						$this->daftar_model->registerAdmin($data);
+						$this->session->set_flashdata('info_berhasil', 'true');
+						redirect('admin/tambahakun');
+					}
+				}
+			}else{
+				redirect('admin');
+			}
+		}
+	}
+
+
+	public function report()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/tolakTA');
+		$this->load->view('admin/report');
 		$this->load->view('admin/footer');
 	}
 }
-
-
-

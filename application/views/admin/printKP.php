@@ -4,8 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Surat Kerja Praktek </title>
 	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
-
-	 <!-- <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>"> -->
 	 <style>
 	 	body{
 	 		line-height: normal;
@@ -14,6 +12,15 @@
 		.table-borderless th,
 		.table-borderless tr {
 		    border: 0 !important;
+		}
+		.kepadayth-cover{
+			line-height: 10px;
+		}
+		#kepadayth{
+			font-size: 10pt;
+		}
+		.tanggal{
+			font-size:17px;
 		}
 	 </style>
 </head>
@@ -36,7 +43,7 @@
 								   $bulanindo ="Januari";
 								break;
 								case '02':
-								   $bulanindo ="Febuari";
+								   $bulanindo ="Februari";
 								break;
 								case '03':
 								   $bulanindo ="Maret";
@@ -72,16 +79,16 @@
 						$tanggal_fix = $pecah[2]." ".$bulanindo." ".$pecah[0];
 					?>
 
-					<h4 class="pull-right tanggal">Jakarta, <?=$tanggal_fix?></h4>
+					<span class="pull-right tanggal">Jakarta, <?=$tanggal_fix?></span>
 				</div><!-- /.col-xs-6 -->
 			</div>
-			<span class="hidden-print warning"><h1 class="text-center">Harus Memakai Browser CHROME!</h1></span>
+			<span class="hidden-print warning"><h1 class="text-center">Direkomendasikan Menggunakan Chrome Versi 64 Atau Lebih</h1></span>
 		</div>
 
 
 
 
-		<br /><br />
+		<br /><br /> <br /> <br /> <br />			
 
 		<div class="container idsurat">
 			<div class="row">
@@ -97,13 +104,13 @@
 
 		<br /><br />
 
-		<div class="container kepadayth">
-			<p id="kepadayth">Kepada Yth,</p>
-			<p id="kepadayth"><?=$surat['nama_perusahaan']?></p>
-			<p id="kepadayth-1"><?=$surat['alamat_perusahaan']?></p>
-			<p id="kepadayth-1"><?=$surat['kota']?> <?=$surat['kodepos']?></p>
-			<p id="kepadayth">UP. <?=$surat['orang_dituju']?></p>
-			<p id="kepadayth"><?=$surat['jabatan_dituju']?></p>
+		<div class="container kepadayth-cover">
+			<p>Kepada Yth,</p>
+			<p><?=$surat['nama_perusahaan']?></p>
+			<p id="kepadayth"><?=$surat['alamat_perusahaan']?></p>
+			<p id="kepadayth"><?=$surat['kota']?> <?=$surat['kodepos']?></p>
+			<p>UP. <?=$surat['orang_dituju']?></p>
+			<p><?=$surat['jabatan_dituju']?></p>
 		</div>
 		<br /><br />
 		<div class="container isipesan">
@@ -118,17 +125,18 @@
 					<th>No.</th>
 					<th>Nama</th>
 					<th>NIM</th>
+					<th>No Handphone</th>
 				</tr>
 				<?php $no=1; ?>
 				<?php foreach ($mahasiswa as $vmahasiswa): ?>
-					<tr>
+				<tr>
 						<td><?=$no++?></td>
 						<td><?=$vmahasiswa['nama_mahasiswa']?></td>
 						<td><?=$vmahasiswa['nim']?></td>
+						<td><?=$vmahasiswa['nohp']?></td>
 					</tr>
-				<?php endforeach ?>
-
 				
+			<?php endforeach ?>
 			</table>
 			<p class="text-justify">Demikian Surat permohonan kami, atas perhatian dan bantuan Bapak/Ibu kami ucapkan terima kasih.</p>
 			<br /><br />
